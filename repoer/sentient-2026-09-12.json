@@ -1,0 +1,182 @@
+{
+  "checked_at": "2026-09-13",
+  "source_url": "https://x.com/sentient_agency/status/2098719224252514744",
+  "source_published_date": "2026-09-12",
+  "verification": "Hovedinnlegg og ti GitHub-prosjektsider/README lest. Ikke installert eller kjørt. Fire bildevedlegg ikke analysert.",
+  "tools": [
+    {
+      "id": 1,
+      "name": "Cobalt",
+      "source_repo_url": "https://github.com/imputnet/cobalt",
+      "repository_url": "https://github.com/imputnet/cobalt",
+      "primary_source_url": "https://github.com/imputnet/cobalt",
+      "license_reported": "AGPL-3.0; API/web har egne lisensopplysninger",
+      "purpose": "Medienedlasting via nettgrensesnitt og API.",
+      "potential_use": "Hente egne klipp og tillatte referansemedier.",
+      "caveats": "Gjelder gratis, offentlig tilgjengelig innhold. Kontroller plattformstøtte ved bruk; API/web må lisenssjekkes separat.",
+      "tags": [
+        "media",
+        "video",
+        "nedlasting"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 2,
+      "name": "SearXNG",
+      "source_repo_url": "https://github.com/searxng/searxng",
+      "repository_url": "https://github.com/searxng/searxng",
+      "primary_source_url": "https://github.com/searxng/searxng",
+      "license_reported": "AGPL-3.0",
+      "purpose": "Metasøk som samler svar fra flere søketjenester.",
+      "potential_use": "Felles researchverktøy ved egen drift.",
+      "caveats": "Personvern avhenger også av valgt instans og konfigurasjon. Ingen konkret instans eller logger er kontrollert.",
+      "tags": [
+        "søk",
+        "research",
+        "personvern"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 3,
+      "name": "Reactive Resume",
+      "source_repo_url": "https://github.com/AmruthPillai/Reactive-Resume",
+      "repository_url": "https://github.com/reactive-resume/reactive-resume",
+      "primary_source_url": "https://github.com/reactive-resume/reactive-resume",
+      "license_reported": "MIT",
+      "purpose": "CV-bygger med maler, forhåndsvisning og eksport, blant annet PDF og JSON.",
+      "potential_use": "CV-er og strukturerte profil-/porteføljedata.",
+      "caveats": "Innleggets AmruthPillai/Reactive-Resume videresender til reactive-resume/reactive-resume. Bruk ny repo-adresse.",
+      "tags": [
+        "CV",
+        "profil",
+        "PDF"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 4,
+      "name": "changedetection.io",
+      "source_repo_url": "https://github.com/dgtlmoon/changedetection.io",
+      "repository_url": "https://github.com/dgtlmoon/changedetection.io",
+      "primary_source_url": "https://github.com/dgtlmoon/changedetection.io",
+      "license_reported": "Apache-2.0",
+      "purpose": "Overvåker nettsideendringer med varsler, selektorer, filtre og intervaller.",
+      "potential_use": "Følge dokumentasjon, release-sider, ressurstilgang eller stillinger.",
+      "caveats": "Selvdrift og betalt vertstjeneste er ulike tilbud. Varsling avhenger av sjekkintervall og vellykket sidehenting; øyeblikkelig varsling er ikke en målt garanti.",
+      "tags": [
+        "overvåking",
+        "endringer",
+        "varsler"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 5,
+      "name": "Suwayomi-Server",
+      "source_repo_url": "https://github.com/Suwayomi/Suwayomi-Server",
+      "repository_url": "https://github.com/Suwayomi/Suwayomi-Server",
+      "primary_source_url": "https://github.com/Suwayomi/Suwayomi-Server",
+      "license_reported": "MPL-2.0",
+      "purpose": "Manga-leserserver kompatibel med Mihon/Tachiyomi-utvidelser, med klienter og nettgrensesnitt.",
+      "potential_use": "Referanse for bibliotek, leseframdrift og klient/server-design.",
+      "caveats": "README beskriver en selvstendig implementasjon, uttrykkelig ikke en fork. Innleggets historikk er upresis; påstanden om immunitet mot juridiske krav er ikke underbygget og brukes ikke som beslutningsgrunnlag.",
+      "tags": [
+        "manga",
+        "bibliotek",
+        "leser"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 6,
+      "name": "LibreTranslate",
+      "source_repo_url": "https://github.com/LibreTranslate/LibreTranslate",
+      "repository_url": "https://github.com/LibreTranslate/LibreTranslate",
+      "primary_source_url": "https://github.com/LibreTranslate/LibreTranslate",
+      "license_reported": "AGPL-3.0",
+      "purpose": "Selvdriftet oversettelses-API basert på Argos Translate, med mulighet for offlinebruk.",
+      "potential_use": "Utkast til lokalisering og dokumentoversettelse.",
+      "caveats": "Offlinebruk forutsetter lokale språkmodeller og avhengigheter. Kontroller ønskede språkpar og kvalitet med representative tekster.",
+      "tags": [
+        "oversettelse",
+        "lokalisering",
+        "offline",
+        "API"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 7,
+      "name": "gallery-dl",
+      "source_repo_url": "https://github.com/mikf/gallery-dl",
+      "repository_url": "https://codeberg.org/mikf/gallery-dl",
+      "primary_source_url": "https://github.com/mikf/gallery-dl",
+      "license_reported": "GPL-2.0 oppgitt på GitHub; kontroller valgt versjon",
+      "purpose": "Kommandolinjeverktøy for bildegallerier og samlinger, med konfigurerbar filnavngivning.",
+      "potential_use": "Arkivere egne eller lisensierte bildereferanser.",
+      "caveats": "Aktiv utvikling er flyttet til https://codeberg.org/mikf/gallery-dl ifølge GitHub-README. Codeberg-siden lot seg ikke hente i nettverktøyet. Metadata, innlogging og støttede nettsteder varierer; full bevaring av bildetekster er ikke verifisert.",
+      "tags": [
+        "bilder",
+        "gallerier",
+        "arkivering",
+        "CLI"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 8,
+      "name": "ArchiveBox",
+      "source_repo_url": "https://github.com/ArchiveBox/ArchiveBox",
+      "repository_url": "https://github.com/ArchiveBox/ArchiveBox",
+      "primary_source_url": "https://github.com/ArchiveBox/ArchiveBox",
+      "license_reported": "MIT",
+      "purpose": "Nettarkiv for flere formater, blant annet HTML, PNG, PDF og tekst.",
+      "potential_use": "Bevare prosjektkilder, dokumentasjon og referansesider før de endres.",
+      "caveats": "Komplett kopi av enhver dynamisk nettside er ikke demonstrert. Inspiser lagret innhold og behold sikkerhetskopier for varig bevaring.",
+      "tags": [
+        "arkivering",
+        "research",
+        "nettsider",
+        "PDF"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 9,
+      "name": "LocalSend",
+      "source_repo_url": "https://github.com/localsend/localsend",
+      "repository_url": "https://github.com/localsend/localsend",
+      "primary_source_url": "https://github.com/localsend/localsend",
+      "license_reported": "Apache-2.0",
+      "purpose": "Deler filer og meldinger mellom enheter på lokalt nettverk uten ekstern server.",
+      "potential_use": "Flytte bygg, skjermbilder og dokumenter mellom egne enheter.",
+      "caveats": "Enhetene må kunne nå hverandre på lokalnettet. Praktisk overføring påvirkes av nettverk og lagringsplass; storfiloverføring er ikke testet.",
+      "tags": [
+        "fildeling",
+        "lokalnett",
+        "bygg",
+        "overføring"
+      ],
+      "runtime_tested": false
+    },
+    {
+      "id": 10,
+      "name": "Vaultwarden",
+      "source_repo_url": "https://github.com/dani-garcia/vaultwarden",
+      "repository_url": "https://github.com/dani-garcia/vaultwarden",
+      "primary_source_url": "https://github.com/dani-garcia/vaultwarden",
+      "license_reported": "AGPL-3.0",
+      "purpose": "Alternativ Bitwarden-kompatibel server skrevet i Rust, for egen drift.",
+      "potential_use": "Kandidat til separat passordinfrastruktur.",
+      "caveats": "Uoffisiell implementasjon. README beskriver nesten komplett API-støtte; dette garanterer ikke alle betalte Bitwarden-funksjoner eller framtidig klientkompatibilitet. Støtte går via Vaultwarden. Ingen server er satt opp.",
+      "tags": [
+        "passord",
+        "egen-drift",
+        "Bitwarden"
+      ],
+      "runtime_tested": false
+    }
+  ]
+}
