@@ -1,0 +1,178 @@
+{
+  "checked_at": "2026-09-20",
+  "scope": "Tre unike repoer fra fire brukerlenker; duplikatet er slått sammen. Dokumentasjon, lisenser, metadata og utvalgt kildekode lest; ingen kjøring eller installasjon.",
+  "project": "The Deep Ones (Unity 6000.3.22f1 / URP 17.3)",
+  "relationships": {
+    "coastal_port_upstream": "2e95e1a3e757ca1268247417dee01606e5e3d55c",
+    "coastal_port_vendored_cuda_webshader": "c272bb782f8458761af2894e8771517f64ecdae6",
+    "standalone_cuda_webshader_reviewed": "d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a"
+  },
+  "repositories": [
+    {
+      "repository": "SamG-Coder/coastal-simulation-cuda-webshader",
+      "repository_url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader",
+      "commit": "e5a80fe42b4eeba6c01de1467035bafd69592d3e",
+      "commit_url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/commit/e5a80fe42b4eeba6c01de1467035bafd69592d3e",
+      "checked_at": "2026-09-20",
+      "license": "MIT (root); component notices must also be retained",
+      "purpose": "GPU-basert kystsimulering; høy relevans som algoritme- og effektreferanse for Unity.",
+      "runtime_tested": false,
+      "installed": false,
+      "integrated_in_game": false,
+      "tags": [
+        "water",
+        "shoreline",
+        "foam",
+        "wetness",
+        "spray",
+        "shallow-water",
+        "WebGPU",
+        "Unity-port"
+      ],
+      "readme_url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/README.md",
+      "entry_points": [
+        {
+          "path": "src/coastal-kernels.cu",
+          "url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/src/coastal-kernels.cu"
+        },
+        {
+          "path": "src/coastal-render.cu",
+          "url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/src/coastal-render.cu"
+        },
+        {
+          "path": "src/gpu-interop.js",
+          "url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/src/gpu-interop.js"
+        },
+        {
+          "path": "src/resident-coast.js",
+          "url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/src/resident-coast.js"
+        },
+        {
+          "path": "CREDITS.md",
+          "url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/CREDITS.md"
+        }
+      ],
+      "snapshots": [
+        {
+          "path": "repoer/kilder/coastal-webgpu-2026-09-20/SamG-Coder--coastal-simulation-cuda-webshader/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/SamG-Coder/coastal-simulation-cuda-webshader/e5a80fe42b4eeba6c01de1467035bafd69592d3e/LICENSE",
+          "sha256": "cfc86358916d058e558822e4c36a2deed6f313d16ba7e6c28be1fc9f16b10336"
+        },
+        {
+          "path": "repoer/kilder/coastal-webgpu-2026-09-20/SamG-Coder--coastal-simulation-cuda-webshader/CREDITS.md",
+          "source_url": "https://raw.githubusercontent.com/SamG-Coder/coastal-simulation-cuda-webshader/e5a80fe42b4eeba6c01de1467035bafd69592d3e/CREDITS.md",
+          "sha256": "c49321c6f7300136225307b4223acc13616f1a4ed0ad89d9fccff3a7ad96e076"
+        },
+        {
+          "path": "repoer/kilder/coastal-webgpu-2026-09-20/SamG-Coder--coastal-simulation-cuda-webshader/vendor/cuda-webshader/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/SamG-Coder/coastal-simulation-cuda-webshader/e5a80fe42b4eeba6c01de1467035bafd69592d3e/vendor/cuda-webshader/LICENSE",
+          "sha256": "8cfad05cca921d774bd78ecc5c15b85b0f193be253b8c7dcbaa72b92aef338e0"
+        },
+        {
+          "path": "repoer/kilder/coastal-webgpu-2026-09-20/SamG-Coder--coastal-simulation-cuda-webshader/vendor/cuda-webshader/PROVENANCE.md",
+          "source_url": "https://raw.githubusercontent.com/SamG-Coder/coastal-simulation-cuda-webshader/e5a80fe42b4eeba6c01de1467035bafd69592d3e/vendor/cuda-webshader/PROVENANCE.md",
+          "sha256": "eb7ad04e0a3074bf7ea2f51cc0bfb649b5fb25276ccdefc7fe4b846d9082a44d"
+        }
+      ]
+    },
+    {
+      "repository": "iamtechartist/coastal-simulation",
+      "repository_url": "https://github.com/iamtechartist/coastal-simulation",
+      "commit": "2e95e1a3e757ca1268247417dee01606e5e3d55c",
+      "commit_url": "https://github.com/iamtechartist/coastal-simulation/commit/2e95e1a3e757ca1268247417dee01606e5e3d55c",
+      "checked_at": "2026-09-20",
+      "license": "MIT (root); component notices must also be retained",
+      "purpose": "Original kystsimulering; referanse for strandkontakt, materialer og numerisk sammenligning.",
+      "runtime_tested": false,
+      "installed": false,
+      "integrated_in_game": false,
+      "tags": [
+        "water",
+        "shoreline",
+        "Three.js",
+        "WASM",
+        "reference-solver"
+      ],
+      "readme_url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/README.md",
+      "entry_points": [
+        {
+          "path": "src/simulation.js",
+          "url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/src/simulation.js"
+        },
+        {
+          "path": "src/surface.js",
+          "url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/src/surface.js"
+        },
+        {
+          "path": "src/shading.js",
+          "url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/src/shading.js"
+        },
+        {
+          "path": "src/spray.js",
+          "url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/src/spray.js"
+        },
+        {
+          "path": "src/solver-accelerator.js",
+          "url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/src/solver-accelerator.js"
+        }
+      ],
+      "snapshots": [
+        {
+          "path": "repoer/kilder/coastal-webgpu-2026-09-20/iamtechartist--coastal-simulation/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/iamtechartist/coastal-simulation/2e95e1a3e757ca1268247417dee01606e5e3d55c/LICENSE",
+          "sha256": "b0e0e711c04aac69e316e9c79a3119b722dc7d65e129990cdbe7a35dea6fec8b"
+        }
+      ]
+    },
+    {
+      "repository": "SamG-Coder/cuda-webshader",
+      "repository_url": "https://github.com/SamG-Coder/cuda-webshader",
+      "commit": "d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a",
+      "commit_url": "https://github.com/SamG-Coder/cuda-webshader/commit/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a",
+      "checked_at": "2026-09-20",
+      "license": "MIT (root); component notices must also be retained",
+      "purpose": "CUDA-delsett til WGSL; nyttig for WebGPU-prototyper og læring, lav direkte Unity-relevans.",
+      "runtime_tested": false,
+      "installed": false,
+      "integrated_in_game": false,
+      "tags": [
+        "CUDA",
+        "WGSL",
+        "WebGPU",
+        "compiler",
+        "particles",
+        "GPU-resident"
+      ],
+      "readme_url": "https://github.com/SamG-Coder/cuda-webshader/blob/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a/README.md",
+      "entry_points": [
+        {
+          "path": "docs/architecture.md",
+          "url": "https://github.com/SamG-Coder/cuda-webshader/blob/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a/docs/architecture.md"
+        },
+        {
+          "path": "src/compiler/compiler.js",
+          "url": "https://github.com/SamG-Coder/cuda-webshader/blob/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a/src/compiler/compiler.js"
+        },
+        {
+          "path": "src/runtime/runtime.js",
+          "url": "https://github.com/SamG-Coder/cuda-webshader/blob/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a/src/runtime/runtime.js"
+        },
+        {
+          "path": "src/runtime/three-bridge.js",
+          "url": "https://github.com/SamG-Coder/cuda-webshader/blob/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a/src/runtime/three-bridge.js"
+        },
+        {
+          "path": "package.json",
+          "url": "https://github.com/SamG-Coder/cuda-webshader/blob/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a/package.json"
+        }
+      ],
+      "snapshots": [
+        {
+          "path": "repoer/kilder/coastal-webgpu-2026-09-20/SamG-Coder--cuda-webshader/LICENSE",
+          "source_url": "https://raw.githubusercontent.com/SamG-Coder/cuda-webshader/d1abd25c32b93d40ce13c7757fccdd0ce6e2f01a/LICENSE",
+          "sha256": "8cfad05cca921d774bd78ecc5c15b85b0f193be253b8c7dcbaa72b92aef338e0"
+        }
+      ]
+    }
+  ]
+}
