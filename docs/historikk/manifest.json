@@ -1,0 +1,142 @@
+{
+  "captured_at": "2026-09-23",
+  "description": "Avgrenset historisk researcharkiv. Ingen spillkode, credentials eller fullstendige prosjekter er kopiert. Fullstendige dokumentkopier er byte-identiske; utdrag har en ny proveniensoverskrift.",
+  "sources": [
+    {
+      "snapshot": "blender-mcp-assessment.md",
+      "source_path": "/home/tombonator3000t/.codex/skills/blender-mcp/references/assessment.md",
+      "source_sha256": "82be36297f015464a9fdbfb85c711d88b5daf59dc49a99c708a917b2dae9e182",
+      "captured_at": "2026-09-23",
+      "scope": "exact_copy",
+      "snapshot_sha256": "82be36297f015464a9fdbfb85c711d88b5daf59dc49a99c708a917b2dae9e182"
+    },
+    {
+      "snapshot": "blender-mcp-local-verification.md",
+      "source_path": "/home/tombonator3000t/.codex/skills/blender-mcp/references/local-verification.md",
+      "source_sha256": "54e06a6716d5b44e692e453137011c50ac95edcfd84a39cb98fac948687fbd31",
+      "captured_at": "2026-09-23",
+      "scope": "exact_copy",
+      "snapshot_sha256": "54e06a6716d5b44e692e453137011c50ac95edcfd84a39cb98fac948687fbd31"
+    },
+    {
+      "snapshot": "brainstorming-SOURCE.json",
+      "source_path": "/home/tombonator3000t/.codex/skills/brainstorming/SOURCE.json",
+      "source_sha256": "d46bd69ce85dbf44c72ab1ede8d63d09667d0c5d8306c5c87809109d92c9e0a3",
+      "captured_at": "2026-09-23",
+      "scope": "exact_copy",
+      "snapshot_sha256": "d46bd69ce85dbf44c72ab1ede8d63d09667d0c5d8306c5c87809109d92c9e0a3"
+    },
+    {
+      "snapshot": "brainstorming-LICENSE.txt",
+      "source_path": "/home/tombonator3000t/.codex/skills/brainstorming/LICENSE",
+      "source_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "captured_at": "2026-09-23",
+      "scope": "exact_copy",
+      "snapshot_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+    },
+    {
+      "snapshot": "splats-and-generated-characters.md",
+      "source_path": "/home/tombonator3000t/.codex/skills/game-production/references/splats-and-generated-characters.md",
+      "source_sha256": "6ec6f18f3c8fb60bf20347f985fa9bd27eb9406e57d01c54c0fccdbe5aa507a8",
+      "captured_at": "2026-09-23",
+      "scope": "exact_copy",
+      "snapshot_sha256": "6ec6f18f3c8fb60bf20347f985fa9bd27eb9406e57d01c54c0fccdbe5aa507a8"
+    },
+    {
+      "snapshot": "voidcraft-stylized-components.md",
+      "source_path": "/home/tombonator3000t/Documents/Codex/VOIDCRAFT/docs/developer/STYLIZED_COMPONENTS_ADAPTATION.md",
+      "source_sha256": "2a33810be7f4822af3dbdd96b2c0ce647d6697715da5661a15d4d9b0c4fdf6db",
+      "captured_at": "2026-09-23",
+      "scope": "exact_copy",
+      "source_repository": "Tombonator3000/Voidcraft",
+      "source_head_commit": "5557e24f717dbffd90c3f06b61588e4864e93060",
+      "source_matches_head": true,
+      "source_url": "https://github.com/Tombonator3000/Voidcraft/blob/5557e24f717dbffd90c3f06b61588e4864e93060/docs/developer/STYLIZED_COMPONENTS_ADAPTATION.md",
+      "snapshot_sha256": "2a33810be7f4822af3dbdd96b2c0ce647d6697715da5661a15d4d9b0c4fdf6db"
+    },
+    {
+      "snapshot": "voidcraft-foundation-excerpt.md",
+      "source_path": "/home/tombonator3000t/Documents/Codex/VOIDCRAFT/docs/developer/VOIDCRAFT_FOUNDATION.md",
+      "source_sha256": "5c6df4e8a50956e573ad1168a6a634ea058c38a408eb2e0aa974c1b528b3190b",
+      "captured_at": "2026-09-23",
+      "scope": "line_excerpt",
+      "source_lines": [
+        1,
+        18
+      ],
+      "source_repository": "Tombonator3000/Voidcraft",
+      "source_head_commit": "5557e24f717dbffd90c3f06b61588e4864e93060",
+      "source_matches_head": true,
+      "source_url": "https://github.com/Tombonator3000/Voidcraft/blob/5557e24f717dbffd90c3f06b61588e4864e93060/docs/developer/VOIDCRAFT_FOUNDATION.md",
+      "snapshot_sha256": "a379088ae947ffd39606ee3e02f5ec3bac36ff77344f96f3bd69e6be26d35286"
+    },
+    {
+      "snapshot": "deep-ones-water-provenance-excerpt.md",
+      "source_path": "/home/tombonator3000t/Documents/Codex/the-deep-ones-3d/docs/unity/AQUATIC.md",
+      "source_sha256": "44f930dd7d5701010117c391547c133601d2bfab733f661a5bf5d7dfa859526d",
+      "captured_at": "2026-09-23",
+      "scope": "line_excerpt",
+      "source_lines": [
+        29,
+        35
+      ],
+      "source_repository": "Tombonator3000/the-deep-ones-3d",
+      "source_head_commit": "e6d893dca5ce46d8bcce4fcd60760e14fffdd193",
+      "source_matches_head": true,
+      "source_url": "https://github.com/Tombonator3000/the-deep-ones-3d/blob/e6d893dca5ce46d8bcce4fcd60760e14fffdd193/docs/unity/AQUATIC.md",
+      "snapshot_sha256": "d3c2444696f40e04723648adc588ea5e16cb5ccdef9bcaf08a7af50d63d25dc2"
+    },
+    {
+      "snapshot": "deep-ones-habitats-excerpt.md",
+      "source_path": "/home/tombonator3000t/Documents/Codex/the-deep-ones-3d/docs/unity/LIVING_COAST.md",
+      "source_sha256": "7bd601f70c3989dcb2900aac9a9de4cb9f56b475dbb397b32f8833bc67153b19",
+      "captured_at": "2026-09-23",
+      "scope": "line_excerpt",
+      "source_lines": [
+        23,
+        29
+      ],
+      "source_repository": "Tombonator3000/the-deep-ones-3d",
+      "source_head_commit": "e6d893dca5ce46d8bcce4fcd60760e14fffdd193",
+      "source_matches_head": true,
+      "source_url": "https://github.com/Tombonator3000/the-deep-ones-3d/blob/e6d893dca5ce46d8bcce4fcd60760e14fffdd193/docs/unity/LIVING_COAST.md",
+      "snapshot_sha256": "5377000afb2950739b9619a64e5eea2b6b6e55323ff807dd03afc88150120a5e"
+    },
+    {
+      "snapshot": "signal47-mcp-candidates-excerpt.md",
+      "source_path": "/home/tombonator3000t/.codex/.chatgpt-projects/g-p-6aa25fc827e88191822a16151401213b/sources/OPPRINNELIG_SAMTALE.md",
+      "source_sha256": "c8c8aa7186925481b02fce8fdaaa10c1d598b734f767d0cb4f69db0acad464ee",
+      "captured_at": "2026-09-23",
+      "scope": "line_excerpt",
+      "source_lines": [
+        2587,
+        2640
+      ],
+      "snapshot_sha256": "be7d4a4efc1c532c2d97d97a4fd3b3cf5450277d86392e98da59a73e234672a6"
+    },
+    {
+      "snapshot": "signal47-font-credit-excerpt.md",
+      "source_path": "/home/tombonator3000t/.codex/.chatgpt-projects/g-p-6aa25fc827e88191822a16151401213b/sources/SAMLET_DOKUMENTASJON.md",
+      "source_sha256": "634f389d6de0a542a5b3e6d905a2f1da128e80f3ec61610c303776b2ffb516c5",
+      "captured_at": "2026-09-23",
+      "scope": "line_excerpt",
+      "source_lines": [
+        434,
+        438
+      ],
+      "snapshot_sha256": "a322d65b30d0ed3182f7c3ac5ce99eec582ee414d140a287ac4bf6b63f6f3a96"
+    },
+    {
+      "snapshot": "signal47-gauntlet-tools-excerpt.md",
+      "source_path": "/home/tombonator3000t/.codex/.chatgpt-projects/g-p-6aa25fc827e88191822a16151401213b/sources/SAMLET_DOKUMENTASJON.md",
+      "source_sha256": "634f389d6de0a542a5b3e6d905a2f1da128e80f3ec61610c303776b2ffb516c5",
+      "captured_at": "2026-09-23",
+      "scope": "line_excerpt",
+      "source_lines": [
+        229,
+        235
+      ],
+      "snapshot_sha256": "6e1ce9ba5de86ff8d24c5e1555eb20549bcb34f60ab22dff2c5d5f40519595b1"
+    }
+  ]
+}

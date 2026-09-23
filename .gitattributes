@@ -1,0 +1,4 @@
+# Preserve source snapshots byte-for-byte, including their original whitespace.
+kilder/github/** -text -whitespace
+repoer/kilder/** -text -whitespace
+docs/historikk/** -text -whitespace

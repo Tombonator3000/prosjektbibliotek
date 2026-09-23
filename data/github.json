@@ -1,0 +1,6623 @@
+{
+  "schema_version": 1,
+  "owner": "Tombonator3000",
+  "collected_at": "2026-09-23T08:55:18+00:00",
+  "finished_at": "2026-09-23T08:55:43+00:00",
+  "starred_count": 22,
+  "pages": 1,
+  "page_sizes": [
+    22
+  ],
+  "endpoint": "https://api.github.com/user/starred",
+  "pagination_complete": true,
+  "starred_ids": [
+    406930975,
+    920995232,
+    1007827531,
+    1042536885,
+    1053412951,
+    1057067049,
+    1117130049,
+    1123139685,
+    1254699739,
+    1274708755,
+    1277471539,
+    1332039735,
+    1336106642,
+    1338028110,
+    1360317501,
+    1363070348,
+    1366718071,
+    1375594818,
+    1377492826,
+    1378042060,
+    1380797051,
+    1382335409
+  ],
+  "starred_names": [
+    "achimala/dream-loop",
+    "bilawalsidhu/gods-eye-view",
+    "bobeff/open-source-games",
+    "chaseleantj/desktop-habitats",
+    "chrispository/desktop-habitats-omarchy",
+    "Crosstalk-Solutions/project-nomad",
+    "cryptomanavan/ShoreBreak",
+    "iamtechartist/coastal-simulation",
+    "lhlGitHub/threejs-architecture-effects",
+    "marceld23/BlocksBeyondTheStars",
+    "moonpudding/localchannels",
+    "multimodal-art-projection/YuE",
+    "SamG-Coder/cuda-webshader",
+    "scottstts/Threejs-Awesome-Graphics-Agent-Skills",
+    "Tombonator3000/3044",
+    "Tombonator3000/conspiracy-canvas",
+    "Tombonator3000/SIGNAL-47",
+    "Tombonator3000/state-shift-strategy",
+    "Tombonator3000/the-deep-ones",
+    "Tombonator3000/Transcendensens-Vev-CRPG",
+    "Tombonator3000/vector-war-games",
+    "Tombonator3000/Voidcraft"
+  ],
+  "repositories": [
+    {
+      "id": 1360317501,
+      "full_name": "achimala/dream-loop",
+      "html_url": "https://github.com/achimala/dream-loop",
+      "description": "Agent skill for impressive 3D visuals using Blender + image gen + subagent critic",
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 1517,
+      "created_at": "2026-09-07T14:19:20Z",
+      "updated_at": "2026-09-23T07:15:03Z",
+      "pushed_at": "2026-09-09T22:43:38Z",
+      "commit": "9bddb901f7d071cfefdd21e264267c757177a9df",
+      "starred_at": "2026-09-10T13:18:51Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/achimala--dream-loop/9bddb901f7d071cfefdd21e264267c757177a9df/LICENSE.txt",
+          "bytes": 1070,
+          "sha256": "1607e9149a254c619d0ceb4119ed9346e13048c28c1d437d80ff2837e40159da",
+          "git_blob_sha": "dd54a3e60d5fe9e2296c4745c5b826d74158c852",
+          "source_url": "https://github.com/achimala/dream-loop/blob/9bddb901f7d071cfefdd21e264267c757177a9df/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/achimala--dream-loop/9bddb901f7d071cfefdd21e264267c757177a9df/README.md.txt",
+          "bytes": 2182,
+          "sha256": "3db72b0ce7bff56e78785f4d93c9c6f48b3cf89f91615208c76bd000e71a9bdd",
+          "git_blob_sha": "324c9a24be4fcb269fabb5d1e04c2deda6a58901",
+          "source_url": "https://github.com/achimala/dream-loop/blob/9bddb901f7d071cfefdd21e264267c757177a9df/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SKILL.md",
+          "type": "file"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "references",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-10T13:18:51Z"
+    },
+    {
+      "id": 944414751,
+      "full_name": "ahujasid/mcp-for-blender",
+      "html_url": "https://github.com/ahujasid/mcp-for-blender",
+      "description": "Community plugin to control Blender 3D with any LLM of your choice",
+      "homepage": "https://mcp-for-blender.com/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Python",
+      "topics": [
+        "3d-modeling",
+        "ai",
+        "blender",
+        "blender-addon",
+        "blender-mcp",
+        "claude",
+        "generative-ai",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "python"
+      ],
+      "stargazers_count": 29220,
+      "created_at": "2025-03-07T09:58:58Z",
+      "updated_at": "2026-09-23T08:46:06Z",
+      "pushed_at": "2026-09-21T05:37:57Z",
+      "commit": "7cc602252386b92829bc7364e3a897253610be38",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [
+        "ahujasid/blender-mcp"
+      ],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/ahujasid--mcp-for-blender/7cc602252386b92829bc7364e3a897253610be38/LICENSE.txt",
+          "bytes": 1071,
+          "sha256": "049501fd54d27852507853a5b88094ca1c6ff97404418a5032f3310eecc9cde6",
+          "git_blob_sha": "82e98f0ee1ef20d31f852ad43c91020cc51f82ea",
+          "source_url": "https://github.com/ahujasid/mcp-for-blender/blob/7cc602252386b92829bc7364e3a897253610be38/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/ahujasid--mcp-for-blender/7cc602252386b92829bc7364e3a897253610be38/README.md.txt",
+          "bytes": 31303,
+          "sha256": "5754d0a4a17b4c24f3779427d293e82a3642bc4da223fe6c25a334efb0413905",
+          "git_blob_sha": "6393f1e44c73f7d5da504c64c8603beaa92052c5",
+          "source_url": "https://github.com/ahujasid/mcp-for-blender/blob/7cc602252386b92829bc7364e3a897253610be38/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".python-version",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "TERMS_AND_CONDITIONS.md",
+          "type": "file"
+        },
+        {
+          "path": "addon.py",
+          "type": "file"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "main.py",
+          "type": "file"
+        },
+        {
+          "path": "pyproject.toml",
+          "type": "file"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "uv.lock",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 682723630,
+      "full_name": "aras-p/UnityGaussianSplatting",
+      "html_url": "https://github.com/aras-p/UnityGaussianSplatting",
+      "description": "Toy Gaussian Splatting visualization in Unity",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "C#",
+      "topics": [
+        "gaussian-splatting",
+        "unity"
+      ],
+      "stargazers_count": 3416,
+      "created_at": "2023-08-24T19:34:46Z",
+      "updated_at": "2026-09-23T06:26:53Z",
+      "pushed_at": "2025-10-17T07:21:38Z",
+      "commit": "2c6fed37da67a217367261fcfcd3316d34c73e76",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "local_path": "kilder/github/aras-p--UnityGaussianSplatting/2c6fed37da67a217367261fcfcd3316d34c73e76/LICENSE.md.txt",
+          "bytes": 1075,
+          "sha256": "3dcf5e2cf3cdcbeba511294d2c4e2311afb9fbbb722e05b81e946bb4be68d8e3",
+          "git_blob_sha": "f39d6892276b10fdd204f2bd4fe9fc4b935ee833",
+          "source_url": "https://github.com/aras-p/UnityGaussianSplatting/blob/2c6fed37da67a217367261fcfcd3316d34c73e76/LICENSE.md"
+        },
+        {
+          "path": "readme.md",
+          "local_path": "kilder/github/aras-p--UnityGaussianSplatting/2c6fed37da67a217367261fcfcd3316d34c73e76/readme.md.txt",
+          "bytes": 6481,
+          "sha256": "188b8bb60eadfc51501960919f4a8639ed8aec440f9a0f447c70e9246cbd8b95",
+          "git_blob_sha": "d5c351c683de8de4a87edd3483a8c53bbf85ef09",
+          "source_url": "https://github.com/aras-p/UnityGaussianSplatting/blob/2c6fed37da67a217367261fcfcd3316d34c73e76/readme.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE.md",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "package",
+          "type": "dir"
+        },
+        {
+          "path": "projects",
+          "type": "dir"
+        },
+        {
+          "path": "readme.md",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 90356372,
+      "full_name": "ArchiveBox/ArchiveBox",
+      "html_url": "https://github.com/ArchiveBox/ArchiveBox",
+      "description": "🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more...",
+      "homepage": "https://archivebox.io",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "dev",
+      "language": "Python",
+      "topics": [
+        "archivebox",
+        "backups",
+        "bookmark-archiver",
+        "browser-bookmarks",
+        "chromium",
+        "digipres",
+        "firefox",
+        "headless-browser",
+        "internet-archiving",
+        "pinboard",
+        "pocket",
+        "python",
+        "rss",
+        "self-hosted",
+        "singlefile",
+        "warc",
+        "wayback-machine",
+        "web-archiving",
+        "wget",
+        "youtube-dl"
+      ],
+      "stargazers_count": 28574,
+      "created_at": "2017-05-05T08:50:14Z",
+      "updated_at": "2026-09-23T05:26:10Z",
+      "pushed_at": "2026-09-23T04:24:53Z",
+      "commit": "1f142fcdde9ffd977cdbc43304be3d05829ad540",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/ArchiveBox--ArchiveBox/1f142fcdde9ffd977cdbc43304be3d05829ad540/LICENSE.txt",
+          "bytes": 1070,
+          "sha256": "94e19d573d2a152c04409ba6995f8754ec212c56d0cf1796626445046bcbf92a",
+          "git_blob_sha": "f9a7bc7604762f893477c54d3b53db7b2f6c7961",
+          "source_url": "https://github.com/ArchiveBox/ArchiveBox/blob/1f142fcdde9ffd977cdbc43304be3d05829ad540/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/ArchiveBox--ArchiveBox/1f142fcdde9ffd977cdbc43304be3d05829ad540/README.md.txt",
+          "bytes": 96008,
+          "sha256": "a5c2a0e5c45cd23f7136810af2f48deb2409333813eac27466e94e2d20a5b0ab",
+          "git_blob_sha": "3375824d68e9e8468822f44767becebf86a1d38b",
+          "source_url": "https://github.com/ArchiveBox/ArchiveBox/blob/1f142fcdde9ffd977cdbc43304be3d05829ad540/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "archivebox",
+          "type": "dir"
+        },
+        {
+          "path": "bin",
+          "type": "dir"
+        },
+        {
+          "path": "docker-compose.yml",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "etc",
+          "type": "dir"
+        },
+        {
+          "path": "pdm_build.py",
+          "type": "file"
+        },
+        {
+          "path": "publicsite",
+          "type": "dir"
+        },
+        {
+          "path": "pyproject.toml",
+          "type": "file"
+        },
+        {
+          "path": "skills",
+          "type": "dir"
+        },
+        {
+          "path": "uv.lock",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1308747259,
+      "full_name": "arloopa/UnitySplats",
+      "html_url": "https://github.com/arloopa/UnitySplats",
+      "description": "Cross-platform Unity 6 package for importing, loading, and rendering 3D Gaussian Splats. Supports Built-in, URP, HDRP, PLY/SOG/SPZ/GLB formats, runtime loading, GPU and CPU sorting, XR, mobile, desktop, and WebGL 2.",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "C#",
+      "topics": [],
+      "stargazers_count": 43,
+      "created_at": "2026-07-22T11:37:41Z",
+      "updated_at": "2026-09-22T07:17:26Z",
+      "pushed_at": "2026-08-18T08:46:18Z",
+      "commit": "6c0258189a2b124af1282fa9236fd9b6637f1a1a",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "local_path": "kilder/github/arloopa--UnitySplats/6c0258189a2b124af1282fa9236fd9b6637f1a1a/LICENSE.md.txt",
+          "bytes": 1064,
+          "sha256": "ce5539b628125e959c8c7b3b7842d6e2f66bb0a03b92e070a6f3327a59f32782",
+          "git_blob_sha": "ca3f3d6acf8681b1c667a4901a7b446f93c90826",
+          "source_url": "https://github.com/arloopa/UnitySplats/blob/6c0258189a2b124af1282fa9236fd9b6637f1a1a/LICENSE.md"
+        },
+        {
+          "path": "LICENSE.md.meta",
+          "local_path": "kilder/github/arloopa--UnitySplats/6c0258189a2b124af1282fa9236fd9b6637f1a1a/LICENSE.md.meta.txt",
+          "bytes": 155,
+          "sha256": "2df66ebce59cbd0cd46832f3dc6ad6d516189c9a6e42108af88c2d9dd73146ec",
+          "git_blob_sha": "0aaa7932d03b7c4034501e2da73511710661e40d",
+          "source_url": "https://github.com/arloopa/UnitySplats/blob/6c0258189a2b124af1282fa9236fd9b6637f1a1a/LICENSE.md.meta"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/arloopa--UnitySplats/6c0258189a2b124af1282fa9236fd9b6637f1a1a/README.md.txt",
+          "bytes": 14975,
+          "sha256": "892f9b5ac57335670557c06adfc4bd90daff3abe39d6a9af8c92426d6720ed41",
+          "git_blob_sha": "c3280fe5dcf28dd661151c5b22e31281f3ad7dba",
+          "source_url": "https://github.com/arloopa/UnitySplats/blob/6c0258189a2b124af1282fa9236fd9b6637f1a1a/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "Documentation~",
+          "type": "dir"
+        },
+        {
+          "path": "Editor.meta",
+          "type": "file"
+        },
+        {
+          "path": "Editor",
+          "type": "dir"
+        },
+        {
+          "path": "LICENSE.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "Runtime.meta",
+          "type": "file"
+        },
+        {
+          "path": "Runtime",
+          "type": "dir"
+        },
+        {
+          "path": "Samples~",
+          "type": "dir"
+        },
+        {
+          "path": "Tests.meta",
+          "type": "file"
+        },
+        {
+          "path": "Tests",
+          "type": "dir"
+        },
+        {
+          "path": "Third Party Notices.md",
+          "type": "file"
+        },
+        {
+          "path": "Third Party Notices.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json.meta",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1277471539,
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "html_url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "homepage": "https://maptheworld.ai/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [
+        "3d-globe",
+        "cesium",
+        "flight-tracking",
+        "geospatial",
+        "geospatial-intelligence",
+        "gis",
+        "osint",
+        "photogrammetry",
+        "satellite-tracking",
+        "spatial-intelligence",
+        "webgl",
+        "worldview"
+      ],
+      "stargazers_count": 41486,
+      "created_at": "2026-06-22T23:37:22Z",
+      "updated_at": "2026-09-23T08:54:47Z",
+      "pushed_at": "2026-09-23T01:34:13Z",
+      "commit": "082074a00684af97458b85529093e2b2a9f28ed1",
+      "starred_at": "2026-09-10T15:13:09Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/bilawalsidhu--gods-eye-view/082074a00684af97458b85529093e2b2a9f28ed1/LICENSE.txt",
+          "bytes": 3281,
+          "sha256": "b231bb38e2d4eab741643126087cbe9df2b58e2f2e5abf27ad613d05f52b01ca",
+          "git_blob_sha": "4f01699a2afc703093fcf07181129c3724aae9ff",
+          "source_url": "https://github.com/bilawalsidhu/gods-eye-view/blob/082074a00684af97458b85529093e2b2a9f28ed1/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/bilawalsidhu--gods-eye-view/082074a00684af97458b85529093e2b2a9f28ed1/README.md.txt",
+          "bytes": 54391,
+          "sha256": "eac4feae53e21a0f5e876d630615b048b4db07886ef88505c70e3845ba90046f",
+          "git_blob_sha": "88690d52f4ad5581d5b1d0a25171bc2831969238",
+          "source_url": "https://github.com/bilawalsidhu/gods-eye-view/blob/082074a00684af97458b85529093e2b2a9f28ed1/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".agents",
+          "type": "dir"
+        },
+        {
+          "path": ".env.example",
+          "type": "file"
+        },
+        {
+          "path": ".git-blame-ignore-revs",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".prettierignore",
+          "type": "file"
+        },
+        {
+          "path": ".prettierrc.json",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "DATA_SOURCES.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "TESTING.md",
+          "type": "file"
+        },
+        {
+          "path": "build",
+          "type": "dir"
+        },
+        {
+          "path": "config",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "pinokio",
+          "type": "dir"
+        },
+        {
+          "path": "public",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "server",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "style.css",
+          "type": "file"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "vite.config.js",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2026-09-10T15:13:09Z"
+    },
+    {
+      "id": 406930975,
+      "full_name": "bobeff/open-source-games",
+      "html_url": "https://github.com/bobeff/open-source-games",
+      "description": "A list of open source games.",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Python",
+      "topics": [
+        "awesome-list",
+        "games",
+        "open-source"
+      ],
+      "stargazers_count": 15347,
+      "created_at": "2021-09-15T21:35:29Z",
+      "updated_at": "2026-09-23T08:13:32Z",
+      "pushed_at": "2026-02-25T20:22:58Z",
+      "commit": "3a9ab8fc892a2cdadf8989a72ba7624a11e39cec",
+      "starred_at": "2026-09-17T11:22:21Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "cc0-1.0",
+        "name": "Creative Commons Zero v1.0 Universal",
+        "spdx_id": "CC0-1.0",
+        "url": "https://api.github.com/licenses/cc0-1.0",
+        "node_id": "MDc6TGljZW5zZTY="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/bobeff--open-source-games/3a9ab8fc892a2cdadf8989a72ba7624a11e39cec/LICENSE.txt",
+          "bytes": 7048,
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+          "git_blob_sha": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+          "source_url": "https://github.com/bobeff/open-source-games/blob/3a9ab8fc892a2cdadf8989a72ba7624a11e39cec/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/bobeff--open-source-games/3a9ab8fc892a2cdadf8989a72ba7624a11e39cec/README.md.txt",
+          "bytes": 37285,
+          "sha256": "b7c21b00b2dc88634a4a4dcbac773d01b6e72508c023600e0dd5e2bbd02a199f",
+          "git_blob_sha": "0a54e0898d52ffa31f83f843b66aee458c5a49b8",
+          "source_url": "https://github.com/bobeff/open-source-games/blob/3a9ab8fc892a2cdadf8989a72ba7624a11e39cec/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-17T11:22:21Z"
+    },
+    {
+      "id": 1363080361,
+      "full_name": "bpy-dev/blender-mcp",
+      "html_url": "https://github.com/bpy-dev/blender-mcp",
+      "description": "Independent enhanced distribution of Blender Lab MCP: standalone bpy, runtime API documentation, and benchmark tooling",
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Python",
+      "topics": [],
+      "stargazers_count": 94,
+      "created_at": "2026-09-09T18:32:08Z",
+      "updated_at": "2026-09-23T01:54:21Z",
+      "pushed_at": "2026-09-12T03:27:21Z",
+      "commit": "e8ac4088d4a3e0469d3eff9f9bb2dd717e899219",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/bpy-dev--blender-mcp/e8ac4088d4a3e0469d3eff9f9bb2dd717e899219/LICENSE.txt",
+          "bytes": 34674,
+          "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+          "git_blob_sha": "f6cdd22a6c1fbc887e08a215cb4beb3c47048041",
+          "source_url": "https://github.com/bpy-dev/blender-mcp/blob/e8ac4088d4a3e0469d3eff9f9bb2dd717e899219/LICENSE"
+        },
+        {
+          "path": "NOTICE.md",
+          "local_path": "kilder/github/bpy-dev--blender-mcp/e8ac4088d4a3e0469d3eff9f9bb2dd717e899219/NOTICE.md.txt",
+          "bytes": 1077,
+          "sha256": "ff5960982f3c5fa9660a779476ecd8e5924d9d4a9811badf83e12267196d59f0",
+          "git_blob_sha": "66606d606edebe0bffe53f53ee3a833aaee0d4f0",
+          "source_url": "https://github.com/bpy-dev/blender-mcp/blob/e8ac4088d4a3e0469d3eff9f9bb2dd717e899219/NOTICE.md"
+        },
+        {
+          "path": "readme.md",
+          "local_path": "kilder/github/bpy-dev--blender-mcp/e8ac4088d4a3e0469d3eff9f9bb2dd717e899219/readme.md.txt",
+          "bytes": 6177,
+          "sha256": "2964a91add44970befcf9b8800f495e1bf438a1870edb08201071342ba44bd76",
+          "git_blob_sha": "cd24dcdae98df3f9ee8c83a512ee06d505b8a525",
+          "source_url": "https://github.com/bpy-dev/blender-mcp/blob/e8ac4088d4a3e0469d3eff9f9bb2dd717e899219/readme.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "Makefile",
+          "type": "file"
+        },
+        {
+          "path": "NOTICE.md",
+          "type": "file"
+        },
+        {
+          "path": "PUBLICATION_CHECKLIST.md",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "_misc",
+          "type": "dir"
+        },
+        {
+          "path": "addon",
+          "type": "dir"
+        },
+        {
+          "path": "benchmarks",
+          "type": "dir"
+        },
+        {
+          "path": "chat_client",
+          "type": "dir"
+        },
+        {
+          "path": "mcp",
+          "type": "dir"
+        },
+        {
+          "path": "readme.md",
+          "type": "file"
+        },
+        {
+          "path": "readme_bpy_backend.rst",
+          "type": "file"
+        },
+        {
+          "path": "readme_local_llm.rst",
+          "type": "file"
+        },
+        {
+          "path": "readme_tools.rst",
+          "type": "file"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1375594818,
+      "full_name": "chaseleantj/desktop-habitats",
+      "html_url": "https://github.com/chaseleantj/desktop-habitats",
+      "description": "Living ecosystems you can interact with on your desktop",
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 259,
+      "created_at": "2026-09-18T08:31:55Z",
+      "updated_at": "2026-09-23T08:55:07Z",
+      "pushed_at": "2026-09-22T19:57:36Z",
+      "commit": "66e80ea1b6bafd25324c84c72067e750c1a1f334",
+      "starred_at": "2026-09-18T11:18:42Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/chaseleantj--desktop-habitats/66e80ea1b6bafd25324c84c72067e750c1a1f334/LICENSE.txt",
+          "bytes": 1067,
+          "sha256": "b660528234fa02f2c865e920aff83cf4bfc0f0650e6b7f85de91149dad7e3f78",
+          "git_blob_sha": "72376d8d10f66d4f61feed9c1cc78038c521fee0",
+          "source_url": "https://github.com/chaseleantj/desktop-habitats/blob/66e80ea1b6bafd25324c84c72067e750c1a1f334/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/chaseleantj--desktop-habitats/66e80ea1b6bafd25324c84c72067e750c1a1f334/README.md.txt",
+          "bytes": 7967,
+          "sha256": "3a4f4293c428cc7b7ee475ca2b582d70035d2526ed5530a588af2c14a7a757ae",
+          "git_blob_sha": "e43df4d70b4f97d14b6d846f9275cc147e09fc57",
+          "source_url": "https://github.com/chaseleantj/desktop-habitats/blob/66e80ea1b6bafd25324c84c72067e750c1a1f334/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "scenes",
+          "type": "dir"
+        },
+        {
+          "path": "serve.mjs",
+          "type": "file"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "ui",
+          "type": "dir"
+        },
+        {
+          "path": "vendor",
+          "type": "dir"
+        },
+        {
+          "path": "wallpaper",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-18T11:18:42Z"
+    },
+    {
+      "id": 1382335409,
+      "full_name": "chrispository/desktop-habitats-omarchy",
+      "html_url": "https://github.com/chrispository/desktop-habitats-omarchy",
+      "description": "Living ecosystems you can interact with on your desktop",
+      "homepage": null,
+      "private": false,
+      "fork": true,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2026-09-22T20:42:33Z",
+      "updated_at": "2026-09-23T04:54:01Z",
+      "pushed_at": "2026-09-23T04:53:56Z",
+      "commit": "bf985895d6b49dd7882019a4babcc3a3fb8d92ae",
+      "starred_at": "2026-09-22T22:05:02Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": "chaseleantj/desktop-habitats",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/chrispository--desktop-habitats-omarchy/bf985895d6b49dd7882019a4babcc3a3fb8d92ae/LICENSE.txt",
+          "bytes": 1067,
+          "sha256": "b660528234fa02f2c865e920aff83cf4bfc0f0650e6b7f85de91149dad7e3f78",
+          "git_blob_sha": "72376d8d10f66d4f61feed9c1cc78038c521fee0",
+          "source_url": "https://github.com/chrispository/desktop-habitats-omarchy/blob/bf985895d6b49dd7882019a4babcc3a3fb8d92ae/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/chrispository--desktop-habitats-omarchy/bf985895d6b49dd7882019a4babcc3a3fb8d92ae/README.md.txt",
+          "bytes": 4455,
+          "sha256": "73f284d41ad206bb6f8dd392a72b7bf0fb2794e2f2b105641148b53b7b9b0069",
+          "git_blob_sha": "42ec32d9a8f34e47794f84a1e45cce4e8aa644d2",
+          "source_url": "https://github.com/chrispository/desktop-habitats-omarchy/blob/bf985895d6b49dd7882019a4babcc3a3fb8d92ae/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "3d_models",
+          "type": "dir"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "linux",
+          "type": "dir"
+        },
+        {
+          "path": "manifest.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "plugin",
+          "type": "dir"
+        },
+        {
+          "path": "preview.png",
+          "type": "file"
+        },
+        {
+          "path": "scenes",
+          "type": "dir"
+        },
+        {
+          "path": "serve.mjs",
+          "type": "file"
+        },
+        {
+          "path": "setup",
+          "type": "file"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "ui",
+          "type": "dir"
+        },
+        {
+          "path": "uninstall",
+          "type": "file"
+        },
+        {
+          "path": "vendor",
+          "type": "dir"
+        },
+        {
+          "path": "wallpaper",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2026-09-22T22:05:02Z"
+    },
+    {
+      "id": 948148972,
+      "full_name": "CoderGamester/mcp-unity",
+      "html_url": "https://github.com/CoderGamester/mcp-unity",
+      "description": "Model Context Protocol (MCP) plugin to connect with Unity Editor — designed for Cursor, Claude Code, Codex, Windsurf and other IDEs",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "C#",
+      "topics": [
+        "claudecode",
+        "codex-cli",
+        "copilot",
+        "cursor",
+        "game-development",
+        "mcp",
+        "model-context-protocol",
+        "openai",
+        "openclaw",
+        "unity",
+        "unity-package",
+        "unity3d"
+      ],
+      "stargazers_count": 1909,
+      "created_at": "2025-03-13T20:41:25Z",
+      "updated_at": "2026-09-22T04:14:05Z",
+      "pushed_at": "2026-09-03T08:11:29Z",
+      "commit": "382a43a30f4dab4c7f02d770b4ec7d084813bbe4",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "local_path": "kilder/github/CoderGamester--mcp-unity/382a43a30f4dab4c7f02d770b4ec7d084813bbe4/LICENSE.md.txt",
+          "bytes": 1074,
+          "sha256": "0d4b4563e85d93d0f2c7b8f496683131d36a86e70d491db38f42521096091eb5",
+          "git_blob_sha": "bba7cd45ec0eec738f39e27ada6768b300057e10",
+          "source_url": "https://github.com/CoderGamester/mcp-unity/blob/382a43a30f4dab4c7f02d770b4ec7d084813bbe4/LICENSE.md"
+        },
+        {
+          "path": "LICENSE.md.meta",
+          "local_path": "kilder/github/CoderGamester--mcp-unity/382a43a30f4dab4c7f02d770b4ec7d084813bbe4/LICENSE.md.meta.txt",
+          "bytes": 158,
+          "sha256": "9912adfb5a12f341e5d3ecdff487750654f13e0adca774f5a9d10ce057fe810f",
+          "git_blob_sha": "771a80d9edcc7883f2d049924e9a043b387320b9",
+          "source_url": "https://github.com/CoderGamester/mcp-unity/blob/382a43a30f4dab4c7f02d770b4ec7d084813bbe4/LICENSE.md.meta"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/CoderGamester--mcp-unity/382a43a30f4dab4c7f02d770b4ec7d084813bbe4/README.md.txt",
+          "bytes": 39425,
+          "sha256": "84d1c9773c4a84c7a4cbffa5c8ab63e88d1699105c281e916ac78269b6050033",
+          "git_blob_sha": "8a39afebb0878408b893b0f775ab78c74291b72f",
+          "source_url": "https://github.com/CoderGamester/mcp-unity/blob/382a43a30f4dab4c7f02d770b4ec7d084813bbe4/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".windsurfrules",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "CLAUDE.md",
+          "type": "file"
+        },
+        {
+          "path": "CLAUDE.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "Editor.meta",
+          "type": "file"
+        },
+        {
+          "path": "Editor",
+          "type": "dir"
+        },
+        {
+          "path": "LICENSE.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "README-ja.md",
+          "type": "file"
+        },
+        {
+          "path": "README-ja.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "README_zh-CN.md",
+          "type": "file"
+        },
+        {
+          "path": "README_zh-CN.md.meta",
+          "type": "file"
+        },
+        {
+          "path": "Server~",
+          "type": "dir"
+        },
+        {
+          "path": "docs.meta",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "glama.json",
+          "type": "file"
+        },
+        {
+          "path": "glama.json.meta",
+          "type": "file"
+        },
+        {
+          "path": "llms.txt",
+          "type": "file"
+        },
+        {
+          "path": "llms.txt.meta",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json.meta",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 950564038,
+      "full_name": "CoplayDev/unity-mcp",
+      "html_url": "https://github.com/CoplayDev/unity-mcp",
+      "description": "Unity MCP acts as a bridge between AI assistants and your Unity Editor. Give your LLM tools to manage assets, control scenes, edit scripts, and automate tasks within Unity.",
+      "homepage": "https://coplaydev.github.io/unity-mcp/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "beta",
+      "language": "C#",
+      "topics": [
+        "ai",
+        "ai-integration",
+        "anthropic",
+        "claude",
+        "copilot",
+        "cursor",
+        "game-development",
+        "gamedev",
+        "gemini",
+        "llm",
+        "mcp",
+        "model-context-protocol",
+        "openai",
+        "unity",
+        "unity3d",
+        "videogames"
+      ],
+      "stargazers_count": 14425,
+      "created_at": "2025-03-18T11:01:58Z",
+      "updated_at": "2026-09-23T07:46:57Z",
+      "pushed_at": "2026-09-22T19:03:04Z",
+      "commit": "63202654d5f9998fe9f583123c08e8cb13a41669",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/CoplayDev--unity-mcp/63202654d5f9998fe9f583123c08e8cb13a41669/LICENSE.txt",
+          "bytes": 1066,
+          "sha256": "6efe650c965012ac418238dcd6b9116e4130a5220717ef0dfb539dd159c4245c",
+          "git_blob_sha": "e7f878d1da6b4d9488058157ce6b48cb584460b1",
+          "source_url": "https://github.com/CoplayDev/unity-mcp/blob/63202654d5f9998fe9f583123c08e8cb13a41669/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/CoplayDev--unity-mcp/63202654d5f9998fe9f583123c08e8cb13a41669/README.md.txt",
+          "bytes": 5278,
+          "sha256": "eb5d0fc9f6baa1dab43acb69c7e3dc4774e73a1cf9142d2344073bd4309d843b",
+          "git_blob_sha": "a804bd3b1959f1301b7baeeb254d680cf7da9c62",
+          "source_url": "https://github.com/CoplayDev/unity-mcp/blob/63202654d5f9998fe9f583123c08e8cb13a41669/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".claude",
+          "type": "dir"
+        },
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".mcpbignore",
+          "type": "file"
+        },
+        {
+          "path": "CLAUDE.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "CustomTools",
+          "type": "dir"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "MCPForUnity",
+          "type": "dir"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "Server",
+          "type": "dir"
+        },
+        {
+          "path": "TestProjects",
+          "type": "dir"
+        },
+        {
+          "path": "docker-compose.yml",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "manifest.json",
+          "type": "file"
+        },
+        {
+          "path": "mcp_source.py",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "unity-mcp-skill",
+          "type": "dir"
+        },
+        {
+          "path": "website",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1177031688,
+      "full_name": "cortiz2894/stylized-components",
+      "html_url": "https://github.com/cortiz2894/stylized-components",
+      "description": "A growing collection of real-time, anime-inspired rendering systems for the web, built with Next.js, Three.js and React Three Fiber. Each one is a self-contained, reusable component written in custom GLSL — drop it into your own scene and drive it from Leva. No baked textures, no black boxes.",
+      "homepage": "https://stylized.cortiz.dev/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [],
+      "stargazers_count": 395,
+      "created_at": "2026-03-09T16:15:48Z",
+      "updated_at": "2026-09-22T07:55:45Z",
+      "pushed_at": "2026-08-20T15:29:33Z",
+      "commit": "c0c02c47971e70b214a25de01ac9633e7608fc84",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/cortiz2894--stylized-components/c0c02c47971e70b214a25de01ac9633e7608fc84/LICENSE.txt",
+          "bytes": 1081,
+          "sha256": "c01dd513a12133adbe704df25f0f4686a8ddeaf2f0b1a02a62ee5cbf056aabbc",
+          "git_blob_sha": "52674a36773b6c603742dce3671dca8b80656355",
+          "source_url": "https://github.com/cortiz2894/stylized-components/blob/c0c02c47971e70b214a25de01ac9633e7608fc84/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/cortiz2894--stylized-components/c0c02c47971e70b214a25de01ac9633e7608fc84/README.md.txt",
+          "bytes": 12410,
+          "sha256": "1d7c500ff12c19e28e1d593a9215d0ebb7b8c217b6bce64ff2e42fcea76f1d6a",
+          "git_blob_sha": "d8ae79a16848742622829046869b59fd09c8ac06",
+          "source_url": "https://github.com/cortiz2894/stylized-components/blob/c0c02c47971e70b214a25de01ac9633e7608fc84/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".claude",
+          "type": "dir"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "type": "file"
+        },
+        {
+          "path": "next.config.ts",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "type": "file"
+        },
+        {
+          "path": "pnpm-workspace.yaml",
+          "type": "file"
+        },
+        {
+          "path": "postcss.config.mjs",
+          "type": "file"
+        },
+        {
+          "path": "public",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tsconfig.json",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1007827531,
+      "full_name": "Crosstalk-Solutions/project-nomad",
+      "html_url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "description": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+      "homepage": "https://www.projectnomad.us",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [],
+      "stargazers_count": 38160,
+      "created_at": "2025-06-24T15:35:01Z",
+      "updated_at": "2026-09-23T08:54:47Z",
+      "pushed_at": "2026-09-22T23:28:26Z",
+      "commit": "85da928019c428faf43cf96785f16f7da9efb0df",
+      "starred_at": "2026-09-20T20:34:28Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/Crosstalk-Solutions--project-nomad/85da928019c428faf43cf96785f16f7da9efb0df/LICENSE.txt",
+          "bytes": 10779,
+          "sha256": "e4f125622d3c03c2ebd7caf0eb9f0e9a10029349f75b7e342699cb1a0c212aee",
+          "git_blob_sha": "b96a9eb75aea26656c31d162e08f24b4436935a1",
+          "source_url": "https://github.com/Crosstalk-Solutions/project-nomad/blob/85da928019c428faf43cf96785f16f7da9efb0df/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Crosstalk-Solutions--project-nomad/85da928019c428faf43cf96785f16f7da9efb0df/README.md.txt",
+          "bytes": 14396,
+          "sha256": "1936b0b553adadef5c1021c71eb4b8aaa3d72587e840660926092e53132dc04d",
+          "git_blob_sha": "2894d9a6ba9ec027946d3d9191da0699cec5b414",
+          "source_url": "https://github.com/Crosstalk-Solutions/project-nomad/blob/85da928019c428faf43cf96785f16f7da9efb0df/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".releaserc.json",
+          "type": "file"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "FAQ.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "admin",
+          "type": "dir"
+        },
+        {
+          "path": "collections",
+          "type": "dir"
+        },
+        {
+          "path": "install",
+          "type": "dir"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2026-09-20T20:34:28Z"
+    },
+    {
+      "id": 1378042060,
+      "full_name": "cryptomanavan/ShoreBreak",
+      "html_url": "https://github.com/cryptomanavan/ShoreBreak",
+      "description": null,
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 40,
+      "created_at": "2026-09-20T07:05:58Z",
+      "updated_at": "2026-09-23T06:15:28Z",
+      "pushed_at": "2026-09-20T07:47:22Z",
+      "commit": "11c8c057db671628ef2dbc308ab9fe0f233f48dc",
+      "starred_at": "2026-09-20T12:58:37Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/cryptomanavan--ShoreBreak/11c8c057db671628ef2dbc308ab9fe0f233f48dc/LICENSE.txt",
+          "bytes": 1076,
+          "sha256": "f7168e2f5f4ad84a1dfff14b920976da1ade30646b7b7a9f40d214f88e6aeeb5",
+          "git_blob_sha": "7e3af314a0f2a86f3b6326b45e95ab22b77cbb63",
+          "source_url": "https://github.com/cryptomanavan/ShoreBreak/blob/11c8c057db671628ef2dbc308ab9fe0f233f48dc/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/cryptomanavan--ShoreBreak/11c8c057db671628ef2dbc308ab9fe0f233f48dc/README.md.txt",
+          "bytes": 5538,
+          "sha256": "bfe3614e458a5130eeedcb4cba0b83aa9feda55780bfc65c1aca8bcd44c6673a",
+          "git_blob_sha": "0fd790db3138036b23e3ed52d2a9cf9927c423f5",
+          "source_url": "https://github.com/cryptomanavan/ShoreBreak/blob/11c8c057db671628ef2dbc308ab9fe0f233f48dc/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".node-version",
+          "type": "file"
+        },
+        {
+          "path": ".nvmrc",
+          "type": "file"
+        },
+        {
+          "path": "ASSETS.md",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "licenses",
+          "type": "dir"
+        },
+        {
+          "path": "netlify.toml",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "public",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "vite.config.js",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2026-09-20T12:58:37Z"
+    },
+    {
+      "id": 121898717,
+      "full_name": "dani-garcia/vaultwarden",
+      "html_url": "https://github.com/dani-garcia/vaultwarden",
+      "description": "Unofficial Bitwarden compatible server written in Rust, formerly known as bitwarden_rs",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Rust",
+      "topics": [
+        "bitwarden",
+        "bitwarden-rs",
+        "docker",
+        "rocket",
+        "rust",
+        "vaultwarden"
+      ],
+      "stargazers_count": 68037,
+      "created_at": "2018-02-17T22:40:20Z",
+      "updated_at": "2026-09-23T08:08:29Z",
+      "pushed_at": "2026-09-18T18:35:12Z",
+      "commit": "cc67d644f62605cb46f4d16c4a2eed1a861cc8bb",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE="
+      },
+      "files": [
+        {
+          "path": "LICENSE.txt",
+          "local_path": "kilder/github/dani-garcia--vaultwarden/cc67d644f62605cb46f4d16c4a2eed1a861cc8bb/LICENSE.txt.txt",
+          "bytes": 34523,
+          "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+          "git_blob_sha": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+          "source_url": "https://github.com/dani-garcia/vaultwarden/blob/cc67d644f62605cb46f4d16c4a2eed1a861cc8bb/LICENSE.txt"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/dani-garcia--vaultwarden/cc67d644f62605cb46f4d16c4a2eed1a861cc8bb/README.md.txt",
+          "bytes": 11157,
+          "sha256": "5c7e29e287f600fe1979d196d53f94cd8f87f9c0de1acf6481fde510fbfdd4fc",
+          "git_blob_sha": "0b24ba69a9ae454631797358527f715af2ce7d3c",
+          "source_url": "https://github.com/dani-garcia/vaultwarden/blob/cc67d644f62605cb46f4d16c4a2eed1a861cc8bb/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".env.template",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".hadolint.yaml",
+          "type": "file"
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "type": "file"
+        },
+        {
+          "path": ".typos.toml",
+          "type": "file"
+        },
+        {
+          "path": "Cargo.lock",
+          "type": "file"
+        },
+        {
+          "path": "Cargo.toml",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE.txt",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "build.rs",
+          "type": "file"
+        },
+        {
+          "path": "diesel.toml",
+          "type": "file"
+        },
+        {
+          "path": "docker",
+          "type": "dir"
+        },
+        {
+          "path": "macros",
+          "type": "dir"
+        },
+        {
+          "path": "migrations",
+          "type": "dir"
+        },
+        {
+          "path": "playwright",
+          "type": "dir"
+        },
+        {
+          "path": "resources",
+          "type": "dir"
+        },
+        {
+          "path": "rust-toolchain.toml",
+          "type": "file"
+        },
+        {
+          "path": "rustfmt.toml",
+          "type": "file"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 333483116,
+      "full_name": "dgtlmoon/changedetection.io",
+      "html_url": "https://github.com/dgtlmoon/changedetection.io",
+      "description": "Best and simplest tool for website change detection, web page monitoring, and website change alerts. Perfect for tracking content changes, price drops, restock alerts, and website defacement monitoring—all for free or enjoy our SaaS plan!",
+      "homepage": "https://changedetection.io",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "master",
+      "language": "Python",
+      "topics": [
+        "back-in-stock",
+        "change-alert",
+        "change-detection",
+        "change-monitoring",
+        "monitoring",
+        "notifications",
+        "restock-monitor",
+        "rss",
+        "self-hosted",
+        "url-monitor",
+        "web-scraping",
+        "website-change-detection",
+        "website-change-detector",
+        "website-change-monitor",
+        "website-change-notification",
+        "website-change-tracker",
+        "website-defacement-monitoring",
+        "website-monitor",
+        "website-monitoring",
+        "website-watcher"
+      ],
+      "stargazers_count": 34473,
+      "created_at": "2021-01-27T16:03:30Z",
+      "updated_at": "2026-09-23T08:55:00Z",
+      "pushed_at": "2026-09-21T16:06:16Z",
+      "commit": "fd7c9db23e371803bf1892b827b03d9c9c946bcd",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/dgtlmoon--changedetection.io/fd7c9db23e371803bf1892b827b03d9c9c946bcd/LICENSE.txt",
+          "bytes": 11382,
+          "sha256": "94819497b44fbfbbc93198af0eb1b20144098a96c10ab577e9a868bab26d3705",
+          "git_blob_sha": "a6e09a45199d495dd9ff687399fb4835acb0b843",
+          "source_url": "https://github.com/dgtlmoon/changedetection.io/blob/fd7c9db23e371803bf1892b827b03d9c9c946bcd/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/dgtlmoon--changedetection.io/fd7c9db23e371803bf1892b827b03d9c9c946bcd/README.md.txt",
+          "bytes": 22274,
+          "sha256": "d29cb6f8183b4c2628caabc3927999745f6dce321eff5615028a935f1c5d19a4",
+          "git_blob_sha": "172edb546c49189e514d9986ede90d5a8d475e05",
+          "source_url": "https://github.com/dgtlmoon/changedetection.io/blob/fd7c9db23e371803bf1892b827b03d9c9c946bcd/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "type": "file"
+        },
+        {
+          "path": ".ruff.toml",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "MANIFEST.in",
+          "type": "file"
+        },
+        {
+          "path": "README-pip.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "babel.cfg",
+          "type": "file"
+        },
+        {
+          "path": "changedetection.py",
+          "type": "file"
+        },
+        {
+          "path": "changedetectionio",
+          "type": "dir"
+        },
+        {
+          "path": "docker-compose.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-entrypoint.sh",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "requirements-dev.txt",
+          "type": "file"
+        },
+        {
+          "path": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "path": "runtime.txt",
+          "type": "file"
+        },
+        {
+          "path": "setup.cfg",
+          "type": "file"
+        },
+        {
+          "path": "setup.py",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 964416391,
+      "full_name": "haato-w/3d-gabor-splatting",
+      "html_url": "https://github.com/haato-w/3d-gabor-splatting",
+      "description": "[Eurographics 2025 Short] Official PyTorch Implementation for the \"3D Gabor Splatting: Reconstruction of High-frequency Surface Texture using Gabor Noise\" paper",
+      "homepage": "https://haato-w.github.io/3d-gabor-splatting-project-page/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Python",
+      "topics": [
+        "3d-reconstruction",
+        "gabor-filter",
+        "gaussian-splatting",
+        "high-frequency-data",
+        "machine-learning"
+      ],
+      "stargazers_count": 31,
+      "created_at": "2025-04-11T07:18:13Z",
+      "updated_at": "2026-08-21T23:45:31Z",
+      "pushed_at": "2025-05-06T13:50:29Z",
+      "commit": "aeb65553cb69846c1a1a916dd1495314fb220923",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "local_path": "kilder/github/haato-w--3d-gabor-splatting/aeb65553cb69846c1a1a916dd1495314fb220923/LICENSE.md.txt",
+          "bytes": 4275,
+          "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f",
+          "git_blob_sha": "c869e695fa63bfde6f887d63a24a2a71f03480ac",
+          "source_url": "https://github.com/haato-w/3d-gabor-splatting/blob/aeb65553cb69846c1a1a916dd1495314fb220923/LICENSE.md"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/haato-w--3d-gabor-splatting/aeb65553cb69846c1a1a916dd1495314fb220923/README.md.txt",
+          "bytes": 5045,
+          "sha256": "c296644ad6c83d00382af02c8ac5b8c24ed7545fa9f51448624e9eda280a5cf4",
+          "git_blob_sha": "2ed42633bfd77bbed22d605db8a35b2e2b9e395c",
+          "source_url": "https://github.com/haato-w/3d-gabor-splatting/blob/aeb65553cb69846c1a1a916dd1495314fb220923/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".gitmodules",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "arguments",
+          "type": "dir"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "convert.py",
+          "type": "file"
+        },
+        {
+          "path": "environment.yml",
+          "type": "file"
+        },
+        {
+          "path": "gabor_renderer",
+          "type": "dir"
+        },
+        {
+          "path": "lpipsPyTorch",
+          "type": "dir"
+        },
+        {
+          "path": "metrics.py",
+          "type": "file"
+        },
+        {
+          "path": "render.py",
+          "type": "file"
+        },
+        {
+          "path": "scene",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "submodules",
+          "type": "dir"
+        },
+        {
+          "path": "train.py",
+          "type": "file"
+        },
+        {
+          "path": "utils",
+          "type": "dir"
+        },
+        {
+          "path": "view.py",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 978668579,
+      "full_name": "haato-w/diff-gabor-rasterization",
+      "html_url": "https://github.com/haato-w/diff-gabor-rasterization",
+      "description": null,
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Cuda",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2025-05-06T10:38:26Z",
+      "updated_at": "2026-02-02T20:22:25Z",
+      "pushed_at": "2025-11-12T08:46:16Z",
+      "commit": "bf33b99c5a76e0d1b83f97914caf250422a90509",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "files": [
+        {
+          "path": "LICENSE.md",
+          "local_path": "kilder/github/haato-w--diff-gabor-rasterization/bf33b99c5a76e0d1b83f97914caf250422a90509/LICENSE.md.txt",
+          "bytes": 4275,
+          "sha256": "cd5c95b3cfff3acc1bd412420c770f88809331c3db6872df11a970147aa8e81f",
+          "git_blob_sha": "c869e695fa63bfde6f887d63a24a2a71f03480ac",
+          "source_url": "https://github.com/haato-w/diff-gabor-rasterization/blob/bf33b99c5a76e0d1b83f97914caf250422a90509/LICENSE.md"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/haato-w--diff-gabor-rasterization/bf33b99c5a76e0d1b83f97914caf250422a90509/README.md.txt",
+          "bytes": 1963,
+          "sha256": "48be91f93b5c8d1277d936e861f095c1e41bcb9fb914acce56f1e387d823ffa9",
+          "git_blob_sha": "9dc76a9af68f577d44ecc5ebcfc58877b4425d2e",
+          "source_url": "https://github.com/haato-w/diff-gabor-rasterization/blob/bf33b99c5a76e0d1b83f97914caf250422a90509/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".gitmodules",
+          "type": "file"
+        },
+        {
+          "path": "CMakeLists.txt",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "cuda_rasterizer",
+          "type": "dir"
+        },
+        {
+          "path": "diff_gabor_rasterization",
+          "type": "dir"
+        },
+        {
+          "path": "ext.cpp",
+          "type": "file"
+        },
+        {
+          "path": "rasterize_points.cu",
+          "type": "file"
+        },
+        {
+          "path": "rasterize_points.h",
+          "type": "file"
+        },
+        {
+          "path": "setup.py",
+          "type": "file"
+        },
+        {
+          "path": "third_party",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1377492826,
+      "full_name": "iamtechartist/coastal-simulation",
+      "html_url": "https://github.com/iamtechartist/coastal-simulation",
+      "description": "A real-time coastal simulation in Three.js, pairing a shallow-water solver with breaking swells, whitewater, wet sand, spray and shoreline exploration",
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 44,
+      "created_at": "2026-09-19T18:28:24Z",
+      "updated_at": "2026-09-22T14:22:11Z",
+      "pushed_at": "2026-09-19T18:31:48Z",
+      "commit": "2e95e1a3e757ca1268247417dee01606e5e3d55c",
+      "starred_at": "2026-09-19T21:31:27Z",
+      "reference_sources": [
+        "repoer/coastal-webgpu-2026-09-20.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/iamtechartist--coastal-simulation/2e95e1a3e757ca1268247417dee01606e5e3d55c/LICENSE.txt",
+          "bytes": 1067,
+          "sha256": "b0e0e711c04aac69e316e9c79a3119b722dc7d65e129990cdbe7a35dea6fec8b",
+          "git_blob_sha": "ff14a23afa11f668e3f5cd4003d41dd7fa41f2a3",
+          "source_url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/iamtechartist--coastal-simulation/2e95e1a3e757ca1268247417dee01606e5e3d55c/README.md.txt",
+          "bytes": 216,
+          "sha256": "7b8889a062830658127de9d0522f03e687e978a1e36fe54c20e3c8141f95a0fc",
+          "git_blob_sha": "ff81c6167d3d86bebfc234ebeddcaa4118360673",
+          "source_url": "https://github.com/iamtechartist/coastal-simulation/blob/2e95e1a3e757ca1268247417dee01606e5e3d55c/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "initial-state.bin.gz",
+          "type": "file"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "style.css",
+          "type": "file"
+        },
+        {
+          "path": "vendor",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-19T21:31:27Z"
+    },
+    {
+      "id": 511987144,
+      "full_name": "imputnet/cobalt",
+      "html_url": "https://github.com/imputnet/cobalt",
+      "description": "best way to save what you love",
+      "homepage": "https://cobalt.tools",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Svelte",
+      "topics": [
+        "collaboration",
+        "downloader",
+        "instagram",
+        "javascript",
+        "music",
+        "reddit",
+        "social-media",
+        "soundcloud",
+        "svelte",
+        "tiktok",
+        "twitter",
+        "typescript",
+        "video",
+        "vimeo",
+        "vk",
+        "webapp",
+        "youtube",
+        "youtube-downloader"
+      ],
+      "stargazers_count": 43774,
+      "created_at": "2022-07-08T18:12:55Z",
+      "updated_at": "2026-09-23T08:48:35Z",
+      "pushed_at": "2026-04-06T11:59:56Z",
+      "commit": "a636575b09de1fc55d9b8cd98cac88f5f2f16b42",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/imputnet--cobalt/a636575b09de1fc55d9b8cd98cac88f5f2f16b42/LICENSE.txt",
+          "bytes": 34469,
+          "sha256": "ebe435fddb16699248ec09087bfb121517701aac63b679315aec33eb05e4f404",
+          "git_blob_sha": "7d1945a36a17b0912d3e0c23f51552be665719cd",
+          "source_url": "https://github.com/imputnet/cobalt/blob/a636575b09de1fc55d9b8cd98cac88f5f2f16b42/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/imputnet--cobalt/a636575b09de1fc55d9b8cd98cac88f5f2f16b42/README.md.txt",
+          "bytes": 2432,
+          "sha256": "c9a8b5059c77ebe27a502c45970442a1522f770ee9a6b2c27ed15b847da352e8",
+          "git_blob_sha": "795eb7e30a742fbf5ebcf16991e6e5c90332f614",
+          "source_url": "https://github.com/imputnet/cobalt/blob/a636575b09de1fc55d9b8cd98cac88f5f2f16b42/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".deepsource.toml",
+          "type": "file"
+        },
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "api",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "packages",
+          "type": "dir"
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "type": "file"
+        },
+        {
+          "path": "pnpm-workspace.yaml",
+          "type": "file"
+        },
+        {
+          "path": "web",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1380797051,
+      "full_name": "lhlGitHub/threejs-architecture-effects",
+      "html_url": "https://github.com/lhlGitHub/threejs-architecture-effects",
+      "description": "An Agent Skill for building interactive, self-assembling 3D architecture with Three.js.  一个用 Three.js 生成可交互、可动态建造 3D 建筑的 Agent Skill。",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [],
+      "stargazers_count": 152,
+      "created_at": "2026-09-22T03:01:05Z",
+      "updated_at": "2026-09-23T08:29:00Z",
+      "pushed_at": "2026-09-22T03:27:27Z",
+      "commit": "693ca2ec1193e7355054f14d7deb1427439a24d0",
+      "starred_at": "2026-09-22T18:36:13Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/lhlGitHub--threejs-architecture-effects/693ca2ec1193e7355054f14d7deb1427439a24d0/LICENSE.txt",
+          "bytes": 1063,
+          "sha256": "f8457dda7413c93ba7257cecd2d70e755c1f7025bd852c5d5ab1dbf5e225ebcb",
+          "git_blob_sha": "b6383cdb9f08c28e5edb61842ac8e538a91d05c6",
+          "source_url": "https://github.com/lhlGitHub/threejs-architecture-effects/blob/693ca2ec1193e7355054f14d7deb1427439a24d0/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/lhlGitHub--threejs-architecture-effects/693ca2ec1193e7355054f14d7deb1427439a24d0/README.md.txt",
+          "bytes": 4569,
+          "sha256": "789fa833a6083b14affb68d76ebc32f4f09da46e9601a4c9c51eaa31de3a7ee1",
+          "git_blob_sha": "cf77023e6892da01a1cb4b45750d9afd7988a96b",
+          "source_url": "https://github.com/lhlGitHub/threejs-architecture-effects/blob/693ca2ec1193e7355054f14d7deb1427439a24d0/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SKILL.md",
+          "type": "file"
+        },
+        {
+          "path": "agents",
+          "type": "dir"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "references",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-22T18:36:13Z"
+    },
+    {
+      "id": 322921248,
+      "full_name": "LibreTranslate/LibreTranslate",
+      "html_url": "https://github.com/LibreTranslate/LibreTranslate",
+      "description": "Free and Open Source Machine Translation API. Self-hosted, offline capable and easy to setup.",
+      "homepage": "https://libretranslate.com",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Python",
+      "topics": [
+        "api",
+        "machine",
+        "translate",
+        "translation",
+        "translator"
+      ],
+      "stargazers_count": 16713,
+      "created_at": "2020-12-19T19:19:34Z",
+      "updated_at": "2026-09-23T08:49:16Z",
+      "pushed_at": "2026-09-03T17:05:31Z",
+      "commit": "4aca61bd807021e13258456a9e4224b996f655f2",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/LibreTranslate--LibreTranslate/4aca61bd807021e13258456a9e4224b996f655f2/LICENSE.txt",
+          "bytes": 34523,
+          "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+          "git_blob_sha": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+          "source_url": "https://github.com/LibreTranslate/LibreTranslate/blob/4aca61bd807021e13258456a9e4224b996f655f2/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/LibreTranslate--LibreTranslate/4aca61bd807021e13258456a9e4224b996f655f2/README.md.txt",
+          "bytes": 2171,
+          "sha256": "d433462c87a95a56f9cc416fddca91d61c9ca594dfe389e6b7d0766a02b63863",
+          "git_blob_sha": "0769eb42d50c2164a66f1aa85c84711f53cb18da",
+          "source_url": "https://github.com/LibreTranslate/LibreTranslate/blob/4aca61bd807021e13258456a9e4224b996f655f2/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "type": "file"
+        },
+        {
+          "path": ".well-known",
+          "type": "dir"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "TRADEMARK.md",
+          "type": "file"
+        },
+        {
+          "path": "VERSION",
+          "type": "file"
+        },
+        {
+          "path": "babel.cfg",
+          "type": "file"
+        },
+        {
+          "path": "db",
+          "type": "dir"
+        },
+        {
+          "path": "docker-compose.cuda.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker",
+          "type": "dir"
+        },
+        {
+          "path": "k8s.yaml",
+          "type": "file"
+        },
+        {
+          "path": "libretranslate",
+          "type": "dir"
+        },
+        {
+          "path": "main.py",
+          "type": "file"
+        },
+        {
+          "path": "manage.py",
+          "type": "file"
+        },
+        {
+          "path": "pyproject.toml",
+          "type": "file"
+        },
+        {
+          "path": "run.bat",
+          "type": "file"
+        },
+        {
+          "path": "run.sh",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "wsgi.py",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 578822531,
+      "full_name": "localsend/localsend",
+      "html_url": "https://github.com/localsend/localsend",
+      "description": "An open-source cross-platform alternative to AirDrop",
+      "homepage": "https://localsend.org",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Dart",
+      "topics": [
+        "dart",
+        "file-sharing",
+        "flutter",
+        "flutter-apps"
+      ],
+      "stargazers_count": 92510,
+      "created_at": "2022-12-16T00:46:07Z",
+      "updated_at": "2026-09-23T08:47:26Z",
+      "pushed_at": "2026-09-14T13:10:57Z",
+      "commit": "230fb692962668ca22ce0e61a8f53ce1cfd32102",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/localsend--localsend/230fb692962668ca22ce0e61a8f53ce1cfd32102/LICENSE.txt",
+          "bytes": 11346,
+          "sha256": "38514afa30358fc21ef37551f3119b27d820427ece3c6f0ae014c7e47338c087",
+          "git_blob_sha": "129b09014da391f203d75f06b86f27eaf13c5154",
+          "source_url": "https://github.com/localsend/localsend/blob/230fb692962668ca22ce0e61a8f53ce1cfd32102/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/localsend--localsend/230fb692962668ca22ce0e61a8f53ce1cfd32102/README.md.txt",
+          "bytes": 14363,
+          "sha256": "5625cab3d26d35ae61566c4fc86e70b68bf9025424e6569c14896063212bd6db",
+          "git_blob_sha": "44ec4792bfc2cd5b0831e323d47ae321b4994936",
+          "source_url": "https://github.com/localsend/localsend/blob/230fb692962668ca22ce0e61a8f53ce1cfd32102/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".fvmrc",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".gitmodules",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CLAUDE.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_SIGNING.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "Cargo.lock",
+          "type": "file"
+        },
+        {
+          "path": "Cargo.toml",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "app",
+          "type": "dir"
+        },
+        {
+          "path": "cli",
+          "type": "dir"
+        },
+        {
+          "path": "fastlane",
+          "type": "dir"
+        },
+        {
+          "path": "packages",
+          "type": "dir"
+        },
+        {
+          "path": "pubspec.lock",
+          "type": "file"
+        },
+        {
+          "path": "pubspec.yaml",
+          "type": "file"
+        },
+        {
+          "path": "rust-toolchain.toml",
+          "type": "file"
+        },
+        {
+          "path": "server",
+          "type": "dir"
+        },
+        {
+          "path": "support",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1254699739,
+      "full_name": "marceld23/BlocksBeyondTheStars",
+      "html_url": "https://github.com/marceld23/BlocksBeyondTheStars",
+      "description": "A block-based 3D space crafting game: explore procedurally generated planets across many star systems, mine and craft, tame creatures, build ships, bases and your own space stations — solo or with friends. Open-source .NET server + Unity client, self-hostable.",
+      "homepage": "https://www.blocksbeyondthestars.com/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "C#",
+      "topics": [
+        "crafting",
+        "csharp",
+        "dotnet",
+        "family-friendly",
+        "game",
+        "gamedev",
+        "indie-game",
+        "multiplayer",
+        "open-source",
+        "procedural-generation",
+        "sandbox",
+        "self-hosted",
+        "space-game",
+        "survival-game",
+        "unity",
+        "unity3d",
+        "voxel",
+        "voxel-game"
+      ],
+      "stargazers_count": 37,
+      "created_at": "2026-05-30T22:38:44Z",
+      "updated_at": "2026-09-21T21:51:12Z",
+      "pushed_at": "2026-09-21T21:51:14Z",
+      "commit": "56e94d0bbbdb0c0231d54494dd92c841935842cc",
+      "starred_at": "2026-09-07T12:30:12Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/marceld23--BlocksBeyondTheStars/56e94d0bbbdb0c0231d54494dd92c841935842cc/LICENSE.txt",
+          "bytes": 34523,
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+          "git_blob_sha": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+          "source_url": "https://github.com/marceld23/BlocksBeyondTheStars/blob/56e94d0bbbdb0c0231d54494dd92c841935842cc/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/marceld23--BlocksBeyondTheStars/56e94d0bbbdb0c0231d54494dd92c841935842cc/README.md.txt",
+          "bytes": 44376,
+          "sha256": "c4d3da89fa4c3dd901efee724b052c05bdbd4a9657608ce205c17cc5290a3446",
+          "git_blob_sha": "0e5d2765caedf4e5abe579255462908d502b6b3f",
+          "source_url": "https://github.com/marceld23/BlocksBeyondTheStars/blob/56e94d0bbbdb0c0231d54494dd92c841935842cc/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "BlocksBeyondTheStars.CI.slnf",
+          "type": "file"
+        },
+        {
+          "path": "BlocksBeyondTheStars.sln",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_SIGNING.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "Directory.Build.props",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile.ai",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile.reports",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile.worldhost",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "NOTICES.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "TODO.md",
+          "type": "file"
+        },
+        {
+          "path": "ai-backend",
+          "type": "dir"
+        },
+        {
+          "path": "client",
+          "type": "dir"
+        },
+        {
+          "path": "coverlet.runsettings",
+          "type": "file"
+        },
+        {
+          "path": "data",
+          "type": "dir"
+        },
+        {
+          "path": "deploy",
+          "type": "dir"
+        },
+        {
+          "path": "docker-compose.postgres.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.reports.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.tls.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "marketing",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-07T12:30:12Z"
+    },
+    {
+      "id": 25129800,
+      "full_name": "mikf/gallery-dl",
+      "html_url": "https://github.com/mikf/gallery-dl",
+      "description": "Command-line program to download image galleries and collections from several image hosting sites",
+      "homepage": "https://discord.gg/rSzQwRvGnE",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "master",
+      "language": "Python",
+      "topics": [
+        "danbooru",
+        "deviantart",
+        "downloader",
+        "gallery",
+        "kemono",
+        "mangadex",
+        "pixiv",
+        "tumblr",
+        "twitter"
+      ],
+      "stargazers_count": 19809,
+      "created_at": "2014-10-12T19:38:05Z",
+      "updated_at": "2026-09-23T04:19:56Z",
+      "pushed_at": "2026-09-19T13:54:59Z",
+      "commit": "19a64031b7e695dc76d7d689a1c9d7470fc0bfc7",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "gpl-2.0",
+        "name": "GNU General Public License v2.0",
+        "spdx_id": "GPL-2.0",
+        "url": "https://api.github.com/licenses/gpl-2.0",
+        "node_id": "MDc6TGljZW5zZTg="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/mikf--gallery-dl/19a64031b7e695dc76d7d689a1c9d7470fc0bfc7/LICENSE.txt",
+          "bytes": 18092,
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+          "git_blob_sha": "d159169d1050894d3ea3b98e1c965c4058208fe1",
+          "source_url": "https://github.com/mikf/gallery-dl/blob/19a64031b7e695dc76d7d689a1c9d7470fc0bfc7/LICENSE"
+        },
+        {
+          "path": "README.rst",
+          "local_path": "kilder/github/mikf--gallery-dl/19a64031b7e695dc76d7d689a1c9d7470fc0bfc7/README.rst.txt",
+          "bytes": 14375,
+          "sha256": "211f1b3cb32a139105db4aeb155b2e381b16dac9106b38a497a34c33ecdf2cf5",
+          "git_blob_sha": "384fe8419d9d5c322e6613f4da89421f6e069b40",
+          "source_url": "https://github.com/mikf/gallery-dl/blob/19a64031b7e695dc76d7d689a1c9d7470fc0bfc7/README.rst"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "MANIFEST.in",
+          "type": "file"
+        },
+        {
+          "path": "Makefile",
+          "type": "file"
+        },
+        {
+          "path": "README.rst",
+          "type": "file"
+        },
+        {
+          "path": "bin",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "gallery_dl",
+          "type": "dir"
+        },
+        {
+          "path": "pyproject.toml",
+          "type": "file"
+        },
+        {
+          "path": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "path": "requirements",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "setup.cfg",
+          "type": "file"
+        },
+        {
+          "path": "setup.py",
+          "type": "file"
+        },
+        {
+          "path": "snap",
+          "type": "dir"
+        },
+        {
+          "path": "test",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1336106642,
+      "full_name": "moonpudding/localchannels",
+      "html_url": "https://github.com/moonpudding/localchannels",
+      "description": "LocalChannels is local library and media management application. It even has a VR mode for playback of VR-videos.",
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2026-08-16T15:56:32Z",
+      "updated_at": "2026-08-21T10:13:39Z",
+      "pushed_at": "2026-08-21T10:10:53Z",
+      "commit": "7bfdb777f464408f669b17b45581011244fd7a2c",
+      "starred_at": "2026-08-21T09:04:14Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/moonpudding--localchannels/7bfdb777f464408f669b17b45581011244fd7a2c/LICENSE.txt",
+          "bytes": 1074,
+          "sha256": "5530d3f2a1130a766aaf00770c36ffc09651d62dbece1516b1945f0fce9196de",
+          "git_blob_sha": "68e9e6e625c6d063207ebfdc97bcbbc51a903972",
+          "source_url": "https://github.com/moonpudding/localchannels/blob/7bfdb777f464408f669b17b45581011244fd7a2c/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/moonpudding--localchannels/7bfdb777f464408f669b17b45581011244fd7a2c/README.md.txt",
+          "bytes": 23975,
+          "sha256": "0f76a6b80202af9cd2e5671f12b7e7b9910d15a3e9c59a619a7d88ef5afafa11",
+          "git_blob_sha": "e5d1deecc38c230ee8c82313230e5965efb5eda9",
+          "source_url": "https://github.com/moonpudding/localchannels/blob/7bfdb777f464408f669b17b45581011244fd7a2c/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "about.json",
+          "type": "file"
+        },
+        {
+          "path": "app",
+          "type": "dir"
+        },
+        {
+          "path": "config.json",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.yaml",
+          "type": "file"
+        },
+        {
+          "path": "logo.png",
+          "type": "file"
+        },
+        {
+          "path": "requirements.txt",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2026-08-21T09:04:14Z"
+    },
+    {
+      "id": 920995232,
+      "full_name": "multimodal-art-projection/YuE",
+      "html_url": "https://github.com/multimodal-art-projection/YuE",
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "homepage": "https://map-yue2.github.io/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "audio-generation",
+        "deep-learning",
+        "foundation-models",
+        "gpt",
+        "huggingface",
+        "llama",
+        "llms",
+        "music-generation",
+        "style-transfers",
+        "voice-cloning"
+      ],
+      "stargazers_count": 10114,
+      "created_at": "2025-01-23T06:21:58Z",
+      "updated_at": "2026-09-23T08:53:12Z",
+      "pushed_at": "2026-09-23T04:08:37Z",
+      "commit": "09a1e8a85bf35a93b8c01b3f12b139b558b49852",
+      "starred_at": "2026-09-16T10:32:34Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/multimodal-art-projection--YuE/09a1e8a85bf35a93b8c01b3f12b139b558b49852/LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "git_blob_sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "source_url": "https://github.com/multimodal-art-projection/YuE/blob/09a1e8a85bf35a93b8c01b3f12b139b558b49852/LICENSE"
+        },
+        {
+          "path": "MODEL_LICENSE",
+          "local_path": "kilder/github/multimodal-art-projection--YuE/09a1e8a85bf35a93b8c01b3f12b139b558b49852/MODEL_LICENSE.txt",
+          "bytes": 23876,
+          "sha256": "c7a0e99360555513ff56815b5dbbc8f0b27a3ad762ceaeeab6838baea9743b3a",
+          "git_blob_sha": "ba6e1b25188962ab457210297b2d9a2b96823104",
+          "source_url": "https://github.com/multimodal-art-projection/YuE/blob/09a1e8a85bf35a93b8c01b3f12b139b558b49852/MODEL_LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/multimodal-art-projection--YuE/09a1e8a85bf35a93b8c01b3f12b139b558b49852/README.md.txt",
+          "bytes": 19310,
+          "sha256": "f597cda08e910b1103559e831c57ec401f9ba3e908b9e1008eb91efa03929c99",
+          "git_blob_sha": "bcb332053e22ea0bdcfedf3d4371cfe908c07aa7",
+          "source_url": "https://github.com/multimodal-art-projection/YuE/blob/09a1e8a85bf35a93b8c01b3f12b139b558b49852/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "MANIFEST.in",
+          "type": "file"
+        },
+        {
+          "path": "MODEL_LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "type": "file"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "examples",
+          "type": "dir"
+        },
+        {
+          "path": "licenses",
+          "type": "dir"
+        },
+        {
+          "path": "pyproject.toml",
+          "type": "file"
+        },
+        {
+          "path": "skills",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-16T10:32:34Z"
+    },
+    {
+      "id": 1073224795,
+      "full_name": "obra/superpowers",
+      "html_url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "brainstorming",
+        "coding",
+        "obra",
+        "sdlc",
+        "skills",
+        "subagent-driven-development",
+        "superpowers"
+      ],
+      "stargazers_count": 290365,
+      "created_at": "2025-10-09T19:45:18Z",
+      "updated_at": "2026-09-23T08:54:07Z",
+      "pushed_at": "2026-09-22T18:22:49Z",
+      "commit": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/obra--superpowers/5bf4e78011075bcfc0dc295f0724994cd123ee71/LICENSE.txt",
+          "bytes": 1070,
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "git_blob_sha": "abf0390320aa14406af7a520b9b0739fdda9bf08",
+          "source_url": "https://github.com/obra/superpowers/blob/5bf4e78011075bcfc0dc295f0724994cd123ee71/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/obra--superpowers/5bf4e78011075bcfc0dc295f0724994cd123ee71/README.md.txt",
+          "bytes": 14389,
+          "sha256": "04fd40756d26d5f2132ddfbc5c3c35335b02bb456197308975f9d12eaa522382",
+          "git_blob_sha": "cf80400690849b37861f39d396d231ea89ac693b",
+          "source_url": "https://github.com/obra/superpowers/blob/5bf4e78011075bcfc0dc295f0724994cd123ee71/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".agents",
+          "type": "dir"
+        },
+        {
+          "path": ".claude-plugin",
+          "type": "dir"
+        },
+        {
+          "path": ".codex-plugin",
+          "type": "dir"
+        },
+        {
+          "path": ".cursor-plugin",
+          "type": "dir"
+        },
+        {
+          "path": ".devin-plugin",
+          "type": "dir"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".hermes-plugin",
+          "type": "dir"
+        },
+        {
+          "path": ".kimi-plugin",
+          "type": "dir"
+        },
+        {
+          "path": ".muse-plugin",
+          "type": "dir"
+        },
+        {
+          "path": ".opencode",
+          "type": "dir"
+        },
+        {
+          "path": ".pi",
+          "type": "dir"
+        },
+        {
+          "path": ".pre-commit-config.yaml",
+          "type": "file"
+        },
+        {
+          "path": ".version-bump.json",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "CLAUDE.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "type": "file"
+        },
+        {
+          "path": "GEMINI.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "RELEASE-NOTES.md",
+          "type": "file"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "gemini-extension.json",
+          "type": "file"
+        },
+        {
+          "path": "hooks",
+          "type": "dir"
+        },
+        {
+          "path": "index.js",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "skills",
+          "type": "dir"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 905829672,
+      "full_name": "playcanvas/splat-transform",
+      "html_url": "https://github.com/playcanvas/splat-transform",
+      "description": "CLI tool and library for 3D Gaussian splat processing and conversion",
+      "homepage": "https://playcanvas.com",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [
+        "3d-gaussian-splatting",
+        "3dgs",
+        "cli",
+        "gaussian-splatting",
+        "playcanvas",
+        "supersplat",
+        "typescript"
+      ],
+      "stargazers_count": 1334,
+      "created_at": "2024-12-19T15:52:40Z",
+      "updated_at": "2026-09-23T06:03:33Z",
+      "pushed_at": "2026-09-22T14:13:00Z",
+      "commit": "9c73f01224482fded4821bfd426c11388aa6c9f9",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/playcanvas--splat-transform/9c73f01224482fded4821bfd426c11388aa6c9f9/LICENSE.txt",
+          "bytes": 1064,
+          "sha256": "42fa51ddd556be151a29f381fb97ee975825dcc454e805ea3ea9c079cca04d34",
+          "git_blob_sha": "7f478db6d47a259cd70f74b1e69d8ce407fd0912",
+          "source_url": "https://github.com/playcanvas/splat-transform/blob/9c73f01224482fded4821bfd426c11388aa6c9f9/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/playcanvas--splat-transform/9c73f01224482fded4821bfd426c11388aa6c9f9/README.md.txt",
+          "bytes": 30782,
+          "sha256": "745717091c1deabcfc6829ba992fc5e7ac2d3c2777e43bf6182995873a280cca",
+          "git_blob_sha": "aafdc3b1ad02f4ba7f75e4ca178ff43ed804afa0",
+          "source_url": "https://github.com/playcanvas/splat-transform/blob/9c73f01224482fded4821bfd426c11388aa6c9f9/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".npmrc",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "bin",
+          "type": "dir"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "type": "file"
+        },
+        {
+          "path": "generators",
+          "type": "dir"
+        },
+        {
+          "path": "lib",
+          "type": "dir"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "release.sh",
+          "type": "file"
+        },
+        {
+          "path": "renovate.json",
+          "type": "file"
+        },
+        {
+          "path": "rollup.config.mjs",
+          "type": "file"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "test",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "tsconfig.json",
+          "type": "file"
+        },
+        {
+          "path": "typedoc.json",
+          "type": "file"
+        },
+        {
+          "path": "utils",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 707265118,
+      "full_name": "playcanvas/supersplat",
+      "html_url": "https://github.com/playcanvas/supersplat",
+      "description": "3D Gaussian Splat Editor",
+      "homepage": "https://superspl.at/editor",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [
+        "3d-gaussian-splatting",
+        "3dgs",
+        "gaussian-splatting",
+        "pcui",
+        "playcanvas",
+        "typescript",
+        "webgl",
+        "webgpu"
+      ],
+      "stargazers_count": 10248,
+      "created_at": "2023-10-19T14:45:07Z",
+      "updated_at": "2026-09-23T01:57:01Z",
+      "pushed_at": "2026-09-22T16:42:37Z",
+      "commit": "7aec7f79c7114e01553694b80aeb2b86022216fe",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/playcanvas--supersplat/7aec7f79c7114e01553694b80aeb2b86022216fe/LICENSE.txt",
+          "bytes": 1064,
+          "sha256": "42fa51ddd556be151a29f381fb97ee975825dcc454e805ea3ea9c079cca04d34",
+          "git_blob_sha": "7f478db6d47a259cd70f74b1e69d8ce407fd0912",
+          "source_url": "https://github.com/playcanvas/supersplat/blob/7aec7f79c7114e01553694b80aeb2b86022216fe/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/playcanvas--supersplat/7aec7f79c7114e01553694b80aeb2b86022216fe/README.md.txt",
+          "bytes": 3197,
+          "sha256": "6571e965daee30b0b69bc9431194107669d2bdcbb9b1fda3e1505564dc1335c1",
+          "git_blob_sha": "66f086ab7bad15631145472d7148ddd34386d052",
+          "source_url": "https://github.com/playcanvas/supersplat/blob/7aec7f79c7114e01553694b80aeb2b86022216fe/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "copy-and-watch.mjs",
+          "type": "file"
+        },
+        {
+          "path": "eslint.config.mjs",
+          "type": "file"
+        },
+        {
+          "path": "global.d.ts",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "renovate.json",
+          "type": "file"
+        },
+        {
+          "path": "rollup.config.mjs",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "static",
+          "type": "dir"
+        },
+        {
+          "path": "tsconfig.json",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 249995750,
+      "full_name": "reactive-resume/reactive-resume",
+      "html_url": "https://github.com/reactive-resume/reactive-resume",
+      "description": "A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!",
+      "homepage": "https://rxresu.me",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [
+        "agent-skills",
+        "ai",
+        "dsh-plugin",
+        "hacktoberfest",
+        "javascript",
+        "mcp-server",
+        "react",
+        "resume-builder",
+        "self-hosted",
+        "typescript"
+      ],
+      "stargazers_count": 43350,
+      "created_at": "2020-03-25T14:08:22Z",
+      "updated_at": "2026-09-23T07:49:10Z",
+      "pushed_at": "2026-09-22T22:12:49Z",
+      "commit": "73ed3f9b0331d9ae4f97040d2684d06d0357e1ff",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/reactive-resume--reactive-resume/73ed3f9b0331d9ae4f97040d2684d06d0357e1ff/LICENSE.txt",
+          "bytes": 1070,
+          "sha256": "d7839f5fa862720b1501a54bcc0d6a2566b59cee221738640bf1508630f73cc1",
+          "git_blob_sha": "474c93d9dc3f213c2fd6d735162777f6e9022021",
+          "source_url": "https://github.com/reactive-resume/reactive-resume/blob/73ed3f9b0331d9ae4f97040d2684d06d0357e1ff/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/reactive-resume--reactive-resume/73ed3f9b0331d9ae4f97040d2684d06d0357e1ff/README.md.txt",
+          "bytes": 11188,
+          "sha256": "e64449f4ca1f3d24e440304a32560be218ac5f25b8fd6a2ace9d7a123130f9f5",
+          "git_blob_sha": "6250aaf16cf720ef15003e0b7a0099fc582b0a23",
+          "source_url": "https://github.com/reactive-resume/reactive-resume/blob/73ed3f9b0331d9ae4f97040d2684d06d0357e1ff/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".codacy.yml",
+          "type": "file"
+        },
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".env.example",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".markdownlint-cli2.yaml",
+          "type": "file"
+        },
+        {
+          "path": ".nvmrc",
+          "type": "file"
+        },
+        {
+          "path": ".orchestration",
+          "type": "dir"
+        },
+        {
+          "path": ".vscode",
+          "type": "dir"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "CLAUDE.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTEXT-MAP.md",
+          "type": "file"
+        },
+        {
+          "path": "DESIGN.md",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile.dev",
+          "type": "file"
+        },
+        {
+          "path": "GLOSSARY.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "apps",
+          "type": "dir"
+        },
+        {
+          "path": "biome.json",
+          "type": "file"
+        },
+        {
+          "path": "commitlint.config.cjs",
+          "type": "file"
+        },
+        {
+          "path": "compose.dev.yml",
+          "type": "file"
+        },
+        {
+          "path": "compose.yml",
+          "type": "file"
+        },
+        {
+          "path": "crowdin.yml",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "knip.json",
+          "type": "file"
+        },
+        {
+          "path": "lefthook.yml",
+          "type": "file"
+        },
+        {
+          "path": "migrations",
+          "type": "dir"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "packages",
+          "type": "dir"
+        },
+        {
+          "path": "patches",
+          "type": "dir"
+        },
+        {
+          "path": "plans",
+          "type": "dir"
+        },
+        {
+          "path": "playwright.config.ts",
+          "type": "file"
+        },
+        {
+          "path": "pnpm-lock.yaml",
+          "type": "file"
+        },
+        {
+          "path": "pnpm-workspace.yaml",
+          "type": "file"
+        },
+        {
+          "path": "server.json",
+          "type": "file"
+        },
+        {
+          "path": "skills-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "skills",
+          "type": "dir"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "tooling",
+          "type": "dir"
+        },
+        {
+          "path": "tsconfig.json",
+          "type": "file"
+        },
+        {
+          "path": "turbo.json",
+          "type": "file"
+        },
+        {
+          "path": "vitest.setup.ts",
+          "type": "file"
+        },
+        {
+          "path": "vitest.shared.mts",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1377692072,
+      "full_name": "SamG-Coder/coastal-simulation-cuda-webshader",
+      "html_url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader",
+      "description": "GPU-resident CUDA WebShader / WebGPU port of iamtechartist/coastal-simulation, with free-flight controls and an FPS display. Original MIT attribution preserved.",
+      "homepage": "https://samg-coder.github.io/coastal-simulation-cuda-webshader/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [
+        "coastal-simulation",
+        "cuda",
+        "simulation",
+        "threejs",
+        "webgpu"
+      ],
+      "stargazers_count": 10,
+      "created_at": "2026-09-19T23:10:48Z",
+      "updated_at": "2026-09-22T06:14:09Z",
+      "pushed_at": "2026-09-19T23:59:17Z",
+      "commit": "e5a80fe42b4eeba6c01de1467035bafd69592d3e",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/coastal-webgpu-2026-09-20.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "CREDITS.md",
+          "local_path": "kilder/github/SamG-Coder--coastal-simulation-cuda-webshader/e5a80fe42b4eeba6c01de1467035bafd69592d3e/CREDITS.md.txt",
+          "bytes": 1965,
+          "sha256": "c49321c6f7300136225307b4223acc13616f1a4ed0ad89d9fccff3a7ad96e076",
+          "git_blob_sha": "01e8804566a1dc3526384394083da79ed72b0dda",
+          "source_url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/CREDITS.md"
+        },
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/SamG-Coder--coastal-simulation-cuda-webshader/e5a80fe42b4eeba6c01de1467035bafd69592d3e/LICENSE.txt",
+          "bytes": 1129,
+          "sha256": "cfc86358916d058e558822e4c36a2deed6f313d16ba7e6c28be1fc9f16b10336",
+          "git_blob_sha": "87efc376dc1db2551018bf4f0b4c734789d54830",
+          "source_url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/SamG-Coder--coastal-simulation-cuda-webshader/e5a80fe42b4eeba6c01de1467035bafd69592d3e/README.md.txt",
+          "bytes": 12902,
+          "sha256": "7db315f7ebd16e527bc93e37aeaa6f54b9ff8c19e32197ab1f5f0d46ef3c7c49",
+          "git_blob_sha": "49e439a79bbc73e5a08be1bad9cb0676dd6791b4",
+          "source_url": "https://github.com/SamG-Coder/coastal-simulation-cuda-webshader/blob/e5a80fe42b4eeba6c01de1467035bafd69592d3e/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "CREDITS.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "initial-state.bin.gz",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "reports",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "style.css",
+          "type": "file"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "vendor",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1366718071,
+      "full_name": "SamG-Coder/cuda-webshader",
+      "html_url": "https://github.com/SamG-Coder/cuda-webshader",
+      "description": "CUDA → WebGPU showcase explorer. Run NVIDIA sine-wave and particle demos in your browser; compare verified native CUDA benchmarks. MIT project.",
+      "homepage": "https://samg-coder.github.io/cuda-webshader/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Cuda",
+      "topics": [],
+      "stargazers_count": 11,
+      "created_at": "2026-09-11T21:46:44Z",
+      "updated_at": "2026-09-22T22:54:36Z",
+      "pushed_at": "2026-09-22T22:54:32Z",
+      "commit": "f45a967480f0bcd8a2c9bd441e509745f94dd795",
+      "starred_at": "2026-09-20T07:11:56Z",
+      "reference_sources": [
+        "repoer/coastal-webgpu-2026-09-20.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/SamG-Coder--cuda-webshader/f45a967480f0bcd8a2c9bd441e509745f94dd795/LICENSE.txt",
+          "bytes": 1099,
+          "sha256": "8cfad05cca921d774bd78ecc5c15b85b0f193be253b8c7dcbaa72b92aef338e0",
+          "git_blob_sha": "3ecf39236799ee451d0286e3db7cb05c2dcd0c49",
+          "source_url": "https://github.com/SamG-Coder/cuda-webshader/blob/f45a967480f0bcd8a2c9bd441e509745f94dd795/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/SamG-Coder--cuda-webshader/f45a967480f0bcd8a2c9bd441e509745f94dd795/README.md.txt",
+          "bytes": 17762,
+          "sha256": "f6112ced113d474b61a796ff77beb30bc2bf5e982ebc01b95b563a8b7b28804c",
+          "git_blob_sha": "1ccc4ffcf7ac523904b1a3f859a2232e57c3c0ce",
+          "source_url": "https://github.com/SamG-Coder/cuda-webshader/blob/f45a967480f0bcd8a2c9bd441e509745f94dd795/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "type": "file"
+        },
+        {
+          "path": "VALIDATION.md",
+          "type": "file"
+        },
+        {
+          "path": "benchmarks",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "generated",
+          "type": "dir"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "kernels",
+          "type": "dir"
+        },
+        {
+          "path": "lab.html",
+          "type": "file"
+        },
+        {
+          "path": "licenses",
+          "type": "dir"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "reports",
+          "type": "dir"
+        },
+        {
+          "path": "sandbox.html",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "showcases",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-20T07:11:56Z"
+    },
+    {
+      "id": 1377035734,
+      "full_name": "SamG-Coder/WaterCuda",
+      "html_url": "https://github.com/SamG-Coder/WaterCuda",
+      "description": "Infinite procedural islands and a spectral ocean, authored in CUDA and rendered in the browser with WebGPU.",
+      "homepage": "https://samg-coder.github.io/WaterCuda/",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Cuda",
+      "topics": [],
+      "stargazers_count": 37,
+      "created_at": "2026-09-19T10:44:08Z",
+      "updated_at": "2026-09-23T08:28:54Z",
+      "pushed_at": "2026-09-23T03:56:01Z",
+      "commit": "e1f0ec4626c970a5b369aa1c1fbc3a3fe6b889c2",
+      "starred_at": null,
+      "reference_sources": [
+        "docs/TIDLIGERE_RESEARCH.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/SamG-Coder--WaterCuda/e1f0ec4626c970a5b369aa1c1fbc3a3fe6b889c2/LICENSE.txt",
+          "bytes": 1134,
+          "sha256": "91e9e540228d8aebc97aa7ae4f5615b055faafc9ae256369785b93a0b54b5c1e",
+          "git_blob_sha": "1ac3cf1c724e6dd98f35bdc039e9ca3191ad7cba",
+          "source_url": "https://github.com/SamG-Coder/WaterCuda/blob/e1f0ec4626c970a5b369aa1c1fbc3a3fe6b889c2/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/SamG-Coder--WaterCuda/e1f0ec4626c970a5b369aa1c1fbc3a3fe6b889c2/README.md.txt",
+          "bytes": 10716,
+          "sha256": "b5391a65d00102f2934719690b8dbf85ef0450c92a3d84791c6a48f78f8bcf18",
+          "git_blob_sha": "3626c8b0a1857e82ed9691ebcde7a4141e1d3864",
+          "source_url": "https://github.com/SamG-Coder/WaterCuda/blob/e1f0ec4626c970a5b369aa1c1fbc3a3fe6b889c2/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "START.bat",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "kernels",
+          "type": "dir"
+        },
+        {
+          "path": "native",
+          "type": "dir"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "server.mjs",
+          "type": "file"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "style.css",
+          "type": "file"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "vendor",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1274708755,
+      "full_name": "scottstts/Threejs-Awesome-Graphics-Agent-Skills",
+      "html_url": "https://github.com/scottstts/Threejs-Awesome-Graphics-Agent-Skills",
+      "description": "A three.js agent skills for producing awesome graphics for scenes and games",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 826,
+      "created_at": "2026-06-19T20:04:15Z",
+      "updated_at": "2026-09-23T08:48:09Z",
+      "pushed_at": "2026-09-22T22:55:52Z",
+      "commit": "d1cb23dcce6ea8ee4a60f6159daeb79d4b511dba",
+      "starred_at": "2026-09-23T08:36:06Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/scottstts--Threejs-Awesome-Graphics-Agent-Skills/d1cb23dcce6ea8ee4a60f6159daeb79d4b511dba/LICENSE.txt",
+          "bytes": 1066,
+          "sha256": "f1bda038ede2d9c31d1dfd57db6e064f91f06862a31e36cfce78c351658ea397",
+          "git_blob_sha": "f5edb1a90ba350596268a7f2e0f2c36002700fa6",
+          "source_url": "https://github.com/scottstts/Threejs-Awesome-Graphics-Agent-Skills/blob/d1cb23dcce6ea8ee4a60f6159daeb79d4b511dba/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/scottstts--Threejs-Awesome-Graphics-Agent-Skills/d1cb23dcce6ea8ee4a60f6159daeb79d4b511dba/README.md.txt",
+          "bytes": 9200,
+          "sha256": "532dd0f47274fbfcb9ee81d82bded7632c09b50af1f42c296fa27688b525e297",
+          "git_blob_sha": "37d21489141ebaf3309e8c5dd19ee452bb8d84a3",
+          "source_url": "https://github.com/scottstts/Threejs-Awesome-Graphics-Agent-Skills/blob/d1cb23dcce6ea8ee4a60f6159daeb79d4b511dba/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".codex",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "bin",
+          "type": "dir"
+        },
+        {
+          "path": "example-gallery",
+          "type": "dir"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "skills",
+          "type": "dir"
+        },
+        {
+          "path": "source_materials",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-23T08:36:06Z"
+    },
+    {
+      "id": 357241735,
+      "full_name": "searxng/searxng",
+      "html_url": "https://github.com/searxng/searxng",
+      "description": "SearXNG is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.",
+      "homepage": "https://docs.searxng.org",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "master",
+      "language": "Python",
+      "topics": [
+        "bing",
+        "brave",
+        "degoogle",
+        "duckduckgo",
+        "google",
+        "metasearch",
+        "privacy",
+        "python",
+        "qwant",
+        "search",
+        "search-engine",
+        "searx",
+        "searxng",
+        "startpage",
+        "yahoo"
+      ],
+      "stargazers_count": 37524,
+      "created_at": "2021-04-12T15:18:15Z",
+      "updated_at": "2026-09-23T08:51:13Z",
+      "pushed_at": "2026-09-23T07:34:33Z",
+      "commit": "d63bbef7a0282dbb8500254b405af39307e71c6d",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/searxng--searxng/d63bbef7a0282dbb8500254b405af39307e71c6d/LICENSE.txt",
+          "bytes": 34520,
+          "sha256": "57c8ff33c9c0cfc3ef00e650a1cc910d7ee479a8bc509f6c9209a7c2a11399d6",
+          "git_blob_sha": "dba13ed2ddf783ee8118c6a581dbf75305f816a3",
+          "source_url": "https://github.com/searxng/searxng/blob/d63bbef7a0282dbb8500254b405af39307e71c6d/LICENSE"
+        },
+        {
+          "path": "README.rst",
+          "local_path": "kilder/github/searxng--searxng/d63bbef7a0282dbb8500254b405af39307e71c6d/README.rst.txt",
+          "bytes": 2296,
+          "sha256": "6a78fb798e890f75c99d2637f83dcdc90bebfdfdc563d24b59b38ef8a673e2ab",
+          "git_blob_sha": "9c2319105ed83fa26397e523b7425447f2302717",
+          "source_url": "https://github.com/searxng/searxng/blob/d63bbef7a0282dbb8500254b405af39307e71c6d/README.rst"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".coveragerc",
+          "type": "file"
+        },
+        {
+          "path": ".devcontainer",
+          "type": "dir"
+        },
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".helix",
+          "type": "dir"
+        },
+        {
+          "path": ".nvmrc",
+          "type": "file"
+        },
+        {
+          "path": ".pylintrc",
+          "type": "file"
+        },
+        {
+          "path": ".vscode",
+          "type": "dir"
+        },
+        {
+          "path": ".weblate",
+          "type": "file"
+        },
+        {
+          "path": ".yamllint.yml",
+          "type": "file"
+        },
+        {
+          "path": "AI_POLICY.rst",
+          "type": "file"
+        },
+        {
+          "path": "AUTHORS.rst",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.rst",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.rst",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "Makefile",
+          "type": "file"
+        },
+        {
+          "path": "PULL_REQUEST_TEMPLATE.md",
+          "type": "file"
+        },
+        {
+          "path": "README.rst",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "babel.cfg",
+          "type": "file"
+        },
+        {
+          "path": "client",
+          "type": "dir"
+        },
+        {
+          "path": "container",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "go.mod",
+          "type": "file"
+        },
+        {
+          "path": "go.sum",
+          "type": "file"
+        },
+        {
+          "path": "manage",
+          "type": "file"
+        },
+        {
+          "path": "mise.toml",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "pyrightconfig.json",
+          "type": "file"
+        },
+        {
+          "path": "requirements-dev.txt",
+          "type": "file"
+        },
+        {
+          "path": "requirements-server.txt",
+          "type": "file"
+        },
+        {
+          "path": "requirements.txt",
+          "type": "file"
+        },
+        {
+          "path": "searx",
+          "type": "dir"
+        },
+        {
+          "path": "searxng_extra",
+          "type": "dir"
+        },
+        {
+          "path": "setup.py",
+          "type": "file"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "utils",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 323996203,
+      "full_name": "Suwayomi/Suwayomi-Server",
+      "html_url": "https://github.com/Suwayomi/Suwayomi-Server",
+      "description": "A rewrite of Tachiyomi for the Desktop",
+      "homepage": "",
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "master",
+      "language": "Java",
+      "topics": [
+        "desktop",
+        "hacktoberfest",
+        "javalin",
+        "kotlin",
+        "manga",
+        "manga-downloader",
+        "manga-reader",
+        "mangareader",
+        "self-hosted",
+        "tachidesk",
+        "tachidesk-server",
+        "tachiyomi"
+      ],
+      "stargazers_count": 7743,
+      "created_at": "2020-12-23T20:31:38Z",
+      "updated_at": "2026-09-23T07:48:20Z",
+      "pushed_at": "2026-09-17T20:30:31Z",
+      "commit": "d37230ee22909414e5b4f9967eea31606bd890a4",
+      "starred_at": null,
+      "reference_sources": [
+        "repoer/sentient-2026-09-12.md"
+      ],
+      "aliases": [],
+      "parent": null,
+      "license": {
+        "key": "mpl-2.0",
+        "name": "Mozilla Public License 2.0",
+        "spdx_id": "MPL-2.0",
+        "url": "https://api.github.com/licenses/mpl-2.0",
+        "node_id": "MDc6TGljZW5zZTE0"
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/Suwayomi--Suwayomi-Server/d37230ee22909414e5b4f9967eea31606bd890a4/LICENSE.txt",
+          "bytes": 16726,
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+          "git_blob_sha": "d0a1fa1482eea82e19510e7920cbe3a03e41f691",
+          "source_url": "https://github.com/Suwayomi/Suwayomi-Server/blob/d37230ee22909414e5b4f9967eea31606bd890a4/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Suwayomi--Suwayomi-Server/d37230ee22909414e5b4f9967eea31606bd890a4/README.md.txt",
+          "bytes": 15541,
+          "sha256": "7e6b2f5326f3b548a4b6a311ade29218bc5ed8e4dec2321c11bdd6b150ea1466",
+          "git_blob_sha": "a0d14d014a4e8ac4d058182b194cea0f3a42280f",
+          "source_url": "https://github.com/Suwayomi/Suwayomi-Server/blob/d37230ee22909414e5b4f9967eea31606bd890a4/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "AndroidCompat",
+          "type": "dir"
+        },
+        {
+          "path": "CHANGELOG-TEMPLATE.md",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "build.gradle.kts",
+          "type": "file"
+        },
+        {
+          "path": "buildSrc",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "gradle",
+          "type": "dir"
+        },
+        {
+          "path": "gradlew",
+          "type": "file"
+        },
+        {
+          "path": "gradlew.bat",
+          "type": "file"
+        },
+        {
+          "path": "renovate.json",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "server",
+          "type": "dir"
+        },
+        {
+          "path": "settings.gradle.kts",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": null
+    },
+    {
+      "id": 1042536885,
+      "full_name": "Tombonator3000/3044",
+      "html_url": "https://github.com/Tombonator3000/3044",
+      "description": null,
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "HTML",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2025-08-22T07:09:11Z",
+      "updated_at": "2026-02-10T09:03:28Z",
+      "pushed_at": "2026-09-09T14:33:40Z",
+      "commit": "b552cff16001cbee07ae8d7d52a76f44e90e9a9e",
+      "starred_at": "2025-12-19T08:24:12Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": null,
+      "files": [
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--3044/b552cff16001cbee07ae8d7d52a76f44e90e9a9e/README.md.txt",
+          "bytes": 4713,
+          "sha256": "f2747afa09f230c2072b96e70660242bc0c5b5201a89035ce8be0fded0d67b6d",
+          "git_blob_sha": "959bcd15fced7d0dbb96a21bbd58d2c176bdf8f7",
+          "source_url": "https://github.com/Tombonator3000/3044/blob/b552cff16001cbee07ae8d7d52a76f44e90e9a9e/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "3044-FINAL mk2.txt",
+          "type": "file"
+        },
+        {
+          "path": "3044-mk2 - VIRKER.html",
+          "type": "file"
+        },
+        {
+          "path": "BACKSTORY.md",
+          "type": "file"
+        },
+        {
+          "path": "BALANCE_ANALYSIS.md",
+          "type": "file"
+        },
+        {
+          "path": "Geometry3044-DELIVERED.html",
+          "type": "file"
+        },
+        {
+          "path": "Geometry3044_Claude_MEGA_PROMPT.md",
+          "type": "file"
+        },
+        {
+          "path": "Geometry3044_Claude_MEGA_PROMPT.txt",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "agents.md",
+          "type": "file"
+        },
+        {
+          "path": "assets",
+          "type": "dir"
+        },
+        {
+          "path": "babel.config.cjs",
+          "type": "file"
+        },
+        {
+          "path": "design dokument.md",
+          "type": "file"
+        },
+        {
+          "path": "generate-icons.html",
+          "type": "file"
+        },
+        {
+          "path": "icons",
+          "type": "dir"
+        },
+        {
+          "path": "index-OLD.html",
+          "type": "file"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "jest.config.cjs",
+          "type": "file"
+        },
+        {
+          "path": "js",
+          "type": "dir"
+        },
+        {
+          "path": "log.md",
+          "type": "file"
+        },
+        {
+          "path": "manifest.json",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "readme.md",
+          "type": "file"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "styles.css",
+          "type": "file"
+        },
+        {
+          "path": "sw.js",
+          "type": "file"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "todo.md",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2025-12-19T08:24:12Z"
+    },
+    {
+      "id": 1117130049,
+      "full_name": "Tombonator3000/conspiracy-canvas",
+      "html_url": "https://github.com/Tombonator3000/conspiracy-canvas",
+      "description": null,
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2025-12-15T21:55:21Z",
+      "updated_at": "2026-04-13T14:52:28Z",
+      "pushed_at": "2026-04-13T14:52:24Z",
+      "commit": "b9a9beb84647e03a97952babaa5ae221bf592637",
+      "starred_at": "2025-12-19T09:17:17Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": null,
+      "files": [
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--conspiracy-canvas/b9a9beb84647e03a97952babaa5ae221bf592637/README.md.txt",
+          "bytes": 3052,
+          "sha256": "56ad69413584e1892134e75dbe03c183993c830031fea746cfd9309537ca9c33",
+          "git_blob_sha": "13e731eba4acaf6792fe6e9730215a3f2422a789",
+          "source_url": "https://github.com/Tombonator3000/conspiracy-canvas/blob/b9a9beb84647e03a97952babaa5ae221bf592637/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "GAME_ANALYSIS.md",
+          "type": "file"
+        },
+        {
+          "path": "GAME_DESIGN_DOCUMENT.md",
+          "type": "file"
+        },
+        {
+          "path": "GAME_FEATURES.md",
+          "type": "file"
+        },
+        {
+          "path": "IMPLEMENTATION_LOG.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "bun.lock",
+          "type": "file"
+        },
+        {
+          "path": "bun.lockb",
+          "type": "file"
+        },
+        {
+          "path": "components.json",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "eslint.config.js",
+          "type": "file"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "log.md",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "postcss.config.js",
+          "type": "file"
+        },
+        {
+          "path": "public",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tailwind.config.ts",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.app.json",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.json",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.node.json",
+          "type": "file"
+        },
+        {
+          "path": "verify-cases.js",
+          "type": "file"
+        },
+        {
+          "path": "vite.config.ts",
+          "type": "file"
+        },
+        {
+          "path": "vitest.config.ts",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2025-12-19T09:17:17Z"
+    },
+    {
+      "id": 1363070348,
+      "full_name": "Tombonator3000/SIGNAL-47",
+      "html_url": "https://github.com/Tombonator3000/SIGNAL-47",
+      "description": "SIGNAL / 47 Unity project and dedicated Kubuntu automation",
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "C#",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2026-09-09T18:23:02Z",
+      "updated_at": "2026-09-13T14:25:27Z",
+      "pushed_at": "2026-09-13T14:25:19Z",
+      "commit": "ebd784d029e5f0e0ec6a25c644fde42ac91fe927",
+      "starred_at": "2026-09-10T15:14:32Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": null,
+      "files": [
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--SIGNAL-47/ebd784d029e5f0e0ec6a25c644fde42ac91fe927/README.md.txt",
+          "bytes": 5154,
+          "sha256": "4fb7c5ba9a9486fd430195bb3dc78a5d6742f0778dc0c2b71674439e3755c41d",
+          "git_blob_sha": "32abb7875226d29eab022bb26d2e938dab99c93a",
+          "source_url": "https://github.com/Tombonator3000/SIGNAL-47/blob/ebd784d029e5f0e0ec6a25c644fde42ac91fe927/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "Automation",
+          "type": "dir"
+        },
+        {
+          "path": "Docs",
+          "type": "dir"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "Spill-SIGNAL47.sh",
+          "type": "file"
+        },
+        {
+          "path": "Unity",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-10T15:14:32Z"
+    },
+    {
+      "id": 1053412951,
+      "full_name": "Tombonator3000/state-shift-strategy",
+      "html_url": "https://github.com/Tombonator3000/state-shift-strategy",
+      "description": null,
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2025-09-09T12:17:15Z",
+      "updated_at": "2026-09-06T10:10:13Z",
+      "pushed_at": "2026-09-06T10:16:24Z",
+      "commit": "89a23aaf1f9a5c4b38619fffb30e0a61b6944ed5",
+      "starred_at": "2025-09-09T14:26:53Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": null,
+      "files": [
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--state-shift-strategy/89a23aaf1f9a5c4b38619fffb30e0a61b6944ed5/README.md.txt",
+          "bytes": 4405,
+          "sha256": "9b5a70229c9d09e0a0d7e7dbfd89f58fbd1e643752a7c170958aa9808dc88395",
+          "git_blob_sha": "a289576da1858d59ee0a9f70120bab8bda9b9a0c",
+          "source_url": "https://github.com/Tombonator3000/state-shift-strategy/blob/89a23aaf1f9a5c4b38619fffb30e0a61b6944ed5/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "ARTICLE_GENERATOR_GUIDE.md",
+          "type": "file"
+        },
+        {
+          "path": "CARD_SATIRE_LOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CARD_STYLE_MANUAL.md",
+          "type": "file"
+        },
+        {
+          "path": "CLAUDE.md",
+          "type": "file"
+        },
+        {
+          "path": "DESIGN_DOC_MVP.md",
+          "type": "file"
+        },
+        {
+          "path": "FULL_AUDIT_REPORT.md",
+          "type": "file"
+        },
+        {
+          "path": "Humor Template  – Paranoid Times.md",
+          "type": "file"
+        },
+        {
+          "path": "README-core-recovery.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "UPDATES_LOG.md",
+          "type": "file"
+        },
+        {
+          "path": "__tests__",
+          "type": "dir"
+        },
+        {
+          "path": "bunfig.toml",
+          "type": "file"
+        },
+        {
+          "path": "components.json",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "eslint.config.js",
+          "type": "file"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "jest.config.cjs",
+          "type": "file"
+        },
+        {
+          "path": "log.md",
+          "type": "file"
+        },
+        {
+          "path": "multiplayer.md",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "paranoid_times_card_articles_ALL.json",
+          "type": "file"
+        },
+        {
+          "path": "postcss.config.js",
+          "type": "file"
+        },
+        {
+          "path": "public",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "supabase",
+          "type": "dir"
+        },
+        {
+          "path": "tailwind.config.ts",
+          "type": "file"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "tsconfig.app.json",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.jest.json",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.json",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.node.json",
+          "type": "file"
+        },
+        {
+          "path": "vite.config.ts",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2025-09-09T14:26:53Z"
+    },
+    {
+      "id": 1123139685,
+      "full_name": "Tombonator3000/the-deep-ones",
+      "html_url": "https://github.com/Tombonator3000/the-deep-ones",
+      "description": null,
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "JavaScript",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2025-12-26T09:02:03Z",
+      "updated_at": "2026-09-20T09:30:48Z",
+      "pushed_at": "2026-09-07T17:05:45Z",
+      "commit": "76195012b08637f01ebae7d0d5a7253452774889",
+      "starred_at": "2026-09-20T09:30:47Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": null,
+      "files": [
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--the-deep-ones/76195012b08637f01ebae7d0d5a7253452774889/README.md.txt",
+          "bytes": 3726,
+          "sha256": "068e45db61a49d947a0e02f4cbbe590e05b5609e6c8e87ac655fcf91cacf4b1a",
+          "git_blob_sha": "147d4221a5f5fc0f4c74d1c0ee219652c8c7b7f0",
+          "source_url": "https://github.com/Tombonator3000/the-deep-ones/blob/76195012b08637f01ebae7d0d5a7253452774889/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": ".openai",
+          "type": "dir"
+        },
+        {
+          "path": "ASSET-GUIDE.md",
+          "type": "file"
+        },
+        {
+          "path": "GAME-DESIGN.md",
+          "type": "file"
+        },
+        {
+          "path": "GFX-ASSET-LIST.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SYSTEM-PROMPT.md",
+          "type": "file"
+        },
+        {
+          "path": "agents.md",
+          "type": "file"
+        },
+        {
+          "path": "asset-ready.html",
+          "type": "file"
+        },
+        {
+          "path": "backgrounds",
+          "type": "dir"
+        },
+        {
+          "path": "debug-test.html",
+          "type": "file"
+        },
+        {
+          "path": "diagnostic.html",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "game.html",
+          "type": "file"
+        },
+        {
+          "path": "generate_placeholders.py",
+          "type": "file"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "js",
+          "type": "dir"
+        },
+        {
+          "path": "log.md",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "quality",
+          "type": "dir"
+        },
+        {
+          "path": "smoke-test.html",
+          "type": "file"
+        },
+        {
+          "path": "sprites",
+          "type": "dir"
+        },
+        {
+          "path": "test.html",
+          "type": "file"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        },
+        {
+          "path": "v2",
+          "type": "dir"
+        },
+        {
+          "path": "vite.config.js",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2026-09-20T09:30:47Z"
+    },
+    {
+      "id": 1338028110,
+      "full_name": "Tombonator3000/Transcendensens-Vev-CRPG",
+      "html_url": "https://github.com/Tombonator3000/Transcendensens-Vev-CRPG",
+      "description": "crpg test",
+      "homepage": null,
+      "private": true,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "Wolfram Language",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2026-08-18T05:54:40Z",
+      "updated_at": "2026-08-18T08:33:15Z",
+      "pushed_at": "2026-09-06T20:29:14Z",
+      "commit": "0b01a00d863a5d33f09b016c66ea812a700158a0",
+      "starred_at": "2026-08-18T06:31:59Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": null,
+      "files": [
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--Transcendensens-Vev-CRPG/0b01a00d863a5d33f09b016c66ea812a700158a0/README.md.txt",
+          "bytes": 37,
+          "sha256": "28010da5cdfbca82d8a2d529055eca4bd9bde62ea987b0ecf0ebac5e62e6e086",
+          "git_blob_sha": "0eaa4f5356dbf029439d36e80127ae98a438c1ef",
+          "source_url": "https://github.com/Tombonator3000/Transcendensens-Vev-CRPG/blob/0b01a00d863a5d33f09b016c66ea812a700158a0/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "client",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-08-18T06:31:59Z"
+    },
+    {
+      "id": 1057067049,
+      "full_name": "Tombonator3000/vector-war-games",
+      "html_url": "https://github.com/Tombonator3000/vector-war-games",
+      "description": null,
+      "homepage": null,
+      "private": false,
+      "fork": false,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "TypeScript",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2025-09-15T08:28:07Z",
+      "updated_at": "2026-02-10T11:00:11Z",
+      "pushed_at": "2026-02-10T11:00:05Z",
+      "commit": "db13fde9245cb3196fe41983740935f9e4bcea52",
+      "starred_at": "2025-09-15T08:29:34Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": null,
+      "license": null,
+      "files": [
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--vector-war-games/db13fde9245cb3196fe41983740935f9e4bcea52/README.md.txt",
+          "bytes": 2606,
+          "sha256": "c4932c361364f200bb10dbc6b652689fe073fc9722c2adfbb2b293cde1376101",
+          "git_blob_sha": "c95d091f02ee00578713cf86a39abaea740c65af",
+          "source_url": "https://github.com/Tombonator3000/vector-war-games/blob/db13fde9245cb3196fe41983740935f9e4bcea52/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".claude",
+          "type": "dir"
+        },
+        {
+          "path": ".env",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "ADVISOR_BACKEND_SETUP.md",
+          "type": "file"
+        },
+        {
+          "path": "AGENDA_SYSTEM_SUMMARY.md",
+          "type": "file"
+        },
+        {
+          "path": "AGENDA_TASKS.md",
+          "type": "file"
+        },
+        {
+          "path": "AGENDA_TESTING_CHECKLIST.md",
+          "type": "file"
+        },
+        {
+          "path": "AUDIT_PROGRESS.md",
+          "type": "file"
+        },
+        {
+          "path": "BEFORE_AFTER_COMPARISON.md",
+          "type": "file"
+        },
+        {
+          "path": "CASUS_BELLI_SYSTEM.md",
+          "type": "file"
+        },
+        {
+          "path": "CESIUM_DEPRECATION_PLAN.md",
+          "type": "file"
+        },
+        {
+          "path": "CESIUM_IMPLEMENTATION_GUIDE.md",
+          "type": "file"
+        },
+        {
+          "path": "CESIUM_INTEGRATION_EXPLORATION.md",
+          "type": "file"
+        },
+        {
+          "path": "DAMAGE_CALCULATION_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "DEFCON_AUDIT_ANALYSIS_AND_RECOMMENDATIONS.md",
+          "type": "file"
+        },
+        {
+          "path": "DEFCON_SYSTEM_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "DIPLOMACY_AUDIT_2025_11_09.md",
+          "type": "file"
+        },
+        {
+          "path": "DIPLOMACY_AUDIT_FINDINGS.md",
+          "type": "file"
+        },
+        {
+          "path": "DIPLOMACY_ENHANCEMENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "DIPLOMACY_FIX_PROMPT.md",
+          "type": "file"
+        },
+        {
+          "path": "FULL_AUDIT_REPORT.md",
+          "type": "file"
+        },
+        {
+          "path": "GAMEPLAY_AUDIT_2025.md",
+          "type": "file"
+        },
+        {
+          "path": "GAMEPLAY_OPTIMIZATIONS_IMPLEMENTATION_GUIDE.md",
+          "type": "file"
+        },
+        {
+          "path": "GAME_IMPROVEMENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "GAME_INTERCONNECTION_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "GOVERNMENT_SELECTION_IMPLEMENTATION.md",
+          "type": "file"
+        },
+        {
+          "path": "GUI_DESIGN_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "HEARTS_OF_IRON_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "HEARTS_OF_IRON_PHASE2_README.md",
+          "type": "file"
+        },
+        {
+          "path": "HEARTS_OF_IRON_PHASE_4_IMPLEMENTATION.md",
+          "type": "file"
+        },
+        {
+          "path": "IMMIGRATION_CULTURE_REDESIGN.md",
+          "type": "file"
+        },
+        {
+          "path": "IMPLEMENTATION_EXAMPLE.ts",
+          "type": "file"
+        },
+        {
+          "path": "IMPLEMENTATION_SUMMARY.md",
+          "type": "file"
+        },
+        {
+          "path": "MAP_AUDIT_REPORT.md",
+          "type": "file"
+        },
+        {
+          "path": "MAP_FIX_NOTES.md",
+          "type": "file"
+        },
+        {
+          "path": "NEGOTIATION_SYSTEM_SUMMARY.md",
+          "type": "file"
+        },
+        {
+          "path": "NEGOTIATION_TASKS.md",
+          "type": "file"
+        },
+        {
+          "path": "NORAD-Vector-V5-8-HIGHSCORE-NAME-DOCTRINE-SKILLED-IMM-DESIGN.html",
+          "type": "file"
+        },
+        {
+          "path": "NUCLEAR_WAR_IMPLEMENTATION.md",
+          "type": "file"
+        },
+        {
+          "path": "OPTIMIZATIONS.md",
+          "type": "file"
+        },
+        {
+          "path": "PHASE3_IMPLEMENTATION_LOG.md",
+          "type": "file"
+        },
+        {
+          "path": "PHASE_3_IMPLEMENTATION.md",
+          "type": "file"
+        },
+        {
+          "path": "PHASE_7_PLAN.md",
+          "type": "file"
+        },
+        {
+          "path": "PR_BODY.md",
+          "type": "file"
+        },
+        {
+          "path": "REACT_OPTIMIZATION_GUIDE.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "REFACTORING_SUMMARY.md",
+          "type": "file"
+        },
+        {
+          "path": "RESOURCE_MARKET_AND_DEPLETION.md",
+          "type": "file"
+        },
+        {
+          "path": "SIMCITY_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "SIMPLIFIED_SYSTEMS_GUIDE.md",
+          "type": "file"
+        },
+        {
+          "path": "START_DIPLOMACY_FIX.txt",
+          "type": "file"
+        },
+        {
+          "path": "TERRITORIAL_RESOURCES_SYSTEM.md",
+          "type": "file"
+        },
+        {
+          "path": "TURN_RESOLUTION_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "TURN_SYSTEM_AUDIT.md",
+          "type": "file"
+        },
+        {
+          "path": "TURN_SYSTEM_FIX_PLAN.md",
+          "type": "file"
+        },
+        {
+          "path": "TUTORIAL_SYSTEM.md",
+          "type": "file"
+        },
+        {
+          "path": "agents.md",
+          "type": "file"
+        },
+        {
+          "path": "bun.lockb",
+          "type": "file"
+        },
+        {
+          "path": "components.json",
+          "type": "file"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "eslint.config.js",
+          "type": "file"
+        },
+        {
+          "path": "index.html",
+          "type": "file"
+        },
+        {
+          "path": "log.md",
+          "type": "file"
+        },
+        {
+          "path": "package-lock.json",
+          "type": "file"
+        },
+        {
+          "path": "package.json",
+          "type": "file"
+        },
+        {
+          "path": "postcss.config.js",
+          "type": "file"
+        },
+        {
+          "path": "public",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "server",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "supabase",
+          "type": "dir"
+        },
+        {
+          "path": "tailwind.config.ts",
+          "type": "file"
+        },
+        {
+          "path": "todo.md",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.app.json",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.json",
+          "type": "file"
+        },
+        {
+          "path": "tsconfig.node.json",
+          "type": "file"
+        },
+        {
+          "path": "vite.config.ts",
+          "type": "file"
+        }
+      ],
+      "previously_starred_at": "2025-09-15T08:29:34Z"
+    },
+    {
+      "id": 1332039735,
+      "full_name": "Tombonator3000/Voidcraft",
+      "html_url": "https://github.com/Tombonator3000/Voidcraft",
+      "description": "A block-based 3D space crafting game: explore procedurally generated planets across many star systems, mine and craft, tame creatures, build ships, bases and your own space stations — solo or with friends. Open-source .NET server + Unity client, self-hostable.",
+      "homepage": "https://www.blocksbeyondthestars.com/",
+      "private": false,
+      "fork": true,
+      "archived": false,
+      "disabled": false,
+      "default_branch": "main",
+      "language": "C#",
+      "topics": [],
+      "stargazers_count": 1,
+      "created_at": "2026-08-12T13:07:03Z",
+      "updated_at": "2026-09-15T16:46:54Z",
+      "pushed_at": "2026-09-15T16:47:39Z",
+      "commit": "20235009d317b0c4e7e9318e330e7b3bb00cddac",
+      "starred_at": "2026-09-14T14:59:58Z",
+      "reference_sources": [],
+      "aliases": [],
+      "parent": "marceld23/BlocksBeyondTheStars",
+      "license": {
+        "key": "agpl-3.0",
+        "name": "GNU Affero General Public License v3.0",
+        "spdx_id": "AGPL-3.0",
+        "url": "https://api.github.com/licenses/agpl-3.0",
+        "node_id": "MDc6TGljZW5zZTE="
+      },
+      "files": [
+        {
+          "path": "LICENSE",
+          "local_path": "kilder/github/Tombonator3000--Voidcraft/20235009d317b0c4e7e9318e330e7b3bb00cddac/LICENSE.txt",
+          "bytes": 34523,
+          "sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0",
+          "git_blob_sha": "be3f7b28e564e7dd05eaf59d64adba1a4065ac0e",
+          "source_url": "https://github.com/Tombonator3000/Voidcraft/blob/20235009d317b0c4e7e9318e330e7b3bb00cddac/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local_path": "kilder/github/Tombonator3000--Voidcraft/20235009d317b0c4e7e9318e330e7b3bb00cddac/README.md.txt",
+          "bytes": 34907,
+          "sha256": "be0c0bc5c0a0500d0a864e7483c469372501915e01ae2721a07c7990a8c57a52",
+          "git_blob_sha": "fcc70114a41c7e9e047a1942783063b4d8d76cfe",
+          "source_url": "https://github.com/Tombonator3000/Voidcraft/blob/20235009d317b0c4e7e9318e330e7b3bb00cddac/README.md"
+        }
+      ],
+      "warnings": [],
+      "root_entries": [
+        {
+          "path": ".dockerignore",
+          "type": "file"
+        },
+        {
+          "path": ".editorconfig",
+          "type": "file"
+        },
+        {
+          "path": ".gitattributes",
+          "type": "file"
+        },
+        {
+          "path": ".github",
+          "type": "dir"
+        },
+        {
+          "path": ".gitignore",
+          "type": "file"
+        },
+        {
+          "path": "AGENTS.md",
+          "type": "file"
+        },
+        {
+          "path": "BlocksBeyondTheStars.CI.slnf",
+          "type": "file"
+        },
+        {
+          "path": "BlocksBeyondTheStars.sln",
+          "type": "file"
+        },
+        {
+          "path": "CHANGELOG.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "type": "file"
+        },
+        {
+          "path": "CODE_SIGNING.md",
+          "type": "file"
+        },
+        {
+          "path": "CONTRIBUTING.md",
+          "type": "file"
+        },
+        {
+          "path": "Directory.Build.props",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile.ai",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile.reports",
+          "type": "file"
+        },
+        {
+          "path": "Dockerfile.worldhost",
+          "type": "file"
+        },
+        {
+          "path": "LICENSE",
+          "type": "file"
+        },
+        {
+          "path": "NOTICES.md",
+          "type": "file"
+        },
+        {
+          "path": "README.md",
+          "type": "file"
+        },
+        {
+          "path": "SECURITY.md",
+          "type": "file"
+        },
+        {
+          "path": "TODO.md",
+          "type": "file"
+        },
+        {
+          "path": "ai-backend",
+          "type": "dir"
+        },
+        {
+          "path": "client",
+          "type": "dir"
+        },
+        {
+          "path": "coverlet.runsettings",
+          "type": "file"
+        },
+        {
+          "path": "data",
+          "type": "dir"
+        },
+        {
+          "path": "deploy",
+          "type": "dir"
+        },
+        {
+          "path": "docker-compose.postgres.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.reports.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.tls.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker-compose.yml",
+          "type": "file"
+        },
+        {
+          "path": "docker",
+          "type": "dir"
+        },
+        {
+          "path": "docs",
+          "type": "dir"
+        },
+        {
+          "path": "marketing",
+          "type": "dir"
+        },
+        {
+          "path": "scripts",
+          "type": "dir"
+        },
+        {
+          "path": "src",
+          "type": "dir"
+        },
+        {
+          "path": "tests",
+          "type": "dir"
+        },
+        {
+          "path": "tools",
+          "type": "dir"
+        }
+      ],
+      "previously_starred_at": "2026-09-14T14:59:58Z"
+    }
+  ]
+}

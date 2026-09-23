@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+data/sync-errors.json
+data/.sync-*.tmp

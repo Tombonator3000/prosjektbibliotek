@@ -1,0 +1,156 @@
+{
+  "achimala/dream-loop": {
+    "summary": "Agent-skill for visuell iterasjon: et generert målbilde sammenlignes med skjermbilder fra den faktiske scenen gjennom en egen kritiker.",
+    "categories": ["Skills og agentverktøy", "3D og simulering"],
+    "reuse": "Bruk arbeidsmetoden som referanse for målbildet, faktisk bygg, visuell kritikk og ny korrigering i spill eller interaktive scener. Blender omtales for egne 3D-modeller.",
+    "caveats": "Dette er en arbeidsmetode/skill, ikke en spillmotor eller ferdig Unity-integrasjon. Forutsetter agentverktøy for bilder og visuell inspeksjon. Repoets oppgitte modelltesting er opphavspersonens dokumentasjon; skillen er ikke installert eller kjørt ved katalogiseringen.",
+    "tags": ["agent-skill", "visuell QA", "målbilder", "Blender", "subagenter", "iterasjon"]
+  },
+  "bilawalsidhu/gods-eye-view": {
+    "summary": "Nettleserapp med CesiumJS-globus og lag for blant annet fly, skip, satellitter, vær og offentlig tilgjengelige geografiske data.",
+    "categories": ["3D og simulering", "Apper og egen drift"],
+    "reuse": "Studer modulære kartlag, sanntidsdata med interpolasjon, satellittbaner, kameraføring og et instrumentpreget grensesnitt for kart- og simuleringsprosjekter.",
+    "caveats": "CesiumJS/Vite-app under utvikling, ikke en Unity-motor. Enkelte effekter og posisjoner er simulert eller anslått; noen tjenester krever egne nøkler og har kvoter/kostnader. LICENSE gir MIT for kode, men ikke for tredjepartsdata, modeller eller demonstrasjonsmedier; den nevner blant annet CC BY-NC-SA, CC BY-NC og ODbL. API-verdien NOASSERTION må leses sammen med selve lisensfilen. Ikke kjørt ved katalogiseringen.",
+    "tags": ["CesiumJS", "GIS", "WebGL", "satellitter", "kart", "sanntidsdata", "HUD", "Vite"]
+  },
+  "bobeff/open-source-games": {
+    "summary": "Sjangerinndelt lenkesamling over spill med åpen kildekode, nyimplementeringer og kildeporter.",
+    "categories": ["Spill og spillmotorer"],
+    "reuse": "Finn konkrete referanseprosjekter for FPS, strategi, rollespill, roguelikes, byggespill og andre sjangre før en avgrenset kode- eller arkitekturgjennomgang.",
+    "caveats": "Dette er en katalog, ikke en spillmotor eller en samlet assetpakke. Katalogens CC0-lisens sier ikke hva som gjelder for spillene den lenker til; hvert målprosjekts kode, originaldata og assets må vurderes separat. Ingen av de lenkede spillene er testet som del av katalogiseringen.",
+    "tags": ["referanseliste", "spill", "kildeporter", "FPS", "strategi", "rollespill", "åpen kildekode"]
+  },
+  "chaseleantj/desktop-habitats": {
+    "summary": "Interaktive ferskvanns- og revakvarier rendret lokalt med Three.js og WebGL2, med nettleservisning og skrivebordsbakgrunn for macOS.",
+    "categories": ["3D og simulering", "Apper og egen drift"],
+    "reuse": "Studer fisk som reagerer på peker og mat, prosedyriske organismer, vannmiljøer og kvalitetsprofiler som pauser eller reduserer rendering når scenen ikke er synlig.",
+    "caveats": "Skrivebordsappen er dokumentert for macOS; nettleserdemoen er et eget bruksalternativ. Ingen Unity-integrasjon er dokumentert. MIT-kode, separat Three.js-lisens og CC0-materialer fra Poly Haven er oppgitt. Batteritid er ikke målt i README; lokal ytelse og kjøring er ikke testet ved katalogiseringen.",
+    "tags": ["Three.js", "WebGL2", "akvarium", "fisk", "prosedyrisk", "macOS", "levende bakgrunn", "ytelse"]
+  },
+  "chrispository/desktop-habitats-omarchy": {
+    "summary": "Fork av Desktop Habitats som pakker akvariene som Omarchy-plugin med Linux-bakgrunn, skjermtilpasning og innstillingspanel.",
+    "categories": ["3D og simulering", "Apper og egen drift"],
+    "reuse": "Referanse for Three.js-scener som skrivebordsbakgrunn på Omarchy, individuelle skjermoppsett og Blender-rigget sjøanemone med bevegelige tentakler.",
+    "caveats": "Omarchy-spesifikk integrasjon med Qt6 WebEngine/layer-shell; er ikke dokumentasjon på generell Linux- eller Unity-kompatibilitet. README varsler betydelig GPU-bruk. MIT-kode og Three.js/Poly Haven-kilder er oppgitt, men Fab-materialer er også kreditert og må følge sine egne assetvilkår. Ikke installert eller kjørt ved katalogiseringen.",
+    "tags": ["Omarchy", "Linux", "Three.js", "WebGL2", "Qt6", "Blender", "akvarium", "flereskjermer"]
+  },
+  "Crosstalk-Solutions/project-nomad": {
+    "summary": "Server og nettgrensesnitt som samler lokale kunnskapsressurser, kurs, kart, notater og valgfri lokal AI gjennom Docker-baserte tjenester.",
+    "categories": ["Apper og egen drift"],
+    "reuse": "Kandidat til et lokalt kunnskapsbibliotek med Kiwix, Kolibri, kart og dokumentsøk, eller som arkitekturreferanse for et administrasjonspanel over flere selvdriftede verktøy.",
+    "caveats": "README beskriver Debian-baserte systemer og nedlasting under oppsett; AI og innhold avgjør lagrings- og maskinvarebehov. Prosjektet oppgir ingen innebygd autentisering og er ikke ment for direkte internetteksponering. Apache-2.0 gjelder prosjektet; tilknyttede tjenester og innhold har egne vilkår. Ikke installert eller driftstestet her.",
+    "tags": ["Docker", "offline", "kunnskapsbibliotek", "Kiwix", "Kolibri", "Ollama", "Qdrant", "RAG", "selvdrift"]
+  },
+  "cryptomanavan/ShoreBreak": {
+    "summary": "Interaktiv kystdemo i Three.js/WebGL2 med brytende bølger, skum, grunne vannstrømmer, våt sand og undervannsoptikk.",
+    "categories": ["3D og simulering"],
+    "reuse": "Studer samspillet mellom FFT-hav, egen brytende bølgegeometri, GPU-basert gruntvannsløser, skumfelt og adaptiv renderoppløsning for vann- og strandscener.",
+    "caveats": "Grafisk sanntidstilnærming, ikke full 3D Navier–Stokes-simulering. Three.js/WebGL2-kode krever tilpasning til Unity. README skiller automatiske tester fra GPU-inspeksjon og gir ingen fast FPS-garanti. MIT for originalkode/prosedyrisk geometri; fotoressurser og tredjepart har egne lisenser. Ingen tester eller visuell kjøring er utført ved katalogiseringen.",
+    "tags": ["Three.js", "WebGL2", "hav", "FFT", "gruntvann", "bølger", "skum", "undervann", "Vite"]
+  },
+  "iamtechartist/coastal-simulation": {
+    "summary": "Three.js-kystsimulering beskrevet med gruntvannsløser, brytende dønninger, skum, våt sand, sjøsprøyt og utforskning langs stranden.",
+    "categories": ["3D og simulering"],
+    "reuse": "Visuell og teknisk kandidat for strandkontakt, bølgebryting og vann/sand-overganger; README lenker til en nettleserdemo for senere vurdering.",
+    "caveats": "README er svært kort og dokumenterer ikke installasjon, maskinvarekrav, nøyaktighet eller en verifisert integrasjonsvei. MIT-lisensfil er innhentet. Demoen og koden er ikke kjørt, og Unity-kompatibilitet er ikke undersøkt.",
+    "tags": ["Three.js", "kyst", "gruntvann", "bølger", "skum", "våt sand", "demo"]
+  },
+  "lhlGitHub/threejs-architecture-effects": {
+    "summary": "Agent-skill og Vite/React/Three.js-startprosjekt for interaktiv 3D-arkitektur som bygges opp langs en styrbar tidslinje.",
+    "categories": ["Skills og agentverktøy", "3D og simulering"],
+    "reuse": "Referanse for å planlegge bygningsdeler, bruke prosedyriske PBR-materialer og la geometri, skygger og kamera følge en deterministisk konstruksjonstidslinje.",
+    "caveats": "Startprosjektet er en nettleserscene, ikke en Unity-pakke. Klokketårnet er et eksempel og ingen historisk rekonstruksjon; videoeksport er ikke inkludert. Dokumentert som skrivebordsorientert uten generell FPS-garanti. MIT for skillen, egne lisenser for npm-avhengigheter. Ikke installert eller kjørt her.",
+    "tags": ["agent-skill", "Three.js", "React", "Vite", "arkitektur", "konstruksjon", "PBR", "tidslinje"]
+  },
+  "marceld23/BlocksBeyondTheStars": {
+    "summary": "Vokselbasert rom- og byggespill med prosedyriske verdener, Unity-klient og separat autoritativ .NET-server.",
+    "categories": ["Spill og spillmotorer", "3D og simulering"],
+    "reuse": "Studer skillet mellom klient og server, deterministisk verdensgenerering, persistens, delte datamodeller og JSON-definert innhold. Dette er også oppstrømsgrunnlaget for Voidcraft.",
+    "caveats": "Et spill under utvikling med dokumenterte kompatibilitetsforbehold, ikke en generell ferdig spillmotor. README oppgir Unity 6000.4.x/.NET 10, som ikke er SIGNAL / 47s låste versjoner. AGPL-3.0-or-later og tredjepartsnotiser må vurderes før kode tas inn i andre prosjekter. Ingen bygg, spilltest eller ytelsesmåling er gjort ved katalogiseringen.",
+    "tags": ["Unity", "C#", ".NET", "URP", "voksler", "romspill", "flerspiller", "verdensgenerering", "AGPL"]
+  },
+  "moonpudding/localchannels": {
+    "summary": "Lokalt videobibliotek med søk, filnavnbaserte tagger, kontinuerlige kanaler, avspillingshistorikk og VR/WebXR-visning.",
+    "categories": ["Apper og egen drift"],
+    "reuse": "Kandidat for å organisere egne referansevideoer, og kodeeksempel for inkrementell medieindeksering, gjenopptatt avspilling, kanalkøer og 180/360-graders video.",
+    "caveats": "Krever Python/ffmpeg eller Docker; WebXR krever støttet nettleser/hodesett og sikker kontekst. Valgfri AI-analyse sender videobilder til den konfigurerte modellen, og enkelte biblioteksfunksjoner kan endre filnavn eller slette filer. MIT-lisens er innhentet. Ingen installasjon, filoperasjoner eller VR-test er utført ved katalogiseringen.",
+    "tags": ["mediebibliotek", "video", "Python", "ffmpeg", "Docker", "WebXR", "VR", "tagger", "selvdrift"]
+  },
+  "multimodal-art-projection/YuE": {
+    "summary": "YuE2-system for musikkgenerering med redigerbar melodi-/akkordplan, vokal og akkompagnement, samt Python-API og agent-skill.",
+    "categories": ["Lyd og musikk", "Skills og agentverktøy"],
+    "reuse": "Kandidat for senere vurdering av lokal musikkproduksjon og kontrollert variasjon gjennom eksplisitte komposisjonsplaner; API-et deler planlegging, semantisk generering, syntese og dekoding i steg.",
+    "caveats": "Main dokumenterer YuE2; original YuE ligger på YuE-v1-grenen. README oppgir Linux, Python 3.12 og NVIDIA BF16-GPU med 24 GB VRAM. Apache-2.0 gjelder kode/skill/docs; modellvektene har separat CC BY-NC 4.0 med tilleggstillatelse for skapere, og README skiller privat/skaperbruk fra kommersiell selskapsbruk. Les MODEL_LICENSE før et konkret valg. Ingen modell er lastet ned, kjørt eller kvalitetsvurdert her.",
+    "tags": ["YuE2", "musikk", "lyd", "Python", "CUDA", "agent-skill", "komposisjon", "lokal AI", "modellvekter"]
+  },
+  "SamG-Coder/cuda-webshader": {
+    "summary": "Kompilator og WebGPU-kjøremiljø som oversetter et avgrenset CUDA C-utvalg til WGSL, med sandbox, partikler og andre demonstrasjoner.",
+    "categories": ["3D og simulering"],
+    "reuse": "Studer GPU-beregning i nettleseren, delte compute/render-buffere, dokumenterte kernel-kontrakter og oppdeling mellom CPU-tester, nettleser-GPU-tester og native CUDA-sammenligninger.",
+    "caveats": "Ingen generell CUDA- eller Unity-erstatning: støtter et definert delsett og trenger WebGPU. Three.js-broen er låst til 0.186.0 på grunn av en privat buffer-API. Chrono SPH-demoen omtales som eksperimentell og tregere enn sanntid. MIT-prosjekt med blant annet BSD-3-Clause for NVIDIA-eksempler. Publiserte målinger er repoets egne; ingen kompilering eller benchmark er kjørt her.",
+    "tags": ["CUDA", "WebGPU", "WGSL", "Three.js", "GPU compute", "partikler", "kompilator", "benchmark"]
+  },
+  "scottstts/Threejs-Awesome-Graphics-Agent-Skills": {
+    "summary": "Samling av Three.js-skills og implementasjonseksempler for materialer, lys, vann, vær, prosedyrisk geometri, VFX og visuell validering.",
+    "categories": ["Skills og agentverktøy", "3D og simulering"],
+    "reuse": "Slå opp avgrensede grafikksystemer og tilhørende eksempler, særlig hav/undervann, materialer, atmosfære, skygger og diagnostiske visninger. Bruk prinsippene om reproduserbare innganger og tidsmessig stabilitet ved egne vurderinger.",
+    "caveats": "Three.js/TSL/WebGPU/GLSL-referanser, ikke Unity-pakker eller en komplett spillmotor. Eksempelgalleriet eier noe sceneoppsett som ikke følger med den enkelte skillen. Repoets kvalitets- og valideringspåstander er ikke etterprøvd her; ingen skills er installert og ingen demo er kjørt. MIT-lisensfil er innhentet.",
+    "tags": ["agent-skills", "Three.js", "TSL", "WebGPU", "GLSL", "PBR", "hav", "VFX", "visuell QA"]
+  },
+  "Tombonator3000/3044": {
+    "summary": "Geometry 3044: eget retroinspirert nettleserskytespill med fiendeformasjoner, bosser, comboer og synthwave-uttrykk.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer"],
+    "reuse": "Referanse for bølge- og formasjonsstyring, poeng/combo-system, lokale rekordlister, attract mode og enkle partikkel-/CRT-effekter i arkadespill.",
+    "caveats": "Beskrivelsen bygger på README, som også inneholder planlagte funksjoner; disse skal ikke behandles som implementerte. README oppgir MIT og lenker til LICENSE, men en lisensfil finnes ikke i den innhentede rotoversikten. Ingen ny spilltest eller kodeverifisering er gjort.",
+    "tags": ["eget prosjekt", "JavaScript", "arkade", "shooter", "formasjoner", "combo", "CRT", "synthwave"]
+  },
+  "Tombonator3000/conspiracy-canvas": {
+    "summary": "Eget Lovable-basert prosjekt med dokumentert Vite/TypeScript/React-grensesnitt, shadcn-ui og Tailwind CSS.",
+    "categories": ["Egne prosjekter", "Apper og egen drift"],
+    "reuse": "Mulig referanse for React-grensesnitt og oppsett for bygg/hosting; konkrete gjenbrukbare funksjoner må identifiseres gjennom en senere gjennomgang av kildekoden.",
+    "caveats": "README består i stor grad av generisk Lovable-oppsett og har plassholder for prosjekt-ID; den dokumenterer ikke prosjektets konkrete mekanikker. Ingen LICENSE-fil er registrert i innhentet rotoversikt. Hostingbeskrivelsen er ikke en ny verifisering av live-status, og prosjektet er ikke kjørt her.",
+    "tags": ["eget prosjekt", "Lovable", "React", "TypeScript", "Vite", "shadcn-ui", "Tailwind", "GitHub Pages"]
+  },
+  "Tombonator3000/SIGNAL-47": {
+    "summary": "Eget førstepersonsspill om kosmisk etterforskning ved SARO i New Mexico i 1986, bygget med Unity/URP og Blender.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer"],
+    "reuse": "Referanse for fysiske interaksjoner, feltkamera og fotoframkalling, kontrollpunktlagring, dokumentert spillerreise, isolerte testprofiler og sporbar sammenheng mellom kilde, bygg og leveranse.",
+    "caveats": "README ved innhentet commit omtaler en Visual10-utgave og en nyere NightSky12-testkandidat med ventende spillerreise/ytelsesmåling. Dette er historikk fra repoet, ikke nye tester i katalogarbeidet. Bevar Unity 6000.3.22f1, URP 17.3.0, Input System 1.20.0 og Blender 4.5.13 LTS ved videre prosjektarbeid. Spillpakker følger ikke et rent klon. Ingen rotlisens er registrert; egne assets og tredjepartskreditering må håndteres separat.",
+    "tags": ["eget prosjekt", "Unity", "URP", "Blender", "kosmisk skrekk", "etterforskning", "feltkamera", "Gauntlet", "Linux"]
+  },
+  "Tombonator3000/state-shift-strategy": {
+    "summary": "Paranoid Times: eget satirisk kortstrategispill med React-avisgrensesnitt, delstatskart og konkurranse om innflytelse og nyhetsbildet.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer"],
+    "reuse": "Studer datadrevet kortkatalog, strategiheuristikker, synliggjøring av spillekonsekvenser og dokumentert oppfølging av oppstart, lagring, kortflyt og CI-kontroller.",
+    "caveats": "README oppgir kjent lint-gjeld, utilgjengelige Midnight-pakker og en deaktivert AI-planleggingstest; disse begrensningene må følge eventuelle gjenbruksnotater. Tidligere Gauntlet- og PR-status er repoets dokumentasjon, ikke nye tester. Ingen LICENSE-fil er registrert i rotoversikten. Ingen spillkjøring eller type-/testkontroll er utført her.",
+    "tags": ["eget prosjekt", "kortspill", "strategi", "React", "TypeScript", "Bun", "spill-AI", "Gauntlet"]
+  },
+  "Tombonator3000/the-deep-ones": {
+    "summary": "Eget kosmisk fiskespill; README skiller den nye The Stillwater Below-spilldelen i v2/ fra den bevarte eldre The Deep Ones-prototypen.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer"],
+    "reuse": "Referanse for fiskespenning, oppdagelser, butikk/utstyr, hundefølge, original nattillustrasjon og separat lokal lagring når en gammel prototype bygges om.",
+    "caveats": "Funksjonstall og veikart under Original prototype archive gjelder eldre utgave og må ikke tilskrives v2. README hevder MIT i den historiske delen, men LICENSE-fil er ikke registrert i innhentet rotoversikt. Nye spillflyttester, bygg og visuell kontroll er ikke kjørt ved katalogiseringen.",
+    "tags": ["eget prosjekt", "JavaScript", "fiskespill", "kosmisk skrekk", "2D", "illustrasjon", "lokal lagring", "prototype"]
+  },
+  "Tombonator3000/Transcendensens-Vev-CRPG": {
+    "summary": "Eget repo beskrevet som en CRPG-test; tilgjengelig README består av prosjektnavn og denne korte beskrivelsen.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer"],
+    "reuse": "Bevart som gjenfinnbar lenke til eget rollespilleksperiment. Konkrete systemer og gjenbruksmuligheter krever en senere gjennomgang av kildefilene.",
+    "caveats": "README gir ikke grunnlag for påstander om motor, funksjoner, bygg eller spillbarhet. Ingen LICENSE-fil er registrert i innhentet rotoversikt. Ingen installasjon, kodegjennomgang utover innhentet dokumentasjon eller spilltest er gjort her.",
+    "tags": ["eget prosjekt", "CRPG", "rollespill", "eksperiment", "mangelfull dokumentasjon"]
+  },
+  "Tombonator3000/vector-war-games": {
+    "summary": "Eget Lovable/Vite/TypeScript/React-prosjekt med dokumenterte spillrelaterte hooks og Vitest/React Testing Library-oppsett.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer"],
+    "reuse": "Mulig referanse for React-baserte spillsystemer og deterministisk testing av tilfeldige hendelser; README nevner useFlashpoints som eksempel.",
+    "caveats": "README er hovedsakelig generisk prosjektoppsett og dokumenterer ikke en fullstendig spillbeskrivelse. CI- og testomtalen er en opplysning fra repoet, ikke bevis på at testene er kjørt nå. Ingen LICENSE-fil er registrert i rotoversikten, og prosjektet er ikke installert eller kjørt her.",
+    "tags": ["eget prosjekt", "Lovable", "React", "TypeScript", "Vite", "Vitest", "spilltester", "tilfeldige hendelser"]
+  },
+  "Tombonator3000/Voidcraft": {
+    "summary": "Egen utviklingsfork av Blocks Beyond the Stars med Voidcraft-identitet og The Sleeper Signal-kampanje om prosedyriske verdener og kosmisk skrekk.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer", "3D og simulering"],
+    "reuse": "Referanse for å bevare et Unity/.NET-vokselgrunnlag mens egne fortellinger, lokalisering, lagringsidentitet og en separat Windows-spilltestpipeline legges til.",
+    "caveats": "README beskriver narrativt grunnarbeid og en pipeline som fortsatt trenger forkens Actions/Unity-lisensoppsett før første nedlastbare artefakt; ingen egen driftet tjeneste er oppgitt. Oppstrøms funksjonsbeskrivelser og utgivelser er ikke bevis på en testet Voidcraft-leveranse. AGPL-3.0-or-later og oppstrøms-/tredjepartskreditering er bevart. Ingen ny bygg- eller spilltest er utført ved katalogiseringen.",
+    "tags": ["eget prosjekt", "Unity", ".NET", "voksler", "romspill", "kosmisk skrekk", "fortelling", "fork", "AGPL"]
+  }
+}

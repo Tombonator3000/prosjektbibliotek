@@ -1,0 +1,212 @@
+{
+  "CoplayDev/unity-mcp": {
+    "summary": "Unity Editor-kontroll via MCP; historisk kandidat fra SIGNAL / 47.",
+    "categories": [
+      "Skills og agentverktøy",
+      "Spill og spillmotorer"
+    ],
+    "reuse": "Vurder sceneinspeksjon, objekt-/materialredigering og editorautomatisering når prosjektet trenger det.",
+    "caveats": "Det bevarte samtaleutdraget har ingen festet versjon eller dokumentert lokal test. Kontroller valgt Unity-versjon og faktisk transport før bruk.",
+    "tags": [
+      "Unity",
+      "MCP",
+      "editor",
+      "automatisering",
+      "historisk-kandidat"
+    ]
+  },
+  "CoderGamester/mcp-unity": {
+    "summary": "Separat Unity MCP-integrasjon, tidligere nevnt som kandidat.",
+    "categories": [
+      "Skills og agentverktøy",
+      "Spill og spillmotorer"
+    ],
+    "reuse": "Sammenlign funksjoner mot konkrete Unity-editoroppgaver og eksisterende automatisering.",
+    "caveats": "Ingen festet commit eller dokumentert lokal test i den bevarte kilden. Må ikke forveksles med CoplayDev/unity-mcp.",
+    "tags": [
+      "Unity",
+      "MCP",
+      "editor",
+      "scene",
+      "historisk-kandidat"
+    ]
+  },
+  "ahujasid/blender-mcp": {
+    "summary": "Opprinnelig Blender MCP-kandidat fra SIGNAL / 47-samtalen.",
+    "categories": [
+      "Skills og agentverktøy",
+      "3D og simulering"
+    ],
+    "reuse": "Kilde til tidligere utforsking av Blender-kontroll og sceneinspeksjon via MCP.",
+    "caveats": "Den historiske Gauntlet04-kopien oppga at denne broen ikke var installert. Senere verifikasjon av bpy-dev/blender-mcp gjelder en annen distribusjon.",
+    "tags": [
+      "Blender",
+      "MCP",
+      "3D",
+      "historisk-kandidat"
+    ]
+  },
+  "SamG-Coder/WaterCuda": {
+    "summary": "Vann-/GPU-referanse brukt som inspirasjon i The Deep Ones.",
+    "categories": [
+      "3D og simulering"
+    ],
+    "reuse": "Undersøk vannalgoritmer for avgrenset tilpasning til eksisterende renderer.",
+    "caveats": "Produksjonsjournalen oppgir ingen upstream-commit. Ingen referansekode ble kopiert; CUDA, FFT-hav og full gruntvannsløser var ikke avhengigheter i den beskrevne Unity-kandidaten.",
+    "tags": [
+      "vann",
+      "GPU",
+      "Unity-port",
+      "rendering",
+      "referanse"
+    ]
+  },
+  "cortiz2894/stylized-components": {
+    "summary": "Three.js-/React Three Fiber-studier som inspirerte Voidcrafts vegetasjon og vannringer.",
+    "categories": [
+      "3D og simulering"
+    ],
+    "reuse": "Felles terreng-/vegetasjonsmaske, rotfestet vind, nedtråkking, transmisjon gjennom vegetasjon og vanninteraksjon.",
+    "caveats": "MIT oppgitt i historisk tilpasningsnotat; ingen upstream-commit festet der. Voidcraft skrev egen Unity C#/HLSL-kode og vendoret ikke upstream-kode eller assets.",
+    "tags": [
+      "Three.js",
+      "React Three Fiber",
+      "vegetasjon",
+      "gress",
+      "vann",
+      "Unity",
+      "HLSL"
+    ]
+  },
+  "bpy-dev/blender-mcp": {
+    "summary": "Blender MCP-distribusjon med historisk lokal saved-file-verifikasjon.",
+    "categories": [
+      "Skills og agentverktøy",
+      "3D og simulering"
+    ],
+    "reuse": "Inspekter lagrede scener, finn runtime API-signaturer, lag separate checkpoints og verifiser render/FBX-rundtur.",
+    "caveats": "Vurdert e8ac4088d4a3e0469d3eff9f9bb2dd717e899219 med Blender 4.5.13; GPL-3.0-or-later oppgitt. Utvalgte upstream-tester: 83 bestått, 7 hoppet over, 1 feil. Missing-files-verktøy krevde fallback. Live UI og CUDA-verktøy var ikke verifisert.",
+    "tags": [
+      "Blender",
+      "MCP",
+      "saved-file",
+      "stdio",
+      "FBX",
+      "API-oppslag",
+      "historisk-lokal-test"
+    ]
+  },
+  "obra/superpowers": {
+    "summary": "Opphav til den lokalt tilpassede brainstorming-skillen.",
+    "categories": [
+      "Skills og agentverktøy"
+    ],
+    "reuse": "Strukturer designavklaring og beslutninger før implementering; behold konkret opphavs- og tilpasningslogg.",
+    "caveats": "Lokal avledning fra b36e0829c6d0140e93cfef2ca599b1b07d4a7797, skills/brainstorming, tilpasset 13. september 2026. MIT-lisens bevart. Lokal skill er ikke uendret upstream og dette dokumenterer ikke installasjon av hele pakken.",
+    "tags": [
+      "skills",
+      "brainstorming",
+      "design",
+      "arbeidsflyt",
+      "MIT",
+      "lokal-tilpasning"
+    ]
+  },
+  "haato-w/3d-gabor-splatting": {
+    "summary": "Forskningsreferanse for fine mønstre med 3D Gabor Splatting.",
+    "categories": [
+      "3D og simulering"
+    ],
+    "reuse": "Vurder forskningsmetoden for særskilte overflate-/rekonstruksjonsbehov.",
+    "caveats": "Historisk kontroll 13. september oppga begrensninger på kommersiell bruk; ingen commit festet i notatet. Ekstra frekvens-/fase-/vektdata krever passende renderer; ikke et generelt kvalitetsfilter for vanlige splats.",
+    "tags": [
+      "Gaussian splatting",
+      "Gabor",
+      "forskning",
+      "rekonstruksjon",
+      "lisensbegrensning"
+    ]
+  },
+  "haato-w/diff-gabor-rasterization": {
+    "summary": "CUDA-rasterizer til 3D Gabor Splatting-forskningen.",
+    "categories": [
+      "3D og simulering"
+    ],
+    "reuse": "Teknisk referanse for den tilhørende spesialiserte Gabor-rendereren.",
+    "caveats": "Historisk lisensgjennomgang oppga begrensninger på kommersiell bruk. Ingen commit festet i kilden; CUDA og tilpassede data gjør den ikke til en ferdig Unity-integrasjon.",
+    "tags": [
+      "CUDA",
+      "rasterizer",
+      "Gabor",
+      "Gaussian splatting",
+      "forskning"
+    ]
+  },
+  "playcanvas/supersplat": {
+    "summary": "Interaktiv redigering og inspeksjon av Gaussian splats.",
+    "categories": [
+      "3D og simulering"
+    ],
+    "reuse": "Klargjør, inspiser og sammenlign splat-data i et støttet verktøy før import i målprosjektet.",
+    "caveats": "Ingen enkeltversjon festet i det bevarte researchnotatet. Skill WebGL-redigering fra eksportmuligheter som krever WebGPU, og kildeassets rettigheter fra verktøylisensen.",
+    "tags": [
+      "PlayCanvas",
+      "SuperSplat",
+      "Gaussian splatting",
+      "redigering",
+      "WebGL",
+      "WebGPU"
+    ]
+  },
+  "playcanvas/splat-transform": {
+    "summary": "Konvertering, transformasjon og filtrering av splat-data.",
+    "categories": [
+      "3D og simulering"
+    ],
+    "reuse": "Lag reproduserbare konverteringer med festet verktøyversjon, bevar originaldata og kontroller faktiske kollisjonsmesh.",
+    "caveats": "SOG CPU-komprimering betyr ikke CPU-støtte for alle operasjoner. En GLB med KHR_gaussian_splatting er ikke vanlig trekantgeometri. Numerisk kontroll beviser ikke kvalitet eller kompatibilitet.",
+    "tags": [
+      "PlayCanvas",
+      "SOG",
+      "GLB",
+      "Gaussian splatting",
+      "konvertering",
+      "kollisjon"
+    ]
+  },
+  "aras-p/UnityGaussianSplatting": {
+    "summary": "Unity-renderer for forhåndsberegnede splats; historisk Vulkan-/OpenGL-probe bevart.",
+    "categories": [
+      "3D og simulering",
+      "Spill og spillmotorer"
+    ],
+    "reuse": "Undersøk konkrete splat-data i et isolert Unity-oppsett og sammenlign visuell kvalitet, okklusjon og ytelse.",
+    "caveats": "1.1.1 ved 2c6fed37da67a217367261fcfcd3316d34c73e76: små syntetiske fixtures fungerte på Vulkan i det testede Unity 6000.3.22f1/URP 17.3/Intel ARL-oppsettet. OpenGL feilet; okklusjonsfeil gjensto og integrasjon var ikke godkjent. Ingen generell GPU-garanti.",
+    "tags": [
+      "Unity",
+      "Gaussian splatting",
+      "Vulkan",
+      "OpenGL",
+      "okklusjon",
+      "historisk-lokal-test"
+    ]
+  },
+  "arloopa/UnitySplats": {
+    "summary": "Unity-splatpakke med historisk test av proxy-relighting og importerinnstillinger.",
+    "categories": [
+      "3D og simulering",
+      "Spill og spillmotorer"
+    ],
+    "reuse": "Undersøk trent kildedata, korrekt fargerom, matchet proxy og camera-oppsett før produksjonsbruk.",
+    "caveats": "1.2.0 ved 6c0258189a2b124af1282fa9236fd9b6637f1a1a, MIT historisk kontrollert; behold komponentmerknader. Hybrid23s mesh-samplede Gaussians var ikke trent rekonstruksjon. Avgrenset Vulkan-fixture og senere Scan25-erfaring er ikke generell verifikasjon av alle data, MSAA- og kameraoppsett.",
+    "tags": [
+      "Unity",
+      "Gaussian splatting",
+      "relighting",
+      "proxy",
+      "Vulkan",
+      "fargerom",
+      "historisk-lokal-test"
+    ]
+  }
+}
