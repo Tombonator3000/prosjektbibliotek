@@ -1,10 +1,12 @@
 # Prosjektbibliotek
 
-Privat referansebibliotek for **Tombonator3000**: spill, 3D, simulering, skills, agentverktøy og programmer som kan gjenbrukes på tvers av prosjekter.
+Referansebibliotek for **Tombonator3000**: spill, 3D, simulering, skills, agentverktøy og programmer som kan gjenbrukes på tvers av prosjekter.
 
-**[Åpne hele katalogen](KATALOG.md)** · **[Alle GitHub-stjerner](STARRED.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
+**[Oppdatert oversikt: stjerner, egne repoer og 122 Scenario-skills](OFFENTLIG_INVENTAR.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
 
-Den første GitHub-samlingen, 23. september 2026, omfatter **46 unike repoer**: alle **22 stjernemerkede repoer** på kontoen, samt **24 øvrige referanser** fra tidligere dokumentert research. Alle 15 repoene i de fire vedlagte skjermbildene inngår. Det opprinnelige lokale biblioteket fra 13. september er videreført med Git-historikk og tidligere notater bevart.
+Den oppdaterte oversikten bruker GitHubs offentlige API og viser 36 offentlige stjerner og 28 egne offentlige repoer per 27. september 2026. [Maskinlesbart inventar](data/offentlig-inventar.json) og [oppdateringsskriptet](scripts/sync_public_inventory.py) følger med. Kildekode ligger i de lenkede originalrepoene; 122 Scenario-skills er indeksert enkeltvis med lenker til en festet revisjon. Private repoer og private stjerner er ikke med i den offentlige oversikten.
+
+Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike repoer**: **22 repoer som da var stjernemerket**, samt **24 øvrige referanser** fra tidligere dokumentert research. [STARRED.md](STARRED.md) er en datert historisk liste. Det opprinnelige lokale biblioteket fra 13. september er videreført med Git-historikk og tidligere notater bevart.
 
 ## Finn det du trenger
 
@@ -37,6 +39,9 @@ python3 scripts/find.py --category 'Skills og agentverktøy'
 python3 scripts/sync_github.py
 python3 scripts/build_catalog.py
 python3 scripts/verify.py
+
+# Oppdater offentlig inventar (krever ikke innlogging):
+python3 scripts/sync_public_inventory.py
 ```
 
-Krever Python 3.10+ og innlogget GitHub CLI for ny innhenting; søk og katalogbygging fungerer offline. [Bruksveiledningen](docs/BRUK.md) forklarer notater, nye referanser og oppdatering. Se [utført kontroll](docs/VERIFISERING.md) for første samling. Ingen automatisk synkronisering er satt opp. Biblioteket skal beholde privat synlighet.
+Den historiske kuraterte innhentingen krever Python 3.10+ og innlogget GitHub CLI; offentlig inventar bruker kun Python 3.10+ og offentlig GitHub API. Søk og katalogbygging fungerer offline. [Bruksveiledningen](docs/BRUK.md) forklarer notater, nye referanser og oppdatering. Se [utført kontroll](docs/VERIFISERING.md) for første samling. Ingen automatisk synkronisering er satt opp. GitHub oppgir nå dette repoet som offentlig; ikke legg inn nye private opplysninger her uten å endre synligheten først.
