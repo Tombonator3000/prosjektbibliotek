@@ -1,11 +1,19 @@
 # Oppdatert prosjektinventar
 
-Hentet 2026-09-27T09:08:09+00:00 fra GitHubs offentlige API. 
+Hentet 2026-09-27T09:37:04+00:00 fra GitHubs offentlige API. 
 
 **36 offentlige stjerner · 28 egne offentlige repoer · 122 Scenario-skills.**
 Repoer som både er egne og stjernemerket står i begge listene. [JSON-data](data/offentlig-inventar.json).
 
 Dette er et søkbart register med lenker til kildekoden, ikke en kopi av alle kodebasene. Private repoer og eventuelle private stjerner er ikke med i dette offentlige inventaret. Den [kuraterte katalogen](KATALOG.md) har eldre profiler og vurderinger; dens stjernetall viser innhentingen 23. september, ikke dagens status.
+
+## Egen stjerneliste: ✨ Inspiration
+
+[Åpne listen på GitHub](https://github.com/stars/Tombonator3000/lists/inspiration). Alle tre er også med i stjernetabellen nedenfor.
+
+- [achimala/dream-loop](https://github.com/achimala/dream-loop)
+- [bilawalsidhu/gods-eye-view](https://github.com/bilawalsidhu/gods-eye-view)
+- [marceld23/BlocksBeyondTheStars](https://github.com/marceld23/BlocksBeyondTheStars)
 
 ## Stjernemerket på GitHub
 
