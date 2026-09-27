@@ -1,6 +1,6 @@
 # Prosjektkatalog
 
-46 unike repoer; 22 er stjernemerket. Innhentet 2026-09-23.
+Historisk kuratert samling: 46 unike repoer; 22 var stjernemerket ved innhentingen 2026-09-23. Se [oppdatert offentlig inventar](OFFENTLIG_INVENTAR.md) for dagens stjerner, egne repoer og Scenario-skills.
 
 [Startside](README.md) · [Alle stjernemerkede](STARRED.md) · [Maskinlesbar katalog](data/catalog.json)
 
