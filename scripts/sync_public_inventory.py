@@ -5,6 +5,7 @@ Bruker GitHubs offentlige API uten innlogging. Dette er et supplement til den
 kuraterte katalogen, ikke en erstatning for autentisert /user/starred.
 """
 import datetime as dt
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -13,6 +14,22 @@ ROOT = Path(__file__).resolve().parents[1]
 OWNER = "Tombonator3000"
 SCENARIO = "scenario-labs/skills"
 HEADERS = {"User-Agent": "prosjektbibliotek-public-inventory", "Accept": "application/vnd.github+json"}
+
+
+class ListLinks(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.inside = False
+        self.names = set()
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if attrs.get("id") == "user-list-repositories":
+            self.inside = True
+        if self.inside and tag == "a":
+            link = attrs.get("href", "")
+            if link.startswith("/") and len(link.strip("/").split("/")) == 2:
+                self.names.add(link.strip("/"))
 
 
 def get(path):
@@ -44,6 +61,13 @@ def main():
                      and p["path"].endswith("/SKILL.md")), key=lambda s: s["name"])
     if not skills or not stars or not owned:
         raise RuntimeError("Uventet tomt API-resultat; inventaret ble ikke oppdatert")
+    list_url = f"https://github.com/stars/{OWNER}/lists/inspiration"
+    with urlopen(Request(list_url, headers={"User-Agent": "Mozilla/5.0"}), timeout=30) as response:
+        parser = ListLinks()
+        parser.feed(response.read().decode("utf-8"))
+    inspiration = sorted(parser.names, key=str.casefold)
+    if len(inspiration) != 3:
+        raise RuntimeError("Kunne ikke kontrollere alle tre repoene i Inspiration-listen")
     def repo(r):
         return {"full_name": r["full_name"], "url": r["html_url"],
                 "description": r.get("description"), "archived": r["archived"],
@@ -54,6 +78,8 @@ def main():
             "owner": OWNER, "star_pages": star_pages, "owned_pages": own_pages,
             "starred": sorted(map(repo, stars), key=lambda r: r["full_name"].casefold()),
             "owned_public": sorted(map(repo, owned), key=lambda r: r["full_name"].casefold()),
+            "public_lists": [{"name": "✨ Inspiration", "url": list_url,
+                              "repositories": inspiration}],
             "scenario": {"repository": SCENARIO, "url": scenario["html_url"],
                          "skills_page": "https://skills.sh/scenario-labs/skills",
                          "tree_sha": tree["sha"], "tree_truncated": False,
@@ -68,6 +94,11 @@ def main():
              "Private repoer og eventuelle private stjerner er ikke med i dette offentlige inventaret. "
              "Den [kuraterte katalogen](KATALOG.md) har eldre profiler og vurderinger; "
              "dens stjernetall viser innhentingen 23. september, ikke dagens status.", "",
+             "## Egen stjerneliste: ✨ Inspiration", "",
+             f"[Åpne listen på GitHub]({list_url}). Alle tre er også med i stjernetabellen nedenfor.", ""]
+    for name in inspiration:
+        lines.append(f"- [{name}](https://github.com/{name})")
+    lines += ["",
              "## Stjernemerket på GitHub", "",
              "| Repo | Hva det er | Lisensfelt |", "|---|---|---|"]
     for r in data["starred"]:
