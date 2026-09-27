@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-09-27T09:08:09+00:00",
+  "collected_at": "2026-09-27T09:37:04+00:00",
   "scope": "Public GitHub API; private repositories and private stars are excluded",
   "owner": "Tombonator3000",
   "star_pages": 1,
@@ -518,6 +518,17 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main"
+    }
+  ],
+  "public_lists": [
+    {
+      "name": "✨ Inspiration",
+      "url": "https://github.com/stars/Tombonator3000/lists/inspiration",
+      "repositories": [
+        "achimala/dream-loop",
+        "bilawalsidhu/gods-eye-view",
+        "marceld23/BlocksBeyondTheStars"
+      ]
     }
   ],
   "scenario": {
