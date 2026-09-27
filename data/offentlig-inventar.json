@@ -1,0 +1,1021 @@
+{
+  "collected_at": "2026-09-27T09:08:09+00:00",
+  "scope": "Public GitHub API; private repositories and private stars are excluded",
+  "owner": "Tombonator3000",
+  "star_pages": 1,
+  "owned_pages": 1,
+  "starred": [
+    {
+      "full_name": "achimala/dream-loop",
+      "url": "https://github.com/achimala/dream-loop",
+      "description": "Agent skill for impressive 3D visuals using Blender + image gen + subagent critic",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Aureliengmz/clearwater",
+      "url": "https://github.com/Aureliengmz/clearwater",
+      "description": "Real-time, photoreal shallow water in a single HTML file. WebGL2, no libraries, no build step.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "bilawalsidhu/gods-eye-view",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view",
+      "description": "A spy satellite simulator in your browser, except the data is real. Live open source spatial intelligence on a photorealistic 3D globe.",
+      "archived": false,
+      "license_spdx": "NOASSERTION",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "bobeff/open-source-games",
+      "url": "https://github.com/bobeff/open-source-games",
+      "description": "A list of open source games.",
+      "archived": false,
+      "license_spdx": "CC0-1.0",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "chaseleantj/desktop-habitats",
+      "url": "https://github.com/chaseleantj/desktop-habitats",
+      "description": "Living ecosystems you can interact with on your desktop",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "chrispository/desktop-habitats-omarchy",
+      "url": "https://github.com/chrispository/desktop-habitats-omarchy",
+      "description": "Aquarium Screensavers by chaseleantj - forked and re-built for Omarchy.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Crosstalk-Solutions/project-nomad",
+      "url": "https://github.com/Crosstalk-Solutions/project-nomad",
+      "description": "Project NOMAD is an offline-first knowledge and education server. Wikipedia, thousands of books, courses, maps, and optional local AI, all running on hardware you own with no internet required.",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "cryptomanavan/ShoreBreak",
+      "url": "https://github.com/cryptomanavan/ShoreBreak",
+      "description": null,
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "archived": false,
+      "license_spdx": "AGPL-3.0",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "dgreenheck/tidewater",
+      "url": "https://github.com/dgreenheck/tidewater",
+      "description": "Coastal town built with Opus 5.5",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "ektogamat/threejs-conference",
+      "url": "https://github.com/ektogamat/threejs-conference",
+      "description": "Walk through a rainy cyberpunk alley powered by WebGPU, Three.js, and TSL (Three Shading Language). Neon billboards, wet pavement, GPU rain that respects rooftops and props, cinematic post-processing, and first-person exploration with BVH collision.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "ErwannRobin/ex-nihilo",
+      "url": "https://github.com/ErwannRobin/ex-nihilo",
+      "description": "EX NIHILO — generative audiovisual piece in a single HTML file",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "github/github-mcp-server",
+      "url": "https://github.com/github/github-mcp-server",
+      "description": "GitHub's official MCP Server",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "iamtechartist/coastal-simulation",
+      "url": "https://github.com/iamtechartist/coastal-simulation",
+      "description": "A real-time coastal simulation in Three.js, pairing a shallow-water solver with breaking swells, whitewater, wet sand, spray and shoreline exploration",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "JesusGalindez/threejs-ocean-simulator-skills",
+      "url": "https://github.com/JesusGalindez/threejs-ocean-simulator-skills",
+      "description": "Physically based ocean, sky and boats in a single three.js file, plus skills. Claude, Codex and Gemini.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Kenton-GMI/muster-ww2",
+      "url": "https://github.com/Kenton-GMI/muster-ww2",
+      "description": "Muster: a hands-on 3D archive of WWII military models. Browse, configure and arrange soldiers, tanks, artillery and aircraft on a diorama display. All models procedurally built in three.js + TypeScript.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "lhlGitHub/threejs-architecture-effects",
+      "url": "https://github.com/lhlGitHub/threejs-architecture-effects",
+      "description": "An Agent Skill for building interactive, self-assembling 3D architecture with Three.js.  一个用 Three.js 生成可交互、可动态建造 3D 建筑的 Agent Skill。",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "marceld23/BlocksBeyondTheStars",
+      "url": "https://github.com/marceld23/BlocksBeyondTheStars",
+      "description": "A block-based 3D space crafting game: explore procedurally generated planets across many star systems, mine and craft, tame creatures, build ships, bases and your own space stations — solo or with friends. Open-source .NET server + Unity client, self-hostable.",
+      "archived": false,
+      "license_spdx": "AGPL-3.0",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "moonpudding/localchannels",
+      "url": "https://github.com/moonpudding/localchannels",
+      "description": "LocalChannels is local library and media management application. It even has a VR mode for playback of VR-videos.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "multimodal-art-projection/YuE",
+      "url": "https://github.com/multimodal-art-projection/YuE",
+      "description": "YuE2: frontier music generation with symbolic planning, zero-shot covers, and agentic music editing.",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "SamG-Coder/clearwater",
+      "url": "https://github.com/SamG-Coder/clearwater",
+      "description": "Infinite FFT water in CUDA: WebGPU browser demo and native Windows app with shared kernels. Live demo: https://samg-coder.github.io/clearwater/",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "SamG-Coder/cuda-webshader",
+      "url": "https://github.com/SamG-Coder/cuda-webshader",
+      "description": "CUDA → WebGPU showcase explorer. Run NVIDIA sine-wave and particle demos in your browser; compare verified native CUDA benchmarks. MIT project.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "SamG-Coder/WaterCuda",
+      "url": "https://github.com/SamG-Coder/WaterCuda",
+      "description": "Infinite procedural islands and a spectral ocean, authored in CUDA and rendered in the browser with WebGPU.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "scenario-labs/skills",
+      "url": "https://github.com/scenario-labs/skills",
+      "description": "Get production-ready images, video, audio, and 3D from any AI agent: skills that pick the right model, price before spending, and keep characters and brands consistent through the Scenario MCP, plus expert teams that drive Blender, Maya, ZBrush, Unreal, and Unity.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "ScottieFox/caustic-volume",
+      "url": "https://github.com/ScottieFox/caustic-volume",
+      "description": "Real-time water caustics in the browser, built on three.js. Single-file lite and sandbox versions.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "scottstts/Threejs-Awesome-Graphics-Agent-Skills",
+      "url": "https://github.com/scottstts/Threejs-Awesome-Graphics-Agent-Skills",
+      "description": "A three.js agent skills for producing awesome graphics for scenes and games",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/3044",
+      "url": "https://github.com/Tombonator3000/3044",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/conspiracy-canvas",
+      "url": "https://github.com/Tombonator3000/conspiracy-canvas",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/morbidium",
+      "url": "https://github.com/Tombonator3000/morbidium",
+      "description": "2D/3D action spill med rpg elementer",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/prosjektbibliotek",
+      "url": "https://github.com/Tombonator3000/prosjektbibliotek",
+      "description": "Privat referansebibliotek: GitHub-stjerner, skills, spillmotorer, 3D, verktøy og tidligere research med kilder og gjenbruksnotater.",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/SIGNAL-47",
+      "url": "https://github.com/Tombonator3000/SIGNAL-47",
+      "description": "SIGNAL / 47 Unity project and dedicated Kubuntu automation",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/state-shift-strategy",
+      "url": "https://github.com/Tombonator3000/state-shift-strategy",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/the-deep-ones",
+      "url": "https://github.com/Tombonator3000/the-deep-ones",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/vector-war-games",
+      "url": "https://github.com/Tombonator3000/vector-war-games",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/Voidcraft",
+      "url": "https://github.com/Tombonator3000/Voidcraft",
+      "description": "A block-based 3D space crafting game: explore procedurally generated planets across many star systems, mine and craft, tame creatures, build ships, bases and your own space stations — solo or with friends. Open-source .NET server + Unity client, self-hostable.",
+      "archived": false,
+      "license_spdx": "AGPL-3.0",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "tscherrie/salmon-survival",
+      "url": "https://github.com/tscherrie/salmon-survival",
+      "description": "Live one salmon's whole life in a Nordic river – a browser game (English, Deutsch, 中文)",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main"
+    }
+  ],
+  "owned_public": [
+    {
+      "full_name": "Tombonator3000/3044",
+      "url": "https://github.com/Tombonator3000/3044",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/Blocky",
+      "url": "https://github.com/Tombonator3000/Blocky",
+      "description": "Blocky",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/bustville-empire",
+      "url": "https://github.com/Tombonator3000/bustville-empire",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/connect-play",
+      "url": "https://github.com/Tombonator3000/connect-play",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/conspiracy-canvas",
+      "url": "https://github.com/Tombonator3000/conspiracy-canvas",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/cthulhu-text-rpg",
+      "url": "https://github.com/Tombonator3000/cthulhu-text-rpg",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/deep-regrets-digital",
+      "url": "https://github.com/Tombonator3000/deep-regrets-digital",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/guild-life-adventures",
+      "url": "https://github.com/Tombonator3000/guild-life-adventures",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/https-github.com-Tombonator3000",
+      "url": "https://github.com/Tombonator3000/https-github.com-Tombonator3000",
+      "description": "Tesr",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/jones-fastlane",
+      "url": "https://github.com/Tombonator3000/jones-fastlane",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/morbidium",
+      "url": "https://github.com/Tombonator3000/morbidium",
+      "description": "2D/3D action spill med rpg elementer",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/Mythos-Quest-3D",
+      "url": "https://github.com/Tombonator3000/Mythos-Quest-3D",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/Norad-Vector",
+      "url": "https://github.com/Tombonator3000/Norad-Vector",
+      "description": "STRATEGY GAME : WAR GAMES TYPE",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/Nuclear-war-",
+      "url": "https://github.com/Tombonator3000/Nuclear-war-",
+      "description": "Nuclear war",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/pogicity-builder",
+      "url": "https://github.com/Tombonator3000/pogicity-builder",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/prosjektbibliotek",
+      "url": "https://github.com/Tombonator3000/prosjektbibliotek",
+      "description": "Privat referansebibliotek: GitHub-stjerner, skills, spillmotorer, 3D, verktøy og tidligere research med kilder og gjenbruksnotater.",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/SceneForge",
+      "url": "https://github.com/Tombonator3000/SceneForge",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/ShadowGov",
+      "url": "https://github.com/Tombonator3000/ShadowGov",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/ShadowGov---Lovable",
+      "url": "https://github.com/Tombonator3000/ShadowGov---Lovable",
+      "description": "STRATEGY GAME : CARD GAMES TYPE",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/SIGNAL-47",
+      "url": "https://github.com/Tombonator3000/SIGNAL-47",
+      "description": "SIGNAL / 47 Unity project and dedicated Kubuntu automation",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/SIGNAL-47-Playtest",
+      "url": "https://github.com/Tombonator3000/SIGNAL-47-Playtest",
+      "description": "Downloadable SIGNAL / 47 playtest builds. Game source remains in a separate private repository.",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/state-shift-strategy",
+      "url": "https://github.com/Tombonator3000/state-shift-strategy",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/the-deep-ones",
+      "url": "https://github.com/Tombonator3000/the-deep-ones",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/the-deep-ones-3d-downloads",
+      "url": "https://github.com/Tombonator3000/the-deep-ones-3d-downloads",
+      "description": "Public Windows and Linux playtest downloads for The Deep Ones. Game source remains private.",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/tom-erland-showcase",
+      "url": "https://github.com/Tombonator3000/tom-erland-showcase",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/vector-war-games",
+      "url": "https://github.com/Tombonator3000/vector-war-games",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/Voidcraft",
+      "url": "https://github.com/Tombonator3000/Voidcraft",
+      "description": "A block-based 3D space crafting game: explore procedurally generated planets across many star systems, mine and craft, tame creatures, build ships, bases and your own space stations — solo or with friends. Open-source .NET server + Unity client, self-hostable.",
+      "archived": false,
+      "license_spdx": "AGPL-3.0",
+      "default_branch": "main"
+    },
+    {
+      "full_name": "Tombonator3000/Wasteland-Racers",
+      "url": "https://github.com/Tombonator3000/Wasteland-Racers",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main"
+    }
+  ],
+  "scenario": {
+    "repository": "scenario-labs/skills",
+    "url": "https://github.com/scenario-labs/skills",
+    "skills_page": "https://skills.sh/scenario-labs/skills",
+    "tree_sha": "9624e295fa33168bc1be22a628c23ba132d1c959",
+    "tree_truncated": false,
+    "license_spdx": "MIT",
+    "skills": [
+      {
+        "name": "scenario",
+        "path": "skills/scenario/SKILL.md"
+      },
+      {
+        "name": "scenario-3d",
+        "path": "skills/scenario-3d/SKILL.md"
+      },
+      {
+        "name": "scenario-3d-worlds",
+        "path": "skills/scenario-3d-worlds/SKILL.md"
+      },
+      {
+        "name": "scenario-ace-step",
+        "path": "skills/scenario-ace-step/SKILL.md"
+      },
+      {
+        "name": "scenario-admin-analytics",
+        "path": "skills/scenario-admin-analytics/SKILL.md"
+      },
+      {
+        "name": "scenario-asset-analysis",
+        "path": "skills/scenario-asset-analysis/SKILL.md"
+      },
+      {
+        "name": "scenario-audio",
+        "path": "skills/scenario-audio/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-animation",
+        "path": "skills/dcc/blender/scenario-blender-animation/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-expert",
+        "path": "skills/dcc/blender/scenario-blender-expert/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-geometry-nodes",
+        "path": "skills/dcc/blender/scenario-blender-geometry-nodes/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-grease-pencil",
+        "path": "skills/dcc/blender/scenario-blender-grease-pencil/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-hair",
+        "path": "skills/dcc/blender/scenario-blender-hair/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-hard-surface",
+        "path": "skills/dcc/blender/scenario-blender-hard-surface/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-lighting-rendering",
+        "path": "skills/dcc/blender/scenario-blender-lighting-rendering/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-previs-storyboard",
+        "path": "skills/dcc/blender/scenario-blender-previs-storyboard/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-retopology",
+        "path": "skills/dcc/blender/scenario-blender-retopology/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-rigging",
+        "path": "skills/dcc/blender/scenario-blender-rigging/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-sculpting",
+        "path": "skills/dcc/blender/scenario-blender-sculpting/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-texturing-shading",
+        "path": "skills/dcc/blender/scenario-blender-texturing-shading/SKILL.md"
+      },
+      {
+        "name": "scenario-blender-uv-baking",
+        "path": "skills/dcc/blender/scenario-blender-uv-baking/SKILL.md"
+      },
+      {
+        "name": "scenario-brand-kit",
+        "path": "skills/scenario-brand-kit/SKILL.md"
+      },
+      {
+        "name": "scenario-caption-studio",
+        "path": "skills/scenario-caption-studio/SKILL.md"
+      },
+      {
+        "name": "scenario-consistency",
+        "path": "skills/scenario-consistency/SKILL.md"
+      },
+      {
+        "name": "scenario-elevenlabs",
+        "path": "skills/scenario-elevenlabs/SKILL.md"
+      },
+      {
+        "name": "scenario-fan-cam",
+        "path": "skills/scenario-fan-cam/SKILL.md"
+      },
+      {
+        "name": "scenario-formats",
+        "path": "skills/scenario-formats/SKILL.md"
+      },
+      {
+        "name": "scenario-game-assets",
+        "path": "skills/scenario-game-assets/SKILL.md"
+      },
+      {
+        "name": "scenario-gemini-image",
+        "path": "skills/scenario-gemini-image/SKILL.md"
+      },
+      {
+        "name": "scenario-gemini-omni",
+        "path": "skills/scenario-gemini-omni/SKILL.md"
+      },
+      {
+        "name": "scenario-gpt-image",
+        "path": "skills/scenario-gpt-image/SKILL.md"
+      },
+      {
+        "name": "scenario-grok-imagine-image",
+        "path": "skills/scenario-grok-imagine-image/SKILL.md"
+      },
+      {
+        "name": "scenario-grok-imagine-video",
+        "path": "skills/scenario-grok-imagine-video/SKILL.md"
+      },
+      {
+        "name": "scenario-identity-library",
+        "path": "skills/scenario-identity-library/SKILL.md"
+      },
+      {
+        "name": "scenario-ideogram",
+        "path": "skills/scenario-ideogram/SKILL.md"
+      },
+      {
+        "name": "scenario-image",
+        "path": "skills/scenario-image/SKILL.md"
+      },
+      {
+        "name": "scenario-image-editing",
+        "path": "skills/scenario-image-editing/SKILL.md"
+      },
+      {
+        "name": "scenario-inspiration",
+        "path": "skills/scenario-inspiration/SKILL.md"
+      },
+      {
+        "name": "scenario-kling",
+        "path": "skills/scenario-kling/SKILL.md"
+      },
+      {
+        "name": "scenario-luma-image",
+        "path": "skills/scenario-luma-image/SKILL.md"
+      },
+      {
+        "name": "scenario-luma-video",
+        "path": "skills/scenario-luma-video/SKILL.md"
+      },
+      {
+        "name": "scenario-mai-image",
+        "path": "skills/scenario-mai-image/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-animation",
+        "path": "skills/dcc/maya/scenario-maya-animation/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-deformation",
+        "path": "skills/dcc/maya/scenario-maya-deformation/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-expert",
+        "path": "skills/dcc/maya/scenario-maya-expert/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-fx",
+        "path": "skills/dcc/maya/scenario-maya-fx/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-groom",
+        "path": "skills/dcc/maya/scenario-maya-groom/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-lighting-rendering",
+        "path": "skills/dcc/maya/scenario-maya-lighting-rendering/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-lookdev",
+        "path": "skills/dcc/maya/scenario-maya-lookdev/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-modeling",
+        "path": "skills/dcc/maya/scenario-maya-modeling/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-pipeline-scripting",
+        "path": "skills/dcc/maya/scenario-maya-pipeline-scripting/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-retopology-uv",
+        "path": "skills/dcc/maya/scenario-maya-retopology-uv/SKILL.md"
+      },
+      {
+        "name": "scenario-maya-rigging",
+        "path": "skills/dcc/maya/scenario-maya-rigging/SKILL.md"
+      },
+      {
+        "name": "scenario-meshy",
+        "path": "skills/scenario-meshy/SKILL.md"
+      },
+      {
+        "name": "scenario-minimax-music",
+        "path": "skills/scenario-minimax-music/SKILL.md"
+      },
+      {
+        "name": "scenario-minimax-video",
+        "path": "skills/scenario-minimax-video/SKILL.md"
+      },
+      {
+        "name": "scenario-model-comparison",
+        "path": "skills/scenario-model-comparison/SKILL.md"
+      },
+      {
+        "name": "scenario-model-training",
+        "path": "skills/scenario-model-training/SKILL.md"
+      },
+      {
+        "name": "scenario-moderation",
+        "path": "skills/scenario-moderation/SKILL.md"
+      },
+      {
+        "name": "scenario-orbit-views",
+        "path": "skills/scenario-orbit-views/SKILL.md"
+      },
+      {
+        "name": "scenario-patina-retexture",
+        "path": "skills/scenario-patina-retexture/SKILL.md"
+      },
+      {
+        "name": "scenario-product-shots",
+        "path": "skills/scenario-product-shots/SKILL.md"
+      },
+      {
+        "name": "scenario-quality-gate",
+        "path": "skills/scenario-quality-gate/SKILL.md"
+      },
+      {
+        "name": "scenario-refine-loop",
+        "path": "skills/scenario-refine-loop/SKILL.md"
+      },
+      {
+        "name": "scenario-report",
+        "path": "skills/scenario-report/SKILL.md"
+      },
+      {
+        "name": "scenario-reve",
+        "path": "skills/scenario-reve/SKILL.md"
+      },
+      {
+        "name": "scenario-rodin",
+        "path": "skills/scenario-rodin/SKILL.md"
+      },
+      {
+        "name": "scenario-runway",
+        "path": "skills/scenario-runway/SKILL.md"
+      },
+      {
+        "name": "scenario-seedance",
+        "path": "skills/scenario-seedance/SKILL.md"
+      },
+      {
+        "name": "scenario-seedance-music-video",
+        "path": "skills/scenario-seedance-music-video/SKILL.md"
+      },
+      {
+        "name": "scenario-seedance-storyboard",
+        "path": "skills/scenario-seedance-storyboard/SKILL.md"
+      },
+      {
+        "name": "scenario-seedream",
+        "path": "skills/scenario-seedream/SKILL.md"
+      },
+      {
+        "name": "scenario-skyboxes",
+        "path": "skills/scenario-skyboxes/SKILL.md"
+      },
+      {
+        "name": "scenario-sonilo",
+        "path": "skills/scenario-sonilo/SKILL.md"
+      },
+      {
+        "name": "scenario-sparc3d",
+        "path": "skills/scenario-sparc3d/SKILL.md"
+      },
+      {
+        "name": "scenario-sprite-animation",
+        "path": "skills/scenario-sprite-animation/SKILL.md"
+      },
+      {
+        "name": "scenario-storyboards",
+        "path": "skills/scenario-storyboards/SKILL.md"
+      },
+      {
+        "name": "scenario-team-admin",
+        "path": "skills/scenario-team-admin/SKILL.md"
+      },
+      {
+        "name": "scenario-text-overlay",
+        "path": "skills/scenario-text-overlay/SKILL.md"
+      },
+      {
+        "name": "scenario-textures",
+        "path": "skills/scenario-textures/SKILL.md"
+      },
+      {
+        "name": "scenario-ugc",
+        "path": "skills/scenario-ugc/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-2d",
+        "path": "skills/game-engines/unity/scenario-unity-2d/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-animation",
+        "path": "skills/game-engines/unity/scenario-unity-animation/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-architecture",
+        "path": "skills/game-engines/unity/scenario-unity-architecture/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-expert",
+        "path": "skills/game-engines/unity/scenario-unity-expert/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-gameplay",
+        "path": "skills/game-engines/unity/scenario-unity-gameplay/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-mobile",
+        "path": "skills/game-engines/unity/scenario-unity-mobile/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-performance",
+        "path": "skills/game-engines/unity/scenario-unity-performance/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-pipeline-automation",
+        "path": "skills/game-engines/unity/scenario-unity-pipeline-automation/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-rendering-lighting",
+        "path": "skills/game-engines/unity/scenario-unity-rendering-lighting/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-shaders",
+        "path": "skills/game-engines/unity/scenario-unity-shaders/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-ui",
+        "path": "skills/game-engines/unity/scenario-unity-ui/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-vfx",
+        "path": "skills/game-engines/unity/scenario-unity-vfx/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-web",
+        "path": "skills/game-engines/unity/scenario-unity-web/SKILL.md"
+      },
+      {
+        "name": "scenario-unity-world-building",
+        "path": "skills/game-engines/unity/scenario-unity-world-building/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-animation",
+        "path": "skills/game-engines/unreal/scenario-unreal-animation/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-cinematics",
+        "path": "skills/game-engines/unreal/scenario-unreal-cinematics/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-expert",
+        "path": "skills/game-engines/unreal/scenario-unreal-expert/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-gameplay",
+        "path": "skills/game-engines/unreal/scenario-unreal-gameplay/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-lighting-rendering",
+        "path": "skills/game-engines/unreal/scenario-unreal-lighting-rendering/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-materials",
+        "path": "skills/game-engines/unreal/scenario-unreal-materials/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-performance",
+        "path": "skills/game-engines/unreal/scenario-unreal-performance/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-pipeline-automation",
+        "path": "skills/game-engines/unreal/scenario-unreal-pipeline-automation/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-vfx",
+        "path": "skills/game-engines/unreal/scenario-unreal-vfx/SKILL.md"
+      },
+      {
+        "name": "scenario-unreal-world-building",
+        "path": "skills/game-engines/unreal/scenario-unreal-world-building/SKILL.md"
+      },
+      {
+        "name": "scenario-veo",
+        "path": "skills/scenario-veo/SKILL.md"
+      },
+      {
+        "name": "scenario-video",
+        "path": "skills/scenario-video/SKILL.md"
+      },
+      {
+        "name": "scenario-video-ads",
+        "path": "skills/scenario-video-ads/SKILL.md"
+      },
+      {
+        "name": "scenario-video-assembly",
+        "path": "skills/scenario-video-assembly/SKILL.md"
+      },
+      {
+        "name": "scenario-video-editing",
+        "path": "skills/scenario-video-editing/SKILL.md"
+      },
+      {
+        "name": "scenario-vidu",
+        "path": "skills/scenario-vidu/SKILL.md"
+      },
+      {
+        "name": "scenario-wan",
+        "path": "skills/scenario-wan/SKILL.md"
+      },
+      {
+        "name": "scenario-workflow-authoring",
+        "path": "skills/scenario-workflow-authoring/SKILL.md"
+      },
+      {
+        "name": "scenario-workflows",
+        "path": "skills/scenario-workflows/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-automation",
+        "path": "skills/dcc/zbrush/scenario-zbrush-automation/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-character-creature",
+        "path": "skills/dcc/zbrush/scenario-zbrush-character-creature/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-expert",
+        "path": "skills/dcc/zbrush/scenario-zbrush-expert/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-hard-surface",
+        "path": "skills/dcc/zbrush/scenario-zbrush-hard-surface/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-paint-render",
+        "path": "skills/dcc/zbrush/scenario-zbrush-paint-render/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-pose-print",
+        "path": "skills/dcc/zbrush/scenario-zbrush-pose-print/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-retopology-export",
+        "path": "skills/dcc/zbrush/scenario-zbrush-retopology-export/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-sculpting",
+        "path": "skills/dcc/zbrush/scenario-zbrush-sculpting/SKILL.md"
+      },
+      {
+        "name": "scenario-zbrush-stylized",
+        "path": "skills/dcc/zbrush/scenario-zbrush-stylized/SKILL.md"
+      }
+    ]
+  }
+}
