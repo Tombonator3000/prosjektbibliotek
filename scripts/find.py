@@ -16,6 +16,36 @@ def flatten(value):
     return str(value) if value is not None else ""
 
 
+def all_records(root):
+    repositories = json.loads((root / 'data/catalog.json').read_text(encoding='utf-8'))['repositories']
+    inventory_path = root / 'data/offentlig-inventar.json'
+    if inventory_path.exists():
+        inventory = json.loads(inventory_path.read_text())
+        for current in inventory['starred'] + inventory['owned_public']:
+            previous = next((r for r in repositories if r.get('id') == current.get('id')
+                             or r['full_name'] == current['full_name']), None)
+            if previous is not None:
+                previous.update({k: current[k] for k in ('full_name', 'description')})
+                previous['html_url'] = current['url']
+            else:
+                repositories.append({'id': current.get('id'), 'full_name': current['full_name'],
+                                     'description': current['description'], 'html_url': current['url'],
+                                     'categories': ['Egne prosjekter'] if current['full_name'].startswith('Tombonator3000/') else ['Offentlig inventar'],
+                                     'profile_path': 'OFFENTLIG_INVENTAR.md'})
+    skills_path = root / 'data/skills.json'
+    if skills_path.exists():
+        data = json.loads(skills_path.read_text())
+        for skill in data['entries']:
+            repositories.append({'full_name': f"{skill['repository']}:{skill['name']}",
+                                 'summary': skill['path'], 'html_url': skill['url'],
+                                 'categories': ['Skills og agentverktøy'], 'profile_path': 'SKILLS.md'})
+        for skill in data['personal_bundles']:
+            repositories.append({'full_name': skill['name'], 'summary': skill['description'],
+                                 'html_url': 'https://github.com/Tombonator3000/prosjektbibliotek/blob/main/' + skill['path'],
+                                 'categories': ['Skills og agentverktøy'], 'profile_path': skill['path']})
+    return repositories
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("query", nargs="*", help="Søkeord; alle ordene må finnes, uansett store/små bokstaver.")
@@ -25,7 +55,7 @@ def main():
     parser.add_argument("--root", type=Path, default=ROOT, help=argparse.SUPPRESS)
     args = parser.parse_args()
     try:
-        repositories = json.loads((args.root / "data/catalog.json").read_text(encoding="utf-8"))["repositories"]
+        repositories = all_records(args.root)
         if not isinstance(repositories, list):
             raise ValueError("repositories må være en liste")
         categories = sorted({category for repo in repositories for category in repo["categories"]}, key=str.casefold)

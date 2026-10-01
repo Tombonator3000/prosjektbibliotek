@@ -1,0 +1,14 @@
+interface:
+  display_name: Morbidium spritesheets
+  short_description: Lag animerte figurer og spriteark klare for Claude
+  default_prompt: Bruk $morbidium-spritesheets til å lage en animert figurpakke for
+    Morbidium som Claude kan integrere.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

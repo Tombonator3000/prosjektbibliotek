@@ -2,9 +2,11 @@
 
 Referansebibliotek for **Tombonator3000**: spill, 3D, simulering, skills, agentverktøy og programmer som kan gjenbrukes på tvers av prosjekter.
 
-**[Oppdatert oversikt: stjerner, egne repoer og 122 Scenario-skills](OFFENTLIG_INVENTAR.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
+**[Stjerner og egne repoer](OFFENTLIG_INVENTAR.md)** · **[Samlet skilloversikt](SKILLS.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
 
-Den oppdaterte oversikten bruker GitHubs offentlige API og viser 36 offentlige stjerner og 28 egne offentlige repoer per 27. september 2026. [Maskinlesbart inventar](data/offentlig-inventar.json) og [oppdateringsskriptet](scripts/sync_public_inventory.py) følger med. Kildekode ligger i de lenkede originalrepoene; 122 Scenario-skills er indeksert enkeltvis med lenker til en festet revisjon. Private repoer og private stjerner er ikke med i den offentlige oversikten.
+Oppdatert **1. oktober 2026**: **44 offentlige stjerner**, **29 egne offentlige repoer**, **187 SKILL.md-filer fra 13 stjernerepoer** og den komplette egne **Morbidium-spritesheets-pakken**. Av skillfilene er 122 Scenario-skills og seks Scenario-hjelpere for internt repoarbeid. Én skilltekst finnes i to filer, så de 187 filene har 186 ulike dokumentinnhold. [Se hva som er nytt](docs/OPPDATERING_2026-10-01.md).
+
+[Maskinlesbart inventar](data/offentlig-inventar.json), [skilldata](data/skills.json) og oppdateringsskriptene følger med. Kildekode ligger i de lenkede originalrepoene; skillkildene er festet til kontrollerte commits. Private repoer og private stjerner er ikke med i den offentlige oversikten. `scripts/find.py` søker nå i den historiske katalogen, det ferske inventaret og skills.
 
 Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike repoer**: **22 repoer som da var stjernemerket**, samt **24 øvrige referanser** fra tidligere dokumentert research. [STARRED.md](STARRED.md) er en datert historisk liste. Det opprinnelige lokale biblioteket fra 13. september er videreført med Git-historikk og tidligere notater bevart.
 
@@ -12,7 +14,7 @@ Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike 
 
 | Område | Startpunkt |
 |---|---|
-| Skills, agentarbeid, Blender og Unity MCP | [Skills og agentverktøy](KATALOG.md#skills-og-agentverktøy) |
+| Skills, agentarbeid, Blender og Unity MCP | [Samlet skilloversikt](SKILLS.md) |
 | Spillprosjekter, spillarkitektur og motorintegrasjon | [Spill og spillmotorer](KATALOG.md#spill-og-spillmotorer) |
 | Vann, shaderkode, Three.js, WebGPU og splats | [3D og simulering](KATALOG.md#3d-og-simulering) |
 | Musikkgenerering | [Lyd og musikk](KATALOG.md#lyd-og-musikk) |
@@ -34,6 +36,8 @@ Biblioteket er en referansesamling med utvalgte dokumentkilder. Hele upstream-ko
 ```sh
 python3 scripts/find.py vann
 python3 scripts/find.py --category 'Skills og agentverktøy'
+python3 scripts/find.py prop-art
+python3 scripts/find.py morbidium-spritesheets
 
 # Hent stjerner/kilder, bygg katalog og kontroller resultatet:
 python3 scripts/sync_github.py
@@ -42,6 +46,8 @@ python3 scripts/verify.py
 
 # Oppdater offentlig inventar (krever ikke innlogging):
 python3 scripts/sync_public_inventory.py
+python3 scripts/build_skill_index.py --refresh
+python3 scripts/verify.py
 ```
 
 Den historiske kuraterte innhentingen krever Python 3.10+ og innlogget GitHub CLI; offentlig inventar bruker kun Python 3.10+ og offentlig GitHub API. Søk og katalogbygging fungerer offline. [Bruksveiledningen](docs/BRUK.md) forklarer notater, nye referanser og oppdatering. Se [utført kontroll](docs/VERIFISERING.md) for første samling. Ingen automatisk synkronisering er satt opp. GitHub oppgir nå dette repoet som offentlig; ikke legg inn nye private opplysninger her uten å endre synligheten først.

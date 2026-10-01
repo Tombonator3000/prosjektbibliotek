@@ -1,6 +1,8 @@
 # Prosjektkatalog
 
-Historisk kuratert samling: 46 unike repoer; 22 var stjernemerket ved innhentingen 2026-09-23. Se [oppdatert offentlig inventar](OFFENTLIG_INVENTAR.md) for dagens stjerner, egne repoer og Scenario-skills.
+Historisk kuratert samling: 46 unike repoer; 22 var stjernemerket ved innhentingen 2026-09-23.
+
+[Oppdatert stjerne- og repoinventar](OFFENTLIG_INVENTAR.md) · [Samlet skilloversikt](SKILLS.md)
 
 [Startside](README.md) · [Alle stjernemerkede](STARRED.md) · [Maskinlesbar katalog](data/catalog.json)
 

@@ -92,7 +92,8 @@ def main():
         lines += ["", "**Søkeord:** " + ", ".join(repo["tags"])]
         write(repo["profile_path"], "\n".join(lines))
     write("data/catalog.json", json.dumps(data, ensure_ascii=False, indent=2))
-    catalogue = ["# Prosjektkatalog", "", f"{len(entries)} unike repoer; {data['starred_count']} er stjernemerket. Innhentet {date}.", "",
+    catalogue = ["# Prosjektkatalog", "", f"Historisk kuratert samling: {len(entries)} unike repoer; {data['starred_count']} var stjernemerket ved innhentingen {date}.", "",
+        "[Oppdatert stjerne- og repoinventar](OFFENTLIG_INVENTAR.md) · [Samlet skilloversikt](SKILLS.md)", "",
         "[Startside](README.md) · [Alle stjernemerkede](STARRED.md) · [Maskinlesbar katalog](data/catalog.json)", "",
         "Kategorier og mulig gjenbruk er våre vurderinger. Repoer kan stå i flere kategorier. ⭐ betyr at repoet var stjernemerket ved siste innhenting."]
     for category in CATEGORIES:

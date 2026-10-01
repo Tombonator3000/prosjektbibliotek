@@ -20,16 +20,32 @@ class ListLinks(HTMLParser):
     def __init__(self):
         super().__init__()
         self.inside = False
+        self.found_container = False
+        self.depth = 0
+        self.in_heading = False
         self.names = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if attrs.get("id") == "user-list-repositories":
             self.inside = True
-        if self.inside and tag == "a":
+            self.found_container = True
+        if self.inside and tag == "div":
+            self.depth += 1
+        if self.inside and tag == "h2":
+            self.in_heading = True
+        if self.inside and self.in_heading and tag == "a":
             link = attrs.get("href", "")
             if link.startswith("/") and len(link.strip("/").split("/")) == 2:
                 self.names.add(link.strip("/"))
+
+    def handle_endtag(self, tag):
+        if tag == "h2":
+            self.in_heading = False
+        if self.inside and tag == "div":
+            self.depth -= 1
+            if self.depth == 0:
+                self.inside = False
 
 
 def get(path):
@@ -53,7 +69,9 @@ def main():
     stars, star_pages = all_pages(f"users/{OWNER}/starred?per_page=100")
     owned, own_pages = all_pages(f"users/{OWNER}/repos?per_page=100&type=owner&sort=full_name")
     scenario, _ = get(f"repos/{SCENARIO}")
-    tree, _ = get(f"repos/{SCENARIO}/git/trees/{scenario['default_branch']}?recursive=1")
+    revision, _ = get(f"repos/{SCENARIO}/commits/{scenario['default_branch']}")
+    commit = revision['sha']
+    tree, _ = get(f"repos/{SCENARIO}/git/trees/{commit}?recursive=1")
     if tree.get("truncated"):
         raise RuntimeError("Scenario-treet er avkortet; inventaret ble ikke oppdatert")
     skills = sorted(({"name": p["path"].split("/")[-2], "path": p["path"]}
@@ -66,13 +84,13 @@ def main():
         parser = ListLinks()
         parser.feed(response.read().decode("utf-8"))
     inspiration = sorted(parser.names, key=str.casefold)
-    if len(inspiration) != 3:
-        raise RuntimeError("Kunne ikke kontrollere alle tre repoene i Inspiration-listen")
+    if not parser.found_container:
+        raise RuntimeError("Kunne ikke lese Inspiration-listen; forrige inventar er beholdt")
     def repo(r):
-        return {"full_name": r["full_name"], "url": r["html_url"],
+        return {"id": r["id"], "full_name": r["full_name"], "url": r["html_url"],
                 "description": r.get("description"), "archived": r["archived"],
                 "license_spdx": (r.get("license") or {}).get("spdx_id"),
-                "default_branch": r["default_branch"]}
+                "default_branch": r["default_branch"], "pushed_at": r["pushed_at"]}
     data = {"collected_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "scope": "Public GitHub API; private repositories and private stars are excluded",
             "owner": OWNER, "star_pages": star_pages, "owned_pages": own_pages,
@@ -82,7 +100,7 @@ def main():
                               "repositories": inspiration}],
             "scenario": {"repository": SCENARIO, "url": scenario["html_url"],
                          "skills_page": "https://skills.sh/scenario-labs/skills",
-                         "tree_sha": tree["sha"], "tree_truncated": False,
+                         "commit": commit, "tree_sha": revision['commit']['tree']['sha'], "tree_truncated": False,
                          "license_spdx": (scenario.get("license") or {}).get("spdx_id"),
                          "skills": skills}}
     starred = {x["full_name"] for x in data["starred"]}
@@ -93,9 +111,10 @@ def main():
              "Dette er et søkbart register med lenker til kildekoden, ikke en kopi av alle kodebasene. "
              "Private repoer og eventuelle private stjerner er ikke med i dette offentlige inventaret. "
              "Den [kuraterte katalogen](KATALOG.md) har eldre profiler og vurderinger; "
-             "dens stjernetall viser innhentingen 23. september, ikke dagens status.", "",
+             "dens stjernetall viser innhentingen 23. september, ikke dagens status. "
+             "Se [samlet skilloversikt](SKILLS.md) for skills fra alle undersøkte stjernerepoer og egne skillpakker.", "",
              "## Egen stjerneliste: ✨ Inspiration", "",
-             f"[Åpne listen på GitHub]({list_url}). Alle tre er også med i stjernetabellen nedenfor.", ""]
+             f"[Åpne listen på GitHub]({list_url}). {len(inspiration)} repoer er registrert i listen.", ""]
     for name in inspiration:
         lines.append(f"- [{name}](https://github.com/{name})")
     lines += ["",
@@ -109,14 +128,14 @@ def main():
         lines.append(f"| [{r['full_name']}]({r['url']}) | {str(r['description'] or 'Ingen beskrivelse').replace('|', '/')} | {'Ja' if r['full_name'] in starred else 'Nei'} |")
     lines += ["", "## Scenario Agent Skills", "",
               f"[Oversikt på skills.sh]({data['scenario']['skills_page']}) · "
-              f"[Kildekode ved festet revisjon](https://github.com/{SCENARIO}/tree/{tree['sha']}/skills) · "
+              f"[Kildekode ved festet revisjon](https://github.com/{SCENARIO}/tree/{commit}/skills) · "
               f"GitHubs lisensfelt: {data['scenario']['license_spdx'] or 'uavklart'}.", "",
               "De generelle Scenario-skillsene bruker Scenario MCP og tjenesten deres. "
               "Ekspertfamiliene for Blender, Maya, ZBrush, Unreal og Unity krever den aktuelle appen "
               "og har egne opplysninger om hva som er testet. Ingen skills er installert her.", "",
               "| Skill | Kilde |", "|---|---|"]
     for skill in skills:
-        lines.append(f"| `{skill['name']}` | [SKILL.md](https://github.com/{SCENARIO}/blob/{tree['sha']}/{skill['path']}) |")
+        lines.append(f"| `{skill['name']}` | [SKILL.md](https://github.com/{SCENARIO}/blob/{commit}/{skill['path']}) |")
     lines += ["", "## Bruk i prosjektene", "",
               "- **Morbidium, Guild Life, The Deep Ones:** se `scenario-game-assets`, `scenario-sprite-animation`, `scenario-textures`, `scenario-3d`, `scenario-blender-expert` og `scenario-unity-expert`.",
               "- **Vann og hav:** se stjernene Clearwater, WaterCuda, ShoreBreak, coastal-simulation, Tidewater og Three.js ocean simulator. Undersøk lisens og ytelse i målprosjektet før kode tas inn.",

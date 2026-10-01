@@ -185,7 +185,34 @@ class Check:
                          f"Historikk: ugyldig source_sha256 for {path}")
             if item.get("scope") == "exact_copy":
                 self.require(item.get("source_sha256") == item.get("snapshot_sha256"), f"Historikk: exact_copy har ulike hasher for {path}")
+        self.public_inventory()
         self.markdown_links()
+
+    def public_inventory(self):
+        if not (self.root / 'data/offentlig-inventar.json').exists():
+            return
+        inventory = self.read_json('data/offentlig-inventar.json')
+        for key in ('starred', 'owned_public'):
+            names = [r['full_name'] for r in inventory[key]]
+            self.require(len(names) == len(set(names)), f'Inventar: duplikater i {key}')
+        self.require(not inventory['scenario']['tree_truncated'], 'Inventar: avkortet Scenario-tre')
+        if not (self.root / 'data/skills.json').exists():
+            return
+        skills = self.read_json('data/skills.json')
+        sources = self.read_json('data/skill-sources.json')
+        names = {r['full_name'] for r in inventory['starred']}
+        scanned = {r['repository'] for r in sources['sources']}
+        self.require(names <= scanned, 'Skills: mangler kildegjennomgang for stjernerepoer')
+        self.require(skills['scanned_starred_repositories'] == len(names), 'Skills: feil antall stjernerepoer')
+        self.require(skills['github_skill_documents'] == len(skills['entries']), 'Skills: feil dokumentantall')
+        self.require(skills['github_unique_document_blobs'] == len({e['blob_sha'] for e in skills['entries']}), 'Skills: feil antall dokumentinnhold')
+        for e in skills['entries']:
+            self.require(bool(re.fullmatch(r'[0-9a-f]{40}', e['commit'])), f"Skills: ugyldig commit for {e['name']}")
+            self.require(e['url'].startswith(f"https://github.com/{e['repository']}/blob/{e['commit']}/"), f"Skills: feil kilde-URL for {e['name']}")
+        for bundle in skills['personal_bundles']:
+            self.local_path(bundle['path'], bundle['name'])
+            for f in bundle['files']:
+                self.snapshot(f, bundle['name'], historical=True)
 
 
 def main():
