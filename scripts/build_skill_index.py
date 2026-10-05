@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bygg skilloversikt fra kildemanifest. --refresh sjekker nye/endrede stjernerepoer."""
+"""Bygg skilloversikt. --refresh sjekker stjerner og egne offentlige repoer."""
 import argparse
 import concurrent.futures
 import hashlib
@@ -27,11 +27,12 @@ def api(path):
 
 def scan(repo):
     name = repo['full_name']
-    commit = api(f"repos/{name}/commits/{quote(repo['default_branch'], safe='')}")['sha']
+    revision = api(f"repos/{name}/commits/{quote(repo['default_branch'], safe='')}")
+    commit = revision['sha']
     tree = api(f'repos/{name}/git/trees/{commit}?recursive=1')
     if tree.get('truncated'):
         raise RuntimeError(f'Avkortet tre for {name}; beholdt forrige manifest')
-    return {'repository': name, 'commit': commit, 'tree_sha': tree['sha'], 'truncated': False,
+    return {'repository': name, 'commit': commit, 'tree_sha': revision['commit']['tree']['sha'], 'truncated': False,
             'pushed_at': repo['pushed_at'], 'default_branch': repo['default_branch'],
             'license_spdx': repo.get('license_spdx'),
             'skills': [{'path': p['path'], 'blob_sha': p['sha']} for p in tree['tree']
@@ -47,7 +48,9 @@ def main():
     cache_path = ROOT / 'data/skill-sources.json'
     cached = json.loads(cache_path.read_text()) if cache_path.exists() else {'sources': []}
     sources = {s['repository']: s for s in cached['sources']}
-    current = {r['full_name']: r for r in inventory['starred']}
+    starred = {r['full_name'] for r in inventory['starred']}
+    owned = {r['full_name'] for r in inventory['owned_public']}
+    current = {r['full_name']: r for r in inventory['starred'] + inventory['owned_public']}
     if args.refresh:
         pending = [r for n, r in current.items() if n not in sources
                    or sources[n].get('pushed_at') != r.get('pushed_at')]
@@ -79,7 +82,8 @@ def main():
                             'kind': 'repoarbeid' if source['repository'] == 'scenario-labs/skills'
                                     and not skill['path'].startswith('skills/') else 'skill',
                             'license_spdx': source.get('license_spdx'),
-                            'currently_starred': source['repository'] in current})
+                            'currently_starred': source['repository'] in starred,
+                            'currently_owned': source['repository'] in owned})
     bundles = []
     for path in sorted((ROOT / 'skills').glob('*/SKILL.md')):
         text = path.read_text()
@@ -92,14 +96,17 @@ def main():
                   'source': 'Eksisterende personlig skill, kopiert uten endringer', 'files': files}
         bundles.append(bundle)
     data = {'schema_version': 1, 'collected_at': inventory['collected_at'],
-            'scanned_starred_repositories': len(current),
+            'scanned_starred_repositories': len(starred),
+            'scanned_owned_repositories': len(owned),
+            'scanned_unique_repositories': len(current),
             'github_skill_documents': len(entries),
             'github_unique_document_blobs': len({e['blob_sha'] for e in entries}),
             'scenario_product_skills': len(inventory['scenario']['skills']),
             'entries': entries, 'personal_bundles': bundles}
     (ROOT / 'data/skills.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
     lines = ['# Skills i prosjektbiblioteket', '',
-             f"Oppdatert {inventory['collected_at'][:10]}. Alle {len(current)} offentlige stjernerepoer er undersøkt for `SKILL.md`.", '',
+             f"Oppdatert {inventory['collected_at'][:10]}. Alle {len(starred)} offentlige stjernerepoer og "
+             f"{len(owned)} egne offentlige repoer er undersøkt for `SKILL.md` ({len(current)} unike repoer).", '',
              f"**{len(entries)} SKILL.md-filer** ({data['github_unique_document_blobs']} ulike dokumentinnhold) fra "
              f"{len({e['repository'] for e in entries})} repoer, pluss **{len(bundles)} egen komplett skillpakke**.", '',
              '[Startside](README.md) · [Stjerner og egne repoer](OFFENTLIG_INVENTAR.md) · [JSON](data/skills.json)', '',

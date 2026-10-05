@@ -195,18 +195,33 @@ class Check:
         for key in ('starred', 'owned_public'):
             names = [r['full_name'] for r in inventory[key]]
             self.require(len(names) == len(set(names)), f'Inventar: duplikater i {key}')
+        for r in inventory['starred']:
+            self.require(bool(re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z', r.get('starred_at', ''))),
+                         f"Inventar: mangler stjernedato for {r['full_name']}")
         self.require(not inventory['scenario']['tree_truncated'], 'Inventar: avkortet Scenario-tre')
         if not (self.root / 'data/skills.json').exists():
             return
         skills = self.read_json('data/skills.json')
         sources = self.read_json('data/skill-sources.json')
         names = {r['full_name'] for r in inventory['starred']}
+        owned = {r['full_name'] for r in inventory['owned_public']}
         scanned = {r['repository'] for r in sources['sources']}
-        self.require(names <= scanned, 'Skills: mangler kildegjennomgang for stjernerepoer')
+        for source in sources['sources']:
+            self.require(bool(re.fullmatch(r'[0-9a-f]{40}', source.get('commit', ''))),
+                         f"Skills: ugyldig kildecommit for {source['repository']}")
+            self.require(bool(re.fullmatch(r'[0-9a-f]{40}', source.get('tree_sha', ''))),
+                         f"Skills: ugyldig kildetre for {source['repository']}")
+            self.require(source.get('truncated') is False, f"Skills: avkortet kildetre for {source['repository']}")
+        self.require((names | owned) <= scanned, 'Skills: mangler kildegjennomgang for stjerner eller egne repoer')
         self.require(skills['scanned_starred_repositories'] == len(names), 'Skills: feil antall stjernerepoer')
+        self.require(skills.get('scanned_owned_repositories') == len(owned), 'Skills: feil antall egne repoer')
+        self.require(skills.get('scanned_unique_repositories') == len(names | owned), 'Skills: feil antall unike repoer')
+        self.require(skills['scenario_product_skills'] == len(inventory['scenario']['skills']), 'Skills: feil antall Scenario-skills')
         self.require(skills['github_skill_documents'] == len(skills['entries']), 'Skills: feil dokumentantall')
         self.require(skills['github_unique_document_blobs'] == len({e['blob_sha'] for e in skills['entries']}), 'Skills: feil antall dokumentinnhold')
         for e in skills['entries']:
+            self.require(e['currently_starred'] == (e['repository'] in names), f"Skills: feil stjernestatus for {e['name']}")
+            self.require(e.get('currently_owned') == (e['repository'] in owned), f"Skills: feil eierskap for {e['name']}")
             self.require(bool(re.fullmatch(r'[0-9a-f]{40}', e['commit'])), f"Skills: ugyldig commit for {e['name']}")
             self.require(e['url'].startswith(f"https://github.com/{e['repository']}/blob/{e['commit']}/"), f"Skills: feil kilde-URL for {e['name']}")
         for bundle in skills['personal_bundles']:

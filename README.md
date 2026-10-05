@@ -4,9 +4,9 @@ Referansebibliotek for **Tombonator3000**: spill, 3D, simulering, skills, agentv
 
 **[Stjerner og egne repoer](OFFENTLIG_INVENTAR.md)** · **[Samlet skilloversikt](SKILLS.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
 
-Oppdatert **1. oktober 2026**: **44 offentlige stjerner**, **29 egne offentlige repoer**, **187 SKILL.md-filer fra 13 stjernerepoer** og den komplette egne **Morbidium-spritesheets-pakken**. Av skillfilene er 122 Scenario-skills og seks Scenario-hjelpere for internt repoarbeid. Én skilltekst finnes i to filer, så de 187 filene har 186 ulike dokumentinnhold. [Se hva som er nytt](docs/OPPDATERING_2026-10-01.md).
+Oppdatert **5. oktober 2026**: **56 offentlige stjerner**, **32 egne offentlige repoer**, **236 SKILL.md-filer fra 16 repoer** og den komplette egne **Morbidium-spritesheets-pakken**. Alle 78 unike offentlige repoer er undersøkt for skills. Av skillfilene er 139 Scenario-skills og seks Scenario-hjelpere for internt repoarbeid. Noen skills finnes i flere mapper; de 236 filene har 215 ulike dokumentinnhold. [Se hva som er nytt siden torsdag](docs/OPPDATERING_2026-10-05.md).
 
-[Maskinlesbart inventar](data/offentlig-inventar.json), [skilldata](data/skills.json) og oppdateringsskriptene følger med. Kildekode ligger i de lenkede originalrepoene; skillkildene er festet til kontrollerte commits. Private repoer og private stjerner er ikke med i den offentlige oversikten. `scripts/find.py` søker nå i den historiske katalogen, det ferske inventaret og skills.
+[Maskinlesbart inventar med stjernedatoer](data/offentlig-inventar.json), [skilldata](data/skills.json) og oppdateringsskriptene følger med. Kildekode ligger i de lenkede originalrepoene; skillkildene er festet til kontrollerte commits. Private repoer og private stjerner er ikke med i den offentlige oversikten. `scripts/find.py` søker i den historiske katalogen, det ferske inventaret og skills fra både stjerner og egne offentlige repoer.
 
 Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike repoer**: **22 repoer som da var stjernemerket**, samt **24 øvrige referanser** fra tidligere dokumentert research. [STARRED.md](STARRED.md) er en datert historisk liste. Det opprinnelige lokale biblioteket fra 13. september er videreført med Git-historikk og tidligere notater bevart.
 

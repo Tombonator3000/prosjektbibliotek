@@ -1,10 +1,21 @@
 {
-  "collected_at": "2026-10-01T15:57:48+00:00",
+  "collected_at": "2026-10-05T19:46:22+00:00",
   "scope": "Public GitHub API; private repositories and private stars are excluded",
   "owner": "Tombonator3000",
   "star_pages": 1,
   "owned_pages": 1,
   "starred": [
+    {
+      "id": 892815,
+      "full_name": "achillean/shodan-python",
+      "url": "https://github.com/achillean/shodan-python",
+      "description": "The official Python library for Shodan",
+      "archived": false,
+      "license_spdx": "NOASSERTION",
+      "default_branch": "master",
+      "pushed_at": "2024-08-05T13:11:50Z",
+      "starred_at": "2026-10-04T19:16:28Z"
+    },
     {
       "id": 1360317501,
       "full_name": "achimala/dream-loop",
@@ -13,7 +24,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-09T22:43:38Z"
+      "pushed_at": "2026-09-09T22:43:38Z",
+      "starred_at": "2026-09-10T13:18:51Z"
     },
     {
       "id": 1386131103,
@@ -23,7 +35,19 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-10-01T15:48:54Z"
+      "pushed_at": "2026-10-04T20:50:27Z",
+      "starred_at": "2026-10-01T11:35:25Z"
+    },
+    {
+      "id": 489384246,
+      "full_name": "antoniaci/blackbird",
+      "url": "https://github.com/antoniaci/blackbird",
+      "description": "An OSINT tool to search for accounts by username and email in social networks.",
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main",
+      "pushed_at": "2025-07-13T13:48:19Z",
+      "starred_at": "2026-10-04T19:15:57Z"
     },
     {
       "id": 1383489293,
@@ -33,7 +57,30 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-23T13:20:28Z"
+      "pushed_at": "2026-09-23T13:20:28Z",
+      "starred_at": "2026-09-25T13:58:35Z"
+    },
+    {
+      "id": 1047320420,
+      "full_name": "bethington/ghidra-mcp",
+      "url": "https://github.com/bethington/ghidra-mcp",
+      "description": "Ghidra MCP Server — 200+ MCP tools for AI-powered reverse engineering. GUI plugin + headless server, lazy tool loading, convention enforcement, batch operations, Ghidra Server integration, and Docker deployment.",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "default_branch": "dev",
+      "pushed_at": "2026-10-05T09:32:15Z",
+      "starred_at": "2026-10-05T06:12:13Z"
+    },
+    {
+      "id": 1401933950,
+      "full_name": "bhouston/three-dlss-nr",
+      "url": "https://github.com/bhouston/three-dlss-nr",
+      "description": "A Three.js (TSL / WebGPU) port of OpenDLSS-NR, the open-source reimplementation of NVIDIA's DLSS 5 neural rendering network",
+      "archived": false,
+      "license_spdx": "NOASSERTION",
+      "default_branch": "main",
+      "pushed_at": "2026-10-05T17:59:45Z",
+      "starred_at": "2026-10-04T17:06:03Z"
     },
     {
       "id": 1277471539,
@@ -43,7 +90,8 @@
       "archived": false,
       "license_spdx": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-10-01T08:23:04Z"
+      "pushed_at": "2026-10-05T16:03:09Z",
+      "starred_at": "2026-09-10T15:13:09Z"
     },
     {
       "id": 406930975,
@@ -53,7 +101,8 @@
       "archived": false,
       "license_spdx": "CC0-1.0",
       "default_branch": "main",
-      "pushed_at": "2026-02-25T20:22:58Z"
+      "pushed_at": "2026-02-25T20:22:58Z",
+      "starred_at": "2026-09-17T11:22:21Z"
     },
     {
       "id": 1375594818,
@@ -63,7 +112,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-30T20:11:50Z"
+      "pushed_at": "2026-09-30T20:11:50Z",
+      "starred_at": "2026-09-18T11:18:42Z"
     },
     {
       "id": 1382335409,
@@ -73,7 +123,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-25T23:27:06Z"
+      "pushed_at": "2026-09-25T23:27:06Z",
+      "starred_at": "2026-09-22T22:05:02Z"
     },
     {
       "id": 1182216394,
@@ -83,7 +134,8 @@
       "archived": false,
       "license_spdx": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-08-08T14:53:31Z"
+      "pushed_at": "2026-08-08T14:53:31Z",
+      "starred_at": "2026-09-28T20:43:53Z"
     },
     {
       "id": 1007827531,
@@ -93,7 +145,8 @@
       "archived": false,
       "license_spdx": "Apache-2.0",
       "default_branch": "main",
-      "pushed_at": "2026-09-30T04:00:21Z"
+      "pushed_at": "2026-10-02T22:13:45Z",
+      "starred_at": "2026-09-20T20:34:28Z"
     },
     {
       "id": 1378042060,
@@ -103,7 +156,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-20T07:47:22Z"
+      "pushed_at": "2026-09-20T07:47:22Z",
+      "starred_at": "2026-09-20T12:58:37Z"
     },
     {
       "id": 1206390571,
@@ -113,7 +167,8 @@
       "archived": false,
       "license_spdx": "AGPL-3.0",
       "default_branch": "main",
-      "pushed_at": "2026-10-01T15:56:11Z"
+      "pushed_at": "2026-10-05T18:30:38Z",
+      "starred_at": "2026-09-26T19:45:27Z"
     },
     {
       "id": 1384232861,
@@ -123,7 +178,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-25T04:02:40Z"
+      "pushed_at": "2026-09-25T04:02:40Z",
+      "starred_at": "2026-09-24T19:25:49Z"
     },
     {
       "id": 1305817664,
@@ -133,7 +189,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-23T23:51:30Z"
+      "pushed_at": "2026-09-23T23:51:30Z",
+      "starred_at": "2026-09-24T14:43:17Z"
     },
     {
       "id": 1385240845,
@@ -143,7 +200,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-24T10:53:44Z"
+      "pushed_at": "2026-09-24T10:53:44Z",
+      "starred_at": "2026-09-24T14:25:00Z"
     },
     {
       "id": 942771284,
@@ -153,7 +211,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-10-01T15:34:32Z"
+      "pushed_at": "2026-10-05T16:15:15Z",
+      "starred_at": "2026-09-24T12:46:35Z"
     },
     {
       "id": 1377492826,
@@ -163,7 +222,19 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-19T18:31:48Z"
+      "pushed_at": "2026-09-19T18:31:48Z",
+      "starred_at": "2026-09-19T21:31:27Z"
+    },
+    {
+      "id": 1404809331,
+      "full_name": "iamtechartist/obsidian",
+      "url": "https://github.com/iamtechartist/obsidian",
+      "description": "Break a stone and what's inside? A cathedral. Break the cathedral? A whale. Break the whale and you're holding the stone again. 32,000 shards, one endless loop, all procedural Three.js.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main",
+      "pushed_at": "2026-10-04T20:48:31Z",
+      "starred_at": "2026-10-04T22:42:37Z"
     },
     {
       "id": 1384706778,
@@ -173,7 +244,19 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-25T17:19:25Z"
+      "pushed_at": "2026-09-25T17:19:25Z",
+      "starred_at": "2026-09-26T19:35:37Z"
+    },
+    {
+      "id": 1378437950,
+      "full_name": "Karolynaz/devil-3ds",
+      "url": "https://github.com/Karolynaz/devil-3ds",
+      "description": "Nintendo 3DS finally gets a Diablo port built for comfortable dual-screen play. Based on DevilutionX, whose original 3DS UI and controls were difficult to use.",
+      "archived": false,
+      "license_spdx": "NOASSERTION",
+      "default_branch": "master",
+      "pushed_at": "2026-10-05T19:06:55Z",
+      "starred_at": "2026-10-01T19:41:39Z"
     },
     {
       "id": 1384075638,
@@ -183,7 +266,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-23T19:17:00Z"
+      "pushed_at": "2026-09-23T19:17:00Z",
+      "starred_at": "2026-09-24T18:14:35Z"
     },
     {
       "id": 136780445,
@@ -193,7 +277,19 @@
       "archived": false,
       "license_spdx": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-09-28T10:03:27Z"
+      "pushed_at": "2026-09-28T10:03:27Z",
+      "starred_at": "2026-09-27T12:30:46Z"
+    },
+    {
+      "id": 1212922,
+      "full_name": "laramies/theHarvester",
+      "url": "https://github.com/laramies/theHarvester",
+      "description": "E-mails, subdomains and names Harvester - OSINT ",
+      "archived": false,
+      "license_spdx": "GPL-2.0",
+      "default_branch": "master",
+      "pushed_at": "2026-10-04T19:00:27Z",
+      "starred_at": "2026-10-04T19:16:19Z"
     },
     {
       "id": 1380797051,
@@ -203,7 +299,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-22T03:27:27Z"
+      "pushed_at": "2026-09-22T03:27:27Z",
+      "starred_at": "2026-09-22T18:36:13Z"
     },
     {
       "id": 1254699739,
@@ -213,7 +310,8 @@
       "archived": false,
       "license_spdx": "AGPL-3.0",
       "default_branch": "main",
-      "pushed_at": "2026-09-30T20:16:46Z"
+      "pushed_at": "2026-10-05T19:18:29Z",
+      "starred_at": "2026-09-07T12:30:12Z"
     },
     {
       "id": 1336106642,
@@ -223,7 +321,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-08-21T10:10:53Z"
+      "pushed_at": "2026-08-21T10:10:53Z",
+      "starred_at": "2026-08-21T09:04:14Z"
     },
     {
       "id": 920995232,
@@ -233,7 +332,41 @@
       "archived": false,
       "license_spdx": "Apache-2.0",
       "default_branch": "main",
-      "pushed_at": "2026-09-29T02:04:56Z"
+      "pushed_at": "2026-10-05T13:58:58Z",
+      "starred_at": "2026-09-16T10:32:34Z"
+    },
+    {
+      "id": 173228436,
+      "full_name": "NationalSecurityAgency/ghidra",
+      "url": "https://github.com/NationalSecurityAgency/ghidra",
+      "description": "Ghidra is a software reverse engineering (SRE) framework",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "default_branch": "master",
+      "pushed_at": "2026-10-05T13:19:28Z",
+      "starred_at": "2026-10-05T19:43:43Z"
+    },
+    {
+      "id": 1216542069,
+      "full_name": "neilsonnn/image-blaster",
+      "url": "https://github.com/neilsonnn/image-blaster",
+      "description": "An image-to-world skillset for Claude.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main",
+      "pushed_at": "2026-05-15T01:36:10Z",
+      "starred_at": "2026-10-04T11:27:41Z"
+    },
+    {
+      "id": 729255101,
+      "full_name": "OpenCloudGaming/OpenNOW",
+      "url": "https://github.com/OpenCloudGaming/OpenNOW",
+      "description": "Custom GeForce Now Client Named OpenNOW",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main",
+      "pushed_at": "2026-10-05T19:19:54Z",
+      "starred_at": "2026-10-05T14:22:09Z"
     },
     {
       "id": 1397016507,
@@ -243,7 +376,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-30T23:39:09Z"
+      "pushed_at": "2026-10-05T12:43:12Z",
+      "starred_at": "2026-10-01T15:46:22Z"
     },
     {
       "id": 1388128752,
@@ -253,7 +387,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-29T11:58:58Z"
+      "pushed_at": "2026-10-04T17:35:21Z",
+      "starred_at": "2026-09-27T06:46:52Z"
     },
     {
       "id": 1366718071,
@@ -263,7 +398,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-28T22:32:27Z"
+      "pushed_at": "2026-10-04T22:40:12Z",
+      "starred_at": "2026-09-20T07:11:56Z"
     },
     {
       "id": 1377035734,
@@ -273,7 +409,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-25T00:57:26Z"
+      "pushed_at": "2026-09-25T00:57:26Z",
+      "starred_at": "2026-09-24T18:17:22Z"
     },
     {
       "id": 1331882604,
@@ -283,7 +420,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-10-01T11:06:53Z"
+      "pushed_at": "2026-10-04T19:21:05Z",
+      "starred_at": "2026-09-25T14:15:44Z"
     },
     {
       "id": 1389323262,
@@ -293,7 +431,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-26T14:21:46Z"
+      "pushed_at": "2026-09-26T14:21:46Z",
+      "starred_at": "2026-09-26T19:11:55Z"
     },
     {
       "id": 1274708755,
@@ -303,7 +442,30 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-09-22T22:55:52Z"
+      "pushed_at": "2026-09-22T22:55:52Z",
+      "starred_at": "2026-09-23T08:36:06Z"
+    },
+    {
+      "id": 4165675,
+      "full_name": "smicallef/spiderfoot",
+      "url": "https://github.com/smicallef/spiderfoot",
+      "description": "SpiderFoot automates OSINT for threat intelligence and mapping your attack surface.",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "master",
+      "pushed_at": "2026-04-13T19:43:06Z",
+      "starred_at": "2026-10-04T19:16:11Z"
+    },
+    {
+      "id": 275386910,
+      "full_name": "soxoj/maigret",
+      "url": "https://github.com/soxoj/maigret",
+      "description": "🕵️‍♂️ Collect a dossier on a person by username from 6K websites",
+      "archived": false,
+      "license_spdx": "MIT",
+      "default_branch": "main",
+      "pushed_at": "2026-10-05T07:58:30Z",
+      "starred_at": "2026-10-04T19:16:05Z"
     },
     {
       "id": 1338987521,
@@ -313,7 +475,8 @@
       "archived": false,
       "license_spdx": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-09-25T17:46:51Z"
+      "pushed_at": "2026-09-25T17:46:51Z",
+      "starred_at": "2026-09-27T12:03:43Z"
     },
     {
       "id": 1264396304,
@@ -323,7 +486,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-10-01T05:39:52Z"
+      "pushed_at": "2026-10-05T12:08:52Z",
+      "starred_at": "2026-10-01T09:23:17Z"
     },
     {
       "id": 1042536885,
@@ -333,7 +497,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-09T14:33:40Z"
+      "pushed_at": "2026-09-09T14:33:40Z",
+      "starred_at": "2025-12-19T08:24:12Z"
     },
     {
       "id": 1117130049,
@@ -343,7 +508,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-04-13T14:52:24Z"
+      "pushed_at": "2026-04-13T14:52:24Z",
+      "starred_at": "2025-12-19T09:17:17Z"
     },
     {
       "id": 1394838108,
@@ -353,7 +519,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-10-01T12:28:34Z"
+      "pushed_at": "2026-10-02T03:48:18Z",
+      "starred_at": "2026-09-29T09:36:54Z"
     },
     {
       "id": 1385799150,
@@ -363,7 +530,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-29T05:44:44Z"
+      "pushed_at": "2026-09-29T05:44:44Z",
+      "starred_at": "2026-09-26T12:44:58Z"
     },
     {
       "id": 1383099921,
@@ -373,7 +541,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-27T09:37:21Z"
+      "pushed_at": "2026-10-01T16:05:28Z",
+      "starred_at": "2026-09-23T09:00:11Z"
     },
     {
       "id": 1363070348,
@@ -383,7 +552,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-13T14:25:19Z"
+      "pushed_at": "2026-10-05T19:09:45Z",
+      "starred_at": "2026-09-10T15:14:32Z"
     },
     {
       "id": 1053412951,
@@ -393,7 +563,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-06T10:16:24Z"
+      "pushed_at": "2026-09-06T10:16:24Z",
+      "starred_at": "2025-09-09T14:26:53Z"
     },
     {
       "id": 1123139685,
@@ -403,7 +574,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-07T17:05:45Z"
+      "pushed_at": "2026-09-07T17:05:45Z",
+      "starred_at": "2026-09-20T09:30:47Z"
     },
     {
       "id": 1057067049,
@@ -413,7 +585,8 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-02-10T11:00:05Z"
+      "pushed_at": "2026-02-10T11:00:05Z",
+      "starred_at": "2025-09-15T08:29:34Z"
     },
     {
       "id": 1332039735,
@@ -423,7 +596,8 @@
       "archived": false,
       "license_spdx": "AGPL-3.0",
       "default_branch": "main",
-      "pushed_at": "2026-09-15T16:47:39Z"
+      "pushed_at": "2026-09-15T16:47:39Z",
+      "starred_at": "2026-09-14T14:59:58Z"
     },
     {
       "id": 1385819373,
@@ -433,7 +607,8 @@
       "archived": false,
       "license_spdx": "MIT",
       "default_branch": "main",
-      "pushed_at": "2026-10-01T15:51:15Z"
+      "pushed_at": "2026-10-05T17:49:16Z",
+      "starred_at": "2026-09-24T21:37:44Z"
     },
     {
       "id": 1390232691,
@@ -443,7 +618,8 @@
       "archived": false,
       "license_spdx": "NOASSERTION",
       "default_branch": "main",
-      "pushed_at": "2026-09-29T23:15:02Z"
+      "pushed_at": "2026-10-02T02:02:24Z",
+      "starred_at": "2026-09-27T11:51:12Z"
     }
   ],
   "owned_public": [
@@ -475,7 +651,7 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-05-15T14:33:21Z"
+      "pushed_at": "2026-10-02T02:56:10Z"
     },
     {
       "id": 1137355542,
@@ -525,7 +701,7 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-20T17:19:54Z"
+      "pushed_at": "2026-10-02T05:27:02Z"
     },
     {
       "id": 1136499163,
@@ -548,6 +724,16 @@
       "pushed_at": "2026-02-05T09:08:18Z"
     },
     {
+      "id": 1401096682,
+      "full_name": "Tombonator3000/Jonesinthefastlane",
+      "url": "https://github.com/Tombonator3000/Jonesinthefastlane",
+      "description": null,
+      "archived": false,
+      "license_spdx": "NOASSERTION",
+      "default_branch": "main",
+      "pushed_at": "2026-10-03T11:23:28Z"
+    },
+    {
       "id": 1394838108,
       "full_name": "Tombonator3000/Loincloth-Legends",
       "url": "https://github.com/Tombonator3000/Loincloth-Legends",
@@ -555,7 +741,27 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-10-01T12:28:34Z"
+      "pushed_at": "2026-10-02T03:48:18Z"
+    },
+    {
+      "id": 1405991488,
+      "full_name": "Tombonator3000/Lula",
+      "url": "https://github.com/Tombonator3000/Lula",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main",
+      "pushed_at": "2026-10-05T18:42:43Z"
+    },
+    {
+      "id": 1401415634,
+      "full_name": "Tombonator3000/MOONSTONE",
+      "url": "https://github.com/Tombonator3000/MOONSTONE",
+      "description": null,
+      "archived": false,
+      "license_spdx": null,
+      "default_branch": "main",
+      "pushed_at": "2026-10-03T14:49:44Z"
     },
     {
       "id": 1385799150,
@@ -615,7 +821,7 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-27T09:37:21Z"
+      "pushed_at": "2026-10-01T16:05:28Z"
     },
     {
       "id": 1161534004,
@@ -655,7 +861,7 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-09-13T14:25:19Z"
+      "pushed_at": "2026-10-05T19:09:45Z"
     },
     {
       "id": 1364441301,
@@ -705,7 +911,7 @@
       "archived": false,
       "license_spdx": null,
       "default_branch": "main",
-      "pushed_at": "2026-04-13T14:23:07Z"
+      "pushed_at": "2026-10-02T05:04:04Z"
     },
     {
       "id": 1057067049,
@@ -753,8 +959,8 @@
     "repository": "scenario-labs/skills",
     "url": "https://github.com/scenario-labs/skills",
     "skills_page": "https://skills.sh/scenario-labs/skills",
-    "commit": "c8a4bddf2b052864f2eaf98d7ce5aa044c72bf42",
-    "tree_sha": "6682344f4b81f53bd3f073c250cac29d4c6d3e25",
+    "commit": "91caa011e13774a220aba7136309b49964104040",
+    "tree_sha": "377205e8b70b1a2daeb300703d498eb5b79b9c4d",
     "tree_truncated": false,
     "license_spdx": "MIT",
     "skills": [
@@ -875,6 +1081,62 @@
         "path": "skills/scenario-gemini-omni/SKILL.md"
       },
       {
+        "name": "scenario-godot-2d",
+        "path": "skills/game-engines/godot/scenario-godot-2d/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-3d-world",
+        "path": "skills/game-engines/godot/scenario-godot-3d-world/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-animation",
+        "path": "skills/game-engines/godot/scenario-godot-animation/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-architecture",
+        "path": "skills/game-engines/godot/scenario-godot-architecture/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-audio",
+        "path": "skills/game-engines/godot/scenario-godot-audio/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-expert",
+        "path": "skills/game-engines/godot/scenario-godot-expert/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-gameplay",
+        "path": "skills/game-engines/godot/scenario-godot-gameplay/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-multiplayer",
+        "path": "skills/game-engines/godot/scenario-godot-multiplayer/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-performance-export",
+        "path": "skills/game-engines/godot/scenario-godot-performance-export/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-pipeline-automation",
+        "path": "skills/game-engines/godot/scenario-godot-pipeline-automation/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-rendering-lighting",
+        "path": "skills/game-engines/godot/scenario-godot-rendering-lighting/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-shaders",
+        "path": "skills/game-engines/godot/scenario-godot-shaders/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-ui",
+        "path": "skills/game-engines/godot/scenario-godot-ui/SKILL.md"
+      },
+      {
+        "name": "scenario-godot-vfx",
+        "path": "skills/game-engines/godot/scenario-godot-vfx/SKILL.md"
+      },
+      {
         "name": "scenario-gpt-image",
         "path": "skills/scenario-gpt-image/SKILL.md"
       },
@@ -905,6 +1167,10 @@
       {
         "name": "scenario-inspiration",
         "path": "skills/scenario-inspiration/SKILL.md"
+      },
+      {
+        "name": "scenario-kinetic-music-video",
+        "path": "skills/scenario-kinetic-music-video/SKILL.md"
       },
       {
         "name": "scenario-kling",
@@ -1041,6 +1307,10 @@
       {
         "name": "scenario-seedream",
         "path": "skills/scenario-seedream/SKILL.md"
+      },
+      {
+        "name": "scenario-side-view-game-kit",
+        "path": "skills/scenario-side-view-game-kit/SKILL.md"
       },
       {
         "name": "scenario-skyboxes",
@@ -1197,6 +1467,10 @@
       {
         "name": "scenario-vidu",
         "path": "skills/scenario-vidu/SKILL.md"
+      },
+      {
+        "name": "scenario-walkable-room",
+        "path": "skills/scenario-walkable-room/SKILL.md"
       },
       {
         "name": "scenario-wan",

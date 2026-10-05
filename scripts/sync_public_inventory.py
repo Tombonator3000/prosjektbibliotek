@@ -48,16 +48,17 @@ class ListLinks(HTMLParser):
                 self.inside = False
 
 
-def get(path):
-    with urlopen(Request("https://api.github.com/" + path, headers=HEADERS), timeout=30) as response:
+def get(path, accept="application/vnd.github+json"):
+    headers = {**HEADERS, "Accept": accept}
+    with urlopen(Request("https://api.github.com/" + path, headers=headers), timeout=30) as response:
         return json.load(response), response.headers.get("Link", "")
 
 
-def all_pages(path):
+def all_pages(path, accept="application/vnd.github+json"):
     items = []
     page = 1
     while True:
-        batch, links = get(path + f"&page={page}")
+        batch, links = get(path + f"&page={page}", accept)
         items.extend(batch)
         if 'rel="next"' not in links:
             break
@@ -66,7 +67,14 @@ def all_pages(path):
 
 
 def main():
-    stars, star_pages = all_pages(f"users/{OWNER}/starred?per_page=100")
+    star_events, star_pages = all_pages(f"users/{OWNER}/starred?per_page=100&sort=created&direction=desc",
+                                       "application/vnd.github.star+json")
+    if any(not event.get("starred_at") or not event.get("repo") for event in star_events):
+        raise RuntimeError("Stjernedatoer mangler; forrige inventar er beholdt")
+    stars = [event["repo"] for event in star_events]
+    star_dates = {event["repo"]["id"]: event["starred_at"] for event in star_events}
+    if len(star_dates) != len(stars):
+        raise RuntimeError("Duplikater i starlisten; forrige inventar er beholdt")
     owned, own_pages = all_pages(f"users/{OWNER}/repos?per_page=100&type=owner&sort=full_name")
     scenario, _ = get(f"repos/{SCENARIO}")
     revision, _ = get(f"repos/{SCENARIO}/commits/{scenario['default_branch']}")
@@ -94,7 +102,8 @@ def main():
     data = {"collected_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
             "scope": "Public GitHub API; private repositories and private stars are excluded",
             "owner": OWNER, "star_pages": star_pages, "owned_pages": own_pages,
-            "starred": sorted(map(repo, stars), key=lambda r: r["full_name"].casefold()),
+            "starred": sorted(({**repo(r), "starred_at": star_dates[r["id"]]} for r in stars),
+                              key=lambda r: r["full_name"].casefold()),
             "owned_public": sorted(map(repo, owned), key=lambda r: r["full_name"].casefold()),
             "public_lists": [{"name": "✨ Inspiration", "url": list_url,
                               "repositories": inspiration}],
@@ -105,7 +114,7 @@ def main():
                          "skills": skills}}
     starred = {x["full_name"] for x in data["starred"]}
     lines = ["# Oppdatert prosjektinventar", "",
-             f"Hentet {data['collected_at']} fra GitHubs offentlige API. ", "",
+             f"Hentet {data['collected_at']} fra GitHubs offentlige API.", "",
              f"**{len(stars)} offentlige stjerner · {len(owned)} egne offentlige repoer · {len(skills)} Scenario-skills.**",
              "Repoer som både er egne og stjernemerket står i begge listene. [JSON-data](data/offentlig-inventar.json).", "",
              "Dette er et søkbart register med lenker til kildekoden, ikke en kopi av alle kodebasene. "
@@ -119,9 +128,10 @@ def main():
         lines.append(f"- [{name}](https://github.com/{name})")
     lines += ["",
              "## Stjernemerket på GitHub", "",
-             "| Repo | Hva det er | Lisensfelt |", "|---|---|---|"]
+             "Stjernedatoer er oppgitt i UTC.", "",
+             "| Repo | Hva det er | Stjernemerket | Lisensfelt |", "|---|---|---|---|"]
     for r in data["starred"]:
-        lines.append(f"| [{r['full_name']}]({r['url']}) | {str(r['description'] or 'Ingen beskrivelse').replace('|', '/')} | {r['license_spdx'] or 'Uavklart'} |")
+        lines.append(f"| [{r['full_name']}]({r['url']}) | {str(r['description'] or 'Ingen beskrivelse').replace('|', '/')} | {r['starred_at']} | {r['license_spdx'] or 'Uavklart'} |")
     lines += ["", "## Egne offentlige repoer", "",
               "| Repo | Hva det er | I stjernene |", "|---|---|---|"]
     for r in data["owned_public"]:
