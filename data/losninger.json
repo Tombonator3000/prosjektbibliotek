@@ -1,0 +1,804 @@
+{
+  "schema_version": 1,
+  "scope": "Løsningskort fra Toms offentlige repoer. Status gjelder opphavet på datoen i kortet; biblioteket kjører ikke kodene selv.",
+  "domains": [
+    "grafikk",
+    "lyd",
+    "testing",
+    "ui",
+    "bygg",
+    "regler"
+  ],
+  "count": 19,
+  "status_counts": {
+    "PASS": 14,
+    "FAIL": 0,
+    "UNVERIFIED": 5
+  },
+  "cards": [
+    {
+      "id": "bloom-terskel-over-en",
+      "title": "Bloom som bare gløder på lys og ild",
+      "domain": "grafikk",
+      "tags": [
+        "bloom",
+        "UnrealBloomPass",
+        "threshold",
+        "terskel",
+        "HDR",
+        "emissive",
+        "grøtete",
+        "gløder",
+        "overeksponert",
+        "dis"
+      ],
+      "stack": "three.js r170, UnrealBloomPass før OutputPass, ACES-tonekurve",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/main.js#L1191",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/main.js",
+      "origin_line": 1191,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/bloom-terskel-over-en.md",
+      "heading": "Bloom som bare gløder på lys og ild",
+      "symptom": "Lyse flater gløder midt på dagen: hvite vegger, markiser og sollys på brostein får en hvit dis rundt seg, og bildet ser grøtete ut.",
+      "solution": "- Sett terskelen over 1, så bare det som er lysere enn hvitt i HDR gløder.\n- Gi lamper, ild, vinduer om natta og magi emissive over 1, så de fortsatt gløder.\n- La terskelen og styrken følge stedet og tiden:\n\n| Sted | Terskel | Styrke |\n| --- | --- | --- |\n| Ute om dagen | 1,12 | 0,32 |\n| Ute om natta | 0,98 | 0,52 |\n| Kloakk og hule | 0,88 | 0,55 |\n\n```js\nbloomLook(threshold, strength) { this.bloom.threshold = threshold; this.bloom.strength = strength; }\n// ute, n = natt fra 0 til 1\nthis.bloomLook(1.12 - n * 0.14, 0.32 + n * 0.2);\n```",
+      "caveats": "- Lamper med lav emissive (under 1) slutter å gløde. Sjekk at `emissiveIntensity` ganger fargen kommer over 1 der det skal gløde.\n- `Math.pow` av et negativt tall gir NaN, som blir en hvit klatt i bloom. Klem verdiene før du opphøyer.",
+      "evidence": [
+        "[Loggen, 9. oktober 00:23](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L263) og [bildene før og etter, 00:29](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L266): markisen på torget gløder ikke lenger midt på dagen."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@7e5ba8e`: by, områder, kloakk og tittel har hver sin terskel og styrke."
+      ]
+    },
+    {
+      "id": "instancedmesh-fargeliste-ved-count-null",
+      "title": "InstancedMesh blir svart når fargelista lages mens count er 0",
+      "domain": "grafikk",
+      "tags": [
+        "InstancedMesh",
+        "setColorAt",
+        "instanceColor",
+        "count",
+        "svart",
+        "partikler",
+        "farge",
+        "black"
+      ],
+      "stack": "three.js r128 og nyere, InstancedMesh",
+      "status": "UNVERIFIED",
+      "origin": "Tombonator3000/morbidium@729219ceb3e77119179deadb9fbfcd25bd8b2a4a:logg/2026-09.md#L1092",
+      "origin_repository": "Tombonator3000/morbidium",
+      "origin_commit": "729219ceb3e77119179deadb9fbfcd25bd8b2a4a",
+      "origin_path": "logg/2026-09.md",
+      "origin_line": 1092,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "Toms egen kode, ingen lisensfil i repoet",
+      "checked": "2026-10-09",
+      "public_checked": null,
+      "see_also": [
+        "vertexcolors-uten-fargeattributt"
+      ],
+      "path": "losninger/grafikk/instancedmesh-fargeliste-ved-count-null.md",
+      "heading": "InstancedMesh blir svart når fargelista lages mens count er 0",
+      "symptom": "Alle instansene i en InstancedMesh, for eksempel partikler, blir svarte, selv om `setColorAt` blir kalt.",
+      "solution": "Lag fargelista for full kapasitet før du setter `count` ned, eller lag den selv:\n\n```js\nmesh.instanceColor = new THREE.InstancedBufferAttribute(new Float32Array(capacity * 3), 3);\n```",
+      "caveats": "Det samme gjelder alle steder som lager partikler. Morbidium hadde feilen på 44 steder samtidig.",
+      "evidence": [
+        "Årsaken og rettelsen står i loggen til Morbidium, men testen er ikke sett her: [logg/2026-09.md, linje 1092 til 1095](https://github.com/Tombonator3000/morbidium/blob/729219ceb3e77119179deadb9fbfcd25bd8b2a4a/logg/2026-09.md?plain=1#L1092)."
+      ],
+      "used_in": [
+        "`Tombonator3000/morbidium@729219c`: partiklene fikk farge da fargelista ble laget for alle plassene."
+      ]
+    },
+    {
+      "id": "lyskroker-lights-fragment-begin-r170",
+      "title": "Kroker for lys per lyskilde i lights_fragment_begin (r170)",
+      "domain": "grafikk",
+      "tags": [
+        "lights_fragment_begin",
+        "getSpotLightInfo",
+        "getDirectionalLightInfo",
+        "skyskygger",
+        "onBeforeCompile",
+        "ShaderChunk",
+        "directLight"
+      ],
+      "stack": "three.js r170, MeshStandardMaterial",
+      "status": "UNVERIFIED",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:memory.md#L212",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "memory.md",
+      "origin_line": 212,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/lyskroker-lights-fragment-begin-r170.md",
+      "heading": "Kroker for lys per lyskilde i lights_fragment_begin (r170)",
+      "symptom": "Du vil dempe eller farge lyset fra sola for alle materialer, for eksempel skygger fra skyer som bare treffer direkte lys og ikke fyllyset. Endringen må gjøres per lyskilde.",
+      "solution": "Linjene i r170 som det går an å henge noe på:\n\n```glsl\ngetSpotLightInfo( spotLight, geometryPosition, directLight );\ngetDirectionalLightInfo( directionalLight, directLight );\n```\n\nLegg til for eksempel `directLight.color *= cloudShadowAt( worldPos );` rett etter, med `.replace()` i onBeforeCompile eller på `THREE.ShaderChunk.lights_fragment_begin` før noe kompileres.",
+      "caveats": "- Linjene skifter mellom versjonene. Sjekk dem i `node_modules/three/src/renderers/shaders/ShaderChunk/lights_fragment_begin.glsl.js` for den versjonen du bruker.\n- Verdensposisjonen må sendes fra vertex-shaderen. `geometryPosition` ligger i kamerarommet.",
+      "evidence": [
+        "Strengene er sjekket i r170 (`lights_fragment_begin.glsl.js` linje 97 og 141), men kroken er ikke tatt i bruk ennå. [memory.md](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L212)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: notert til skyskygger. Ikke tatt i bruk."
+      ]
+    },
+    {
+      "id": "myke-trekroner-med-vertex-ao",
+      "title": "Myke trekroner med AO i hjørnefargene",
+      "domain": "grafikk",
+      "tags": [
+        "trær",
+        "trekroner",
+        "low poly",
+        "flatShading",
+        "plast",
+        "facetter",
+        "ikosaeder",
+        "vertexColors",
+        "AO",
+        "InstancedMesh",
+        "mergeVertices"
+      ],
+      "stack": "three.js r170, InstancedMesh med setColorAt, BufferGeometryUtils.mergeVertices",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/treegeo.js#L29",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/treegeo.js",
+      "origin_line": 29,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/myke-trekroner-med-vertex-ao.md",
+      "heading": "Myke trekroner med AO i hjørnefargene",
+      "symptom": "Trærne ser ut som facetterte plastkuler og kjegler i én farge.",
+      "solution": "- Slå sammen hjørnene med `mergeVertices`, og forskyv dem med støy som bare avhenger av posisjonen. Da flytter like hjørner seg likt, og det blir ingen sprekker.\n- Regn normalene på nytt, og vri dem 55 prosent mot retningen ut fra midten, så lyset faller mykt over kronen.\n- Legg AO i en fargeattributt: mørkere nederst og i gropene, lysere øverst, og litt flekker. Med `vertexColors: true` ganges den med fargen per instans.\n- Graner: kjegler med takket nederkant og mørk underside.\n\n```js\nnn.fromBufferAttribute(nrm, i).lerp(dirFromCenter, 0.55).normalize();\nconst ao = (0.5 + 0.62 * smoothstep(-0.95, 0.75, y)) * (0.82 + 0.18 * smoothstep(0.88, 1.12, lump)) * mottling;\n```",
+      "caveats": "- `vertexColors: true` krever en fargeattributt på hver geometri som bruker materialet. Uten den blir alt svart (se kortet vertexcolors-uten-fargeattributt).\n- Detail 2 gir 320 flater per kule mot 80. I Ekeskogen ble det 524 000 trekanter på høy kvalitet mot 239 000 før. Hvor fine kronene er, bør derfor følge kvaliteten.",
+      "evidence": [
+        "[Loggen, 9. oktober 00:26](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L265) og [bildene og trekantene, 00:29](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L266)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@7e5ba8e`: alle løvtrær og graner i områdene og rundt Fristaden. På lav kvalitet er trekantene som før."
+      ]
+    },
+    {
+      "id": "onbeforecompile-i-kjede",
+      "title": "Flere shaderendringer på samme materiale med onBeforeCompile",
+      "domain": "grafikk",
+      "tags": [
+        "onBeforeCompile",
+        "customProgramCacheKey",
+        "shader",
+        "patch",
+        "MeshStandardMaterial",
+        "overskrives",
+        "feil program",
+        "cutaway",
+        "wetness",
+        "sway"
+      ],
+      "stack": "three.js r170, MeshStandardMaterial med onBeforeCompile",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/wet.js#L27",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/wet.js",
+      "origin_line": 27,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/onbeforecompile-i-kjede.md",
+      "heading": "Flere shaderendringer på samme materiale med onBeforeCompile",
+      "symptom": "To endringer på samme materiale, for eksempel fuktighet og vind i trærne, virker ikke sammen: den siste overskriver den første. Eller to materialer med ulike endringer får det samme programmet.",
+      "solution": "Kjed funksjonene og nøklene:\n\n```js\nfunction chain(mat, key, fn) {\n  const prev = mat.onBeforeCompile;\n  const prevKey = mat.customProgramCacheKey ? mat.customProgramCacheKey.bind(mat) : null;\n  mat.onBeforeCompile = (sh, r) => { if (prev) prev.call(mat, sh, r); fn(sh); };\n  mat.customProgramCacheKey = () => (prevKey ? prevKey() : '') + '|' + key;\n}\n```\n\nHver endring kaller `chain(mat, 'wet', sh => { ... })` med sin egen nøkkel.",
+      "caveats": "- Endringer som erstatter den samme `#include`-linja, må tåle at en annen endring allerede har gjort det. Bygg videre på teksten som står der, ikke på den opprinnelige chunken.\n- Uniformer som deles mellom materialer, legges i et felles objekt og settes inn i `sh.uniforms` i hver endring.",
+      "evidence": [
+        "[memory.md, wet.js](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L68).",
+        "[chain() i wet.js](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/wet.js#L27)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: addWetness, addSway og addCutaway på de samme materialene i byen og områdene siden 0.5."
+      ]
+    },
+    {
+      "id": "pmrem-miljokart-fra-himmelkule",
+      "title": "Miljøkart fra en enkel himmelkule",
+      "domain": "grafikk",
+      "tags": [
+        "PMREM",
+        "PMREMGenerator",
+        "environment",
+        "environmentIntensity",
+        "miljøkart",
+        "refleksjoner",
+        "glans",
+        "matt",
+        "plast",
+        "MeshStandardMaterial"
+      ],
+      "stack": "three.js r170, MeshStandardMaterial, scene.environment og scene.environmentIntensity",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/envlight.js#L58",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/envlight.js",
+      "origin_line": 58,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/pmrem-miljokart-fra-himmelkule.md",
+      "heading": "Miljøkart fra en enkel himmelkule",
+      "symptom": "MeshStandardMaterial ser matt og plastaktig ut. Våt stein, metall og rustning blinker ikke, fordi det ikke finnes noe miljø å speile.",
+      "solution": "- Lag en kule med farger fra himmelen: toppen, horisonten og bakken, pluss en myk solflekk i samme retning som sola.\n- Gjør den om til PMREM, og sett den som `scene.environment`.\n- Hold styrken lav, så sola og fyllyset fortsatt bærer bildet: rundt 0,3 om dagen og 0,08 om natta. Bruk ikke noe miljøkart i mørke kjellere og huler.\n- Bygg kartet på nytt bare når himmelen har endret seg merkbart, og høyst hvert sjette sekund.\n\n```js\nconst pmrem = new THREE.PMREMGenerator(renderer);\n// scene: en BackSide-kule med ShaderMaterial som blander uTop, uHorizon og uGround etter retningen\nconst rt = pmrem.fromScene(skyScene, 0.03, 0.1, 50);\nscene.environment = rt.texture;\nscene.environmentIntensity = (0.3 - night * 0.22) * (1 - cloud * 0.35);\n```",
+      "caveats": "- Miljøkartet gir både glans og diffust lys. Står det for høyt, flater det ut lyset og gjør mørke steder grå.\n- `fromScene` tegner seks sider og glatter dem ut, og det tar noen millisekunder. Hvor lang tid det tar på mobil, er ikke målt.\n- Kast det gamle kartet med `dispose()` når du lager et nytt.",
+      "evidence": [
+        "[Loggen, 9. oktober 00:24](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L264) og [bildene før og etter, 00:29](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L266)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@7e5ba8e`: by og områder om dagen og natta, ikke i kloakken."
+      ]
+    },
+    {
+      "id": "regnstreker-fast-pikselbredde",
+      "title": "Regnstreker med fast bredde i piksler",
+      "domain": "grafikk",
+      "tags": [
+        "regn",
+        "regnstreker",
+        "dråper",
+        "partikler",
+        "skjermrom",
+        "bredde",
+        "enorme",
+        "forsvinner",
+        "DoubleSide",
+        "billboard"
+      ],
+      "stack": "three.js r170, ShaderMaterial, instanserte flater bygget i skjermrommet",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/weather.js#L103",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/weather.js",
+      "origin_line": 103,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/regnstreker-fast-pikselbredde.md",
+      "heading": "Regnstreker med fast bredde i piksler",
+      "symptom": "De nærmeste regndråpene blir enorme streker over skjermen, eller strekene forsvinner fra noen vinkler.",
+      "solution": "Bygg streken i klipprommet og gi den en fast bredde i piksler, ganget med `w` så den ikke krymper med avstanden. Bruk `DoubleSide`.\n\n```glsl\nc.xy += perp * position.x * uPx * c.w;   // uPx er bredden i klipprom-enheter\n```\n\n```js\nnew THREE.ShaderMaterial({ side: THREE.DoubleSide, uniforms: { uPx: { value: 0.002 } } });\n```",
+      "caveats": "- `uPx` må regnes på nytt når oppløsningen eller pikselforholdet endrer seg.\n- Strekker du partikler langs farten, trenger tangenten formen `vec2(d.y, -d.x)`, ellers blir de borte.",
+      "evidence": [
+        "[memory.md, regnstrekene](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L66).",
+        "[Vertex-shaderen i weather.js](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/weather.js#L103)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: regn og storm i byen og områdene siden 0.5."
+      ]
+    },
+    {
+      "id": "three-r170-composer-msaa",
+      "title": "Kantutjevning når three.js tegner gjennom EffectComposer",
+      "domain": "grafikk",
+      "tags": [
+        "three.js",
+        "r170",
+        "WebGL2",
+        "MSAA",
+        "antialias",
+        "EffectComposer",
+        "kantutjevning",
+        "hakkete kanter",
+        "aliasing",
+        "samples",
+        "HalfFloat"
+      ],
+      "stack": "three.js r170, WebGL2, EffectComposer med RenderPass, UnrealBloomPass og OutputPass",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/main.js#L231",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/main.js",
+      "origin_line": 231,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/three-r170-composer-msaa.md",
+      "heading": "Kantutjevning når three.js tegner gjennom EffectComposer",
+      "symptom": "Kantene hakker selv om rendereren er laget med `antialias: true`. Det gjelder alt som går gjennom EffectComposer: bygninger, trær, figurer og skyggekanter.",
+      "solution": "Gi komposeren en target med `samples`, og ta `antialias` av rendereren, siden den bare koster minne:\n\n```js\nconst renderer = new THREE.WebGLRenderer({ antialias: false });\nconst composer = new EffectComposer(renderer,\n  new THREE.WebGLRenderTarget(innerWidth, innerHeight, { type: THREE.HalfFloatType, samples: 4 }));\n\n// etter kvalitet: 4 på høy, 2 på middels, 0 på lav\nfor (const rt of [composer.renderTarget1, composer.renderTarget2]) {\n  if (rt.samples !== n) { rt.samples = n; rt.dispose(); }\n}\n```",
+      "caveats": "- Komposeren kloner targeten, så begge bufferne får MSAA, og hvert pass etter scenen løses opp på nytt. Vil du spare det, gir du MSAA bare til et eget RenderPass og kopierer over.\n- Endrer du `samples` på en target som er i bruk, må du kalle `dispose()`, ellers bygges den ikke på nytt.\n- HalfFloat med MSAA krever at skjermkortet kan tegne til halvflyt (EXT_color_buffer_half_float), akkurat som komposeren uten MSAA.\n- Ting med alphaTest (gresstuster, faner) får ikke glatte kanter av MSAA alene. Det krever `alphaToCoverage: true` på materialet.",
+      "evidence": [
+        "[Loggen i DoD-Roguelite, 9. oktober 00:22](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L262) og [bildene før og etter, 00:29](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L266).",
+        "[EffectComposer.js i r170, linje 27](https://github.com/mrdoob/three.js/blob/r170/examples/jsm/postprocessing/EffectComposer.js#L27)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@7e5ba8e`: kantutjevning på høy og middels kvalitet. Bildene var glatte, og CI-testene var grønne."
+      ]
+    },
+    {
+      "id": "uniformlister-for-forste-render",
+      "title": "Uniformlister må ha verdier før første render",
+      "domain": "grafikk",
+      "tags": [
+        "uniform",
+        "array",
+        "uniformliste",
+        "ShaderMaterial",
+        "krasj",
+        "første render",
+        "vec4",
+        "Vector4",
+        "delte uniformer"
+      ],
+      "stack": "three.js r170, ShaderMaterial med lister som uniform vec4 uRip[8]",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/water.js#L102",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/water.js",
+      "origin_line": 102,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/grafikk/uniformlister-for-forste-render.md",
+      "heading": "Uniformlister må ha verdier før første render",
+      "symptom": "Spillet krasjer i three.js ved første render av et materiale med en uniformliste, for eksempel `uniform vec4 uRip[8];` for ringer i vannet.",
+      "solution": "Lag listene med full lengde og nøytrale verdier når modulen lastes, og del de samme listene mellom alle materialene:\n\n```js\nconst SHARED = {\n  rip: Array.from({ length: NRIP }, () => new THREE.Vector4(0, 0, -99, 0)),\n  lp: Array.from({ length: NL }, () => new THREE.Vector3(0, -99, 0)),\n  lc: Array.from({ length: NL }, () => new THREE.Color(0, 0, 0)),\n};\nuniforms: { uRip: { value: SHARED.rip }, uLP: { value: SHARED.lp }, uLC: { value: SHARED.lc } }\n```\n\nOppdater objektene i lista, ikke bytt ut lista.",
+      "caveats": "- Lengden i GLSL (`[NRIP]`) og i JS må være like.\n- En nøytral verdi må være ufarlig i shaderen. Her betyr z = -99 at ringen ikke finnes.",
+      "evidence": [
+        "[memory.md i DoD-Roguelite, avsnittet om water.js](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L64).",
+        "[Listene i water.js](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/water.js#L102)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: vann i byen, i områdene og i kloakken siden 0.5."
+      ]
+    },
+    {
+      "id": "vertexcolors-uten-fargeattributt",
+      "title": "vertexColors uten fargeattributt blir svart",
+      "domain": "grafikk",
+      "tags": [
+        "vertexColors",
+        "color",
+        "attributt",
+        "svart",
+        "black",
+        "geometri",
+        "materiale",
+        "instanceColor"
+      ],
+      "stack": "three.js r170, WebGL2, MeshStandardMaterial med vertexColors",
+      "status": "UNVERIFIED",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/treegeo.js#L29",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/treegeo.js",
+      "origin_line": 29,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [
+        "myke-trekroner-med-vertex-ao"
+      ],
+      "path": "losninger/grafikk/vertexcolors-uten-fargeattributt.md",
+      "heading": "vertexColors uten fargeattributt blir svart",
+      "symptom": "Et materiale med `vertexColors: true` blir svart på noen meshes, men ikke på andre.",
+      "solution": "- Gi hver geometri som deler materialet en fargeattributt, også om den bare er hvit.\n- Eller lag et eget materiale uten `vertexColors` til geometrier uten farge.\n\n```js\ng.setAttribute('color', new THREE.BufferAttribute(new Float32Array(g.attributes.position.count * 3).fill(1), 3));\n```",
+      "caveats": "`setColorAt` på en InstancedMesh er noe annet. Den fargen ganges med fargeattributten, så begge må finnes når begge er slått på (se kortet instancedmesh-fargeliste-ved-count-null).",
+      "evidence": [
+        "Ikke gjenskapt i en test. Kortet bygger på hvordan WebGL behandler attributter som ikke er satt, og trekronene i DoD-Roguelite ble laget med fargeattributt på alle geometrier for å unngå det."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@7e5ba8e`: alle geometriene til MAT.leaf og M.spruce har fargeattributt."
+      ]
+    },
+    {
+      "id": "webgl-kontekst-tapt",
+      "title": "Når WebGL-konteksten blir borte",
+      "domain": "grafikk",
+      "tags": [
+        "webglcontextlost",
+        "webglcontextrestored",
+        "context lost",
+        "kontekst",
+        "krasj",
+        "minne",
+        "GPU",
+        "svart skjerm",
+        "mobil",
+        "Chrome"
+      ],
+      "stack": "three.js r128 og nyere, WebGL",
+      "status": "UNVERIFIED",
+      "origin": "Tombonator3000/morbidium@729219ceb3e77119179deadb9fbfcd25bd8b2a4a:src/04_render.js#L57",
+      "origin_repository": "Tombonator3000/morbidium",
+      "origin_commit": "729219ceb3e77119179deadb9fbfcd25bd8b2a4a",
+      "origin_path": "src/04_render.js",
+      "origin_line": 57,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "Toms egen kode, ingen lisensfil i repoet",
+      "checked": "2026-10-09",
+      "public_checked": null,
+      "see_also": [],
+      "path": "losninger/grafikk/webgl-kontekst-tapt.md",
+      "heading": "Når WebGL-konteksten blir borte",
+      "symptom": "Skjermen blir svart eller fryser, særlig på mobil eller etter lang spilling. Konsollen sier noe om at WebGL-konteksten er mistet (context lost).",
+      "solution": "```js\ncanvas.addEventListener('webglcontextlost', e => { e.preventDefault(); mistet(); });\ncanvas.addEventListener('webglcontextrestored', () => hentet());\n```\n\n- I `mistet()`: pause spillet, lagre det nødvendige og si fra til spilleren.\n- Kommer konteksten ikke tilbake innen 8 s: vis en melding og lagre en lettere kvalitet til neste gang, så spillet ikke krasjer på samme sted.\n- I `hentet()`: bygg nivået og teksturene på nytt.",
+      "caveats": "- Uten `preventDefault()` kommer konteksten aldri tilbake.\n- Ser du etter lekkasjer, sammenlign `renderer.info.memory` (teksturer og geometrier) før og etter at et nivå er bygd flere ganger.",
+      "evidence": [
+        "Koden er lest, men testen er ikke sett her: [04_render.js i Morbidium, linje 57 til 94](https://github.com/Tombonator3000/morbidium/blob/729219ceb3e77119179deadb9fbfcd25bd8b2a4a/src/04_render.js#L57)."
+      ],
+      "used_in": [
+        "`Tombonator3000/morbidium@729219c`: pause, melding og lettere kvalitet når konteksten blir borte."
+      ]
+    },
+    {
+      "id": "karplus-strong-lutt-med-lookahead",
+      "title": "Prosedyrisk lutt med Karplus-Strong og en sequencer med lookahead",
+      "domain": "lyd",
+      "tags": [
+        "WebAudio",
+        "musikk",
+        "prosedyrisk",
+        "Karplus-Strong",
+        "lutt",
+        "pluck",
+        "sequencer",
+        "lookahead",
+        "setInterval",
+        "playbackRate",
+        "uten lydfiler"
+      ],
+      "stack": "WebAudio API i nettleseren, uten lydfiler",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/music.js#L259",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/music.js",
+      "origin_line": 259,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/lyd/karplus-strong-lutt-med-lookahead.md",
+      "heading": "Prosedyrisk lutt med Karplus-Strong og en sequencer med lookahead",
+      "symptom": "Du vil ha musikk uten lydfiler (én fil, liten størrelse). Notene skal ligge stødig i takt, selv når fanen er tung eller ligger i bakgrunnen.",
+      "solution": "- **Lutt**: Karplus-Strong, forhåndsrendret én gang per tone til en AudioBuffer og lagret i et kart. Bruk filtrert støy som startbuffer og et kamfilter for plukkeposisjonen (nasal klang). Dempingen er 0,997, eller 0,9985 for dype toner.\n- **Avspilling**: en `AudioBufferSourceNode` per note gjennom lavpass, en topp på 240 Hz for kroppen, gain og panorering. `playbackRate` stiller tonehøyden helt nøyaktig.\n- **Sequencer**: `setInterval` hvert 25. ms planlegger alle noter som skal spilles de neste 140 ms, med `src.start(t)` på lydklokka.\n\n```js\nwhile (s.next < ctx.currentTime + 0.14) { song.step(this, s, s.n, s.next, s.sd); s.next += s.sd; s.n++; }\nif (s.next < ctx.currentTime - 0.5) s.next = ctx.currentTime + 0.05;   // fanen lå i bakgrunnen\n```",
+      "caveats": "- Lengden på forsinkelseslinja er et heltall. Regn ut den faktiske tonen (`sr / (N + 0.5)`) og rett den med `playbackRate`.\n- AudioContext må startes etter et trykk fra spilleren.\n- Etter at fanen har ligget i bakgrunnen, må `next` hoppes fram, ellers kommer alle notene på en gang.",
+      "evidence": [
+        "[memory.md i DoD-Roguelite, musikken](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L40), [Karplus-Strong i music.js](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/music.js#L259) og [sequenceren](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/music.js#L244)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: all musikken i spillet siden 0.2: tittel, by, vertshus, kloakk og kamp."
+      ]
+    },
+    {
+      "id": "bilder-for-og-etter-med-worktree",
+      "title": "Bilder før og etter en grafikkendring med git worktree",
+      "domain": "testing",
+      "tags": [
+        "før og etter",
+        "sammenligning",
+        "skjermbilder",
+        "git worktree",
+        "regresjon",
+        "grafikk",
+        "A/B"
+      ],
+      "stack": "git, Node-bygg, Playwright-testrigg",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:memory.md#L174",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "memory.md",
+      "origin_line": 174,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/testing/bilder-for-og-etter-med-worktree.md",
+      "heading": "Bilder før og etter en grafikkendring med git worktree",
+      "symptom": "Du har endret lys, bloom eller materialer og vil vise hva som ble bedre, men det gamle bygget er borte.",
+      "solution": "```sh\ngit worktree add <scratch>/before HEAD          # forrige commit i en egen mappe\nln -s $PWD/node_modules <scratch>/before/node_modules\n(cd <scratch>/before && node build.mjs)\nROOT=<scratch>/before node <testrigg> before.png steg.json\nnode <testrigg> after.png steg.json             # de samme stegene på det nye bygget\ngit worktree remove --force <scratch>/before\n```\n\nSett bildene side om side (for eksempel med Pillow).",
+      "caveats": "- Tilfeldige nivåer blir ulike for hver kjøring. Sammenlign steder som er like hver gang, eller gi spillet et fast frø.\n- Bruk de samme innstillingene (kvalitet, vindusstørrelse, tid på døgnet) i begge kjøringene.",
+      "evidence": [
+        "[Loggen 9. oktober 00:29](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L266) og [memory.md](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L174)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@7e5ba8e`: bloom, miljøkart og trekroner før og etter i byen, Ekeskogen og kloakken."
+      ]
+    },
+    {
+      "id": "playwright-swiftshader-three-lokalt",
+      "title": "Nettleserttester av three.js-spill uten skjermkort og uten nett",
+      "domain": "testing",
+      "tags": [
+        "Playwright",
+        "headless",
+        "Chromium",
+        "SwiftShader",
+        "WebGL",
+        "CDN",
+        "importmap",
+        "route",
+        "node_modules",
+        "skjermbilder",
+        "offline",
+        "CI"
+      ],
+      "stack": "Playwright med headless Chromium, three.js fra jsdelivr via importmap",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:tools/test/shot.mjs#L20",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "tools/test/shot.mjs",
+      "origin_line": 20,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/testing/playwright-swiftshader-three-lokalt.md",
+      "heading": "Nettleserttester av three.js-spill uten skjermkort og uten nett",
+      "symptom": "Testene i en sky- eller CI-maskin gir svart lerret, «WebGL not supported», eller henger fordi three.js ikke kan hentes fra CDN.",
+      "solution": "- Start Chromium med SwiftShader: `--use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader --ignore-gpu-blocklist`.\n- Rut forespørslene til three.js mot den lokale `node_modules/three`:\n\n```js\nawait page.route(/cdn\\.jsdelivr\\.net\\/npm\\/three@[^/]+\\/(.*)$/, async route => {\n  const m = route.request().url().match(/three@[^/]+\\/(.*)$/);\n  await route.fulfill({ status: 200, contentType: 'application/javascript', body: fs.readFileSync(path.join(THREE_DIR, m[1])) });\n});\n```\n\n- Stopp eller server skriftene selv (fontsource lokalt), så siden ikke venter på Google Fonts.\n- Ta handlingene som JSON (`eval`, `wait`, `key`, `shot`), og skriv loggen til en fil.",
+      "caveats": "- SwiftShader bruker 5 til 30 s per bilde i store scener. Vent på en tilstand (for eksempel `G.state === 'world'`), ikke på et fast antall millisekunder.\n- Skriv utdata til en fil. Piper du til `tail` og kjøringen tidsavbrytes, er alt borte.\n- Tall for fps fra SwiftShader sier ingenting om ekte maskiner. Merk ytelse som UNVERIFIED.\n- SwiftShader kan regne dybden feil på én stor bakkeflate som går bak kameraet. Del den opp i mindre celler.",
+      "evidence": [
+        "[memory.md i DoD-Roguelite, testriggen](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L160) og [fellene](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L172).",
+        "[Loggen 9. oktober 00:48: alle testene grønne](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L271)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: alle skjermbilder, stresstester og CI-jobbene siden 0.1."
+      ]
+    },
+    {
+      "id": "grid-skjerm-klipper-toppen",
+      "title": "Høye paneler mister toppen når skjermen sentreres med grid",
+      "domain": "ui",
+      "tags": [
+        "CSS",
+        "grid",
+        "place-items center",
+        "overflow",
+        "scroll",
+        "mobil",
+        "toppen klippes",
+        "panel",
+        "safe center",
+        "margin auto"
+      ],
+      "stack": "CSS grid, fullskjerms overlegg med overflow-y: auto",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/page.html#L853",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/page.html",
+      "origin_line": 853,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/ui/grid-skjerm-klipper-toppen.md",
+      "heading": "Høye paneler mister toppen når skjermen sentreres med grid",
+      "symptom": "På mobil er toppen av et panel borte, og det går ikke an å rulle opp dit. Nederst ruller det fint.",
+      "solution": "Sentrer med automatiske marger i stedet. De blir 0 når panelet er for høyt:\n\n```css\n#world { place-items: start center; }\n#world .panel { margin-block: auto; }\n```",
+      "caveats": "`place-items: safe center` gjør det samme i nyere nettlesere, men margin-trikset virker overalt.",
+      "evidence": [
+        "[Loggen 9. oktober 00:44](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L270)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@bc86711`: verdenskartet på mobil, både på langs og på tvers."
+      ]
+    },
+    {
+      "id": "hidden-attributt-med-display-grid",
+      "title": "hidden virker ikke på elementer med display: grid",
+      "domain": "ui",
+      "tags": [
+        "hidden",
+        "attributt",
+        "display grid",
+        "display flex",
+        "CSS",
+        "skjult",
+        "vises likevel",
+        "important"
+      ],
+      "stack": "HTML og CSS",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:src/page.html#L26",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "src/page.html",
+      "origin_line": 26,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/ui/hidden-attributt-med-display-grid.md",
+      "heading": "hidden virker ikke på elementer med display: grid",
+      "symptom": "`el.hidden = true` skjuler ikke en skjerm eller et panel. Elementet vises fortsatt.",
+      "solution": "```css\n[hidden] { display: none !important; }\n```",
+      "caveats": "- Knapper beholder fokus etter klikk, og mellomrom kan da trykke dem igjen. Kall `blur()` når et løp starter eller fortsetter.\n- `[hidden=until-found]` bør unntas hvis du bruker den.",
+      "evidence": [
+        "[memory.md, fallgruver](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L180) og [regelen i page.html](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/page.html#L26)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: alle skjermene i spillet (meny, pause, dialog, reisekart, verdenskart)."
+      ]
+    },
+    {
+      "id": "skrifter-med-fontface",
+      "title": "Skrifter som virker offline og i en streng CSP",
+      "domain": "ui",
+      "tags": [
+        "skrift",
+        "font",
+        "FontFace",
+        "woff2",
+        "base64",
+        "offline",
+        "CSP",
+        "font-src",
+        "data-URI",
+        "Google Fonts",
+        "artifact"
+      ],
+      "stack": "Nettleser, FontFace API, én HTML-fil",
+      "status": "UNVERIFIED",
+      "origin": "Tombonator3000/SIGNAL-47@925d61336e95abb9310646be0e0de77271ad0f4a:web/src/core/fonts.ts#L6",
+      "origin_repository": "Tombonator3000/SIGNAL-47",
+      "origin_commit": "925d61336e95abb9310646be0e0de77271ad0f4a",
+      "origin_path": "web/src/core/fonts.ts",
+      "origin_line": 6,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "Toms egen kode, ingen lisensfil i repoet",
+      "checked": "2026-10-09",
+      "public_checked": null,
+      "see_also": [],
+      "path": "losninger/ui/skrifter-med-fontface.md",
+      "heading": "Skrifter som virker offline og i en streng CSP",
+      "symptom": "Spillet får systemskrift uten nett eller i en sandkasse, fordi skriftene hentes fra Google Fonts. Eller en CSP nekter `data:`-adresser i `@font-face`.",
+      "solution": "Bygg woff2-filene inn som base64, gjør dem om til ArrayBuffer, og registrer dem med FontFace:\n\n```js\nconst face = new FontFace(family, arrayBuffer, { weight: '700' });\ndocument.fonts.add(await face.load());\n```",
+      "caveats": "- Sjekk at skriften har ÆØÅ og ÅÄÖ før du velger den. SIGNAL-47 fant en skrift uten.\n- Ta bare med de delene av tegnsettet du trenger (latin og latin-ext). Det holder størrelsen nede.\n- Krediter skriftene og lisensen (ofte OFL) i prosjektets kildeliste.",
+      "evidence": [
+        "Koden er lest, men testen er ikke kjørt her: [fonts.ts i SIGNAL-47](https://github.com/Tombonator3000/SIGNAL-47/blob/925d61336e95abb9310646be0e0de77271ad0f4a/web/src/core/fonts.ts#L6)."
+      ],
+      "used_in": [
+        "`Tombonator3000/SIGNAL-47@925d613`: alle skriftene i nettutgaven."
+      ]
+    },
+    {
+      "id": "en-html-fil-uten-fetch",
+      "title": "Hele spillet i én HTML-fil uten fetch",
+      "domain": "bygg",
+      "tags": [
+        "én fil",
+        "single file",
+        "base64",
+        "data-URI",
+        "artifact",
+        "sandkasse",
+        "fetch blokkert",
+        "esbuild",
+        "importmap",
+        "budsjett",
+        "offline"
+      ],
+      "stack": "esbuild, three.js r170 fra jsdelivr via importmap, Claude-artifact og GitHub Pages",
+      "status": "PASS",
+      "origin": "Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:build.mjs#L30",
+      "origin_repository": "Tombonator3000/DoD-Roguelite",
+      "origin_commit": "5e940d274364fe068e298c51012a0edb0eca5f5d",
+      "origin_path": "build.mjs",
+      "origin_line": 30,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "MIT",
+      "checked": "2026-10-09",
+      "public_checked": "2026-10-09",
+      "see_also": [],
+      "path": "losninger/bygg/en-html-fil-uten-fetch.md",
+      "heading": "Hele spillet i én HTML-fil uten fetch",
+      "symptom": "Spillet virker lokalt, men som Claude-artifact lastes ikke modeller og teksturer, fordi sandkassen blokkerer fetch av egne filer.",
+      "solution": "- Bygg med esbuild til én fil.\n- Legg modeller, teksturer og bilder inn som base64: data-URI-er for bilder, og globale variabler for binærdata.\n- Hent three.js fra jsdelivr med en importmap, med eksakt versjon.\n- Lag to utgaver: `index.html` (vanlig side) og `artifact.html` uten doctype og head, for publisering.\n\n```js\nimages[name] = `data:image/${ext};base64,${bytes.toString('base64')}`;\nconst data = `window.DUCK_B64=\"${duck}\";window.TEX=${JSON.stringify(images)};`;\n```",
+      "caveats": "- En artifact kan være høyst 16 MB. I DoD-Roguelite tok teksturene 3,8 MB og hele fila 6,9 MB.\n- base64 gjør filene en tredjedel større. Komprimer bildene først (JPEG 76 til 80).\n- Skrifter fra Google Fonts kommer ikke med offline. Se kortet skrifter-med-fontface.\n- Fra three.js r171 er `three.module.js` delt i flere filer, og da må importmapen endres.",
+      "evidence": [
+        "[Loggen, artifact versjon 8 publisert 9. oktober 00:53](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/log.md?plain=1#L274).",
+        "[memory.md, tekniske beslutninger](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md?plain=1#L25)."
+      ],
+      "used_in": [
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: alle utgavene fra 0.2 til 0.7, både som artifact og på GitHub Pages."
+      ]
+    },
+    {
+      "id": "pages-deler-localstorage",
+      "title": "Alle spillene på GitHub Pages deler localStorage",
+      "domain": "bygg",
+      "tags": [
+        "localStorage",
+        "GitHub Pages",
+        "opphav",
+        "origin",
+        "kvote",
+        "QuotaExceededError",
+        "lagring",
+        "prefiks",
+        "nøkler"
+      ],
+      "stack": "Nettleser, GitHub Pages under tombonator3000.github.io",
+      "status": "PASS",
+      "origin": "Tombonator3000/SIGNAL-47@925d61336e95abb9310646be0e0de77271ad0f4a:web/memory.md#L166",
+      "origin_repository": "Tombonator3000/SIGNAL-47",
+      "origin_commit": "925d61336e95abb9310646be0e0de77271ad0f4a",
+      "origin_path": "web/memory.md",
+      "origin_line": 166,
+      "date": "2026-10-09",
+      "agent": "Claude",
+      "license": "Toms egen kode, ingen lisensfil i repoet",
+      "checked": "2026-10-09",
+      "public_checked": null,
+      "see_also": [],
+      "path": "losninger/bygg/pages-deler-localstorage.md",
+      "heading": "Alle spillene på GitHub Pages deler localStorage",
+      "symptom": "Lagring feiler med QuotaExceededError, eller nøkler kolliderer med et annet spill. Det skjer bare på GitHub Pages, ikke lokalt.",
+      "solution": "- Gi alle nøkler et prefiks per spill, for eksempel `s47.` eller `svartnebb.`.\n- Legg store ting, som bilder og miniatyrer, i IndexedDB i stedet.\n- Fang feil ved skriving, og si fra til spilleren i stedet for å miste lagringen.",
+      "caveats": "- `localStorage.setItem(k, undefined)` lagrer strengen \"undefined\".\n- Et privat vindu eller blokkert lagring kan kaste feil allerede ved lesing.",
+      "evidence": [
+        "Opphavet følger av adressene: [SIGNAL-47](https://tombonator3000.github.io/SIGNAL-47/) og [DoD-Roguelite](https://tombonator3000.github.io/DoD-Roguelite/) har begge `tombonator3000.github.io`. Se også [same-origin-regelen hos MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy).",
+        "[web/memory.md i SIGNAL-47, linje 166](https://github.com/Tombonator3000/SIGNAL-47/blob/925d61336e95abb9310646be0e0de77271ad0f4a/web/memory.md?plain=1#L166)."
+      ],
+      "used_in": [
+        "`Tombonator3000/SIGNAL-47@925d613`: alle nøkler har prefikset `s47.`, og bilder ligger i IndexedDB.",
+        "`Tombonator3000/DoD-Roguelite@5e940d2`: nøklene har prefikset `svartnebb.`. Miniatyrene i lagringene ligger fortsatt i localStorage."
+      ]
+    }
+  ]
+}
