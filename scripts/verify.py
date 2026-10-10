@@ -22,6 +22,7 @@ class Check:
         self.errors = []
         self.snapshots = set()
         self.links = 0
+        self.cards = 0
 
     def require(self, condition, message):
         if not condition:
@@ -186,7 +187,34 @@ class Check:
             if item.get("scope") == "exact_copy":
                 self.require(item.get("source_sha256") == item.get("snapshot_sha256"), f"Historikk: exact_copy har ulike hasher for {path}")
         self.public_inventory()
+        self.solution_cards()
         self.markdown_links()
+
+    def solution_cards(self):
+        # Løsningskortene: formatet kontrolleres i build_solution_index.parse. Her kommer
+        # det som krever resten av biblioteket: offentlige kilder og at oversikten er bygd.
+        if not (self.root / "losninger").is_dir():
+            return
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import build_solution_index as bsi
+        cards, problems = bsi.load(self.root)
+        self.errors += problems
+        inventory = self.read_json("data/offentlig-inventar.json") if (self.root / "data/offentlig-inventar.json").exists() else {}
+        public = {r["full_name"].casefold() for key in ("starred", "owned_public") for r in inventory.get(key, [])}
+        for card in cards:
+            label = card["path"]
+            repo = (card["origin_repository"] or "").casefold()
+            # Biblioteket er offentlig: kilden må stå i det offentlige inventaret, eller kortet må si
+            # når noen så at repoet var offentlig (til neste synkronisering av inventaret).
+            self.require(repo in public or bool(card["public_checked"]),
+                         f"{label}: {card['origin_repository']} står ikke i det offentlige inventaret og mangler offentlig_kontrollert")
+            for other in card["see_also"]:
+                self.require(any(c["id"] == other for c in cards), f"{label}: se_ogsa peker på ukjent kort {other}")
+        built = self.read_json("data/losninger.json") if (self.root / "data/losninger.json").exists() else None
+        self.require(built == bsi.index_data(cards), "Løsningskort: data/losninger.json er ikke bygd på nytt; kjør scripts/build_solution_index.py")
+        index = (self.root / "LOSNINGER.md").read_text(encoding="utf-8") if (self.root / "LOSNINGER.md").exists() else ""
+        self.require(index == bsi.markdown(cards), "Løsningskort: LOSNINGER.md er ikke bygd på nytt; kjør scripts/build_solution_index.py")
+        self.cards = len(cards)
 
     def public_inventory(self):
         if not (self.root / 'data/offentlig-inventar.json').exists():
@@ -244,7 +272,7 @@ def main():
         for error in check.errors:
             print(f"- {error}", file=sys.stderr)
         return 1
-    print(f"OK: stjerner/katalog, profiler, {len(check.snapshots)} kildefiler og {check.links} lokale lenker kontrollert.")
+    print(f"OK: stjerner/katalog, profiler, {len(check.snapshots)} kildefiler, {check.cards} løsningskort og {check.links} lokale lenker kontrollert.")
     print("Dette bekrefter lokal integritet og registrert teststatus; det bekrefter ikke programkjøring eller nettlenker.")
     return 0
 

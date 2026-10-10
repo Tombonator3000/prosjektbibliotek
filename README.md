@@ -2,7 +2,7 @@
 
 Referansebibliotek for **Tombonator3000**: spill, 3D, simulering, skills, agentverktøy og programmer som kan gjenbrukes på tvers av prosjekter.
 
-**[Stjerner og egne repoer](OFFENTLIG_INVENTAR.md)** · **[Samlet skilloversikt](SKILLS.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
+**[Løsningskort](LOSNINGER.md)** · **[Stjerner og egne repoer](OFFENTLIG_INVENTAR.md)** · **[Samlet skilloversikt](SKILLS.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
 
 Oppdatert **5. oktober 2026**: **56 offentlige stjerner**, **32 egne offentlige repoer**, **236 SKILL.md-filer fra 16 repoer** og den komplette egne **Morbidium-spritesheets-pakken**. Alle 78 unike offentlige repoer er undersøkt for skills. Av skillfilene er 139 Scenario-skills og seks Scenario-hjelpere for internt repoarbeid. Noen skills finnes i flere mapper; de 236 filene har 215 ulike dokumentinnhold. [Se hva som er nytt siden torsdag](docs/OPPDATERING_2026-10-05.md).
 
@@ -14,6 +14,7 @@ Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike 
 
 | Område | Startpunkt |
 |---|---|
+| Problemer Tom allerede har løst i egne spill: symptom, årsak, løsning, bevis og opphav | [Løsningskort](LOSNINGER.md) |
 | Skills, agentarbeid, Blender og Unity MCP | [Samlet skilloversikt](SKILLS.md) |
 | Spillprosjekter, spillarkitektur og motorintegrasjon | [Spill og spillmotorer](KATALOG.md#spill-og-spillmotorer) |
 | Vann, shaderkode, Three.js, WebGPU og splats | [3D og simulering](KATALOG.md#3d-og-simulering) |
@@ -22,6 +23,10 @@ Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike 
 | Egne spill og programmer | [Egne prosjekter](KATALOG.md#egne-prosjekter) |
 
 Hvert repo har en norsk profil med formål, konkrete gjenbruksmuligheter, begrensninger, søkeord, lisensmetadata og festede kildelenker. README- og lisenskilder er bevart som tekst der de finnes, med dato og kontrollsummer. [JSON-katalogen](data/catalog.json) gir samme innhold for søk og senere automatisering.
+
+## Løsningskort
+
+Fra 9. oktober 2026 har biblioteket [løsningskort](LOSNINGER.md): korte notater om problemer som er løst i Toms egne spill. Hvert kort har symptomet slik man ville søkt etter det, årsaken, løsningen med en liten kodebit, fallgruvene, hvordan det sjekkes, status (PASS, FAIL eller UNVERIFIED) med bevis, og opphavet festet til en commit. Kortene ligger i `losninger/<domene>/`, og [malen](losninger/MAL.md) viser formatet. `find.py` søker i dem, og `verify.py` stopper kort som mangler bevis eller kommer fra et repo som ikke er offentlig. Se [hvordan du skriver et kort](docs/BRUK.md#løsningskort).
 
 ## Tidligere gjennomganger
 
@@ -38,6 +43,11 @@ python3 scripts/find.py vann
 python3 scripts/find.py --category 'Skills og agentverktøy'
 python3 scripts/find.py prop-art
 python3 scripts/find.py morbidium-spritesheets
+python3 scripts/find.py msaa                       # søker også i løsningskortene
+
+# Etter et nytt eller endret løsningskort i losninger/:
+python3 scripts/build_solution_index.py
+python3 scripts/verify.py
 
 # Hent stjerner/kilder, bygg katalog og kontroller resultatet:
 python3 scripts/sync_github.py
