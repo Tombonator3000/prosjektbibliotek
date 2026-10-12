@@ -33,3 +33,29 @@ Synkronisering henter alle sider fra den innloggede kontoens star-endepunkt, ogs
 Nye stjerner får automatisk profiler, men står som **Uklassifisert** fram til det finnes norske notater. Rediger `data/starred-notes.json` for starrepoer og `data/extra-notes.json` for øvrige tilleggsreferanser. Legg ekstra repo-id og lokal provenienskilde i `data/extra-references.json`. De opprinnelige Sentient-/WebGPU-notatene under `repoer/` bevares som historikk.
 
 Genererte filer er `KATALOG.md`, `STARRED.md`, `data/catalog.json` og `repoer/prosjekter/*.md`. Endre kildenotatene og bygg igjen. Synkroniseringsskriptet gjør bare GitHub-lesinger og lokale filskrivinger; det oppretter ingen GitHub-commit, publiserer ingenting og installerer ingen av verktøyene. Commit og push gjøres eksplisitt etter kontroll. Ingen automatisk tidsplan er aktivert.
+
+## Løsningskort
+
+Løsningskortene er det Tom og agentene har lært i egne spill: et problem, hvorfor det skjer, hva som løser det og hvordan det sjekkes. Målet er at neste prosjekt finner løsningen her i stedet for å lete på nytt. Oversikten står i [LOSNINGER.md](../LOSNINGER.md).
+
+**Finn et kort.** `python3 scripts/find.py <ord>` søker i tittel, symptom, løsning, fallgruver, stikkord, stack og opphav. `--category Løsningskort` viser bare kortene.
+
+**Skriv et kort** når et problem er løst eller en teknikk er tatt i bruk i et av Toms offentlige repoer:
+
+1. Kopier [malen](../losninger/MAL.md) til `losninger/<domene>/<id>.md`. Domenene er `grafikk`, `lyd`, `testing`, `ui`, `bygg` og `regler`.
+2. Fyll ut nøkkelblokken og alle seksjonene: Symptom, Årsak, Løsning, Fallgruver, Slik verifiseres det, Bevis og Brukt i.
+3. Fest opphavet til en hel commit: `eier/repo@<40 tegn>:sti#Llinje`. Lenker i Bevis bør også være festet til en commit, med `?plain=1#L<linje>` for Markdown-filer.
+4. Kjør `python3 scripts/build_solution_index.py` og `python3 scripts/verify.py`.
+
+**Status** gjelder opphavsprosjektet på datoen i kortet:
+
+- PASS: sjekket der, og Bevis viser hvordan.
+- FAIL: prøvd og virket ikke. Det er like nyttig å vite.
+- UNVERIFIED: funnet i kode eller notater uten at testen er sett.
+
+Biblioteket kjører ikke koden selv. Den som tar en løsning inn i et annet prosjekt, må sjekke versjon, lisens og prosjektets rammer, og verifisere der.
+
+**Bare offentlige repoer.** Biblioteket er offentlig. `verify.py` godtar bare kort der opphavet står i det offentlige inventaret, eller der `offentlig_kontrollert` sier når noen så at repoet var offentlig. Det siste er ment for repoer som er nyere enn siste synkronisering av inventaret. Løsninger fra private repoer skrives i det private repoets egen `docs/losninger/`.
+
+`data/losninger.json` og `LOSNINGER.md` er generert fra kortene. Endre kortene, ikke de genererte filene. Skillen `spill-gjenbruk` i Toms Claude-konto leser kortene før arbeid i et spill og skriver nye kort etterpå.
+

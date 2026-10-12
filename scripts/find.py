@@ -43,6 +43,17 @@ def all_records(root):
             repositories.append({'full_name': skill['name'], 'summary': skill['description'],
                                  'html_url': 'https://github.com/Tombonator3000/prosjektbibliotek/blob/main/' + skill['path'],
                                  'categories': ['Skills og agentverktøy'], 'profile_path': skill['path']})
+    cards_path = root / 'data/losninger.json'
+    if cards_path.exists():
+        for card in json.loads(cards_path.read_text(encoding='utf-8'))['cards']:
+            first = card['solution'].split('\n\n')[0]
+            repositories.append({'full_name': f"løsning/{card['domain']}/{card['id']}",
+                                 'summary': f"[{card['status']}] {card['title']}",
+                                 'description': card['symptom'], 'reuse': first, 'caveats': card['caveats'],
+                                 'purpose': card['solution'],
+                                 'tags': card['tags'] + [card['stack'], card['origin_repository'] or ''],
+                                 'html_url': 'https://github.com/Tombonator3000/prosjektbibliotek/blob/main/' + card['path'],
+                                 'categories': ['Løsningskort'], 'profile_path': card['path']})
     return repositories
 
 
@@ -63,7 +74,8 @@ def main():
             print("\n".join(categories))
             return 0
         terms = " ".join(args.query).casefold().split()
-        fields = ("full_name", "description", "purpose", "summary", "reuse", "categories", "tags")
+        # forbeholdene (caveats) søkes også, så advarsler som lisens og GPU-krav kan finnes
+        fields = ("full_name", "description", "purpose", "summary", "reuse", "caveats", "categories", "tags")
         matches = []
         for repo in repositories:
             if args.category and args.category.casefold() not in [c.casefold() for c in repo["categories"]]:
