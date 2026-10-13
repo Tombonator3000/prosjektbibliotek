@@ -9,9 +9,9 @@
     "bygg",
     "regler"
   ],
-  "count": 19,
+  "count": 21,
   "status_counts": {
-    "PASS": 14,
+    "PASS": 16,
     "FAIL": 0,
     "UNVERIFIED": 5
   },
@@ -55,6 +55,54 @@
       ],
       "used_in": [
         "`Tombonator3000/DoD-Roguelite@7e5ba8e`: by, områder, kloakk og tittel har hver sin terskel og styrke."
+      ]
+    },
+    {
+      "id": "figurark-fast-storrelse",
+      "title": "Figurer fra KI-tegnede ark skifter størrelse mellom rutene",
+      "domain": "grafikk",
+      "tags": [
+        "figurark",
+        "sprite sheet",
+        "spritesheet",
+        "ChatGPT",
+        "Codex",
+        "størrelse",
+        "skala",
+        "flimrer",
+        "hode for stort",
+        "myke figurer",
+        "myk.py",
+        "HD remake",
+        "ScummVM"
+      ],
+      "stack": "ScummVM med HD-patch (DigHD), Python-pipeline med numpy og Pillow, figurark 1536 x 1024 i glatt stil med ekte alfa",
+      "status": "PASS",
+      "origin": "Tombonator3000/Dig-HD-Remake@091a953b89b522c6d45478315aecefa6dbab1d75:pipeline/dighd/myk.py#L236",
+      "origin_repository": "Tombonator3000/Dig-HD-Remake",
+      "origin_commit": "091a953b89b522c6d45478315aecefa6dbab1d75",
+      "origin_path": "pipeline/dighd/myk.py",
+      "origin_line": 236,
+      "date": "2026-10-10",
+      "agent": "Claude",
+      "license": "Toms egen pipelinekode, ingen lisensfil i repoet (motorpatchen er GPL sammen med ScummVM)",
+      "checked": "2026-10-13",
+      "public_checked": "2026-10-13",
+      "see_also": [
+        "scumm-v6-kostymer-skygge-og-soppelruter"
+      ],
+      "path": "losninger/grafikk/figurark-fast-storrelse.md",
+      "heading": "Figurer fra KI-tegnede ark skifter størrelse mellom rutene",
+      "symptom": "En HD-figur laget fra et figurark (ChatGPT/Codex) blir litt større, mindre, smalere eller bredere fra rute til rute, særlig når den snakker eller gestikulerer. Originalen er jevn. Hodene blir ofte tegnet omtrent 35 prosent for store.",
+      "solution": "1. Mottaket: tilpass hver rute til originalens omriss i bredde og høyde for seg, innenfor et lite spenn rundt gruppens faktor, og bruk det bare når overlappet med originalen ikke blir tydelig dårligere.\n\n```python\ndef fit_scales(drawing, original, scale, rng=0.12, s=4):\n    core = drawing[..., 3] >= 128\n    ys, xs = np.nonzero(core); oy, ox = np.nonzero(original[..., 3] > 0)\n    sx = (ox.max() - ox.min() + 1) * s / (xs.max() - xs.min() + 1)\n    sy = (oy.max() - oy.min() + 1) * s / (ys.max() - ys.min() + 1)\n    lo, hi = scale * (1 - rng), scale * (1 + rng)\n    return min(hi, max(lo, sx)), min(hi, max(lo, sy))\n# bruk (sx, sy) når snitt/union >= snitt/union med gruppens faktor - 0.03\n```\n\n2. Før levering (Sam & Max HD, 13. oktober): skriv målet på hver rute i 4x inn i prompten («rute 3: 280 x 288 px»), si at hoder, hender og øyne ikke gjøres større, og legg et frittstående kontrollskript i arbeidsgrenen som grafikeren kjører før commit. Skriptet finner omrisset i hver rute og sammenligner med originalen ganger 4: avvik over 6 prosent er advarsel, over 12 prosent feil, og spredning over 5 prosent innen samme ark er advarsel.\n\n3. Mottaket måler hvor stort hver gruppe faktisk er tegnet mot 4x, og merker gruppen «sjekk» når den avviker mer enn 12 prosent fra medianen for arket (`myk.py` versjon 4 i Sam & Max HD).",
+      "caveats": "- En rute der grafikeren har tegnet noe helt annet (en arm mangler) rettes ikke; den må fanges av kontrollen (snitt/union under 0,6).\n- Spennet må holdes lite, ellers strekkes ansikter. Samme regel står i skillen morbidium-spritesheets: fast skala, fotfeste og hodestørrelse, ingen rute skalert for seg for å fylle boksen.\n- Kontrollskriptet i arbeidsgrenen må bare trenge Python 3, numpy og Pillow, ellers blir det ikke kjørt.\n- Ruter som er søppel i dataene (tusenvis av piksler brede) gir meningsløse mål; hold dem ute før målene skrives i prompten.",
+      "evidence": [
+        "Tombonator3000/Dig-HD-Remake@091a953b89b522c6d45478315aecefa6dbab1d75:log.md, pytest `test_soft_cel_keeps_original_size` og måling på 441 ruter.",
+        "Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42:pipeline/tests/test_pipeline.py, `test_soft_cel_size_spread` og `test_sjekk_leveranse_tool` (43 tester bestått 13. oktober, log.md samme dag)."
+      ],
+      "used_in": [
+        "`Tombonator3000/Dig-HD-Remake@091a953b89b522c6d45478315aecefa6dbab1d75`: mottaket av myke figurer, PR 44. UNVERIFIED på ekte skjerm.",
+        "`Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42`: `myk.py` versjon 3 portet og utvidet med størrelsesrapport, mål per rute i figurpromptene og `tools/sjekk_leveranse.py` i arbeidsgrenen. Ikke prøvd på ekte ChatGPT-leveranser ennå."
       ]
     },
     {
@@ -301,6 +349,54 @@
       ],
       "used_in": [
         "`Tombonator3000/DoD-Roguelite@5e940d2`: regn og storm i byen og områdene siden 0.5."
+      ]
+    },
+    {
+      "id": "scumm-v6-kostymer-skygge-og-soppelruter",
+      "title": "Magenta skygger og kjempestore ruter i SCUMM v6-kostymer",
+      "domain": "grafikk",
+      "tags": [
+        "SCUMM",
+        "Sam & Max",
+        "COST",
+        "klassiske kostymer",
+        "magenta",
+        "rosa",
+        "skygge",
+        "shadow table",
+        "palettindeks 13",
+        "søppelruter",
+        "garbage cels",
+        "speilvending",
+        "figurark",
+        "ScummVM"
+      ],
+      "stack": "SCUMM v6 (Sam & Max Hit the Road), ScummVM c9091321, egne Python-dekodere for COST (format 0x58 til 0x61)",
+      "status": "PASS",
+      "origin": "Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42:pipeline/smhd/figur.py#L306",
+      "origin_repository": "Tombonator3000/Sam-Max-HD",
+      "origin_commit": "ef9c4414562aa73700e2bb9ec06355cebb1c6b42",
+      "origin_path": "pipeline/smhd/figur.py",
+      "origin_line": 306,
+      "date": "2026-10-13",
+      "agent": "Claude",
+      "license": "Toms egen pipelinekode, ingen lisensfil i repoet (motorpatchen er GPL sammen med ScummVM)",
+      "checked": "2026-10-13",
+      "public_checked": "2026-10-13",
+      "see_also": [
+        "figurark-fast-storrelse"
+      ],
+      "path": "losninger/grafikk/scumm-v6-kostymer-skygge-og-soppelruter.md",
+      "heading": "Magenta skygger og kjempestore ruter i SCUMM v6-kostymer",
+      "symptom": "Når kostymerutene trekkes ut som RGBA-bilder, får noen figurer magenta eller rosa felt (255, 87, 255) under seg eller rundt seg, og noen kostymer er bare en magenta flekk. Noen få ruter er flere tusen piksler brede eller høye og ser ut som støy. Figurarkene til en KI-grafiker får da magenta former og ruter som ikke går an å tegne.",
+      "solution": "Les indeksbildet (`_idx.png`) ved siden av RGBA-bildet og fjern skyggepikslene før ruten går på arket; hopp over kostymer som da blir tomme. Sett en øvre grense for rutestørrelse (ekte ruter er høyst 320 x 200):\n\n```python\nSHADOW_INDEX = 13\nMAX_CEL = (640, 400)\n\ndef cel_rgba(extract, name):\n    im = np.array(Image.open(extract / \"costumes\" / f\"{name}.png\").convert(\"RGBA\"))\n    idx = np.array(Image.open(extract / \"costumes\" / f\"{name}_idx.png\"))\n    im[idx == SHADOW_INDEX, 3] = 0          # skyggen lages av motoren, ikke av grafikeren\n    return im if im[..., 3].any() else None\n\ndef valid_cel(c):\n    return 0 < c[\"w\"] <= MAX_CEL[0] and 0 < c[\"h\"] <= MAX_CEL[1]\n```\n\nBe ikke grafikeren tegne ruter mot venstre; si i prompten at spillet speilvender.",
+      "caveats": "- Ikke tolk magenta som maske ut fra RGB alene: indeks 13 kan ha en annen farge i andre rom. Bruk indeksbildet, og RGB-regelen bare som reserve.\n- Noen kostymer har både skygge og en ekte form (i Sam & Max 95 og 194, en hvit og en svart form); de skal fortsatt ha ark.\n- Bare palettindeks 0 til 15 er like i alle rom. Kostymefargene må tas fra paletten i rommet der kostymet faktisk vises (finn det i de dekompilerte skriptene), ellers blir for eksempel Sams skjorte oransje.\n- Kroppen er oftest lag 1 i v6 (lag 0 i The Dig), og en animasjon endrer bare sine egne lag. Et sammensatt bilde av en figur må starte med startanimasjonen, ellers mangler hodet.",
+      "evidence": [
+        "Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42:pipeline/tests/test_pipeline.py, `test_figure_shadow_pixels_and_invalid_cels` og `test_costume_palette_table_real_game`, 43 tester bestått 13. oktober (log.md samme dag).",
+        "Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42:docs/ANALYSE.md, avsnitt 11 med tellingene og motorkjøringen i rom 92."
+      ],
+      "used_in": [
+        "`Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42`: figurarkene til ChatGPT (fig-jobbene) og hovedarkene for Sam og Max. Ikke sett med ekte HD-leveranser ennå."
       ]
     },
     {

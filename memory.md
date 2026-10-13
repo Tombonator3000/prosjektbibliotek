@@ -16,3 +16,4 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 - `scripts/sync_public_inventory.py` får 403 fra proxyen i Claudes skyøkter (users/Tombonator3000/starred). Kjør den på en egen maskin.
 - `build_skill_index.py --refresh` krever at alle repoene i inventaret er skannet. Et repo i owned_public uten skillskann gjør at verify.py feiler.
 - Biblioteket er offentlig. Ingen navn, stier eller kode fra private repoer, heller ikke i kort, log.md eller memory.md.
+- `build_catalog.py` sorterer søkeord ustabilt når de bare skiller seg i store og små bokstaver (Blender og blender). Kjøringen gir da diff i catalog.json og profilene uten at noe er endret. Ta ikke med den støyen (sett 2026-10-13).
