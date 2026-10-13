@@ -2,7 +2,7 @@
 
 Løste problemer og teknikker fra Toms egne spill, skrevet så neste prosjekt kan bruke dem i stedet for å finne dem på nytt. Hvert kort sier hva man ser, hvorfor det skjer, hva som løser det, hvordan det sjekkes og hvor det kommer fra.
 
-**19 kort.** PASS: 14 · FAIL: 0 · UNVERIFIED: 5
+**21 kort.** PASS: 16 · FAIL: 0 · UNVERIFIED: 5
 
 [Startside](README.md) · [Mal for nye kort](losninger/MAL.md) · [JSON](data/losninger.json) · [Slik skriver du et kort](docs/BRUK.md#løsningskort)
 
@@ -18,12 +18,14 @@ python3 scripts/find.py --category Løsningskort
 | Kort | Status | Stack | Opphav | Sist sjekket |
 |---|---|---|---|---|
 | [Bloom som bare gløder på lys og ild](losninger/grafikk/bloom-terskel-over-en.md) | PASS | three.js r170, UnrealBloomPass før OutputPass, ACES-tonekurve | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/main.js#L1191) | 2026-10-09 |
+| [Figurer fra KI-tegnede ark skifter størrelse mellom rutene](losninger/grafikk/figurark-fast-storrelse.md) | PASS | ScummVM med HD-patch (DigHD), Python-pipeline med numpy og Pillow, figurark 1536 x 1024 i glatt stil med ekte alfa | [Dig-HD-Remake@091a953](https://github.com/Tombonator3000/Dig-HD-Remake/blob/091a953b89b522c6d45478315aecefa6dbab1d75/pipeline/dighd/myk.py#L236) | 2026-10-13 |
 | [InstancedMesh blir svart når fargelista lages mens count er 0](losninger/grafikk/instancedmesh-fargeliste-ved-count-null.md) | UNVERIFIED | three.js r128 og nyere, InstancedMesh | [morbidium@729219c](https://github.com/Tombonator3000/morbidium/blob/729219ceb3e77119179deadb9fbfcd25bd8b2a4a/logg/2026-09.md#L1092) | 2026-10-09 |
 | [Kroker for lys per lyskilde i lights_fragment_begin (r170)](losninger/grafikk/lyskroker-lights-fragment-begin-r170.md) | UNVERIFIED | three.js r170, MeshStandardMaterial | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md#L212) | 2026-10-09 |
 | [Myke trekroner med AO i hjørnefargene](losninger/grafikk/myke-trekroner-med-vertex-ao.md) | PASS | three.js r170, InstancedMesh med setColorAt, BufferGeometryUtils.mergeVertices | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/treegeo.js#L29) | 2026-10-09 |
 | [Flere shaderendringer på samme materiale med onBeforeCompile](losninger/grafikk/onbeforecompile-i-kjede.md) | PASS | three.js r170, MeshStandardMaterial med onBeforeCompile | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/wet.js#L27) | 2026-10-09 |
 | [Miljøkart fra en enkel himmelkule](losninger/grafikk/pmrem-miljokart-fra-himmelkule.md) | PASS | three.js r170, MeshStandardMaterial, scene.environment og scene.environmentIntensity | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/envlight.js#L58) | 2026-10-09 |
 | [Regnstreker med fast bredde i piksler](losninger/grafikk/regnstreker-fast-pikselbredde.md) | PASS | three.js r170, ShaderMaterial, instanserte flater bygget i skjermrommet | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/weather.js#L103) | 2026-10-09 |
+| [Magenta skygger og kjempestore ruter i SCUMM v6-kostymer](losninger/grafikk/scumm-v6-kostymer-skygge-og-soppelruter.md) | PASS | SCUMM v6 (Sam & Max Hit the Road), ScummVM c9091321, egne Python-dekodere for COST (format 0x58 til 0x61) | [Sam-Max-HD@ef9c441](https://github.com/Tombonator3000/Sam-Max-HD/blob/ef9c4414562aa73700e2bb9ec06355cebb1c6b42/pipeline/smhd/figur.py#L306) | 2026-10-13 |
 | [Kantutjevning når three.js tegner gjennom EffectComposer](losninger/grafikk/three-r170-composer-msaa.md) | PASS | three.js r170, WebGL2, EffectComposer med RenderPass, UnrealBloomPass og OutputPass | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/main.js#L231) | 2026-10-09 |
 | [Uniformlister må ha verdier før første render](losninger/grafikk/uniformlister-for-forste-render.md) | PASS | three.js r170, ShaderMaterial med lister som uniform vec4 uRip[8] | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/water.js#L102) | 2026-10-09 |
 | [vertexColors uten fargeattributt blir svart](losninger/grafikk/vertexcolors-uten-fargeattributt.md) | UNVERIFIED | three.js r170, WebGL2, MeshStandardMaterial med vertexColors | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/treegeo.js#L29) | 2026-10-09 |
