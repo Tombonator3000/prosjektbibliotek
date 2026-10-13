@@ -3,7 +3,7 @@ id: scumm-v6-kostymer-skygge-og-soppelruter
 tittel: Magenta skygger og kjempestore ruter i SCUMM v6-kostymer
 domene: grafikk
 stikkord: SCUMM, Sam & Max, COST, klassiske kostymer, magenta, rosa, skygge, shadow table, palettindeks 13, søppelruter, garbage cels, speilvending, figurark, ScummVM
-stack: SCUMM v6 (Sam & Max Hit the Road), ScummVM c9091321, egne Python-dekodere for COST (format 0x58 til 0x61)
+stack: SCUMM v5 og nyere, testet i v6 (Sam & Max Hit the Road), ScummVM c9091321, egne Python-dekodere for COST (format 0x58 til 0x61)
 status: PASS
 opphav: Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42:pipeline/smhd/figur.py#L306
 dato: 2026-10-13
@@ -48,6 +48,7 @@ Be ikke grafikeren tegne ruter mot venstre; si i prompten at spillet speilvender
 
 ## Fallgruver
 
+- Skyggeregelen gjelder bare SCUMM v5 og nyere. ScummVM setter `_shadowTable` i `actor.cpp` bare når `_game.version >= 5`; ellers er den null, og indeks 13 tegnes som vanlig farge. I Zak McKracken FM-Towns (v3) bruker kostyme 8 indeks 13 som farge, så pikslene skal ikke fjernes der (målt 2026-10-13).
 - Ikke tolk magenta som maske ut fra RGB alene: indeks 13 kan ha en annen farge i andre rom. Bruk indeksbildet, og RGB-regelen bare som reserve.
 - Noen kostymer har både skygge og en ekte form (i Sam & Max 95 og 194, en hvit og en svart form); de skal fortsatt ha ark.
 - Bare palettindeks 0 til 15 er like i alle rom. Kostymefargene må tas fra paletten i rommet der kostymet faktisk vises (finn det i de dekompilerte skriptene), ellers blir for eksempel Sams skjorte oransje.

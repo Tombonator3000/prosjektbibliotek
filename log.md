@@ -18,3 +18,7 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - 09:24 Kortet `figurark-fast-storrelse` stoppet verify.py (manglet nøkkelblokken). Skrevet om etter MAL.md med opphav festet til Dig-HD-Remake@091a953b, og utvidet med det Sam & Max HD gjør før levering: mål per rute i prompten og et kontrollskript grafikeren kjører selv.
 - 09:24 Begge repoene står ikke i det offentlige inventaret; offentlig_kontrollert 2026-10-13 (Sam-Max-HD: api private false, Dig-HD-Remake: README åpen uten innlogging).
 - 09:24 build_solution_index.py og verify.py: 21 kort, OK. build_catalog.py byttet bare rekkefølgen på søkeord med store og små bokstaver i seks profiler og catalog.json; de endringene er ikke tatt med.
+
+## 2026-10-13, Zak
+
+- 09:50 Kortet om skygger i SCUMM-kostymer: skyggeregelen gjelder bare v5 og nyere (`_shadowTable` er null i v3). Funnet ved måling av Zak McKracken FM-Towns, der kostyme 8 bruker indeks 13 som farge.
