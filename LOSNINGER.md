@@ -2,7 +2,7 @@
 
 Løste problemer og teknikker fra Toms egne spill, skrevet så neste prosjekt kan bruke dem i stedet for å finne dem på nytt. Hvert kort sier hva man ser, hvorfor det skjer, hva som løser det, hvordan det sjekkes og hvor det kommer fra.
 
-**21 kort.** PASS: 16 · FAIL: 0 · UNVERIFIED: 5
+**22 kort.** PASS: 17 · FAIL: 0 · UNVERIFIED: 5
 
 [Startside](README.md) · [Mal for nye kort](losninger/MAL.md) · [JSON](data/losninger.json) · [Slik skriver du et kort](docs/BRUK.md#løsningskort)
 
@@ -42,6 +42,7 @@ python3 scripts/find.py --category Løsningskort
 | Kort | Status | Stack | Opphav | Sist sjekket |
 |---|---|---|---|---|
 | [Bilder før og etter en grafikkendring med git worktree](losninger/testing/bilder-for-og-etter-med-worktree.md) | PASS | git, Node-bygg, Playwright-testrigg | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md#L174) | 2026-10-09 |
+| [Teste en Pages-nettside som henter filer fra GitHub-API-et, fra Claude-sandkassen](losninger/testing/nettside-med-github-api-i-sandkassen.md) | PASS | Playwright for Python med headless Chromium 141, en side på github.io som henter spillfiler med fetch fra api.github.com (git/trees og git/blobs) med en lesenøkkel | [ZakMcKracken-HD@7147a72](https://github.com/Tombonator3000/ZakMcKracken-HD/blob/7147a72e2522124c3c5a5874c5e0ce65dcb28db3/tools/nettsidetest.py#L51) | 2026-10-14 |
 | [Nettleserttester av three.js-spill uten skjermkort og uten nett](losninger/testing/playwright-swiftshader-three-lokalt.md) | PASS | Playwright med headless Chromium, three.js fra jsdelivr via importmap | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/tools/test/shot.mjs#L20) | 2026-10-09 |
 
 ## Brukerflate
