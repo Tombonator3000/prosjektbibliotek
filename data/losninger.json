@@ -9,9 +9,9 @@
     "bygg",
     "regler"
   ],
-  "count": 22,
+  "count": 24,
   "status_counts": {
-    "PASS": 17,
+    "PASS": 19,
     "FAIL": 0,
     "UNVERIFIED": 5
   },
@@ -646,6 +646,54 @@
       ]
     },
     {
+      "id": "logg-over-det-som-mangler-hd",
+      "title": "Hvilke figurruter og objekter mangler faktisk HD når spillet spilles",
+      "domain": "testing",
+      "tags": [
+        "mangler HD",
+        "uten HD",
+        "gult felt",
+        "originalpiksler",
+        "figurruter",
+        "kostymeruter",
+        "objekter",
+        "filmer",
+        "dighd-uten-hd.txt",
+        "spilltest",
+        "prioritering",
+        "ScummVM",
+        "HD remake"
+      ],
+      "stack": "ScummVM med HD-patch (DigHD) for SCUMM v7, C++11, motoren bygger HD-bildet per piksel fra kilder (rom, objekt, rute, film)",
+      "status": "PASS",
+      "origin": "Tombonator3000/Dig-HD-Remake@6221c6eecd0ca3071c5b5adfdd1b48c115ee7c0f:engine/patches/0001-dighd-hd-grafikk.patch#L4509",
+      "origin_repository": "Tombonator3000/Dig-HD-Remake",
+      "origin_commit": "6221c6eecd0ca3071c5b5adfdd1b48c115ee7c0f",
+      "origin_path": "engine/patches/0001-dighd-hd-grafikk.patch",
+      "origin_line": 4509,
+      "date": "2026-10-15",
+      "agent": "Claude",
+      "license": "Motorpatchen er GPL-3.0 sammen med ScummVM; pipelinen er Toms egen kode uten lisensfil",
+      "checked": "2026-10-15",
+      "public_checked": "2026-10-15",
+      "see_also": [
+        "publisert-mod-er-fasit",
+        "figurark-fast-storrelse"
+      ],
+      "path": "losninger/testing/logg-over-det-som-mangler-hd.md",
+      "heading": "Hvilke figurruter og objekter mangler faktisk HD når spillet spilles",
+      "symptom": "Tellinger fra spillfilene sier at tusenvis av figurruter mangler HD (10 158 i The Dig), men ikke hvilke som vises. Å bestille alt koster mye, og en gjennomspilling uten funn sier ikke hva som mangler. Gult felt (Ctrl+Shift+H) viser hullene bare mens noen ser på.",
+      "solution": "Der motoren bestemmer at en piksel blir originalpiksel fordi HD mangler, lagres hvem den tilhører, og én gang per bilde telles det som står på skjermen:\n\n1. Per skjermpiksel en eier: `kMissCel | kostyme << 12 | rute`, `kMissObject | objekt << 8 | tilstand`, `kMissRoom | rom` eller `kMissFilm | film`, ellers 0. Sett den samme sted som kilden for pikselen (`blitVirtScreen()`, `blitSmush()`), og nullstill den overalt ellers kilden settes (`blit8()`, `moveScreen()`, romskifte).\n2. Før hver skjermoppdatering: tell eierne på skjermen, hopp over svarte piksler med gjeldende palett, og legg tallene i en tabell per bilde og rom: hvor mange bilder det sto der og flest piksler i ett bilde.\n3. Skriv tabellen som tekst (tabulator) i lagringsmappen hvert 20. sekund og ved avslutning, og les den inn ved start, så flere kvelder blir én liste.\n4. Et lite skript samler rutene per kostyme og sorterer etter hvor mye de ble vist.\n\n```cpp\nfor (uint i = 0; i < _missOwner.size(); i++) {\n\tuint32 o = _missOwner[i];\n\tif (o) {\n\t\tconst byte *c = _pal + _shadow[i] * 3;\n\t\tif (!(c[0] | c[1] | c[2]))\n\t\t\to = 0;  // svart ser likt ut i HD\n\t}\n\tif (o == runOwner) { run++; continue; }\n\tif (runOwner) _missCount[runOwner] += run;\n\trunOwner = o; run = 1;\n}\n```",
+      "caveats": "- Tell det som står på skjermen, ikke det som tegnes på nytt. Første utkast talte pikslene i de skitne områdene, og tavla i rom 28 fikk 8 320 piksler i stedet for 63 906.\n- Svarte flater og tilstanden uten rom (rom 0, før spillet og mellom filmer) gir falske linjer.\n- Sjekk svart når det telles, ikke når pikselen tegnes: en fade bygger skjermen på nytt uten å tegne pikslene.\n- Et testhopp til et rom setter ingen figurer der. Bruk en testkrok som setter inn en skuespiller med kostymet for å prøve rutetellingen.\n- I klassisk grafikk telles ingenting; det som vises da, er originalt med vilje.\n- Lagringsmappen i nettleseren er ikke lett å hente filer fra, så lista er mest nyttig fra pakken på PC.",
+      "evidence": [
+        "Tombonator3000/Dig-HD-Remake@6221c6eecd0ca3071c5b5adfdd1b48c115ee7c0f:docs/HD-MOTOR.md?plain=1#L217, avsnittet om lista med testene 15. oktober: 31 Boston-ruter og tavla `obj241_01` med en mod uten figurer og objekter, ingenting med r12-modden, 34 av 34 kontroller uten avvik, 10,3 til 10,6 sekunder CPU før og etter.",
+        "Tombonator3000/Dig-HD-Remake@6221c6eecd0ca3071c5b5adfdd1b48c115ee7c0f:pipeline/tests/test_modflett.py, `test_missing_list_groups_cels_per_costume_and_sorts_by_exposure`."
+      ],
+      "used_in": [
+        "`Tombonator3000/Dig-HD-Remake@6221c6eecd0ca3071c5b5adfdd1b48c115ee7c0f`: `dighd-uten-hd.txt` i lagringsmappen og `dighd mangler` (PR 52). Ikke testet på ekte skjerm, i nettleseren eller på Windows."
+      ]
+    },
+    {
       "id": "nettside-med-github-api-i-sandkassen",
       "title": "Teste en Pages-nettside som henter filer fra GitHub-API-et, fra Claude-sandkassen",
       "domain": "testing",
@@ -943,6 +991,56 @@
       "used_in": [
         "`Tombonator3000/SIGNAL-47@925d613`: alle nøkler har prefikset `s47.`, og bilder ligger i IndexedDB.",
         "`Tombonator3000/DoD-Roguelite@5e940d2`: nøklene har prefikset `svartnebb.`. Miniatyrene i lagringene ligger fortsatt i localStorage."
+      ]
+    },
+    {
+      "id": "publisert-mod-er-fasit",
+      "title": "En ny bygging av HD-modden visker ut rettinger som bare finnes i den publiserte",
+      "domain": "bygg",
+      "tags": [
+        "hd-mod",
+        "mod",
+        "modpakke",
+        "fletting",
+        "flett",
+        "overstyringer",
+        "overrides",
+        "tvangspush",
+        "force push",
+        "sjekksummer",
+        "SHA256SUMS",
+        "regresjon",
+        "rettinger forsvinner",
+        "ScummVM",
+        "HD remake"
+      ],
+      "stack": "ScummVM med HD-patch (DigHD), Python-pipeline (dighd), modden i en egen git-gren med én commit som erstattes (hd-mod), flere agenter som leverer til samme mod",
+      "status": "PASS",
+      "origin": "Tombonator3000/Dig-HD-Remake@b612c3151838b5b2e117b49343582b7577e107a4:pipeline/dighd/modflett.py#L115",
+      "origin_repository": "Tombonator3000/Dig-HD-Remake",
+      "origin_commit": "b612c3151838b5b2e117b49343582b7577e107a4",
+      "origin_path": "pipeline/dighd/modflett.py",
+      "origin_line": 115,
+      "date": "2026-10-15",
+      "agent": "Claude",
+      "license": "Toms egen pipelinekode, ingen lisensfil i repoet (motorpatchen er GPL sammen med ScummVM)",
+      "checked": "2026-10-15",
+      "public_checked": "2026-10-15",
+      "see_also": [
+        "logg-over-det-som-mangler-hd",
+        "figurark-fast-storrelse"
+      ],
+      "path": "losninger/bygg/publisert-mod-er-fasit.md",
+      "heading": "En ny bygging av HD-modden visker ut rettinger som bare finnes i den publiserte",
+      "symptom": "Etter en ny runde er rettinger borte fra den publiserte modden: figurer, lysfaser eller objekter som var rettet, vises som før igjen. Nettsiden og nattbygget av pakken henter modden fra grenen, så feilen går rett ut til spilleren. Ingen feilmelding; runden melder bare at modden er publisert.",
+      "solution": "Den publiserte modden er fasit. Runden bygger en kandidat som før, henter den publiserte og fletter:\n\n1. Del filene i enheter: alle filene for samme bilde (`room022.png` og `room022_idx.png`; `costume014_003.png`, `_hd.png` og `_idx.png`).\n2. En enhet som ikke er publisert, tas fra kandidaten. En publisert enhet med bare indeksbilde får kandidatens bilde, mens de publiserte filene står.\n3. En publisert enhet byttes bare med `--erstatt MØNSTER` og tas ut bare med `--fjern MØNSTER`. Da byttes alle filene i enheten.\n4. Runden noteres i `mod.json` (`runder`: hva som ble lagt til, erstattet og fjernet).\n5. Publiseringen henter bare sjekksummene til den publiserte modden og stopper hvis filer forsvinner eller endres uten at enheten står som erstattet eller fjernet i siste runde. `--tving` bare når eieren vil erstatte hele modden.\n\n```python\n_UNIT = re.compile(r\"^(rooms|objects|costumes)/(.+?)(_idx|_hd|_mask)?\\.png$\")\n\ndef unit_of(rel):\n    m = _UNIT.match(rel)\n    return f\"{m.group(1)}/{m.group(2)}\" if m else (\"fonts\" if rel.startswith(\"fonts/\") else rel)\n\n# vernet før push\nremoved = [r for r in pub if r not in new and unit_of(r) not in allowed]\nchanged = [r for r in pub if r in new and new[r] != pub[r] and unit_of(r) not in allowed]\nok = not (removed or changed) or force\n```\n\nSjekksummene hentes uten bildene, i en egen tom git-mappe:\n\n```sh\ngit -C \"$tmp\" init -q && git -C \"$tmp\" remote add origin \"$url\"\ngit -C \"$tmp\" fetch -q --depth 1 --filter=blob:none origin refs/heads/hd-mod\ngit -C \"$tmp\" cat-file -p FETCH_HEAD:SHA256SUMS > \"$sums\"\n```",
+      "caveats": "- Flett per enhet, ikke per fil. Motoren bruker `_hd.png` før den vanlige `.png`, så en gammel myk rute som blir liggende, vinner over en ny.\n- Hent ikke sjekksummene med `--filter=blob:none` i arbeidskopien. Den blir da en delvis klone, og en senere `git archive` av grenen henter bildene ett og ett.\n- Skriv README før sjekksummene lages. Ellers stemmer ikke `sha256sum -c` neste gang modden hentes.\n- En avvist leveranse forsvinner ikke lenger av seg selv ved neste bygging; den må tas ut med `--fjern`.\n- To git-kommandoer i samme repo samtidig gir `index.lock`-feil; hent spillfiler og mod etter hverandre.\n- Vernet er mot uhell, ikke en sikkerhetsgrense: `mod.json` sier selv hva som kan endres.",
+      "evidence": [
+        "Tombonator3000/Dig-HD-Remake@b612c3151838b5b2e117b49343582b7577e107a4:pipeline/tests/test_modflett.py, 49 tester bestått 15. oktober.",
+        "Tombonator3000/Dig-HD-Remake@6221c6eecd0ca3071c5b5adfdd1b48c115ee7c0f:log.md, oppføringen 2026-10-15 00:35: mot `hd-mod` 05179ed lot en fletting med 13 nye filer alle 28 470 publiserte filer stå (25 sekunder for 1,2 GB), og sjekken stoppet en mod som manglet dem."
+      ],
+      "used_in": [
+        "`Tombonator3000/Dig-HD-Remake@b612c3151838b5b2e117b49343582b7577e107a4`: `dighd flett-mod`, vernet i `tools/mod_gren.sh send` og runden i `tools/gpt_runde.sh` (PR 52). Ikke brukt i en ekte runde ennå."
       ]
     }
   ]

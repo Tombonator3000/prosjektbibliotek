@@ -24,3 +24,9 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - 16:30 Under arbeidet med å få Zak McKracken HD til å kjøre fra GitHub Pages: nytt kort `nettside-med-github-api-i-sandkassen` (teste en Pages-side som henter spillfilene fra api.github.com, fra Claude-sandkassen: Playwright-rutene hentes med requests gjennom proxyen, dummy-nøkkel, vent på tilstand i bildet). Opphav ZakMcKracken-HD@7147a72, PASS med `tools/nettsidetest.py` der.
 - 16:30 ZakMcKracken-HD står ikke i det offentlige inventaret; offentlig_kontrollert 2026-10-14 (api private false). Repoet var privat tidligere samme dag, så lenkene i kortet slutter å virke hvis det blir privat igjen.
 - 16:30 build_solution_index.py og verify.py: 22 kort, OK. build_catalog.py byttet bare rekkefølgen på søkeord i fire profiler og catalog.json; de endringene er ikke tatt med.
+
+## 2026-10-15, løsningskort fra The Dig HD
+
+- 01:23 To nye kort fra arbeidet i Dig-HD-Remake (PR 52): `publisert-mod-er-fasit` (bygg: runden fletter inn i den publiserte HD-modden i stedet for å erstatte den, og publiseringen stopper ved tap; opphav Dig-HD-Remake@b612c315) og `logg-over-det-som-mangler-hd` (testing: motoren skriver det som står på skjermen uten HD til en fil i lagringsmappen; opphav Dig-HD-Remake@6221c6ee). Begge PASS med tester i Dig-HD-Remake.
+- 01:23 Dig-HD-Remake står ikke i det offentlige inventaret; offentlig_kontrollert 2026-10-15 (visibility public i GitHub-listen).
+- 01:23 build_solution_index.py og verify.py: 24 kort, OK. build_catalog.py byttet bare rekkefølgen på søkeord i seks profiler og catalog.json; de endringene er ikke tatt med.

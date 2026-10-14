@@ -2,7 +2,7 @@
 
 Løste problemer og teknikker fra Toms egne spill, skrevet så neste prosjekt kan bruke dem i stedet for å finne dem på nytt. Hvert kort sier hva man ser, hvorfor det skjer, hva som løser det, hvordan det sjekkes og hvor det kommer fra.
 
-**22 kort.** PASS: 17 · FAIL: 0 · UNVERIFIED: 5
+**24 kort.** PASS: 19 · FAIL: 0 · UNVERIFIED: 5
 
 [Startside](README.md) · [Mal for nye kort](losninger/MAL.md) · [JSON](data/losninger.json) · [Slik skriver du et kort](docs/BRUK.md#løsningskort)
 
@@ -42,6 +42,7 @@ python3 scripts/find.py --category Løsningskort
 | Kort | Status | Stack | Opphav | Sist sjekket |
 |---|---|---|---|---|
 | [Bilder før og etter en grafikkendring med git worktree](losninger/testing/bilder-for-og-etter-med-worktree.md) | PASS | git, Node-bygg, Playwright-testrigg | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md#L174) | 2026-10-09 |
+| [Hvilke figurruter og objekter mangler faktisk HD når spillet spilles](losninger/testing/logg-over-det-som-mangler-hd.md) | PASS | ScummVM med HD-patch (DigHD) for SCUMM v7, C++11, motoren bygger HD-bildet per piksel fra kilder (rom, objekt, rute, film) | [Dig-HD-Remake@6221c6e](https://github.com/Tombonator3000/Dig-HD-Remake/blob/6221c6eecd0ca3071c5b5adfdd1b48c115ee7c0f/engine/patches/0001-dighd-hd-grafikk.patch#L4509) | 2026-10-15 |
 | [Teste en Pages-nettside som henter filer fra GitHub-API-et, fra Claude-sandkassen](losninger/testing/nettside-med-github-api-i-sandkassen.md) | PASS | Playwright for Python med headless Chromium 141, en side på github.io som henter spillfiler med fetch fra api.github.com (git/trees og git/blobs) med en lesenøkkel | [ZakMcKracken-HD@7147a72](https://github.com/Tombonator3000/ZakMcKracken-HD/blob/7147a72e2522124c3c5a5874c5e0ce65dcb28db3/tools/nettsidetest.py#L51) | 2026-10-14 |
 | [Nettleserttester av three.js-spill uten skjermkort og uten nett](losninger/testing/playwright-swiftshader-three-lokalt.md) | PASS | Playwright med headless Chromium, three.js fra jsdelivr via importmap | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/tools/test/shot.mjs#L20) | 2026-10-09 |
 
@@ -59,6 +60,7 @@ python3 scripts/find.py --category Løsningskort
 |---|---|---|---|---|
 | [Hele spillet i én HTML-fil uten fetch](losninger/bygg/en-html-fil-uten-fetch.md) | PASS | esbuild, three.js r170 fra jsdelivr via importmap, Claude-artifact og GitHub Pages | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/build.mjs#L30) | 2026-10-09 |
 | [Alle spillene på GitHub Pages deler localStorage](losninger/bygg/pages-deler-localstorage.md) | PASS | Nettleser, GitHub Pages under tombonator3000.github.io | [SIGNAL-47@925d613](https://github.com/Tombonator3000/SIGNAL-47/blob/925d61336e95abb9310646be0e0de77271ad0f4a/web/memory.md#L166) | 2026-10-09 |
+| [En ny bygging av HD-modden visker ut rettinger som bare finnes i den publiserte](losninger/bygg/publisert-mod-er-fasit.md) | PASS | ScummVM med HD-patch (DigHD), Python-pipeline (dighd), modden i en egen git-gren med én commit som erstattes (hd-mod), flere agenter som leverer til samme mod | [Dig-HD-Remake@b612c31](https://github.com/Tombonator3000/Dig-HD-Remake/blob/b612c3151838b5b2e117b49343582b7577e107a4/pipeline/dighd/modflett.py#L115) | 2026-10-15 |
 
 ## Nytt kort
 
