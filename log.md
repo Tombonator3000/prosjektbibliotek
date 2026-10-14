@@ -24,3 +24,9 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - 16:30 Under arbeidet med å få Zak McKracken HD til å kjøre fra GitHub Pages: nytt kort `nettside-med-github-api-i-sandkassen` (teste en Pages-side som henter spillfilene fra api.github.com, fra Claude-sandkassen: Playwright-rutene hentes med requests gjennom proxyen, dummy-nøkkel, vent på tilstand i bildet). Opphav ZakMcKracken-HD@7147a72, PASS med `tools/nettsidetest.py` der.
 - 16:30 ZakMcKracken-HD står ikke i det offentlige inventaret; offentlig_kontrollert 2026-10-14 (api private false). Repoet var privat tidligere samme dag, så lenkene i kortet slutter å virke hvis det blir privat igjen.
 - 16:30 build_solution_index.py og verify.py: 22 kort, OK. build_catalog.py byttet bare rekkefølgen på søkeord i fire profiler og catalog.json; de endringene er ikke tatt med.
+
+## 2026-10-14, løsningskort fra Guild Life Adventures
+
+- 23:13 Etter optimaliseringen av lastetiden i guild-life-adventures (PR #434): nytt kort `vite-oppstartspakke-lat-innlasting` (en statisk import av en sjelden side dro hele three.js inn i oppstartspakken; PeerJS og språkfiler ved behov; forhåndslasting i ledig tid; slik det måles). Opphav guild-life-adventures@52deb0f, PASS med måletall og grønn validering der.
+- 23:13 guild-life-adventures står i det offentlige inventaret (owned_public), så kortet trenger ikke offentlig_kontrollert. Repoet har ingen lisensfil, og det står i kortet.
+- 23:13 build_solution_index.py og verify.py: 23 kort, OK. build_catalog.py ga bare søkeordstøyen; de endringene er ikke tatt med.

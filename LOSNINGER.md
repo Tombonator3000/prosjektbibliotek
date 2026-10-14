@@ -2,7 +2,7 @@
 
 Løste problemer og teknikker fra Toms egne spill, skrevet så neste prosjekt kan bruke dem i stedet for å finne dem på nytt. Hvert kort sier hva man ser, hvorfor det skjer, hva som løser det, hvordan det sjekkes og hvor det kommer fra.
 
-**22 kort.** PASS: 17 · FAIL: 0 · UNVERIFIED: 5
+**23 kort.** PASS: 18 · FAIL: 0 · UNVERIFIED: 5
 
 [Startside](README.md) · [Mal for nye kort](losninger/MAL.md) · [JSON](data/losninger.json) · [Slik skriver du et kort](docs/BRUK.md#løsningskort)
 
@@ -59,6 +59,7 @@ python3 scripts/find.py --category Løsningskort
 |---|---|---|---|---|
 | [Hele spillet i én HTML-fil uten fetch](losninger/bygg/en-html-fil-uten-fetch.md) | PASS | esbuild, three.js r170 fra jsdelivr via importmap, Claude-artifact og GitHub Pages | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/build.mjs#L30) | 2026-10-09 |
 | [Alle spillene på GitHub Pages deler localStorage](losninger/bygg/pages-deler-localstorage.md) | PASS | Nettleser, GitHub Pages under tombonator3000.github.io | [SIGNAL-47@925d613](https://github.com/Tombonator3000/SIGNAL-47/blob/925d61336e95abb9310646be0e0de77271ad0f4a/web/memory.md#L166) | 2026-10-09 |
+| [Krymp oppstartspakken i Vite ved å laste sjeldne ruter, biblioteker og språk ved behov](losninger/bygg/vite-oppstartspakke-lat-innlasting.md) | PASS | Vite 5, React 18, Rollup, three.js 0.180, PeerJS 1.5, GitHub Pages | [guild-life-adventures@52deb0f](https://github.com/Tombonator3000/guild-life-adventures/blob/52deb0fb037af5d7941a37feaaef925793505b3f/src/App.tsx#L15) | 2026-10-14 |
 
 ## Nytt kort
 
