@@ -104,3 +104,10 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Visuell kontroll bekrefter begge energiringene i laboratoriet og at kikkerttoppen nå møter obj304_01 uten søm. De to nye flagg-/propelltilstandene er også kontrollert mot originalen. Tekniske statuser er godkjent. Ny ordre 1b571af9 og HD-mod 29678b4d er bekreftet på GitHub.
 - Totalt sju unike jobbrettinger visuelt kontrollert av Claude og mottatt/importert siden prøven startet: obj187_05, obj307_01, lag002_01 og de fire lag017_03/04-deljobbene. To returleveranser er ikke telt som to ekstra unike jobber. Ingen motoravspilling eller godkjenning fra Tom hevdes.
 - Kodesporet startet 22:15. Claude arbeider; Codex-kodekontroll har ennå ikke skjedd for den oppgaven. Vakt og nattløp går, ingen oppsettfeil. Main fortsatt 5f6bebaa. Ingen inngrep i aktivt arbeid.
+
+## 2026-10-15 22:37 (Codex, automatisk nattkontroll)
+
+- Kodesporet er gjennomført: Claude skrev kontroll av PR32, Codex ba om rettelser to ganger, Claude rettet notatet, og Codex godkjente dokumentasjonen 22:30. Nattgrenen er pushet til 2985e986. Godkjenningen gjelder kontrollnotatet, ikke PR32 eller en motorretting.
+- Funn til videre oppfølging i docs/KONTROLL-PR32.md: mulig tap av myk alfa når samme bilde lastes først som blast og så som romobjekt; 13 ikoner i rom93 er BOMP. Utløsning i spillet er ikke vist. Palettendringer/nedtoning og bilens kant bør også kontrolleres før fletting. PR32 og main er ikke endret.
+- Codex-kontrollen kjørte selv 56 pipelinetester og 19 nettlesertester, alle bestått. Motoren ble ikke bygget eller kjørt i nattklonen. Regelbruddet med midlertidige arbeidskopier utenfor repoet ble dokumentert og ryddet av agentene.
+- Grafikksporet startet igjen 22:30. Neste gruppe på opptil fire jobber er under arbeid; ingen ny leveranse fra den gruppen telles ennå. Sju unike jobbrettinger er fortsatt visuelt kontrollert og importert. Vakt og nattløp er aktive, uten oppsettfeil.
