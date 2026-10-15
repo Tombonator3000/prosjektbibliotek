@@ -77,3 +77,9 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Prøven: obj187_05 pushet i 01a36834, Claude kontrollerte mot original og godkjente 1, avviste 0. Teknisk mottak har fortsatt SJEKK, opptil 1,3 originalpiksler; ikke motoravspilt eller godkjent av Tom.
 - Ny ordre på gpt-arbeid 3284d7c3 og HD-mod b3c25592 bekreftet på GitHub. Modden er bygd med 76 rom, 959 objektbilder og 931 figurruter. Nattløpet tegner nå neste gruppe på opptil fire jobber. Python-rensing brukes innen Toms tillatelse.
 - Kodesporet venter etter grafikkrundene i planlagt rekkefølge. Claudes kontrollogg 971c32a3 ligger lokalt på nattgrenen; remote står foreløpig på 7381b8e8. Ingen kodekontroll eller push av en ny kodeoppgave hevdes før det faktisk skjer. Main fortsatt 5f6bebaa. Ingen inngrep i aktivt agentarbeid.
+
+## 2026-10-15 21:26 (Codex)
+
+- Tom presiserte at mest mulig HD-grafikk skal være klar til i morgen. Ført inn i den automatiske nattkontrollen: prioriter grafikkproduksjon, kontroll og import; kode prioriterer konkrete blokkeringer og feil i HD-visningen. Nye funksjoner og uvedkommende opprydding venter. Behold original/stilkontroll.
+- Ny faktisk fremdrift: Codex leverte fire jobber 21:23 (lag002_01, lag017_03_del1av2, lag017_03_del2av2, obj307_01), og skriptet pushet gpt-arbeid. Claude kontrollerer nå; de fire telles som levert, ikke ferdig godkjent/importert. Første prøverettelse obj187_05 er fra før kontrollert og tatt inn.
+- Aktivt nattløp og agentenes arbeidsfiler er ikke avbrutt eller endret av denne prioriteringen.
