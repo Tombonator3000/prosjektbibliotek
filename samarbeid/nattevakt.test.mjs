@@ -22,6 +22,7 @@ test('en tidligere vellykket runde skjuler ikke en senere feil', () => {
 test('brukerens stopp avbryter; vaktens egen overgangsstopp kan fullføres', () => {
 	assert.equal(vurderLogg(hel + 'Stoppet etter beskjed.').klar, false);
 	assert.equal(vurderLogg(hel + 'Stoppet etter beskjed.', true).klar, true);
+	assert.ok(vurderLogg(hel + 'Codex feilet.\nStoppet etter beskjed.', true).feil);
 });
 
 function lokalVakt(t, text, scriptExists = true, attachPid = null) {
@@ -32,7 +33,8 @@ function lokalVakt(t, text, scriptExists = true, attachPid = null) {
 	if (scriptExists) fs.writeFileSync(fake, '#!/bin/sh\necho "$@" > start-args.txt\n', { mode: 0o755 });
 	const c = { provePid: 2147483647, proveLogg: path.join(root, 'prove.md'), proveStdout: path.join(root, 'prove.txt'), repo: root, nattScript: fake, fokus: 'fixture', frist: new Date(Date.now() + 60000).toISOString(), loggmappe: root, statusfil: path.join(root, 'status.json'), vaktlogg: path.join(root, 'vakt.log'), nattStdout: path.join(root, 'natt.txt') };
 	if (attachPid !== null) {
-		c.nattPid = attachPid; c.nattLogg = path.join(root, 'natt.md');
+		c.nattPid = typeof attachPid === 'function' ? attachPid(root) : attachPid;
+		c.nattLogg = path.join(root, 'natt.md');
 		fs.writeFileSync(c.nattLogg, 'Ferdig. 1 grafikkrunde.\n');
 	}
 	const config = path.join(root, 'config.json'); fs.writeFileSync(config, JSON.stringify(c));
@@ -79,4 +81,23 @@ test('tilkobling følger bare den nye prosessen og ignorerer gammel feillogg', t
 	assert.equal(f.status.nightPid, child.pid);
 	assert.equal(fs.existsSync(path.join(f.root, 'start-args.txt')), false);
 	assert.match(fs.readFileSync(path.join(f.root, 'vakt.log'), 'utf8'), /Følger gjenopptatt nattløp/);
+});
+
+test('beordret stopp under natt vises som stoppet og skjuler ingen tjenestefeil', t => {
+	const f = lokalVakt(t, hel, true, root => {
+		const child = spawn(process.execPath, ['-e', `
+const fs = require('node:fs');
+setTimeout(() => {
+ fs.writeFileSync(${JSON.stringify(path.join(root, 'STOPP'))}, '');
+ fs.appendFileSync(${JSON.stringify(path.join(root, 'natt.md'))}, '- Stoppet etter beskjed.\\n');
+}, 200);
+setTimeout(() => {}, 700);
+`], { stdio: 'ignore' });
+		t.after(() => { if (child.exitCode === null) child.kill(); });
+		return child.pid;
+	});
+	assert.equal(f.result.status, 0, f.result.stderr);
+	assert.equal(f.status.status, 'STOPPET');
+	assert.equal(fs.existsSync(path.join(f.root, 'start-args.txt')), false);
+	assert.equal(fs.existsSync(path.join(f.root, 'STOPP')), true);
 });

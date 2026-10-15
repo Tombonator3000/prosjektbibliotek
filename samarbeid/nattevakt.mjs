@@ -93,11 +93,11 @@ async function main(configPath) {
 				.sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs);
 			if (candidates.length && fs.statSync(candidates[0]).mtimeMs >= Date.now() - 15000) nightLog = candidates[0];
 		}
-		const r = vurderLogg(les(c.nattStdout) + '\n' + (nightLog ? les(nightLog) : ''));
+		const r = vurderLogg(les(c.nattStdout) + '\n' + (nightLog ? les(nightLog) : ''), fs.existsSync(stoppfil));
 		if (r.feil) { feil(r.feil); return; }
 		await vent(2000);
 	}
-	const r = vurderLogg(les(c.nattStdout) + '\n' + (nightLog ? les(nightLog) : ''));
+	const r = vurderLogg(les(c.nattStdout) + '\n' + (nightLog ? les(nightLog) : ''), fs.existsSync(stoppfil));
 	if (r.feil) { feil(r.feil); return; }
 	skriv(fs.existsSync(stoppfil) ? 'STOPPET' : 'FERDIG', 'Natteskiftet har avsluttet. Se nattloggen for leveranser og kontroller.');
 }
