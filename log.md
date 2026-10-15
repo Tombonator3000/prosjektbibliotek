@@ -65,3 +65,10 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Utvidet kontrollen til ti tester, inkludert full prosessovergang med lokalt falskt nattskript og synlig feil ved manglende program. Alle består. Aktiv vakt oppdatert før prøverunden er ferdig.
 - Opprettet lokal trådkontroll «Nattkontroll Sam & Max», hvert 20. minutt gjennom natten med en siste morgenkontroll. Selve arbeidsløpet slutter 08:00; kontrollen kan avslutte rapporteringen etterpå og settes deretter på pause.
 - Første prøverunde produserer obj187_05. Codex bruker bildeverktøyet, sammenligner original/stil og kjører kontroll mellom rettingene. Ingen oppsettfeil i den nye prøven så langt. Python-tillatelsen fra Tom til rensing/plassering er ført videre til nattprompten.
+
+## 2026-10-15 21:16 (Codex, automatisk nattkontroll)
+
+- Nattevakten overførte prøveturen til nattløpet 21:06 etter faktisk leveranse, push og Claude-kontroll. Status NATT, nattevakt og samarbeid.mjs kjører. Codex fortsatt med workspace-write og approval_policy never; ingen oppsettfeil eller nye stopp.
+- Prøven: obj187_05 pushet i 01a36834, Claude kontrollerte mot original og godkjente 1, avviste 0. Teknisk mottak har fortsatt SJEKK, opptil 1,3 originalpiksler; ikke motoravspilt eller godkjent av Tom.
+- Ny ordre på gpt-arbeid 3284d7c3 og HD-mod b3c25592 bekreftet på GitHub. Modden er bygd med 76 rom, 959 objektbilder og 931 figurruter. Nattløpet tegner nå neste gruppe på opptil fire jobber. Python-rensing brukes innen Toms tillatelse.
+- Kodesporet venter etter grafikkrundene i planlagt rekkefølge. Claudes kontrollogg 971c32a3 ligger lokalt på nattgrenen; remote står foreløpig på 7381b8e8. Ingen kodekontroll eller push av en ny kodeoppgave hevdes før det faktisk skjer. Main fortsatt 5f6bebaa. Ingen inngrep i aktivt agentarbeid.
