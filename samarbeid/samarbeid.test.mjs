@@ -55,7 +55,7 @@ if [ "$1" = --version ]; then echo fixture; exit 0; fi
 touch ${JSON.stringify(path.join(root, 'claude-called'))}
 echo 'INGEN OPPGAVE'
 `, { mode: 0o755 });
-	Object.assign(env, { PATH: bin + path.delimiter + process.env.PATH, CLAUDE_CMD: path.join(bin, 'claude'), CODEX_CMD: path.join(bin, 'codex') });
+	Object.assign(env, { PATH: bin + path.delimiter + process.env.PATH, CLAUDE_CMD: path.join(bin, 'claude'), CODEX_CMD: path.join(bin, 'codex'), SAMARBEID_PUSH_VENT: '0,0' });
 	const run = (...extra) => spawnSync(process.execPath, [script, '--repo', repo, '--spor', 'grafikk', '--timer', '0.25', '--loggmappe', path.join(root, 'logs'), ...extra], { env, encoding: 'utf8', timeout: 12000 });
 	return { root, repo, tree, run, git };
 }
@@ -83,7 +83,7 @@ test('commit-feil bevarer leveransen og sender den ikke videre til Claude', (t) 
 test('push-feil etter commit stopper før Claude og beholder committen', (t) => {
 	const f = fixture(t, { fail: 'push' }); const before = f.git(f.tree, 'rev-parse', 'HEAD');
 	const r = f.run('--push');
-	assert.equal(r.status, 1); assert.match(r.stdout, /Push av gpt-arbeid feilet/);
+	assert.equal(r.status, 1); assert.match(r.stdout, /Prøver igjen om 0 sekunder/); assert.match(r.stdout, /Push av gpt-arbeid feilet: /);
 	assert.notEqual(f.git(f.tree, 'rev-parse', 'HEAD'), before);
 	assert.equal(fs.existsSync(path.join(f.root, 'claude-called')), false);
 });

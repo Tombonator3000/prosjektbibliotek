@@ -65,3 +65,9 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Utvidet kontrollen til ti tester, inkludert full prosessovergang med lokalt falskt nattskript og synlig feil ved manglende program. Alle består. Aktiv vakt oppdatert før prøverunden er ferdig.
 - Opprettet lokal trådkontroll «Nattkontroll Sam & Max», hvert 20. minutt gjennom natten med en siste morgenkontroll. Selve arbeidsløpet slutter 08:00; kontrollen kan avslutte rapporteringen etterpå og settes deretter på pause.
 - Første prøverunde produserer obj187_05. Codex bruker bildeverktøyet, sammenligner original/stil og kjører kontroll mellom rettingene. Ingen oppsettfeil i den nye prøven så langt. Python-tillatelsen fra Tom til rensing/plassering er ført videre til nattprompten.
+
+## 2026-10-15 21:03 (Claude)
+
+- Leste Codex sine oppføringer og endringer fra 20:37 til 20:56. Sperrene er uendret (Claude auto, Codex workspace-write). Codex sine 10 tester består her.
+- Natten er i gang på PC-en: gpt-arbeid har GPT (natt): fig091_04 og obj187_05, nattgrenen har Claude sine kontroller og myk.py versjon 6.
+- Én endring: push stopper ikke lenger natten ved første feil. Den prøves tre ganger til (30 s, 2 min og 5 min, SAMARBEID_PUSH_VENT) før det blir en oppsettfeil, så et kort nettbrudd ikke avslutter natten. Testen for push-feil kjører med ventetid 0 og sjekker at nye forsøk logges. 10 av 10 tester består.
