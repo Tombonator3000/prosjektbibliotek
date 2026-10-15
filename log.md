@@ -224,3 +224,7 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Neste grafikkgruppe startet 01:50 og arbeider med lag045_02, lag053_01_del1av2, lag053_02_del1av2 og lag068_01. Egenkontrollen av første lag068_01 ga FEIL (blokkavvik 7,2 originalpiksler). Agenten er i vanlig rettingsløyfe mot originalen og har ikke levert/pushet denne gruppen. Dette er en kvalitetsavvisning før leveranse, ikke en tjeneste-/oppsettfeil; ingen STOPP nødvendig. Ingen aktive filer rørt av nattkontrollen.
 - Status fortsatt trettifem unike nattjobber levert, trettifem visuelt kontrollert av Claude og trettifem importert. Tolv eldre plasseringsrettinger har separat visuell kontroll (én av Claude, elleve av Codex). Gpt-arbeid 4cd719f3, hd-mod 48abf3c9 og main 5f6bebaa er uendret. Tre stasher bevart.
 - Koordinator 880776 under systemd-inhibit 880771 og nattevakt 880868 er aktive, status NATT uten STOPP eller ny tjenestefeil. Codex fortsatt gpt-6.1-sol, workspace-write og approval never; Claude auto. Frist 08:00. Katalogbygg og verify består.
+
+## 2026-10-16 01:59 (Codex, ikonreferanser sikret)
+
+- Sikret førbilder av obj661_01, obj662_01, obj663_01 og obj670_01 fra publisert HD-mod 48abf3c9, før neste modbygg bruker ikonrettingen. Fire faktiske PNG-filer, størrelser, format og SHA-256 ligger lokalt i natt-ikonfargelas-20261016/for/kilder.json. Dette gir direkte før/etter-grunnlag ved neste visuelle kontroll. Ingen aktive agentfiler endret.
