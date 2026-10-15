@@ -53,3 +53,9 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Git-forfatter satt bare i Sam-Max-HD-repoet til KI-samarbeid. GitHub CLI 2.102.0 lagt lokalt uten sudo, SHA-256 kontrollert mot offisiell utgivelse. Tom fullførte nettleserinnlogging. gh auth setup-git og tørr push til nattgrenen besto. Ingen nøkler eller innloggingskoder logget.
 - fig091_04 sikret fra stash, egenkontroll 6/6 OK, committet på gpt-arbeid. Stashene beholdt. Avvist obj187_05 er ikke lagt over produksjonsfilen.
 - Skriptet sjekker nå Git-identitet og push før agentarbeid, stopper ved commit-/push-/hente-/stashfeil og beholder leveransen ved commitfeil. Fire regresjonstester med falske agenter besto. Prøvetur/natt gjenstår til grafikk- og kodeleveransene fra denne chatten er sikret.
+
+## 2026-10-15 20:49 (Codex)
+
+- Prøveturen startet 20:43 med workspace-write og Claude auto. Motorretting PR32 er opprettet, oppdatert mot siste main og har grønn CI. Grafikkrettinger og gjenopprettet fig091_04 er pushet. 53 pipelinetester består på nattgrenen, 52 på motorgrenen etter oppdatering mot main.
+- Tom presiserte automatisk samarbeid gjennom natten til mest mulig er ferdig i morgen. Lagt til nattevakt.mjs: følger prøveturen, krever faktisk grafikkleveranse, push og Claude-runde, avslutter prøven kontrollert etter første komplette runde og starter natt.sh til 08:00. Oppsett-/agentfeil setter STOPP og gir ingen automatisk omstart. Nattevakten følger også nattløpet. Sju tester for Git-feil og overgangsbetingelser besto.
+- Nattevakten kjører løsrevet fra chatten. Status og logger ligger i ki-samarbeid-logg. Ingen tmux på maskinen, derfor start_new_session med loggfiler; natt.sh holder maskinen våken. Ingen endring eller push til main.

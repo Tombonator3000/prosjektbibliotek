@@ -93,3 +93,7 @@ natt.sh ~/Sam-Max-HD --fokus "bare figurarkene for Sam og Max"
 Fra PC-kontrollen 15. oktober sjekkes Git-forfatter og, med --push, en tørr push før agentarbeidet. Codex/Claude-innlogging er separat fra GitHub-innlogging for terminalen. Sett user.name/user.email lokalt i spillrepoet, og logg inn med GitHub CLI ved behov. En commit- eller pushfeil stopper løpet. Ved commitfeil beholdes leveransen i arbeidstreet; den blir ikke meldt vellykket eller lagt i stash. Henting, fast-forward og sikring i stash må også lykkes.
 
 Regresjonstest: `node --test samarbeid/samarbeid.test.mjs`. Testene bruker bare midlertidige lokale repoer og falske agenter.
+
+## Automatisk overgang etter prøvetur
+
+`node samarbeid/nattevakt.mjs KONFIGURASJON.json` kan følge en pågående prøvetur og starte natt.sh til 08:00 etter en levert, pushet og Claude-kontrollert grafikkrunde. Prøvens timegrense er en øvre grense; vakten går videre når den komplette runden er bekreftet. Den setter STOPP ved feil og starter ikke automatisk om igjen. Konfigurasjon, PID og status ligger lokalt i loggmappen, ikke i repoet. STOPP fra brukeren avbryter overgangen. Tester: `node --test samarbeid/*.test.mjs`.
