@@ -34,6 +34,8 @@ git clone https://github.com/Tombonator3000/prosjektbibliotek ~/prosjektbibliote
 
 `installer.sh` trenger bare git og curl. Mangler Node, legger den Node 22 fra nodejs.org i `~/.local/share/node` (sjekksummen kontrolleres, ingen sudo). Så installerer den Claude Code og Codex hvis de mangler, og ber deg logge inn. For Codex velger du «Sign in with ChatGPT»; da brukes ChatGPT-abonnementet ditt. Stiene legges i `~/.bashrc`, så åpne en ny terminal etterpå (eller bruk `natt.sh`, som finner dem selv).
 
+Får du det ikke i gang, gi [OPPDRAG-GPT.md](OPPDRAG-GPT.md) til ChatGPT/Codex på PC-en. Den går gjennom installasjon, innlogging, sandkassen, bildeverktøyet og en prøvetur steg for steg, og skriver hva den fant i log.md.
+
 ## Starte
 
 Repoet må være rent (`git status` uten endringer). Grafikksporet trenger at `./spill.sh` eller `tools/gpt_runde.sh` har kjørt på maskinen før, så spillfilene og `.venv` er på plass.
