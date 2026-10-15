@@ -112,13 +112,28 @@ function logg(tekst) {
 // ---------- git ----------
 
 function git(mappe, ...args) {
-	const r = spawnSync('git', args, { cwd: mappe, encoding: 'utf8' });
+	const r = spawnSync('git', args, { cwd: mappe, encoding: 'utf8', env: { ...process.env, GIT_TERMINAL_PROMPT: '0' } });
 	return { ok: r.status === 0, ut: (r.stdout || '').trim(), feil: (r.stderr || '').trim() };
 }
 
 const head = (mappe) => git(mappe, 'rev-parse', 'HEAD').ut;
 const grenNa = (mappe) => git(mappe, 'branch', '--show-current').ut;
 const skitten = (mappe) => git(mappe, 'status', '--porcelain').ut !== '';
+
+// Oppsett- og Git-feil skal stoppe natten. Å prøve neste jobb kan ellers
+// gjemme leveransen i stash og bruke resten av natten uten å publisere noe.
+class OppsettFeil extends Error {}
+
+function sjekkGitOppsett(v) {
+	const identitet = git(v.repo, 'var', 'GIT_AUTHOR_IDENT');
+	if (!identitet.ok)
+		throw new OppsettFeil('Git mangler forfatternavn/e-post. Sett user.name og user.email lokalt i repoet før natteskiftet.');
+	if (v.push) {
+		const p = git(v.repo, 'push', '--dry-run', 'origin', `HEAD:refs/heads/${v.gren}`);
+		if (!p.ok)
+			throw new OppsettFeil(`Git-push virker ikke før start: ${p.feil.split('\n').at(-1)}. Kontroller GitHub-innlogging og arbeidsgrenen.`);
+	}
+}
 
 // Endrede og nye filer, med stier fra roten av arbeidstreet.
 function endredeFiler(mappe) {
@@ -129,7 +144,8 @@ function endredeFiler(mappe) {
 // Legger ucommittede endringer i git stash i stedet for å slette dem.
 function ryddOpp(mappe, grunn) {
 	if (!skitten(mappe)) return;
-	git(mappe, 'stash', 'push', '-u', '-m', `samarbeid: ${grunn}`);
+	const s = git(mappe, 'stash', 'push', '-u', '-m', `samarbeid: ${grunn}`);
+	if (!s.ok) throw new OppsettFeil(`Kunne ikke sikre endringene i stash: ${s.feil}`);
 	logg(`Ucommittede endringer lagt i git stash i ${path.relative(path.dirname(mappe), mappe) || mappe} (${grunn}).`);
 }
 
@@ -144,7 +160,8 @@ function sikreGren(mappe, gren) {
 
 function push(mappe, gren) {
 	const p = git(mappe, 'push', '-u', 'origin', gren);
-	logg(p.ok ? `Pushet ${gren}.` : `Push av ${gren} feilet: ${p.feil.split('\n').at(-1)}`);
+	if (!p.ok) throw new OppsettFeil(`Push av ${gren} feilet: ${p.feil.split('\n').at(-1)}`);
+	logg(`Pushet ${gren}.`);
 }
 
 // En krasj midt i en git-kommando etterlater index.lock, og da nekter git alt etterpå.
@@ -163,12 +180,14 @@ function fjernGammelLas(mappe) {
 function sikreGrafikktre(v) {
 	if (fs.existsSync(path.join(v.tre, '.git'))) {
 		fjernGammelLas(v.tre);
-		git(v.tre, 'fetch', '-q', 'origin', '+refs/heads/gpt-arbeid:refs/remotes/origin/gpt-arbeid');
-		git(v.tre, 'merge', '-q', '--ff-only', 'origin/gpt-arbeid');
+		const f = git(v.tre, 'fetch', '-q', 'origin', '+refs/heads/gpt-arbeid:refs/remotes/origin/gpt-arbeid');
+		if (!f.ok) throw new OppsettFeil(`Fikk ikke hentet gpt-arbeid: ${f.feil}`);
+		const m = git(v.tre, 'merge', '-q', '--ff-only', 'origin/gpt-arbeid');
+		if (!m.ok) throw new OppsettFeil(`Fikk ikke oppdatert gpt-arbeid uten å overskrive lokalt arbeid: ${m.feil}`);
 	} else {
 		git(v.repo, 'worktree', 'prune');
 		const f = git(v.repo, 'fetch', '-q', 'origin', '+refs/heads/gpt-arbeid:refs/remotes/origin/gpt-arbeid');
-		if (!f.ok) throw new Error(`Fikk ikke hentet gpt-arbeid: ${f.feil}`);
+		if (!f.ok) throw new OppsettFeil(`Fikk ikke hentet gpt-arbeid: ${f.feil}`);
 		const w = git(v.repo, 'worktree', 'add', '-q', '-B', 'gpt-arbeid', v.tre, 'origin/gpt-arbeid');
 		if (!w.ok) throw new Error(`Fikk ikke laget arbeidstre for gpt-arbeid: ${w.feil}`);
 	}
@@ -360,7 +379,7 @@ async function grafikkRunde(v, st) {
 		git(v.tre, 'add', '--', ...lovlige);
 		const melding = `GPT (natt): ${levert.join(', ') || 'notater og rapporter'}`;
 		const c = git(v.tre, 'commit', '-q', '-m', melding);
-		if (!c.ok) logg(`Commit i gpt-arbeid feilet: ${c.feil}`);
+		if (!c.ok) throw new OppsettFeil(`Commit i gpt-arbeid feilet. Leveransen er beholdt i arbeidstreet: ${c.feil}`);
 	}
 	if (andre.length) logg(`Codex endret ${andre.length} filer den ikke skal levere (${andre.slice(0, 5).join(', ')}${andre.length > 5 ? ' ...' : ''}). Ikke tatt med.`);
 	ryddOpp(v.tre, 'filer Codex ikke skal levere');
@@ -448,6 +467,7 @@ async function main() {
 
 	if (!git(v.repo, 'rev-parse', '--git-dir').ok) stopp(`${v.repo} er ikke et git-repo`);
 	fjernGammelLas(v.repo);
+	sjekkGitOppsett(v);
 	if (skitten(v.repo)) {
 		// Etter en krasj eller et avbrudd ligger agentenes halvferdige endringer igjen på nattgrenen.
 		if (!grenNa(v.repo).startsWith('samarbeid/')) {
@@ -507,6 +527,7 @@ async function main() {
 		try {
 			res = s === 'grafikk' ? await grafikkRunde(v, st) : await kodeOppgave(v, st);
 		} catch (e) {
+			if (e instanceof OppsettFeil) throw e;
 			logg(`Feil i sporet ${s}: ${e.message}`);
 			res = 'feil';
 		}

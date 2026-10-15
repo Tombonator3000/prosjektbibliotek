@@ -87,3 +87,9 @@ natt.sh ~/Sam-Max-HD --fokus "bare figurarkene for Sam og Max"
 - Skriptet stopper ved fire feil på rad, når begge sporene er tomme, eller når tiden er ute.
 - Testet med falske `claude` og `codex` mot en lokal origin: begge sporene, retur av beskyttede filer, stash, push og stopp når sporene er tomme. `claude -p --permission-mode auto` er prøvd med ekte Claude. Codex godtar flaggene i versjon 0.162.1, men er ikke kjørt med innlogging og bildeverktøy. Derfor den korte prøven først.
 - Eldre Codex hadde `codex mcp-server`, som Claude kunne bruke som MCP-server. Den finnes ikke i 0.162, så de snakker sammen via `codex exec` og `claude -p`.
+
+## Git-feil ved oppstart og levering
+
+Fra PC-kontrollen 15. oktober sjekkes Git-forfatter og, med --push, en tørr push før agentarbeidet. Codex/Claude-innlogging er separat fra GitHub-innlogging for terminalen. Sett user.name/user.email lokalt i spillrepoet, og logg inn med GitHub CLI ved behov. En commit- eller pushfeil stopper løpet. Ved commitfeil beholdes leveransen i arbeidstreet; den blir ikke meldt vellykket eller lagt i stash. Henting, fast-forward og sikring i stash må også lykkes.
+
+Regresjonstest: `node --test samarbeid/samarbeid.test.mjs`. Testene bruker bare midlertidige lokale repoer og falske agenter.

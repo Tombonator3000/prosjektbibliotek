@@ -18,3 +18,9 @@
 - [ ] Tom: kjør `installer.sh`, så en kort prøve (`natt.sh ~/Sam-Max-HD --timer 1 --jobber 1`) før første natt.
 - [ ] Se etter første natt om Codex klarer bildejobbene i sandkassen (lagrer bildeverktøyet til arbeidsmappen?), og om Claude i auto-modus får kjøre gpt_runde.sh med push.
 - [ ] Ta i bruk i Dig-HD-Remake og ZakMcKracken-HD når det virker i Sam-Max-HD.
+
+### Oppsett kontrollert på PC-en 15. oktober (Codex)
+
+- [x] Verktøy, innlogging, workspace-write, Claude auto, spillgrunnlag og ekte bilde/kopiering kontrollert.
+- [x] Git-forfatter og terminalens GitHub-innlogging rettet. Fire regresjonstester for Git-feil består.
+- [ ] Ny prøvetur med vellykket commit, push og Claude-kontroll, deretter natt til 08:00.
