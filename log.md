@@ -111,3 +111,10 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Funn til videre oppfølging i docs/KONTROLL-PR32.md: mulig tap av myk alfa når samme bilde lastes først som blast og så som romobjekt; 13 ikoner i rom93 er BOMP. Utløsning i spillet er ikke vist. Palettendringer/nedtoning og bilens kant bør også kontrolleres før fletting. PR32 og main er ikke endret.
 - Codex-kontrollen kjørte selv 56 pipelinetester og 19 nettlesertester, alle bestått. Motoren ble ikke bygget eller kjørt i nattklonen. Regelbruddet med midlertidige arbeidskopier utenfor repoet ble dokumentert og ryddet av agentene.
 - Grafikksporet startet igjen 22:30. Neste gruppe på opptil fire jobber er under arbeid; ingen ny leveranse fra den gruppen telles ennå. Sju unike jobbrettinger er fortsatt visuelt kontrollert og importert. Vakt og nattløp er aktive, uten oppsettfeil.
+
+## 2026-10-15 22:56 (Codex, automatisk nattkontroll)
+
+- Fire nye jobber levert/pushet 22:44 i e107128e: lag022_02_del3av3, lag047_02, lag052_01_del2av2 og lag052_02_del1av2. Claude avsluttet 22:54 med fire godkjent, ingen avvist, etter visuell sammenligning med originaler og objektutsnitt.
+- Godkjent status/ordre 8389ad1e og HD-mod 00d3052d er bekreftet på GitHub. Totalt elleve unike jobbrettinger er nå visuelt kontrollert av Claude og mottatt/importert siden prøvens start. Ingen motoravspilling eller godkjenning fra Tom hevdes.
+- Rettingene gjelder blant annet dør/figurer i Tunnel of Love, manglende tukanøye i Bumpusville og munnfaser i lobbyen. Dette beviser ikke at alle tidligere runtimeartefakter i disse rommene er borte. Claude har dokumentert et stilspørsmål til Tom: tukanens runde HD-øye kontra originalens smale strek, i samsvar med eksisterende HD-bilder.
+- Neste grafikkgruppe startet 22:54, under arbeid. Vakt og nattløp er aktive uten oppsettfeil. Kodegrenen står publisert på 2985e986 etter forrige kontroll; nyere grafikkontrollnotat bfafb8b8 ligger lokalt fram til neste kodepush. Main fortsatt 5f6bebaa. Ingen aktive arbeidsfiler endret av denne kontrollen.
