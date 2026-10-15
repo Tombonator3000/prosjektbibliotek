@@ -62,7 +62,7 @@ fi
 [ "$FEIL" = 0 ] || exit 1
 
 echo "Claude Code"
-if command -v claude >/dev/null; then
+if claude --version >/dev/null 2>&1; then
 	ok "$(claude --version)"
 else
 	echo "  installerer Claude Code"
@@ -73,14 +73,15 @@ else
 fi
 
 echo "Codex (ChatGPT)"
-if command -v codex >/dev/null; then
+if codex --version >/dev/null 2>&1; then
 	ok "$(codex --version)"
 else
 	echo "  installerer Codex med npm"
-	if ! npm install -g @openai/codex 2>/dev/null; then
+	# --force rydder opp etter en installasjon som ble avbrutt
+	if ! npm install -g --force @openai/codex 2>/dev/null; then
 		echo "  npm trenger sudo for globale pakker her. Installerer i ~/.npm-global i stedet."
 		npm config set prefix "$HOME/.npm-global"
-		npm install -g @openai/codex
+		npm install -g --force @openai/codex
 		export PATH="$HOME/.npm-global/bin:$PATH"
 		legg_i_bashrc 'export PATH="$HOME/.npm-global/bin:$PATH"'
 	fi

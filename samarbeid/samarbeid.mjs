@@ -147,9 +147,22 @@ function push(mappe, gren) {
 	logg(p.ok ? `Pushet ${gren}.` : `Push av ${gren} feilet: ${p.feil.split('\n').at(-1)}`);
 }
 
+// En krasj midt i en git-kommando etterlater index.lock, og da nekter git alt etterpå.
+// Låsen fjernes bare når ingen git-prosess kjører.
+function fjernGammelLas(mappe) {
+	const gitdir = git(mappe, 'rev-parse', '--absolute-git-dir').ut;
+	if (!gitdir) return;
+	const las = path.join(gitdir, 'index.lock');
+	if (!fs.existsSync(las)) return;
+	if (spawnSync('pgrep', ['-x', 'git']).status === 0) return;
+	fs.unlinkSync(las);
+	logg(`Fjernet en gammel git-lås (${las}), trolig etter en krasj.`);
+}
+
 // Samme arbeidstre for gpt-arbeid som tools/gpt_gren.sh bruker (work/.gpt-gren).
 function sikreGrafikktre(v) {
 	if (fs.existsSync(path.join(v.tre, '.git'))) {
+		fjernGammelLas(v.tre);
 		git(v.tre, 'fetch', '-q', 'origin', '+refs/heads/gpt-arbeid:refs/remotes/origin/gpt-arbeid');
 		git(v.tre, 'merge', '-q', '--ff-only', 'origin/gpt-arbeid');
 	} else {
@@ -434,7 +447,14 @@ async function main() {
 	const v = lesValg(process.argv.slice(2));
 
 	if (!git(v.repo, 'rev-parse', '--git-dir').ok) stopp(`${v.repo} er ikke et git-repo`);
-	if (skitten(v.repo)) stopp(`${v.repo} har ucommittede endringer. Commit eller stash dem først (git status).`);
+	fjernGammelLas(v.repo);
+	if (skitten(v.repo)) {
+		// Etter en krasj eller et avbrudd ligger agentenes halvferdige endringer igjen på nattgrenen.
+		if (!grenNa(v.repo).startsWith('samarbeid/')) {
+			stopp(`${v.repo} har ucommittede endringer. Commit eller stash dem først (git status).`);
+		}
+		ryddOpp(v.repo, 'fra et avbrutt natteskift');
+	}
 	for (const a of ['claude', 'codex']) {
 		if (spawnSync(KOMMANDO[a], ['--version'], { encoding: 'utf8' }).status !== 0) {
 			stopp(`Fant ikke ${KOMMANDO[a]}. Kjør installer.sh først.`);
