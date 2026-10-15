@@ -64,7 +64,11 @@ async function main(configPath) {
 	const stream = fs.openSync(c.nattStdout, 'a');
 	const args = [c.repo, '--til', '08:00', '--fokus', c.fokus];
 	const child = spawn(c.nattScript, args, { cwd: c.repo, stdio: ['ignore', stream, stream], detached: true });
-	await new Promise((resolve, reject) => { child.once('spawn', resolve); child.once('error', reject); });
+	try {
+		await new Promise((resolve, reject) => { child.once('spawn', resolve); child.once('error', reject); });
+	} catch (error) {
+		fs.closeSync(stream); feil(`Kunne ikke starte natteskiftet: ${error.message}`); return;
+	}
 	nightPid = child.pid; child.unref(); fs.closeSync(stream);
 	phase = 'NATT'; skriv(phase, 'Natteskift startet med grafikk og kode, til klokken 08:00.');
 	let nightLog = null;

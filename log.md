@@ -59,3 +59,9 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Prøveturen startet 20:43 med workspace-write og Claude auto. Motorretting PR32 er opprettet, oppdatert mot siste main og har grønn CI. Grafikkrettinger og gjenopprettet fig091_04 er pushet. 53 pipelinetester består på nattgrenen, 52 på motorgrenen etter oppdatering mot main.
 - Tom presiserte automatisk samarbeid gjennom natten til mest mulig er ferdig i morgen. Lagt til nattevakt.mjs: følger prøveturen, krever faktisk grafikkleveranse, push og Claude-runde, avslutter prøven kontrollert etter første komplette runde og starter natt.sh til 08:00. Oppsett-/agentfeil setter STOPP og gir ingen automatisk omstart. Nattevakten følger også nattløpet. Sju tester for Git-feil og overgangsbetingelser besto.
 - Nattevakten kjører løsrevet fra chatten. Status og logger ligger i ki-samarbeid-logg. Ingen tmux på maskinen, derfor start_new_session med loggfiler; natt.sh holder maskinen våken. Ingen endring eller push til main.
+
+## 2026-10-15 20:56 (Codex)
+
+- Utvidet kontrollen til ti tester, inkludert full prosessovergang med lokalt falskt nattskript og synlig feil ved manglende program. Alle består. Aktiv vakt oppdatert før prøverunden er ferdig.
+- Opprettet lokal trådkontroll «Nattkontroll Sam & Max», hvert 20. minutt gjennom natten med en siste morgenkontroll. Selve arbeidsløpet slutter 08:00; kontrollen kan avslutte rapporteringen etterpå og settes deretter på pause.
+- Første prøverunde produserer obj187_05. Codex bruker bildeverktøyet, sammenligner original/stil og kjører kontroll mellom rettingene. Ingen oppsettfeil i den nye prøven så langt. Python-tillatelsen fra Tom til rensing/plassering er ført videre til nattprompten.
