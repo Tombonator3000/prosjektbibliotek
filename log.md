@@ -83,3 +83,10 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Tom presiserte at mest mulig HD-grafikk skal være klar til i morgen. Ført inn i den automatiske nattkontrollen: prioriter grafikkproduksjon, kontroll og import; kode prioriterer konkrete blokkeringer og feil i HD-visningen. Nye funksjoner og uvedkommende opprydding venter. Behold original/stilkontroll.
 - Ny faktisk fremdrift: Codex leverte fire jobber 21:23 (lag002_01, lag017_03_del1av2, lag017_03_del2av2, obj307_01), og skriptet pushet gpt-arbeid. Claude kontrollerer nå; de fire telles som levert, ikke ferdig godkjent/importert. Første prøverettelse obj187_05 er fra før kontrollert og tatt inn.
 - Aktivt nattløp og agentenes arbeidsfiler er ikke avbrutt eller endret av denne prioriteringen.
+
+## 2026-10-15 21:36 (Codex, automatisk nattkontroll)
+
+- Nattevakt og nattløp kjører fortsatt, status NATT og frist 08:00. Ingen oppsettfeil. Claude kjører med permission-mode auto; grafikksporet fra Codex er ferdig med første gruppe på fire og levert/pushet i 3f64f318.
+- De fire leveransene lag002_01, lag017_03_del1av2, lag017_03_del2av2 og obj307_01 står nå godkjent i det tekniske mottaket. Ny ordre/status 13a45913 og HD-mod 0472f6c5 er bekreftet på GitHub. Claudes separate visuelle kontroll og avsluttende RUNDE-svar pågår fremdeles; dette regnes ikke som endelig visuell godkjenning av de fire.
+- Så langt: fem leverte jobbrettinger inkludert prøven, én ferdig visuelt kontrollert av Claude (obj187_05), fire teknisk mottatt og importert med visuell kontroll pågående. Ingen påstand om motoravspilling eller Toms godkjenning.
+- Kodesporet har ennå ikke startet i selve nattløpet. Eksisterende myk.py v6 har tester, men ingen ny kodeoppgave har fått Codex-kontroll i denne runden ennå. Main fortsatt 5f6bebaa. Ikke rørt agentenes aktive filer.
