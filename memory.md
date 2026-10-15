@@ -17,3 +17,10 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 - `build_skill_index.py --refresh` krever at alle repoene i inventaret er skannet. Et repo i owned_public uten skillskann gjør at verify.py feiler.
 - Biblioteket er offentlig. Ingen navn, stier eller kode fra private repoer, heller ikke i kort, log.md eller memory.md.
 - `build_catalog.py` sorterer søkeord ustabilt når de bare skiller seg i store og små bokstaver (Blender og blender). Kjøringen gir da diff i catalog.json og profilene uten at noe er endret. Ta ikke med den støyen (sett 2026-10-13).
+
+## Natteskift (samarbeid/, fra 2026-10-15)
+
+- `samarbeid/samarbeid.mjs` lar Claude og Codex jobbe gjennom natten på Toms Linux-maskin. Roller som i Sam-Max-HD: Codex tegner, Claude kontrollerer grafikken; Claude koder, Codex kontrollerer koden.
+- Ingen av dem kjører uten sperrer. Claude: `--permission-mode auto`. Codex: `--sandbox workspace-write` (ikke nett, `.git` skrivebeskyttet), så skriptet committer for Codex og bare filtypene grafikeren skal levere.
+- `codex mcp-server` er borte i Codex 0.162. Kommunikasjonen går via `codex exec` og `claude -p`.
+- Grafikksporet bruker samme arbeidstre som `tools/gpt_gren.sh` (`work/.gpt-gren`), ellers nekter git to arbeidstrær på gpt-arbeid.

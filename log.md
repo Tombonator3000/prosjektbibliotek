@@ -31,3 +31,12 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - 01:23 Dig-HD-Remake står ikke i det offentlige inventaret; offentlig_kontrollert 2026-10-15 (visibility public i GitHub-listen).
 - 01:23 build_solution_index.py og verify.py: 24 kort, OK. build_catalog.py byttet bare rekkefølgen på søkeord i seks profiler og catalog.json; de endringene er ikke tatt med.
 - 04:33 Tom: lag PR. PR 3 laget fra grenen ccr-4d55edba-vg2olf mot main. Repoet har ingen CI.
+
+## 2026-10-15, natteskift for Claude og Codex
+
+- 18:20 Tom: Claude og ChatGPT er på samme PC (Linux) med full tilgang; få dem til å samarbeide og kontrollere hverandre automatisk, og jobbe til i morgen.
+- 18:30 Første utkast av `samarbeid/samarbeid.mjs` kjørte begge agentene med alle sperrer av. Kontrollen i Claude-økta stoppet det (agenter uten tilsyn og uten sperrer). Ikke committet.
+- 18:45 Codex 0.162.1 sjekket: `codex mcp-server` finnes ikke lenger, `codex exec` tar prompten fra stdin, `image_generation` er på. I `--sandbox workspace-write` er `.git` skrivebeskyttet og nettet stengt, så Codex kan ikke committe selv (prøvd med `codex sandbox`).
+- 18:50 Skrevet om: grafikksporet (Codex tegner i gpt-arbeid, skriptet committer bare resultat.png, notat.md, hovedark og rapporter/, Claude kjører tools/gpt_runde.sh og ser på bildene) og kodesporet (Claude koder på `samarbeid/natt-<dato>`, Codex kontrollerer, Claude retter). Claude i `--permission-mode auto`, Codex i sandkassen. `installer.sh`, `natt.sh` og README.
+- 18:57 Testet med falske claude og codex mot en lokal origin: begge sporene, beskyttede filer holdt utenfor og lagt i stash, push av begge grenene, stopp når sporene er tomme. `claude -p --permission-mode auto` prøvd med ekte Claude. Codex godtar flaggene, men er ikke kjørt med innlogging.
+- 18:59 verify.py OK.

@@ -28,6 +28,10 @@ Hvert repo har en norsk profil med formål, konkrete gjenbruksmuligheter, begren
 
 Fra 9. oktober 2026 har biblioteket [løsningskort](LOSNINGER.md): korte notater om problemer som er løst i Toms egne spill. Hvert kort har symptomet slik man ville søkt etter det, årsaken, løsningen med en liten kodebit, fallgruvene, hvordan det sjekkes, status (PASS, FAIL eller UNVERIFIED) med bevis, og opphavet festet til en commit. Kortene ligger i `losninger/<domene>/`, og [malen](losninger/MAL.md) viser formatet. `find.py` søker i dem, og `verify.py` stopper kort som mangler bevis eller kommer fra et repo som ikke er offentlig. Se [hvordan du skriver et kort](docs/BRUK.md#løsningskort).
 
+## Natteskift
+
+[`samarbeid/`](samarbeid/README.md) lar Claude Code og Codex (ChatGPT) jobbe i et av spillrepoene gjennom natten og kontrollere hverandre: Codex tegner HD-grafikken og Claude kontrollerer den, Claude skriver koden og Codex kontrollerer den. Laget for Linux, fra 15. oktober 2026.
+
 ## Tidligere gjennomganger
 
 - [Ti verktøy fra Sentient](repoer/sentient-2026-09-12.md) – søk, arkivering, oversettelse, media og egen drift; originalinnlegget og repoene er lenket.
