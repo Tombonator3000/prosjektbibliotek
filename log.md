@@ -144,6 +144,13 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 
 ## 2026-10-15 23:58 (Codex, automatisk nattkontroll)
 
-- Codex leverte og pushet fire nye jobber 23:48 i 3bdf5ce6: lag052_07_del2av2, lag052_08_del2av2, lag052_09_del2av2 og lag052_10_del2av2. Alle fire er godkjent i teknisk mottak; ny status/ordre 6803a651 og HD-mod 691f32a8 er publisert. Hashene i beste-mottaket stemmer med resultatfilene, og alle fire objektfaser finnes både som vanlig og native HD-bilde i modden.
+- Codex leverte og pushet fire nye jobber 23:48 i 3bdf5ce6: lag052_07_del2av2, lag052_08_del2av2, lag052_09_del2av2 og lag052_10_del2av2. Alle fire er godkjent i teknisk mottak; ny status/ordre 6803a651 og HD-mod 691f32a8 er publisert. Hashene i beste-mottaket stemmer med resultatfilene. Filkontrollen ble rettet etter denne oppføringen: fasene heter 07, 08, 09 og 0A, og modden har RGBA-filer på 96 x 96 og indekserte filer på 24 x 24. Det finnes ikke separate _hd-filer for disse fasene.
 - Claude auto kontrollerer fortsatt denne gruppen. Avsluttende RUNDE og separat visuell godkjenning foreligger ikke ennå. Totalt nitten unike jobbrettinger er levert, femten visuelt godkjent av Claude, nitten teknisk importert. Fire av de importerte er dermed foreløpige fram til den visuelle kontrollen; bare de femten tidligere regnes ferdig kontrollert. Ingen motoravspilling eller Toms stilgodkjenning hevdes.
 - Nattevakt 768291 og koordinator 768202 under systemd-inhibit 768197 kjører normalt, status NATT, ingen STOPP eller ny tjenestefeil. Tre stasher beholdt og main fortsatt 5f6bebaa. Tidligere kodekontroll står; ingen ny kodeoppgave er ferdig i denne runden. Ikke rørt aktive agentfiler. Katalogbygg og verify består.
+
+## 2026-10-15 23:59 (Codex, avsluttet kontroll og rettet filrapport)
+
+- Claude avsluttet 23:57 med fire godkjent, ingen avvist. Øglefasene 07, 08, 09 og 0A er sammenlignet med originaler og romutsnitt. Kontrollnotat bd547bca ligger lokalt på nattgrenen fram til neste kodepush, slik den vanlige nattflyten gjør. Ny grafikkgruppe startet 23:58.
+- Totalt nitten unike jobbrettinger er nå levert, nitten visuelt godkjent av Claude og nitten importert. De fire nyeste er dermed ikke lenger foreløpige. Motoravspilling og Toms stilgodkjenning gjenstår.
+- Rettet egen filrapport fra forrige oppføring: det var feil å skrive at separate native _hd-filer var bekreftet. De faktiske modfilene er obj486_07, obj486_08, obj486_09 og obj486_0A som RGBA 96 x 96, med _idx 24 x 24 ved siden av. Jobbnummer 10 bruker hex-tilstand 0A. Denne navneforskjellen var en feil i min kontroll, ikke en feil i nattløpet. Ingen grafikkfiler er endret av denne rettingen.
+- Claude korrigerte også den tidligere omtalen av obj486 som øglens munnfaser: det er øyefaser, med øyelokk og dråpe. Tidligere godkjenninger gjelder de samme bildene og står ved lag. Oppsettsstatus fortsatt NATT uten STOPP eller ny tjenestefeil.
