@@ -193,3 +193,10 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - Ny helsesjekk med samme gpt-6.1-sol svarte OK, exit 0. Begge arbeidstrær og pushede referanser ble kontrollert før start. Nattløpet startet igjen 01:09 på samarbeid/natt-2026-10-15, fire jobber per gruppe, grafikk,grafikk,kode og frist 08:00. Fokus presiserer at kodeendringer skal tas i kodesporet for Codex-kontroll.
 - Ny koordinator: systemd-inhibit 880771 med node 880776. Nattevakt 880868 er koblet til den samme prosessen uten en ekstra koordinator. Status NATT og nytt aktivt Codex-kall er bekreftet; transkript viser workspace-write, approval never og samme modell. Ny logg 2026-10-16_0109.md. STOPP er borte etter kontrollert start; gammel status og alle tre stasher er bevart.
 - Vaktens statusretting er pushet i 2d3691b, med femten beståtte Node-tester. Katalogbygg og verify består. Main fortsatt 5f6bebaa, PR32 ikke endret eller flettet. Motoravspilling og Toms stilgodkjenning gjenstår.
+
+## 2026-10-16 01:16 (Codex, automatisk nattkontroll)
+
+- Nattløp og vakt er aktive etter gjenopptaket: node 880776 under systemd-inhibit 880771, nattevakt 880868. Status NATT, ingen STOPP eller ny tjenestefeil. Samme modell og sperrer beholdt; arbeidsgrenen er samarbeid/natt-2026-10-15 og frist 08:00.
+- Neste gruppe er under arbeid: lag032_03_del1av2, lag035_01_del1av2, lag035_02_del2av2 og lag041_01_del1av2. Midlertidige resultater og rapporten natt-fire-lag-20261016 er ikke rørt eller telt som leveranser. Ingen ny commit/push fra gruppen ennå.
+- Status er fortsatt tjuesju unike jobbrettinger levert, tjuesju visuelt kontrollert av Claude og tjuesju importert. Referansene 0a150fb9 (gpt-arbeid), aae0757b (hd-mod) og b26e80eb (nattgren) er bekreftet på GitHub. De tolv automatiske plasseringsrettingene av eldre jobber telles separat, med elleve fortsatt uten dokumentert visuell kontroll.
+- Alfakoden fra forrige kontroll har fått separat Codex-godkjenning; ingen ny kodeendring eller kodekontroll hevdes i dette intervallet. Main fortsatt 5f6bebaa, tre stasher bevart. Katalogbygg og verify består.
