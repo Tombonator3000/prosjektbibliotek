@@ -158,10 +158,21 @@ function sikreGren(mappe, gren) {
 	if (!r.ok) throw new Error(`Kom ikke tilbake til ${gren}: ${r.feil}`);
 }
 
-function push(mappe, gren) {
-	const p = git(mappe, 'push', '-u', 'origin', gren);
-	if (!p.ok) throw new OppsettFeil(`Push av ${gren} feilet: ${p.feil.split('\n').at(-1)}`);
-	logg(`Pushet ${gren}.`);
+// Et kort brudd på nettet midt på natten skal ikke stoppe resten av natten, så push prøves
+// noen ganger til før det regnes som en oppsettfeil. Ventetidene (sekunder) kan settes med
+// SAMARBEID_PUSH_VENT, for eksempel i testene.
+const PUSH_VENT = (process.env.SAMARBEID_PUSH_VENT || '30,120,300').split(',').map(Number);
+
+async function push(mappe, gren) {
+	for (let forsok = 0; ; forsok++) {
+		const p = git(mappe, 'push', '-u', 'origin', gren);
+		if (p.ok) { logg(`Pushet ${gren}.`); return; }
+		const sek = PUSH_VENT[forsok];
+		const feil = p.feil.split('\n').at(-1);
+		if (sek === undefined) throw new OppsettFeil(`Push av ${gren} feilet: ${feil}`);
+		logg(`Push av ${gren} feilet (${feil}). Prøver igjen om ${sek} sekunder.`);
+		await vent(sek * 1000);
+	}
 }
 
 // En krasj midt i en git-kommando etterlater index.lock, og da nekter git alt etterpå.
@@ -398,7 +409,7 @@ async function grafikkRunde(v, st) {
 	}
 	st.levert.push(...levert);
 	logg(`Codex leverte ${levert.length}: ${levert.join(', ')}.`);
-	if (v.push) push(v.tre, 'gpt-arbeid');
+	if (v.push) await push(v.tre, 'gpt-arbeid');
 
 	if (!tidIgjen(v) || skalStoppe(v)) {
 		logg('Tiden er ute før Claude fikk kontrollert. Leveransene ligger i gpt-arbeid til neste runde.');
@@ -456,7 +467,7 @@ async function kodeOppgave(v, st) {
 		ryddOpp(v.repo, 'ucommittet etter retting');
 		if (!f.ok) { logg('Claude feilet under rettingen.'); break; }
 	}
-	if (v.push) push(v.repo, v.gren);
+	if (v.push) await push(v.repo, v.gren);
 	return 'ferdig';
 }
 
