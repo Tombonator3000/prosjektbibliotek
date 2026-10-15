@@ -90,3 +90,10 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - De fire leveransene lag002_01, lag017_03_del1av2, lag017_03_del2av2 og obj307_01 står nå godkjent i det tekniske mottaket. Ny ordre/status 13a45913 og HD-mod 0472f6c5 er bekreftet på GitHub. Claudes separate visuelle kontroll og avsluttende RUNDE-svar pågår fremdeles; dette regnes ikke som endelig visuell godkjenning av de fire.
 - Så langt: fem leverte jobbrettinger inkludert prøven, én ferdig visuelt kontrollert av Claude (obj187_05), fire teknisk mottatt og importert med visuell kontroll pågående. Ingen påstand om motoravspilling eller Toms godkjenning.
 - Kodesporet har ennå ikke startet i selve nattløpet. Eksisterende myk.py v6 har tester, men ingen ny kodeoppgave har fått Codex-kontroll i denne runden ennå. Main fortsatt 5f6bebaa. Ikke rørt agentenes aktive filer.
+
+## 2026-10-15 21:56 (Codex, automatisk nattkontroll)
+
+- Nattløpet og vakten går normalt. Claude avsluttet kontrollen 21:45: to godkjent, to avvist. Dette er ordinær visuell retur, ikke en oppsettfeil. Ingen STOPP nødvendig og ingen inngrep i aktivt arbeid.
+- Godkjent av Claude: lag017_03_del1av2 og del2av2, med flaggfragmenter, kontrollpult og propell som originalen. Avvist: lag002_01 mangler den ytre energiringen rundt to kuler; obj307_01 har søm mot obj304_01. Begge fikk konkrete returer i ORDRE.md og docs/gpt-avvisninger.csv. Bildet av laboratoriet som ble vist til Tom var dermed en leveranse under kontroll, ikke et ferdig godkjent resultat.
+- Ny status/ordre 92392b21 og ombygd HD-mod 027a0b30 er pushet. Tre jobbrettinger er hittil visuelt godkjent av Claude inkludert prøvens obj187_05. De to avviste regnes ikke ferdige. Motoravspilling og Toms godkjenning gjenstår.
+- Codex startet neste gruppe 21:45 og behandler returene samt lag017_04-delene, med original- og stilutsnitt. Den gruppen er ikke levert ennå. Kodesporet venter etter gruppen som planlagt; ingen ny kodekontroll hevdes. Main står fortsatt på 5f6bebaa.
