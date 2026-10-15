@@ -16,6 +16,7 @@ import { spawn, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const HJELP = `Bruk: node samarbeid.mjs --repo MAPPE [valg]
 
@@ -93,6 +94,17 @@ const dato = (d) => `${d.getFullYear()}-${to(d.getMonth() + 1)}-${to(d.getDate()
 const klokke = (d) => `${to(d.getHours())}:${to(d.getMinutes())}`;
 const vent = (ms) => new Promise((s) => setTimeout(s, ms));
 
+// STOPP kan komme mens et feilende kall venter. Kontroller også etter siste
+// venting, slik at det aldri startes et nytt forsøk etter stoppbeskjeden.
+export async function ventMedStopp(ms, stoppet) {
+	const slutt = Date.now() + ms;
+	while (Date.now() < slutt) {
+		if (stoppet()) return false;
+		await vent(Math.min(1000, slutt - Date.now()));
+	}
+	return !stoppet();
+}
+
 function stopp(melding) {
 	console.error(melding);
 	process.exit(1);
@@ -163,15 +175,17 @@ function sikreGren(mappe, gren) {
 // SAMARBEID_PUSH_VENT, for eksempel i testene.
 const PUSH_VENT = (process.env.SAMARBEID_PUSH_VENT || '30,120,300').split(',').map(Number);
 
-async function push(mappe, gren) {
+async function push(mappe, gren, v) {
 	for (let forsok = 0; ; forsok++) {
+		if (skalStoppe(v)) throw new OppsettFeil(`Push av ${gren} avbrutt av STOPP. Committen er beholdt lokalt.`);
 		const p = git(mappe, 'push', '-u', 'origin', gren);
 		if (p.ok) { logg(`Pushet ${gren}.`); return; }
 		const sek = PUSH_VENT[forsok];
 		const feil = p.feil.split('\n').at(-1);
 		if (sek === undefined) throw new OppsettFeil(`Push av ${gren} feilet: ${feil}`);
 		logg(`Push av ${gren} feilet (${feil}). Prøver igjen om ${sek} sekunder.`);
-		await vent(sek * 1000);
+		if (!await ventMedStopp(sek * 1000, () => skalStoppe(v)))
+			throw new OppsettFeil(`Push av ${gren} avbrutt av STOPP. Committen er beholdt lokalt.`);
 	}
 }
 
@@ -265,12 +279,13 @@ function kjorAgent(agent, prompt, hva, mappe, v) {
 async function kjorMedForsok(agent, prompt, hva, mappe, v) {
 	const ventetider = [5, 15, 30];
 	for (let forsok = 0; ; forsok++) {
+		if (skalStoppe(v)) return { ok: false, tekst: 'Stoppet før neste agentkall.' };
 		const r = await kjorAgent(agent, prompt, hva, mappe, v);
 		if (r.ok) return r;
 		const min = ventetider[forsok];
 		if (min === undefined || Date.now() + min * 60e3 > v.frist || skalStoppe(v)) return r;
 		logg(`${NAVN[agent]} feilet (${hva}). Venter ${min} minutter og prøver igjen. Se ${kjoremappe}.`);
-		await vent(min * 60e3);
+		if (!await ventMedStopp(min * 60e3, () => skalStoppe(v))) return r;
 	}
 }
 
@@ -409,7 +424,7 @@ async function grafikkRunde(v, st) {
 	}
 	st.levert.push(...levert);
 	logg(`Codex leverte ${levert.length}: ${levert.join(', ')}.`);
-	if (v.push) await push(v.tre, 'gpt-arbeid');
+	if (v.push) await push(v.tre, 'gpt-arbeid', v);
 
 	if (!tidIgjen(v) || skalStoppe(v)) {
 		logg('Tiden er ute før Claude fikk kontrollert. Leveransene ligger i gpt-arbeid til neste runde.');
@@ -467,7 +482,7 @@ async function kodeOppgave(v, st) {
 		ryddOpp(v.repo, 'ucommittet etter retting');
 		if (!f.ok) { logg('Claude feilet under rettingen.'); break; }
 	}
-	if (v.push) await push(v.repo, v.gren);
+	if (v.push) await push(v.repo, v.gren, v);
 	return 'ferdig';
 }
 
@@ -515,6 +530,7 @@ async function main() {
 			process.exit(130);
 		}
 		avbrutt = true;
+		fs.writeFileSync(path.join(v.loggmappe, 'STOPP'), '');
 		console.log('\nStopper etter dette steget. Ctrl+C en gang til stopper med en gang.');
 	});
 
@@ -530,7 +546,7 @@ async function main() {
 		nr++;
 		if (s === 'grafikk' && Date.now() < pauseGrafikkTil) {
 			if (spor.some((x) => x !== 'grafikk')) continue;
-			await vent(Math.max(0, Math.min(pauseGrafikkTil, v.frist - 10 * 60e3) - Date.now()));
+			await ventMedStopp(Math.max(0, Math.min(pauseGrafikkTil, v.frist - 10 * 60e3) - Date.now()), () => skalStoppe(v));
 			continue;
 		}
 
@@ -561,7 +577,7 @@ async function main() {
 			feilPaRad++;
 			if (feilPaRad >= 4) { logg('Fire feil på rad. Stopper så ikke natten går med til feil.'); break; }
 		}
-		if (!avbrutt && !skalStoppe(v)) await vent(20e3);
+		if (!avbrutt && !skalStoppe(v)) await ventMedStopp(20e3, () => skalStoppe(v));
 	}
 	if (!spor.length) logg('Ingen av sporene har mer å gjøre.');
 
@@ -571,7 +587,7 @@ async function main() {
 	console.log(`\nLogg: ${loggfil}`);
 }
 
-main().catch((e) => {
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main().catch((e) => {
 	logg(`Stoppet på grunn av feil: ${e.message}`);
 	process.exit(1);
 });

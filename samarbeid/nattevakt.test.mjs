@@ -4,7 +4,7 @@ import { vurderLogg } from './nattevakt.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { spawnSync } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const hel = '- 20:50 Codex leverte 1: obj187_05.\n- 20:50 Pushet gpt-arbeid.\n- 21:00 Claude: RUNDE: godkjent 0, avvist 1\n';
@@ -24,13 +24,17 @@ test('brukerens stopp avbryter; vaktens egen overgangsstopp kan fullføres', () 
 	assert.equal(vurderLogg(hel + 'Stoppet etter beskjed.', true).klar, true);
 });
 
-function lokalVakt(t, text, scriptExists = true) {
+function lokalVakt(t, text, scriptExists = true, attachPid = null) {
 	const root = fs.mkdtempSync(path.join(os.tmpdir(), 'nattevakt-test-'));
 	t.after(() => fs.rmSync(root, { recursive: true, force: true }));
 	fs.writeFileSync(path.join(root, 'prove.md'), text);
 	const fake = path.join(root, 'natt.sh');
 	if (scriptExists) fs.writeFileSync(fake, '#!/bin/sh\necho "$@" > start-args.txt\n', { mode: 0o755 });
 	const c = { provePid: 2147483647, proveLogg: path.join(root, 'prove.md'), proveStdout: path.join(root, 'prove.txt'), repo: root, nattScript: fake, fokus: 'fixture', frist: new Date(Date.now() + 60000).toISOString(), loggmappe: root, statusfil: path.join(root, 'status.json'), vaktlogg: path.join(root, 'vakt.log'), nattStdout: path.join(root, 'natt.txt') };
+	if (attachPid !== null) {
+		c.nattPid = attachPid; c.nattLogg = path.join(root, 'natt.md');
+		fs.writeFileSync(c.nattLogg, 'Ferdig. 1 grafikkrunde.\n');
+	}
 	const config = path.join(root, 'config.json'); fs.writeFileSync(config, JSON.stringify(c));
 	const result = spawnSync(process.execPath, [fileURLToPath(new URL('./nattevakt.mjs', import.meta.url)), config], { timeout: 6000, encoding: 'utf8' });
 	return { root, result, status: JSON.parse(fs.readFileSync(c.statusfil, 'utf8')) };
@@ -56,4 +60,23 @@ test('feil ved prosessstart gir synlig feilstatus', t => {
 	assert.equal(f.result.status, 1);
 	assert.equal(f.status.status, 'FEIL');
 	assert.match(f.status.message, /Kunne ikke starte natteskiftet/);
+});
+
+test('tilkobling til avsluttet natt starter ingen ekstra koordinator', t => {
+	const f = lokalVakt(t, hel, true, 2147483647);
+	assert.equal(f.result.status, 1, f.result.stderr);
+	assert.equal(f.status.status, 'FEIL');
+	assert.equal(fs.existsSync(path.join(f.root, 'start-args.txt')), false);
+	assert.equal(fs.existsSync(path.join(f.root, 'STOPP')), true);
+});
+
+test('tilkobling følger bare den nye prosessen og ignorerer gammel feillogg', t => {
+	const child = spawn('/bin/sh', ['-c', 'sleep 1'], { stdio: 'ignore' });
+	t.after(() => { if (child.exitCode === null) child.kill(); });
+	const f = lokalVakt(t, 'Codex feilet i det gamle løpet.\n', true, child.pid);
+	assert.equal(f.result.status, 0, f.result.stderr);
+	assert.equal(f.status.status, 'FERDIG');
+	assert.equal(f.status.nightPid, child.pid);
+	assert.equal(fs.existsSync(path.join(f.root, 'start-args.txt')), false);
+	assert.match(fs.readFileSync(path.join(f.root, 'vakt.log'), 'utf8'), /Følger gjenopptatt nattløp/);
 });

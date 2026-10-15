@@ -27,3 +27,4 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 
 - Erfaring fra PC-prøven 15. oktober: innlogging i Codex/Claude er ikke GitHub-innlogging for git. Kontroller Git-identitet og push før agentkall. Commitfeil skal bevare leveransen i arbeidstreet, ikke gjemme den i stash og melde den levert. Skriptet stopper nå ved slike Git-feil.
 - Ekte codex exec 0.162.1 på Linux er prøvd med workspace-write: bildeverktøyet laget PNG under generated_images og kopierte den inn i gpt-arbeid. SANDKASSE_OK; ingen sudo-løsning nødvendig på denne maskinen.
+- En 503 med «Selected model is at capacity» avbrøt et kall etter at fire bilder var ferdig skrevet. Bevar filene, kontroller dem og sikre commit før gjenopptak. Samme modell svarte igjen i separat helsesjekk. STOPP må kontrolleres under venting, ikke bare før den; regresjonstest dekker dette. Nattevakten kan følge gjenopptatt prosess med nattPid/nattLogg uten å starte et ekstra løp.

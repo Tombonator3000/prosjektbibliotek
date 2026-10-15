@@ -71,6 +71,8 @@ natt.sh ~/Sam-Max-HD --fokus "bare figurarkene for Sam og Max"
 - Ctrl+C: stopper etter steget som pågår. Ctrl+C to ganger stopper med en gang.
 - Fra en annen terminal eller over ssh: `touch ~/ki-samarbeid-logg/STOPP`
 
+STOPP avbryter også venting før et nytt agent- eller pushforsøk, innen ett sekund. En pågående agent får fullføre steget; stoppbeskjeden starter ingen nye agentkall. Committer som ikke ble pushet, blir liggende lokalt.
+
 ## Om morgenen
 
 - `~/ki-samarbeid-logg/<dato>_<klokke>.md`: hva som skjedde, med klokkeslett, og kodecommitene til slutt.
@@ -85,7 +87,7 @@ natt.sh ~/Sam-Max-HD --fokus "bare figurarkene for Sam og Max"
 - Bruken går av kvotene på abonnementene. Feiler et kall, venter skriptet 5, 15 og 30 minutter før det gir opp det steget. Leverer Codex ingen bilder to runder på rad (typisk grensen på bildeverktøyet), tar grafikken 30 minutters pause.
 - Ett kall får maks 90 minutter (`--kall-minutter`).
 - Skriptet stopper ved fire feil på rad, når begge sporene er tomme, eller når tiden er ute.
-- Testet med falske `claude` og `codex` mot en lokal origin: begge sporene, retur av beskyttede filer, stash, push og stopp når sporene er tomme. `claude -p --permission-mode auto` er prøvd med ekte Claude. Codex godtar flaggene i versjon 0.162.1, men er ikke kjørt med innlogging og bildeverktøy. Derfor den korte prøven først.
+- Testet med falske `claude` og `codex` mot en lokal origin. Ekte PC-prøve 15. oktober har også levert, pushet og fått Claude-kontrollert grafikk med Codex 0.162.1 i workspace-write og Claude auto. Testene dekker Git-feil, avbrudd under venting og tilkobling til et eksisterende nattløp.
 - Eldre Codex hadde `codex mcp-server`, som Claude kunne bruke som MCP-server. Den finnes ikke i 0.162, så de snakker sammen via `codex exec` og `claude -p`.
 
 ## Git-feil ved oppstart og levering
@@ -97,3 +99,5 @@ Regresjonstest: `node --test samarbeid/samarbeid.test.mjs`. Testene bruker bare 
 ## Automatisk overgang etter prøvetur
 
 `node samarbeid/nattevakt.mjs KONFIGURASJON.json` kan følge en pågående prøvetur og starte natt.sh til 08:00 etter en levert, pushet og Claude-kontrollert grafikkrunde. Prøvens timegrense er en øvre grense; vakten går videre når den komplette runden er bekreftet. Den setter STOPP ved feil og starter ikke automatisk om igjen. Konfigurasjon, PID og status ligger lokalt i loggmappen, ikke i repoet. STOPP fra brukeren avbryter overgangen. Tester: `node --test samarbeid/*.test.mjs`.
+
+Etter undersøkt feil og kontrollert gjenopptak kan vakten kobles til en allerede startet koordinator: sett `nattPid` og `nattLogg` til den nye prosessen og dens egen logg i konfigurasjonen. Behold `frist`, `nattStdout`, `loggmappe`, `statusfil` og `vaktlogg`. Denne modusen hopper over prøveturen og starter ingen ekstra koordinator. Manglende prosess eller logg setter STOPP. Den er ikke en automatisk omstart etter feil.
