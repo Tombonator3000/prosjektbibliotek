@@ -49,3 +49,6 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 
 
 - Første Sam-arket fig002_06 i natt er godkjent av Claude 04:43: elleve nye native ruter, totalen i modden 942. Faktiske PNG, kontaktark og hasher er sikret lokalt i output/natt-sam00206-20261016 i Codex-arbeidsmappen. Andre ikonkantrinns 163 PNG er bekreftet identiske også i sluttmodd 037f4298. Kvittering av den etterkontrollen i Sam-Max-HD todo er ennå ikke skrevet: fasesjekken stoppet før filskriving da Claude startet neste kontroll. Kontrollnotat 96400c4c er pushet. Ikke regn fig247_01 som godkjent fordi det er levert; det kom som SJEKK for omriss og venter på uavhengig kontroll.
+
+
+- Sam-Max-HD-dokumentasjonen er kvittert i 82751750: andre kantrinns import/visuelle etterkontroll og begge tidligere ventepunkter er oppdatert uten kode-/grafikkendring. Ny kode a9d26856 er separat Codex-godkjent med 64 tester og opplyser i gpt-inn-rapporten om figurark levert til myke-figurer; den leser ikke forrige rundes myke.json. Bruk ORDRE.md/myke.json og faktiske native PNG for ferdige figurruter, ikke den gamle null-linjen i RAPPORT.md før neste import. Claude godkjente fig247_01, men noterte kabeltupp/løkke-forskjell i tredje rute; dette er fortsatt ikke Toms stilgodkjenning.
