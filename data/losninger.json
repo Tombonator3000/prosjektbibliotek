@@ -9,9 +9,9 @@
     "bygg",
     "regler"
   ],
-  "count": 24,
+  "count": 25,
   "status_counts": {
-    "PASS": 19,
+    "PASS": 20,
     "FAIL": 0,
     "UNVERIFIED": 5
   },
@@ -103,6 +103,56 @@
       "used_in": [
         "`Tombonator3000/Dig-HD-Remake@091a953b89b522c6d45478315aecefa6dbab1d75`: mottaket av myke figurer, PR 44. UNVERIFIED på ekte skjerm.",
         "`Tombonator3000/Sam-Max-HD@ef9c4414562aa73700e2bb9ec06355cebb1c6b42`: `myk.py` versjon 3 portet og utvidet med størrelsesrapport, mål per rute i figurpromptene og `tools/sjekk_leveranse.py` i arbeidsgrenen. Ikke prøvd på ekte ChatGPT-leveranser ennå."
+      ]
+    },
+    {
+      "id": "halvflyt-uendelig-svarte-firkanter",
+      "title": "Svarte firkanter i bloom fra høylys som ikke får plass i halvflyt",
+      "domain": "grafikk",
+      "tags": [
+        "svart firkant",
+        "svarte firkanter",
+        "black square",
+        "NaN",
+        "Inf",
+        "uendelig",
+        "HalfFloatType",
+        "halvflyt",
+        "65504",
+        "bloom",
+        "UnrealBloomPass",
+        "GTAO",
+        "ACES",
+        "tonemapping",
+        "RTX"
+      ],
+      "stack": "three.js r170, WebGL2, EffectComposer med HalfFloatType-mål, GTAOPass, UnrealBloomPass, ACES",
+      "status": "PASS",
+      "origin": "Tombonator3000/SIGNAL-47@58aef5011cd5021645ee4be713a30bf06d9f8261:web/src/core/vhs.ts#L38",
+      "origin_repository": "Tombonator3000/SIGNAL-47",
+      "origin_commit": "58aef5011cd5021645ee4be713a30bf06d9f8261",
+      "origin_path": "web/src/core/vhs.ts",
+      "origin_line": 38,
+      "date": "2026-10-16",
+      "agent": "Claude",
+      "license": "Toms egen kode, ingen lisensfil i repoet",
+      "checked": "2026-10-16",
+      "public_checked": null,
+      "see_also": [
+        "bloom-terskel-over-en",
+        "three-r170-composer-msaa"
+      ],
+      "path": "losninger/grafikk/halvflyt-uendelig-svarte-firkanter.md",
+      "heading": "Svarte firkanter i bloom fra høylys som ikke får plass i halvflyt",
+      "symptom": "En svart firkant dukker opp på skjermen og forsvinner igjen, eller store deler av bildet blir svart et øyeblikk. Det skjer på et ekte skjermkort (meldt på RTX 3080) når man ser på noe blankt nær et sterkt lys, for eksempel en lommelykt mot krom eller glass. I programvare-rendereren er det sjelden, fordi høylysene sjelden blir store nok der.",
+      "solution": "Hold bildet endelig og klem det før bloom og før tonekurven:\n\n1. Et eget pass etter GTAO og før bloom som klemmer fargen mellom 0 og et tak og gjør NaN til 0.\n2. Det samme der et senere pass leser scenen direkte og tonekarter selv.\n\n```glsl\nvec3 finite(vec3 c) {\n  c = min(max(c, vec3(0.0)), vec3(10.0));   // max og min gir det andre tallet for NaN\n  return any(isnan(c)) ? vec3(0.0) : c;     // isnan fanger resten\n}\n```\n\n```js\nconst finitePass = () => new ShaderPass({\n  uniforms: { tDiffuse: { value: null } },\n  vertexShader: VERT,\n  fragmentShader: `uniform sampler2D tDiffuse; varying vec2 vUv; ${FINITE}\n    void main() { vec4 c = texture2D(tDiffuse, vUv); gl_FragColor = vec4(finite(c.rgb), clamp(c.a, 0.0, 1.0)); }`,\n});\ncomposer.addPass(renderPass); composer.addPass(gtao); composer.addPass(finitePass()); composer.addPass(bloom);\n```\n\nTaket kan være lavt. Med ACES blir alt over rundt 8 hvitt uansett, og et tak på 10 hindrer også at en flate helt nær et lys blåser ut hele bildet gjennom bloom. Mål først hvor lyse vanlige scener er (her 2 til 12).\n\nTa også bort det som lager de ekstreme verdiene: et lys som følger kameraet (lommelykt) bør ikke ha fysisk avtagning (decay 1,5 til 2), for da blir det hundrevis av ganger sterkere en håndsbredd unna. Lineær avtagning (decay 1) med lavere styrke ga omtrent samme lys ved 4 m og var mye mildere nært.",
+      "caveats": "- `isnan()` kan bli optimalisert bort av noen drivere. Derfor `max` og `min` først: på D3D (ANGLE i Chrome på Windows) og hos NVIDIA gir de det tallet som ikke er NaN.\n- Passet må ligge før bloom. Etter bloom er skaden allerede spredd.\n- En NaN-piksel blir fortsatt én svart piksel, men den smitter ikke lenger.\n- Taket gjør bloom svakere rundt de aller lyseste punktene. Mål vanlige scener først, så det ikke endrer bildet ellers.",
+      "evidence": [
+        "[SIGNAL-47 log.md, 16. oktober 06:46 til 07:09](https://github.com/Tombonator3000/SIGNAL-47/blob/dd5d1f4d9b455061b7718f0d44b0c1d0ff5f6876/web/log.md?plain=1#L648): sonden med kula, nesten hele Ultra-bildet svart før, hvit prikk med glød etter. Sjekket i programvare-rendereren (SwiftShader); på det ekte skjermkortet der feilen ble meldt er resultatet UNVERIFIED til det er prøvd.",
+        "[SIGNAL-47 memory.md, kjente fallgruver](https://github.com/Tombonator3000/SIGNAL-47/blob/dd5d1f4d9b455061b7718f0d44b0c1d0ff5f6876/web/memory.md?plain=1#L159)."
+      ],
+      "used_in": [
+        "`Tombonator3000/SIGNAL-47@58aef50`: PC-nivået (GTAO, bloom, VHS-pass) og VHS-passet på High."
       ]
     },
     {

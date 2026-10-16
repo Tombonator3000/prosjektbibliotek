@@ -31,3 +31,8 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - 01:23 Dig-HD-Remake står ikke i det offentlige inventaret; offentlig_kontrollert 2026-10-15 (visibility public i GitHub-listen).
 - 01:23 build_solution_index.py og verify.py: 24 kort, OK. build_catalog.py byttet bare rekkefølgen på søkeord i seks profiler og catalog.json; de endringene er ikke tatt med.
 - 04:33 Tom: lag PR. PR 3 laget fra grenen ccr-4d55edba-vg2olf mot main. Repoet har ingen CI.
+
+## 2026-10-16, løsningskort fra SIGNAL-47
+
+- 09:23 Nytt kort `halvflyt-uendelig-svarte-firkanter` (grafikk): svarte firkanter i bloom når et høylys går over 65504 i et HalfFloatType-mål og blir uendelig, så NaN etter tonekurven eller GTAO; løst med et pass som klemmer fargen mellom 0 og 10 og gjør NaN til 0 før bloom. Opphav SIGNAL-47@58aef501. PASS i programvare-rendereren (sonde med en kule på en million i lysstyrke: nesten hele bildet svart før, hvit prikk med glød etter); på RTX 3080, der Tom meldte feilen, er det UNVERIFIED til han har prøvd.
+- 09:23 build_solution_index.py og verify.py: 25 kort, OK. build_catalog.py ga bare søkeordstøy i profilene og catalog.json; ikke tatt med.

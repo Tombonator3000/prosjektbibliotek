@@ -2,7 +2,7 @@
 
 Løste problemer og teknikker fra Toms egne spill, skrevet så neste prosjekt kan bruke dem i stedet for å finne dem på nytt. Hvert kort sier hva man ser, hvorfor det skjer, hva som løser det, hvordan det sjekkes og hvor det kommer fra.
 
-**24 kort.** PASS: 19 · FAIL: 0 · UNVERIFIED: 5
+**25 kort.** PASS: 20 · FAIL: 0 · UNVERIFIED: 5
 
 [Startside](README.md) · [Mal for nye kort](losninger/MAL.md) · [JSON](data/losninger.json) · [Slik skriver du et kort](docs/BRUK.md#løsningskort)
 
@@ -19,6 +19,7 @@ python3 scripts/find.py --category Løsningskort
 |---|---|---|---|---|
 | [Bloom som bare gløder på lys og ild](losninger/grafikk/bloom-terskel-over-en.md) | PASS | three.js r170, UnrealBloomPass før OutputPass, ACES-tonekurve | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/main.js#L1191) | 2026-10-09 |
 | [Figurer fra KI-tegnede ark skifter størrelse mellom rutene](losninger/grafikk/figurark-fast-storrelse.md) | PASS | ScummVM med HD-patch (DigHD), Python-pipeline med numpy og Pillow, figurark 1536 x 1024 i glatt stil med ekte alfa | [Dig-HD-Remake@091a953](https://github.com/Tombonator3000/Dig-HD-Remake/blob/091a953b89b522c6d45478315aecefa6dbab1d75/pipeline/dighd/myk.py#L236) | 2026-10-13 |
+| [Svarte firkanter i bloom fra høylys som ikke får plass i halvflyt](losninger/grafikk/halvflyt-uendelig-svarte-firkanter.md) | PASS | three.js r170, WebGL2, EffectComposer med HalfFloatType-mål, GTAOPass, UnrealBloomPass, ACES | [SIGNAL-47@58aef50](https://github.com/Tombonator3000/SIGNAL-47/blob/58aef5011cd5021645ee4be713a30bf06d9f8261/web/src/core/vhs.ts#L38) | 2026-10-16 |
 | [InstancedMesh blir svart når fargelista lages mens count er 0](losninger/grafikk/instancedmesh-fargeliste-ved-count-null.md) | UNVERIFIED | three.js r128 og nyere, InstancedMesh | [morbidium@729219c](https://github.com/Tombonator3000/morbidium/blob/729219ceb3e77119179deadb9fbfcd25bd8b2a4a/logg/2026-09.md#L1092) | 2026-10-09 |
 | [Kroker for lys per lyskilde i lights_fragment_begin (r170)](losninger/grafikk/lyskroker-lights-fragment-begin-r170.md) | UNVERIFIED | three.js r170, MeshStandardMaterial | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/memory.md#L212) | 2026-10-09 |
 | [Myke trekroner med AO i hjørnefargene](losninger/grafikk/myke-trekroner-med-vertex-ao.md) | PASS | three.js r170, InstancedMesh med setColorAt, BufferGeometryUtils.mergeVertices | [DoD-Roguelite@5e940d2](https://github.com/Tombonator3000/DoD-Roguelite/blob/5e940d274364fe068e298c51012a0edb0eca5f5d/src/treegeo.js#L29) | 2026-10-09 |
