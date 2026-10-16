@@ -27,4 +27,6 @@
 - [x] Morgenkontroll 16. oktober: 72 pushet, 68 Claude-vurdert og importert, fire ark med 21 ruter venter. Prosesser avsluttet 08:00, nattkontroll bekreftet PAUSED. Rapport i log.md.
 
 - [ ] Før neste bestilte nattløp: skill forventet friststopp fra driftsfeil i nattevaktens klassifisering, med regresjon; bevar STOPP og arbeid.
-- [ ] Ved neste bestilte Sam-Max-HD-økt: fullfør metadata og Claude-kontroll av fig116_09 og fig249_01 til 03 (1666a2c5) før import. Se morgenrapporten; ingen automatisk fortsettelse etter nattfristen.
+- [x] Etter Toms nye bestilling 16. oktober: metadata for fig116_09 og fig249_01 til 03 er fullført, Codex har sett dem mot original, og Tom har godkjent filene per SHA. 20 av 21 ruter importert, ny modd hentet. Automatikken er fortsatt pauset.
+
+- [ ] Sam-Max-HD: bare munndelen costume249_257 i fig249_02 gjenstår fra siste nattgruppe (teknisk dekning 0,783). Bevar de seks godkjente gangrutene og eget munnlag, se mottakskvitteringen på gpt-arbeid.
