@@ -67,3 +67,6 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 
 
 - Native-alfa-ordrebugen er endelig Codex-godkjent 16. oktober 07:17 (65 tester, SHA/wildcard/sjekk/returprioritering/fjerning av gammel retur). Nattgren 5af29d8c med kode 1ec0d92f er bekreftet pushet. Full gpt_runde med rettingen venter på neste ordinære grafikkimport. Aktiv gruppe fig116_05 til 08 er ennå ikke levert per 07:35, 27 ruter OK i egenkontrollen. Ingen ekstra kontrollagent eller pipelinekjøring skal startes ved siden av denne gruppen.
+
+
+- 16. oktober 07:46: 68 unike nattjobber levert, Claude-vurdert, godkjent og importert; modd 79bca736 har 1075 native ruter. Ny importretting 1ec0d92f er brukt i full, vellykket gpt_runde. Kontroll d107c92a er pushet. Tekniske bevis for 27 nye ruter i output/natt-gator11601-20261016/siste-gatorgruppe-kontroll.json. Siste aktive gruppe fra 07:47 er fig116_09 og fig249_01 til 03, ingen sluttlevering per ca. 07:56. Koordinatorens ti minutters margin gjør at disse kan bli pushet uten Claude-kontroll; tell dem som ventende ved morgenkontrollen. Ikke start nytt nattløp eller godkjenn dem automatisk. Pause heartbeat etter at prosessavslutning og leveranser er kontrollert.
