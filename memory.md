@@ -43,3 +43,6 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 
 
 - Sam-Max-HD-dokumentasjonen for første kantrens og begge Codex-kodekontroller er kvittert i d76310e0 på nattgrenen. Andre trinn de951ff7 er kodegodkjent med 63 tester klokken 04:15, men venter på ny import/visuell kontroll. Alle 163 ikon-PNG i hd-mod 5f6fc0a6 er byteidentiske med sikrede første-trinn-bilder fra 55f976de; bruk eksisterende output/natt-kantrens-20261016/etter som førgrunnlag for andre trinn. Kildekoblingen er registrert i etter-kontroll.json. Ikke overskriv disse førbildene med nye rensede filer.
+
+
+- Andre ikonkantrinn de951ff7 er tatt i bruk i publisert hd-mod 183850f6. Codex har sikret alle 163 nye PNG: alfa/størrelse uendret, 116 byteidentiske med første trinn og 47 med synlig RGB-endring; RGB-snitt endrer seg høyst en tredjedel av ett nivå. 14 PNG er visuelt sett mot original/før/etter på mørk og lys bakgrunn, uten åpenbar ny skade på ekte farger i utvalget. Biltakenes lilla er redusert, men trappetrinn og logoens lyse magentakant står. Bevis finnes i output/natt-kantrens-trinn2-20261016 i Codex-arbeidsmappen; ikke bland det med første trinns kontroll. Sam-Max-HD todo kan kvitteres for andre trinns import/visuelle kontroll når Claude er ferdig i hovedarbeidstreet. Ingen motoravspilling.
