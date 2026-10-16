@@ -24,4 +24,7 @@
 - [x] Verktøy, innlogging, workspace-write, Claude auto, spillgrunnlag og ekte bilde/kopiering kontrollert.
 - [x] Git-forfatter og terminalens GitHub-innlogging rettet. Fire regresjonstester for Git-feil består.
 - [x] Ny prøvetur med vellykket commit, push og Claude-kontroll; natt startet 21:06 til 08:00.
-- [ ] Morgenkontroll 16. oktober: oppsummer leverte, visuelt kontrollerte og importerte jobber hver for seg; stans nattkontroll-automatikken etter rapporten.
+- [x] Morgenkontroll 16. oktober: 72 pushet, 68 Claude-vurdert og importert, fire ark med 21 ruter venter. Prosesser avsluttet 08:00, nattkontroll bekreftet PAUSED. Rapport i log.md.
+
+- [ ] Før neste bestilte nattløp: skill forventet friststopp fra driftsfeil i nattevaktens klassifisering, med regresjon; bevar STOPP og arbeid.
+- [ ] Ved neste bestilte Sam-Max-HD-økt: fullfør metadata og Claude-kontroll av fig116_09 og fig249_01 til 03 (1666a2c5) før import. Se morgenrapporten; ingen automatisk fortsettelse etter nattfristen.
