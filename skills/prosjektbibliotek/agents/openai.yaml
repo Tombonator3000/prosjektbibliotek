@@ -1,0 +1,6 @@
+interface:
+  display_name: "Prosjektbibliotek"
+  short_description: "Finn løsninger, verktøy og skills før du bygger"
+  default_prompt: "Bruk $prosjektbibliotek til å finne relevante løsninger og verktøy før du implementerer oppgaven."
+policy:
+  allow_implicit_invocation: true

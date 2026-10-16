@@ -44,4 +44,4 @@ Tekstkopiene er festet til revisjonen over og lagret uten endringer med `.txt`-s
 
 - [Bevart notat](../../docs/TIDLIGERE_RESEARCH.md)
 
-**Søkeord:** ai, ai-integration, anthropic, automatisering, claude, copilot, cursor, editor, game-development, gamedev, gemini, historisk-kandidat, llm, mcp, MCP, model-context-protocol, openai, unity, Unity, unity3d, videogames
+**Søkeord:** ai, ai-integration, anthropic, automatisering, claude, copilot, cursor, editor, game-development, gamedev, gemini, historisk-kandidat, llm, MCP, mcp, model-context-protocol, openai, Unity, unity, unity3d, videogames

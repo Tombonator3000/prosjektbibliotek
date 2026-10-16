@@ -45,4 +45,4 @@ Tekstkopiene er festet til revisjonen over og lagret uten endringer med `.txt`-s
 
 - [Bevart notat](../../docs/TIDLIGERE_RESEARCH.md)
 
-**Søkeord:** 3D, 3d-modeling, ai, Blender, blender, blender-addon, blender-mcp, claude, generative-ai, historisk-kandidat, llm, mcp, MCP, model-context-protocol, python
+**Søkeord:** 3D, 3d-modeling, ai, Blender, blender, blender-addon, blender-mcp, claude, generative-ai, historisk-kandidat, llm, MCP, mcp, model-context-protocol, python

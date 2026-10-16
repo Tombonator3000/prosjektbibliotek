@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Bygg skilloversikt. --refresh sjekker stjerner og egne offentlige repoer."""
 import argparse
+import base64
 import concurrent.futures
 import hashlib
 import json
@@ -8,6 +9,7 @@ from pathlib import Path
 import re
 import shutil
 import subprocess
+import textwrap
 from urllib.parse import quote
 from urllib.request import Request, urlopen
 
@@ -40,9 +42,51 @@ def scan(repo):
                        and re.search(r'(^|/)SKILL\.md$', p['path'], re.I)]}
 
 
+def frontmatter(text):
+    """Les tekstfeltene navn/beskrivelse uten å utføre YAML eller skillinstruksjoner."""
+    header = re.match(r'\A---\s*\n(.*?)\n---(?:\s*\n|\s*$)', text.lstrip('\ufeff'), re.S)
+    if not header:
+        return {}
+    result = {}
+    for key in ('name', 'description'):
+        match = re.search(r'^' + key + r':[^\S\n]*(.*)((?:\n(?:[ \t]+[^\n]*|[ \t]*))*)', header[1], re.M)
+        if not match:
+            continue
+        value, continuation = match[1].strip(), textwrap.dedent(match[2]).strip()
+        if value.startswith(('>', '|')):
+            value = continuation
+        elif value.startswith('"'):
+            try:
+                value = json.loads(value)
+            except ValueError:
+                value = value.strip('"')
+        elif value.startswith("'") and value.endswith("'"):
+            value = value[1:-1].replace("''", "'")
+        else:
+            value = value.split(' #', 1)[0]
+            if continuation:
+                value += ' ' + continuation
+        result[key] = ' '.join(value.split())
+    return result
+
+
+def describe(item):
+    repository, sha = item
+    blob = api(f'repos/{repository}/git/blobs/{sha}')
+    if blob.get('encoding') != 'base64':
+        raise RuntimeError(f'Uventet skillformat: {repository}@{sha}')
+    content = base64.b64decode(blob['content'])
+    actual = hashlib.sha1(b'blob ' + str(len(content)).encode('ascii') + b'\0' + content).hexdigest()
+    if actual != sha:
+        raise RuntimeError(f'Skillens blob-SHA stemmer ikke: {repository}@{sha}')
+    fields = frontmatter(content.decode('utf-8'))
+    return sha, {'metadata_read': True, 'display_name': fields.get('name', ''), 'description': fields.get('description', '')}
+
+
 def main():
     args = argparse.ArgumentParser(description=__doc__)
     args.add_argument('--refresh', action='store_true')
+    args.add_argument('--describe', action='store_true', help='Hent navn og beskrivelse fra festede, offentlige skillblobber.')
     args = args.parse_args()
     inventory = json.loads((ROOT / 'data/offentlig-inventar.json').read_text())
     cache_path = ROOT / 'data/skill-sources.json'
@@ -67,6 +111,20 @@ def main():
     missing = set(current) - set(sources)
     if missing:
         raise RuntimeError('Nye repoer mangler skillgjennomgang; kjør med --refresh')
+    if args.describe:
+        known = {s['blob_sha']: {k: s[k] for k in ('metadata_read', 'display_name', 'description') if k in s}
+                 for source in sources.values() for s in source['skills'] if s.get('metadata_read')}
+        pending = {s['blob_sha']: source['repository'] for source in sources.values()
+                   if source['repository'] in current for s in source['skills'] if s['blob_sha'] not in known}
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+            known.update(pool.map(describe, [(repo, sha) for sha, repo in sorted(pending.items())]))
+        for source in sources.values():
+            for skill in source['skills']:
+                if skill['blob_sha'] in known:
+                    skill.update(known[skill['blob_sha']])
+        cached['sources'] = sorted(sources.values(), key=lambda s: s['repository'].casefold())
+        cache_path.write_text(json.dumps(cached, ensure_ascii=False, indent=2) + '\n')
+        print(f'Leste metadata fra {len(pending)} festede skillblobber')
     entries = []
     for source in sorted(sources.values(), key=lambda s: s['repository'].casefold()):
         if source.get('truncated') or source.get('error'):
@@ -83,7 +141,8 @@ def main():
                                     and not skill['path'].startswith('skills/') else 'skill',
                             'license_spdx': source.get('license_spdx'),
                             'currently_starred': source['repository'] in starred,
-                            'currently_owned': source['repository'] in owned})
+                            'currently_owned': source['repository'] in owned,
+                            **{k: skill[k] for k in ('display_name', 'description') if skill.get(k)}})
     bundles = []
     for path in sorted((ROOT / 'skills').glob('*/SKILL.md')):
         text = path.read_text()
@@ -91,9 +150,11 @@ def main():
         description = re.search(r'^description:\s*(.+)$', text, re.M).group(1).strip()
         files = [{'path': f.relative_to(ROOT).as_posix(),
                   'sha256': hashlib.sha256(f.read_bytes()).hexdigest()}
-                 for f in sorted(path.parent.rglob('*')) if f.is_file()]
+                 for f in sorted(path.parent.rglob('*')) if f.is_file() and f.suffix != '.pyc' and '__pycache__' not in f.parts]
         bundle = {'name': name, 'description': description, 'path': path.relative_to(ROOT).as_posix(),
                   'source': 'Eksisterende personlig skill, kopiert uten endringer', 'files': files}
+        if name == 'prosjektbibliotek':
+            bundle.update({'source': 'Vedlikeholdt i prosjektbiblioteket', 'provenance': 'repository'})
         bundles.append(bundle)
     data = {'schema_version': 1, 'collected_at': inventory['collected_at'],
             'scanned_starred_repositories': len(starred),
@@ -108,25 +169,29 @@ def main():
              f"Oppdatert {inventory['collected_at'][:10]}. Alle {len(starred)} offentlige stjernerepoer og "
              f"{len(owned)} egne offentlige repoer er undersøkt for `SKILL.md` ({len(current)} unike repoer).", '',
              f"**{len(entries)} SKILL.md-filer** ({data['github_unique_document_blobs']} ulike dokumentinnhold) fra "
-             f"{len({e['repository'] for e in entries})} repoer, pluss **{len(bundles)} egen komplett skillpakke**.", '',
+             f"{len({e['repository'] for e in entries})} repoer, pluss **{len(bundles)} egne komplette skillpakker**.", '',
              '[Startside](README.md) · [Stjerner og egne repoer](OFFENTLIG_INVENTAR.md) · [JSON](data/skills.json)', '',
              'Dette er en kildeoversikt. Noen filer er interne hjelpere for repoarbeid, og like dokumenter kan finnes flere steder. '
              'Ingen tredjepartskills er installert eller kjørt i denne innsamlingen. Lisensfeltet er GitHub-metadata; '
              'kontroller selve lisensen og nødvendige tjenester før bruk.', '', '## Egne skillpakker', '']
     for b in bundles:
+        provenance = (f"{len(b['files'])} filer vedlikeholdes i dette repoet og kontrolleres med SHA-256."
+                      if b.get('provenance') == 'repository' else
+                      f"{len(b['files'])} filer er kopiert byte for byte fra den eksisterende personlige skillen. "
+                      'Pakken inkluderer scripts, referanser, metadata og ikon. Den er tilgjengelig som kilde i biblioteket.')
         lines += [f"### {b['name']}", '', b['description'], '',
                   f"[SKILL.md]({b['path']}) · [Hele pakken]({Path(b['path']).parent.as_posix()})", '',
-                  f"{len(b['files'])} filer er kopiert byte for byte fra den eksisterende personlige skillen. "
-                  'Pakken inkluderer scripts, referanser, metadata og ikon. Den er tilgjengelig som kilde i biblioteket.', '']
+                  provenance, '']
     for repository in sorted({e['repository'] for e in entries}, key=str.casefold):
         subset = [e for e in entries if e['repository'] == repository]
         lines += [f'## {repository}', '', f"{len(subset)} skilldokumenter. [Originalrepo](https://github.com/{repository}).", '',
-                  '| Skill / mappe | Type | Kilde ved festet commit |', '|---|---|---|']
+                  '| Skill / mappe | Type | Opphavets beskrivelse | Kilde ved festet commit |', '|---|---|---|---|']
         for e in subset:
-            lines.append(f"| `{e['name']}` | {e['kind']} | [SKILL.md]({e['url']}) |")
+            description = e.get('description', 'Beskrivelse mangler i manifestet').replace('|', '/').replace('\n', ' ')
+            lines.append(f"| `{e['name']}` | {e['kind']} | {description} | [SKILL.md]({e['url']}) |")
         lines += ['']
     lines += ['## Oppdater og søk', '', '```sh', 'python3 scripts/sync_public_inventory.py',
-              'python3 scripts/build_skill_index.py --refresh', 'python3 scripts/find.py prop-art',
+              'python3 scripts/build_skill_index.py --refresh --describe', 'python3 scripts/build_search_index.py', 'python3 scripts/find.py prop-art',
               'python3 scripts/find.py morbidium-spritesheets', '```', '',
               'Skilloversikten kan bygges offline uten `--refresh`. Ved ny innhenting brukes GitHub CLI hvis tilgjengelig, '
               'ellers offentlig API. Private stjerner omfattes ikke.']

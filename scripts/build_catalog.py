@@ -56,7 +56,7 @@ def main():
             "caveats": "Nytt funn; gjenbruksvurdering gjenstår.", "tags": repo.get("topics", [])})
         repo["runtime_tested_in_this_catalog"] = False
         repo["profile_path"] = f"repoer/prosjekter/{name.replace('/', '--')}.md"
-        repo["tags"] = sorted(set(repo["tags"] + (repo.get("topics") or [])), key=str.casefold)
+        repo["tags"] = sorted(set(repo["tags"] + (repo.get("topics") or [])), key=lambda tag: (tag.casefold(), tag))
         sha, url = repo["commit"], repo["html_url"]
         status = "Stjernemerket" if repo["starred_at"] else ("Tidligere stjernemerket" if repo.get("previously_starred_at") else "Tidligere dokumentert referanse")
         lines = [f"# {name}", "", repo["summary"], "", f"[Åpne originalrepo]({url}) · [Tilbake til katalog](../../KATALOG.md)", "",

@@ -43,4 +43,4 @@ Tekstkopiene er festet til revisjonen over og lagret uten endringer med `.txt`-s
 
 - [Bevart notat](../../docs/TIDLIGERE_RESEARCH.md)
 
-**Søkeord:** claudecode, codex-cli, copilot, cursor, editor, game-development, historisk-kandidat, mcp, MCP, model-context-protocol, openai, openclaw, scene, unity, Unity, unity-package, unity3d
+**Søkeord:** claudecode, codex-cli, copilot, cursor, editor, game-development, historisk-kandidat, MCP, mcp, model-context-protocol, openai, openclaw, scene, Unity, unity, unity-package, unity3d

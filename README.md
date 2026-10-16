@@ -2,9 +2,11 @@
 
 Referansebibliotek for **Tombonator3000**: spill, 3D, simulering, skills, agentverktøy og programmer som kan gjenbrukes på tvers av prosjekter.
 
-**[Løsningskort](LOSNINGER.md)** · **[Stjerner og egne repoer](OFFENTLIG_INVENTAR.md)** · **[Samlet skilloversikt](SKILLS.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
+**[Start her](START_HER.md)** · **[Samlet søkeoversikt](SOK.md)** · **[Løsningskort](LOSNINGER.md)** · **[Stjerner og egne repoer](OFFENTLIG_INVENTAR.md)** · **[Samlet skilloversikt](SKILLS.md)** · **[Agentoppsett](docs/AGENTOPPSETT.md)**
 
-Oppdatert **16. oktober 2026**: **75 offentlige stjerner**, **37 egne offentlige repoer**, **274 SKILL.md-filer fra 26 repoer** og den komplette egne **Morbidium-spritesheets-pakken**. Skillmanifestet dekker alle 101 unike offentlige repoer. Av skillfilene er 144 Scenario-skills og sju Scenario-hjelpere for internt repoarbeid. Noen skills finnes i flere mapper og forker; de 274 filene har 247 ulike dokumentinnhold. [Se de 20 nye stjernene siden 5. oktober](docs/OPPDATERING_2026-10-16.md).
+Oppdatert **16. oktober 2026**: **75 offentlige stjerner**, **37 egne offentlige repoer**, **274 SKILL.md-filer fra 26 repoer** og de egne pakkene **Morbidium-spritesheets** og **prosjektbibliotek**. Skillmanifestet dekker alle 101 unike offentlige repoer. Av skillfilene er 144 Scenario-skills og sju Scenario-hjelpere for internt repoarbeid. Noen skills finnes i flere mapper og forker; de 274 filene har 247 ulike dokumentinnhold. [Se de 20 nye stjernene siden 5. oktober](docs/OPPDATERING_2026-10-16.md).
+
+Biblioteket brukes før nye løsninger og verktøyvalg. Søket har norske og engelske synonymer, relevansrangering, filtre og opphavets beskrivelser fra 273 av de 274 skillfilene. Like skillkopier gir ett treff med alle kildene bevart. [Skillen](skills/prosjektbibliotek/SKILL.md) og [den faste rutinen](docs/AGENTOPPSETT.md) gjør biblioteket tilgjengelig i andre prosjekter. [START_HER.md](START_HER.md) forklarer både lokal søking og bruk uten terminal.
 
 **decomp.wtf:** [egen fork](https://github.com/Tombonator3000/decomp.wtf) er opprettet. Originalen ble arkivert 15. oktober og er ikke lenger vedlikeholdt. [Gjennomgangen](repoer/decomp-wtf-2026-10-16.md) har festet revisjon, bevarte dokumentkilder, plattformstatus og gjenbruksnotater.
 
@@ -25,7 +27,7 @@ Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike 
 | Verktøy, biblioteker, media og lokale tjenester | [Apper og egen drift](KATALOG.md#apper-og-egen-drift) |
 | Egne spill og programmer | [Egne prosjekter](KATALOG.md#egne-prosjekter) |
 
-Hvert repo har en norsk profil med formål, konkrete gjenbruksmuligheter, begrensninger, søkeord, lisensmetadata og festede kildelenker. README- og lisenskilder er bevart som tekst der de finnes, med dato og kontrollsummer. [JSON-katalogen](data/catalog.json) gir samme innhold for søk og senere automatisering.
+De kuraterte profilene og norske søkenotatene har formål, konkrete gjenbruksmuligheter, begrensninger og søkeord. Andre inventaroppføringer har grunnleggende GitHub-metadata. README- og lisenskilder er bevart som tekst der de finnes, med dato og kontrollsummer. [Den samlede søkeindeksen](data/search-index.json) viderefører både historiske profiler, dagens inventar, skills og løsningskort.
 
 ## Løsningskort
 
@@ -43,6 +45,8 @@ Biblioteket er en referansesamling med utvalgte dokumentkilder. Hele upstream-ko
 
 ```sh
 python3 scripts/find.py vann
+python3 scripts/find.py "antialiasing" --stack three.js --limit 5 --explain
+python3 scripts/find.py "generer spriteark" --type skill --limit 5
 python3 scripts/find.py --category 'Skills og agentverktøy'
 python3 scripts/find.py prop-art
 python3 scripts/find.py morbidium-spritesheets
@@ -50,16 +54,19 @@ python3 scripts/find.py msaa                       # søker også i løsningskor
 
 # Etter et nytt eller endret løsningskort i losninger/:
 python3 scripts/build_solution_index.py
+python3 scripts/build_search_index.py
 python3 scripts/verify.py
 
 # Hent stjerner/kilder, bygg katalog og kontroller resultatet:
 python3 scripts/sync_github.py
 python3 scripts/build_catalog.py
+python3 scripts/build_search_index.py
 python3 scripts/verify.py
 
 # Oppdater offentlig inventar (krever ikke innlogging):
 python3 scripts/sync_public_inventory.py
-python3 scripts/build_skill_index.py --refresh
+python3 scripts/build_skill_index.py --refresh --describe
+python3 scripts/build_search_index.py
 python3 scripts/verify.py
 ```
 

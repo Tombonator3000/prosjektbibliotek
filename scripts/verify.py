@@ -189,7 +189,31 @@ class Check:
                 self.require(item.get("source_sha256") == item.get("snapshot_sha256"), f"Historikk: exact_copy har ulike hasher for {path}")
         self.public_inventory()
         self.solution_cards()
+        self.search_index()
         self.markdown_links()
+
+    def search_index(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import build_search_index as search_index
+        import find
+        expected = search_index.index_data(self.root)
+        self.require(self.read_json('data/search-index.json') == expected,
+                     'Søkeindeks: data/search-index.json er ikke bygd på nytt; kjør scripts/build_search_index.py')
+        path = self.root / 'SOK.md'
+        self.require(path.is_file() and path.read_text(encoding='utf-8') == search_index.markdown(expected),
+                     'Søkeindeks: SOK.md er ikke bygd på nytt; kjør scripts/build_search_index.py')
+        self.require(len({r['key'] for r in expected['records']}) == len(expected['records']),
+                     'Søkeindeks: dupliserte oppføringsnøkler')
+        names = {n for r in expected['records'] for n in [r['key'], r['full_name']] + r.get('aliases', [])}
+        config = find.configuration(self.root)
+        self.require(set(config.get('keywords', {})) <= names, 'Søkeord: nøkkel peker til en ukjent oppføring')
+        aliases = {}
+        for index, group in enumerate(config.get('synonyms', [])):
+            for alias in group['aliases']:
+                normalized = find.normalize(alias)
+                self.require(bool(normalized) and aliases.get(normalized, index) == index,
+                             'Søkeord: tomt alias eller alias i flere synonymgrupper')
+                aliases[normalized] = index
 
     def solution_cards(self):
         # Løsningskortene: formatet kontrolleres i build_solution_index.parse. Her kommer

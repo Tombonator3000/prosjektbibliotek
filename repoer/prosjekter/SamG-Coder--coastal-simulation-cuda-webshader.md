@@ -45,4 +45,4 @@ Tekstkopiene er festet til revisjonen over og lagret uten endringer med `.txt`-s
 
 - [Bevart notat](../../repoer/coastal-webgpu-2026-09-20.md)
 
-**Søkeord:** coastal-simulation, cuda, foam, shallow-water, shoreline, simulation, spray, threejs, Unity-port, water, webgpu, WebGPU, wetness
+**Søkeord:** coastal-simulation, cuda, foam, shallow-water, shoreline, simulation, spray, threejs, Unity-port, water, WebGPU, webgpu, wetness

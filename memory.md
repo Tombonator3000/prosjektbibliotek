@@ -2,6 +2,15 @@
 
 Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.md.
 
+## Biblioteket brukes før prosjektarbeid
+
+- START_HER.md er inngangen. SOK.md og data/search-index.json er generert fra historisk katalog, ferskt inventar, norske notater, skillmetadata og løsningskort. Kjør scripts/build_search_index.py etter endringer; verify.py avviser utdaterte indekser.
+- find.py rangerer tittel, symptom og nøkkelord foran brødtekst. data/search-terms.json har synonymer og ekstra behovsord. Standard er ti treff og alle behovsord; --match any utvider eksplisitt. Filtre er dokumenterte ord, ikke kompatibilitetsbevis.
+- build_skill_index.py --describe leser navn og beskrivelse fra festede, offentlige Git-blobber uten å kjøre skillinstruksjoner. 273 av 274 skillfiler har beskrivelse. Identiske blobber er ett søketreff med alle kildestedene beholdt.
+- skills/prosjektbibliotek er egen vedlikeholdt skillpakke, med lokal søkehjelper og GitHub-rute. scripts/setup_agents.py installerer den for Codex og Claude Code og oppdaterer bare den avgrensede rutineblokken i de globale instruksjonsfilene. Se docs/AGENTOPPSETT.md for andre maskiner og skyøkter.
+- Søkerutinen gjelder teknisk prosjektarbeid før ny implementering og verktøyvalg. Svake treff prøves bredere én gang; manglende tilgang rapporteres uten å blokkere resten av oppgaven.
+- tests/test_search.py prøver faktiske behovssøk, filtre, skillkopier, indeksens oppdatering og gjentatt installasjon som bevarer brukerinnstillinger. Testene bruker ikke nettverk.
+
 ## Offentlig innhenting 2026-10-16
 
 - Siste inventar er fra 16. oktober: 75 offentlige stjerner, 37 egne offentlige repoer og 101 unike repoer i skilldekningen. Sammenlign neste innhenting med repo-ID-ene og stjernedatoene i `data/offentlig-inventar.json`, ikke med den historiske listen i STARRED.md.
@@ -24,4 +33,4 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 - `scripts/sync_public_inventory.py` får 403 fra proxyen i Claudes skyøkter (users/Tombonator3000/starred). Kjør den på en egen maskin.
 - `build_skill_index.py --refresh` krever at alle repoene i inventaret er skannet. Et repo i owned_public uten skillskann gjør at verify.py feiler.
 - Biblioteket er offentlig. Ingen navn, stier eller kode fra private repoer, heller ikke i kort, log.md eller memory.md.
-- `build_catalog.py` sorterer søkeord ustabilt når de bare skiller seg i store og små bokstaver (Blender og blender). Kjøringen gir da diff i catalog.json og profilene uten at noe er endret. Ta ikke med den støyen (sett 2026-10-13).
+- Sorteringsfeilen i build_catalog.py ble rettet 2026-10-16 med en stabil sekundær sorteringsnøkkel. En test sammenligner genererte profiler og katalog fra to ulike Python-hashfrø.

@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "stop_words": [
+    "jeg",
+    "du",
+    "vi",
+    "kan",
+    "skal",
+    "vil",
+    "trenger",
+    "finn",
+    "finne",
+    "lag",
+    "lage",
+    "hvordan",
+    "får",
+    "få",
+    "det",
+    "som",
+    "når",
+    "for",
+    "med",
+    "til",
+    "fra",
+    "på",
+    "av",
+    "en",
+    "et",
+    "og",
+    "i",
+    "the",
+    "a",
+    "an",
+    "how",
+    "to",
+    "need",
+    "want",
+    "help",
+    "me",
+    "my",
+    "our",
+    "with",
+    "for",
+    "from",
+    "in",
+    "on",
+    "is",
+    "are",
+    "and"
+  ],
+  "synonyms": [
+    {
+      "aliases": [
+        "kantutjevning",
+        "antialiasing",
+        "anti aliasing",
+        "anti alias",
+        "MSAA",
+        "FXAA",
+        "SMAA",
+        "TAA"
+      ]
+    },
+    {
+      "aliases": [
+        "glød",
+        "gloed",
+        "bloom",
+        "glow",
+        "glowing"
+      ]
+    },
+    {
+      "aliases": [
+        "spriteark",
+        "spritesheet",
+        "spritesheets",
+        "sprite sheet",
+        "sprite sheets",
+        "figurark",
+        "character sheet"
+      ]
+    },
+    {
+      "aliases": [
+        "animasjon",
+        "animation",
+        "animations",
+        "animate",
+        "animere",
+        "animated"
+      ]
+    },
+    {
+      "aliases": [
+        "generer",
+        "generering",
+        "generate",
+        "generation",
+        "create"
+      ]
+    },
+    {
+      "aliases": [
+        "3d fra bilde",
+        "bilde til 3d",
+        "image to 3d",
+        "image to mesh"
+      ]
+    },
+    {
+      "aliases": [
+        "dekompilering",
+        "decompile",
+        "decompilation",
+        "decompiler",
+        "matching decompilation"
+      ]
+    },
+    {
+      "aliases": [
+        "rekompilering",
+        "recompilation",
+        "recompile",
+        "recompiler"
+      ]
+    },
+    {
+      "aliases": [
+        "reverse engineering",
+        "reversering",
+        "binæranalyse",
+        "binary analysis"
+      ]
+    },
+    {
+      "aliases": [
+        "vann",
+        "water",
+        "hav",
+        "ocean",
+        "sea",
+        "bølger",
+        "waves"
+      ]
+    },
+    {
+      "aliases": [
+        "skygge",
+        "skygger",
+        "shadow",
+        "shadows"
+      ]
+    },
+    {
+      "aliases": [
+        "shader",
+        "shaders",
+        "skyggelegger"
+      ]
+    },
+    {
+      "aliases": [
+        "hakking",
+        "stutter",
+        "stuttering",
+        "hitching"
+      ]
+    },
+    {
+      "aliases": [
+        "shader cache",
+        "shadercache",
+        "shader compilation",
+        "forhåndskompilering"
+      ]
+    },
+    {
+      "aliases": [
+        "splat",
+        "splats",
+        "gaussian splatting",
+        "gaussiske splats",
+        "3dgs"
+      ]
+    },
+    {
+      "aliases": [
+        "lyd",
+        "audio",
+        "sound",
+        "sfx",
+        "lydeffekter"
+      ]
+    },
+    {
+      "aliases": [
+        "musikk",
+        "music",
+        "soundtrack"
+      ]
+    },
+    {
+      "aliases": [
+        "terreng",
+        "terrain",
+        "landscape"
+      ]
+    },
+    {
+      "aliases": [
+        "bevegelsesoverføring",
+        "retargeting",
+        "retarget"
+      ]
+    },
+    {
+      "aliases": [
+        "lagring",
+        "lagre",
+        "save",
+        "saving",
+        "persistence"
+      ]
+    },
+    {
+      "aliases": [
+        "migrering",
+        "migration",
+        "migrate",
+        "lagringsmigrering"
+      ]
+    },
+    {
+      "aliases": [
+        "flerspiller",
+        "multiplayer",
+        "nettspill"
+      ]
+    },
+    {
+      "aliases": [
+        "skjermeffekter",
+        "screen effects",
+        "screenfx",
+        "postprocessing",
+        "post processing",
+        "etterbehandling"
+      ]
+    },
+    {
+      "aliases": [
+        "webgl context lost",
+        "context lost",
+        "kontekst tapt",
+        "mistet webgl kontekst",
+        "webgl kontekst tapt"
+      ]
+    },
+    {
+      "aliases": [
+        "gjennomsiktig",
+        "gjennomsiktighet",
+        "transparent",
+        "transparency",
+        "alpha",
+        "alfa"
+      ]
+    },
+    {
+      "aliases": [
+        "three.js",
+        "threejs",
+        "three js"
+      ]
+    },
+    {
+      "aliases": [
+        "nettleser",
+        "browser",
+        "web"
+      ]
+    },
+    {
+      "aliases": [
+        "testing",
+        "test",
+        "verifisering",
+        "verification"
+      ]
+    },
+    {
+      "aliases": [
+        "figur",
+        "figurer",
+        "character",
+        "characters"
+      ]
+    },
+    {
+      "aliases": [
+        "tekstur",
+        "teksturer",
+        "texture",
+        "textures"
+      ]
+    },
+    {
+      "aliases": [
+        "modell",
+        "modeller",
+        "model",
+        "models"
+      ]
+    },
+    {
+      "aliases": [
+        "scene",
+        "scener",
+        "scenes"
+      ]
+    },
+    {
+      "aliases": [
+        "vegetasjon",
+        "vegetation",
+        "gress",
+        "grass"
+      ]
+    },
+    {
+      "aliases": [
+        "refleksjon",
+        "refleksjoner",
+        "reflection",
+        "reflections"
+      ]
+    },
+    {
+      "aliases": [
+        "komprimering",
+        "compression",
+        "compress"
+      ]
+    },
+    {
+      "aliases": [
+        "oppskalering",
+        "upscale",
+        "upscaling",
+        "super resolution",
+        "superoppløsning"
+      ]
+    },
+    {
+      "aliases": [
+        "kamera",
+        "camera",
+        "cameras",
+        "kameraføring"
+      ]
+    },
+    {
+      "aliases": [
+        "bildegenerering",
+        "image generation",
+        "text to image",
+        "tekst til bilde"
+      ]
+    },
+    {
+      "aliases": [
+        "kollisjon",
+        "collision",
+        "collisions"
+      ]
+    }
+  ],
+  "keywords": {
+    "microsoft/TRELLIS.2": [
+      "3D fra bilde",
+      "image-to-3D",
+      "teksturert mesh",
+      "O-Voxel",
+      "PBR",
+      "3D-generering"
+    ],
+    "BlueHeisenberg/SCSKiller": [
+      "shader stutter",
+      "shader cache",
+      "forhåndskompilering",
+      "hakking i spill"
+    ],
+    "EpicGames/unreal-engine-skills-for-claude-code-plugin": [
+      "Unreal Editor",
+      "MCP",
+      "Blueprints",
+      "editorautomatisering"
+    ],
+    "morbidium-spritesheets": [
+      "generer spriteark",
+      "figurark",
+      "spritesheet",
+      "animation",
+      "paper doll",
+      "atlas"
+    ],
+    "scenario-labs/skills:scenario-sprite-animation": [
+      "generer spriteark",
+      "sprite sheets",
+      "animasjon",
+      "figurark"
+    ],
+    "solution:three-r170-composer-msaa": [
+      "antialiasing",
+      "kantutjevning",
+      "EffectComposer",
+      "MSAA",
+      "three.js r170"
+    ],
+    "solution:webgl-kontekst-tapt": [
+      "webgl context lost",
+      "kontekst tapt",
+      "context restoration"
+    ],
+    "solution:hidden-attributt-med-display-grid": [
+      "hidden display grid",
+      "element skjules ikke",
+      "CSS hidden"
+    ],
+    "solution:figurark-fast-storrelse": [
+      "spriteark",
+      "sprite sheets",
+      "fast rutestørrelse",
+      "frame dimensions"
+    ],
+    "i12bp8/decomp.wtf": [
+      "decompilation",
+      "dekompilering",
+      "byte matching",
+      "matching decompilation",
+      "arkivert"
+    ],
+    "Tombonator3000/decomp.wtf": [
+      "decompilation",
+      "dekompilering",
+      "egen fork",
+      "byte matching"
+    ]
+  }
+}

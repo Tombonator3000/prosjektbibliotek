@@ -42,4 +42,4 @@ Tekstkopiene er festet til revisjonen over og lagret uten endringer med `.txt`-s
 
 - [Bevart notat](../../docs/TIDLIGERE_RESEARCH.md)
 
-**Søkeord:** Gaussian splatting, gaussian-splatting, historisk-lokal-test, okklusjon, OpenGL, unity, Unity, Vulkan
+**Søkeord:** Gaussian splatting, gaussian-splatting, historisk-lokal-test, okklusjon, OpenGL, Unity, unity, Vulkan

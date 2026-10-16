@@ -44,4 +44,4 @@ Tekstkopiene er festet til revisjonen over og lagret uten endringer med `.txt`-s
 
 - [Bevart notat](../../docs/TIDLIGERE_RESEARCH.md)
 
-**Søkeord:** 3d-gaussian-splatting, 3dgs, Gaussian splatting, gaussian-splatting, pcui, PlayCanvas, playcanvas, redigering, SuperSplat, typescript, webgl, WebGL, webgpu, WebGPU
+**Søkeord:** 3d-gaussian-splatting, 3dgs, Gaussian splatting, gaussian-splatting, pcui, PlayCanvas, playcanvas, redigering, SuperSplat, typescript, WebGL, webgl, WebGPU, webgpu
