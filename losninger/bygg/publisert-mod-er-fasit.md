@@ -10,7 +10,6 @@ dato: 2026-10-15
 agent: Claude
 lisens: Toms egen pipelinekode, ingen lisensfil i repoet (motorpatchen er GPL sammen med ScummVM)
 sist_sjekket: 2026-10-15
-offentlig_kontrollert: 2026-10-15
 se_ogsa: logg-over-det-som-mangler-hd, figurark-fast-storrelse
 ---
 

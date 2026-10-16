@@ -9,7 +9,6 @@ opphav: Tombonator3000/DoD-Roguelite@5e940d274364fe068e298c51012a0edb0eca5f5d:bu
 dato: 2026-10-09
 agent: Claude
 lisens: MIT
-offentlig_kontrollert: 2026-10-09
 sist_sjekket: 2026-10-09
 ---
 

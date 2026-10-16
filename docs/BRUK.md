@@ -32,6 +32,8 @@ Synkronisering henter alle sider fra den innloggede kontoens star-endepunkt, ogs
 
 Nye stjerner får automatisk profiler, men står som **Uklassifisert** fram til det finnes norske notater. Rediger `data/starred-notes.json` for starrepoer og `data/extra-notes.json` for øvrige tilleggsreferanser. Legg ekstra repo-id og lokal provenienskilde i `data/extra-references.json`. De opprinnelige Sentient-/WebGPU-notatene under `repoer/` bevares som historikk.
 
+Det offentlige inventaret kan oppdateres separat med `scripts/sync_public_inventory.py`, etterfulgt av `scripts/build_skill_index.py --refresh`. `find.py` leser de norske notatene også for nye inventaroppføringer som ennå ikke har en historisk katalogprofil. Et valgfritt `profile_path` i notatet kan peke til en egen dokumentgjennomgang, slik som decomp.wtf-notatet. Dette endrer ikke den daterte historiske katalogen.
+
 Genererte filer er `KATALOG.md`, `STARRED.md`, `data/catalog.json` og `repoer/prosjekter/*.md`. Endre kildenotatene og bygg igjen. Synkroniseringsskriptet gjør bare GitHub-lesinger og lokale filskrivinger; det oppretter ingen GitHub-commit, publiserer ingenting og installerer ingen av verktøyene. Commit og push gjøres eksplisitt etter kontroll. Ingen automatisk tidsplan er aktivert.
 
 ## Løsningskort

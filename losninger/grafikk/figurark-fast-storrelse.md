@@ -10,7 +10,6 @@ dato: 2026-10-10
 agent: Claude
 lisens: Toms egen pipelinekode, ingen lisensfil i repoet (motorpatchen er GPL sammen med ScummVM)
 sist_sjekket: 2026-10-13
-offentlig_kontrollert: 2026-10-13
 se_ogsa: scumm-v6-kostymer-skygge-og-soppelruter
 ---
 

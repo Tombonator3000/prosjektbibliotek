@@ -131,7 +131,10 @@ def main():
              "Stjernedatoer er oppgitt i UTC.", "",
              "| Repo | Hva det er | Stjernemerket | Lisensfelt |", "|---|---|---|---|"]
     for r in data["starred"]:
-        lines.append(f"| [{r['full_name']}]({r['url']}) | {str(r['description'] or 'Ingen beskrivelse').replace('|', '/')} | {r['starred_at']} | {r['license_spdx'] or 'Uavklart'} |")
+        description = str(r['description'] or 'Ingen beskrivelse').replace('|', '/')
+        if r['archived']:
+            description = '**Arkivert.** ' + description
+        lines.append(f"| [{r['full_name']}]({r['url']}) | {description} | {r['starred_at']} | {r['license_spdx'] or 'Uavklart'} |")
     lines += ["", "## Egne offentlige repoer", "",
               "| Repo | Hva det er | I stjernene |", "|---|---|---|"]
     for r in data["owned_public"]:

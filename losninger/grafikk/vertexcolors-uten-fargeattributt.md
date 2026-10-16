@@ -10,7 +10,6 @@ se_ogsa: myke-trekroner-med-vertex-ao
 dato: 2026-10-09
 agent: Claude
 lisens: MIT
-offentlig_kontrollert: 2026-10-09
 sist_sjekket: 2026-10-09
 ---
 

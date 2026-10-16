@@ -2,6 +2,14 @@
 
 Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.md.
 
+## Offentlig innhenting 2026-10-16
+
+- Siste inventar er fra 16. oktober: 75 offentlige stjerner, 37 egne offentlige repoer og 101 unike repoer i skilldekningen. Sammenlign neste innhenting med repo-ID-ene og stjernedatoene i `data/offentlig-inventar.json`, ikke med den historiske listen i STARRED.md.
+- Alle 20 nye stjerner siden 5. oktober har norske notater i `data/starred-notes.json`. `find.py` bruker disse også for inventaroppføringer uten historisk profil. Et valgfritt `profile_path` peker til et eget notat.
+- Egen fork `Tombonator3000/decomp.wtf` er opprettet fra `i12bp8/decomp.wtf`. Begge main-grener pekte til `575b4a30ed481ff5497dfb9ce4f599368a95a04a` ved kontrollen. Originalen ble arkivert 15. oktober. Se `repoer/decomp-wtf-2026-10-16.md` og JSON-manifestet; bevarte dokumentkilder kontrolleres av verify.py.
+- decomp.wtf 0.10.6 oppgir Linux og ustabil Windows-støtte via WSL 2, uten macOS-støtte. Verktøyet er ikke installert eller runtime-testet her.
+- Inventaret dekker nå de offentlige opphavene til alle 24 løsningskort. 20 midlertidige `offentlig_kontrollert`-felt er fjernet uten å endre testdatoer eller bevis.
+
 ## Løsningskort (fra 2026-10-09)
 
 - Kortene er de eneste kildefilene: `losninger/<domene>/<id>.md` med en nøkkel: verdi-blokk øverst og faste seksjoner (Symptom, Årsak, Løsning, Fallgruver, Slik verifiseres det, Bevis, Brukt i). `data/losninger.json` og `LOSNINGER.md` er generert av `scripts/build_solution_index.py`.

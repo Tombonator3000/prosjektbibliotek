@@ -208,5 +208,23 @@
       "fargerom",
       "historisk-lokal-test"
     ]
+  },
+  "Tombonator3000/decomp.wtf": {
+    "summary": "Egen offentlig fork av det arkiverte decomp.wtf, opprettet 16. oktober 2026.",
+    "categories": [
+      "Egne prosjekter",
+      "Skills og agentverktøy",
+      "Spill og spillmotorer"
+    ],
+    "reuse": "Utgangspunkt for videre arbeid med lokal matching-dekompilering og bytekontroll.",
+    "caveats": "main er kontrollert lik originalens siste commit 575b4a30ed481ff5497dfb9ce4f599368a95a04a. Ingen kodeendringer, installasjon eller runtime-test i denne oppgaven.",
+    "tags": [
+      "decomp.wtf",
+      "fork",
+      "dekompilering",
+      "MCP",
+      "bytekontroll"
+    ],
+    "profile_path": "repoer/decomp-wtf-2026-10-16.md"
   }
 }

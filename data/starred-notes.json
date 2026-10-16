@@ -152,5 +152,146 @@
     "reuse": "Referanse for å bevare et Unity/.NET-vokselgrunnlag mens egne fortellinger, lokalisering, lagringsidentitet og en separat Windows-spilltestpipeline legges til.",
     "caveats": "README beskriver narrativt grunnarbeid og en pipeline som fortsatt trenger forkens Actions/Unity-lisensoppsett før første nedlastbare artefakt; ingen egen driftet tjeneste er oppgitt. Oppstrøms funksjonsbeskrivelser og utgivelser er ikke bevis på en testet Voidcraft-leveranse. AGPL-3.0-or-later og oppstrøms-/tredjepartskreditering er bevart. Ingen ny bygg- eller spilltest er utført ved katalogiseringen.",
     "tags": ["eget prosjekt", "Unity", ".NET", "voksler", "romspill", "kosmisk skrekk", "fortelling", "fork", "AGPL"]
+  },
+  "ahujasid/mcp-for-blender": {
+    "summary": "Opprinnelig Blender MCP-kandidat fra SIGNAL / 47-samtalen.",
+    "categories": ["Skills og agentverktøy", "3D og simulering"],
+    "reuse": "Kilde til tidligere utforsking av Blender-kontroll og sceneinspeksjon via MCP.",
+    "caveats": "Den historiske Gauntlet04-kopien oppga at denne broen ikke var installert. Senere verifikasjon av bpy-dev/blender-mcp gjelder en annen distribusjon.",
+    "tags": ["Blender", "MCP", "3D", "historisk-kandidat"]
+  },
+  "amathislab/terra": {
+    "summary": "TERRA: terrengtilpasset rekonstruksjon, retargeting og styring av muskelskjelettbasert bevegelse.",
+    "categories": ["3D og simulering"],
+    "reuse": "Undersøk metoder for bevegelsesoverføring, terrengkontakt og kontroll av figurer.",
+    "caveats": "Forskningskode. En oppføring dokumenterer ikke en ferdig spillmotorintegrasjon eller lokal test.",
+    "tags": ["TERRA", "animasjon", "retargeting", "terreng", "bevegelse", "forskning"]
+  },
+  "arielshad/3d-asset-server": {
+    "summary": "API og MCP for 3D-assets.",
+    "categories": ["Skills og agentverktøy", "3D og simulering"],
+    "reuse": "Vurder assetoppslag og tilgang til 3D-ressurser fra agentverktøy.",
+    "caveats": "Repoets lisensmetadata erstatter ikke vilkårene for hvert asset eller hver tilkoblet tjeneste. Ikke kjørt lokalt.",
+    "tags": ["3D", "assets", "MCP", "API", "modeller"]
+  },
+  "BlueHeisenberg/SCSKiller": {
+    "summary": "Verktøy som forhåndskompilerer spillshadere til GPU-driverens cache på Windows.",
+    "categories": ["Spill og spillmotorer", "Apper og egen drift"],
+    "reuse": "Undersøk håndtering av shaderkompilering og cache for å redusere hakking.",
+    "caveats": "Oppgitt for Windows med NVIDIA og AMD. Virkning og kompatibilitet må måles per spill og driver; ingen lokal ytelsestest.",
+    "tags": ["shader", "kompilering", "cache", "hakking", "Windows", "NVIDIA", "AMD"]
+  },
+  "EpicGames/unreal-engine-skills-for-claude-code-plugin": {
+    "summary": "Skills og MCP-arbeidsflyt for å styre Unreal Editor fra Claude Code.",
+    "categories": ["Skills og agentverktøy", "Spill og spillmotorer"],
+    "reuse": "Vurder editorverktøy for scener, Blueprints, materialer og animasjon i et eksisterende Unreal-prosjekt.",
+    "caveats": "README krever Unreal-pluginene ModelContextProtocol og AllToolsets og en kjørende editor for verktøykall. Ikke installert eller testet her.",
+    "tags": ["Unreal", "Unreal Engine", "MCP", "Claude Code", "editor", "Blueprints"]
+  },
+  "GLinnik21/plx-native": {
+    "summary": "Uoffisiell Plex-klient for LG webOS med native grensesnitt.",
+    "categories": ["Apper og egen drift"],
+    "reuse": "Studer TV-grensesnitt og native medieavspilling som alternativ til en nettleserbasert klient.",
+    "caveats": "Målplattformen er LG webOS. Oppgitte bildefrekvenser og videoformater er ikke verifisert på egen TV.",
+    "tags": ["Plex", "webOS", "LG", "TV", "media", "native"]
+  },
+  "i12bp8/decomp.wtf": {
+    "summary": "Lokal agentstyrt matching-dekompilering av spill til C med byte-for-byte-kontroll.",
+    "categories": ["Skills og agentverktøy", "Spill og spillmotorer"],
+    "reuse": "Studer funksjonsfordeling, opprinnelig kompilator, bytekontroll og MCP. Egen fork: Tombonator3000/decomp.wtf.",
+    "caveats": "Originalen ble arkivert 15. oktober 2026. Versjon 0.10.6: Linux, ustabil Windows-støtte via WSL 2, ikke macOS. MIT gjelder verktøyet; spill har egne rettigheter. Ikke installert eller runtime-testet.",
+    "tags": ["decomp.wtf", "dekompilering", "matching", "bytekontroll", "reverse engineering", "MCP", "C", "N64", "GameCube", "Wii", "arkivert", "fork"],
+    "profile_path": "repoer/decomp-wtf-2026-10-16.md"
+  },
+  "joetsoi/OpenMoonstone": {
+    "summary": "Åpen nyimplementering av Moonstone: A Hard Day's Knight.",
+    "categories": ["Spill og spillmotorer"],
+    "reuse": "Undersøk kode og spillarkitektur som referanse for et Moonstone-lignende spill.",
+    "caveats": "Repoets AGPL-3.0-metadata gjelder kode, ikke automatisk originalspillets grafikk og data. Ikke bygget eller spilltestet.",
+    "tags": ["Moonstone", "spill", "nyimplementering", "kildeport"]
+  },
+  "microsoft/TRELLIS.2": {
+    "summary": "3D-generering med kompakte strukturerte latenter.",
+    "categories": ["3D og simulering"],
+    "reuse": "Vurder metoden som referanse for generering av 3D-innhold og en senere avgrenset assetprøve.",
+    "caveats": "Ingen modeller er lastet ned eller kjørt. Kontroller kode, modellvilkår og maskinkrav hver for seg før bruk.",
+    "tags": ["TRELLIS.2", "3D", "generering", "modeller", "assets", "latenter"]
+  },
+  "morluto/rea": {
+    "summary": "Agentbasert reverse engineering fra appatferd til native binærfiler.",
+    "categories": ["Skills og agentverktøy", "Apper og egen drift"],
+    "reuse": "Studer arbeidsflyter for å undersøke appatferd og binærkode med agenter.",
+    "caveats": "Verktøy og tilganger avhenger av målet som undersøkes. Ingen apper eller binærfiler er analysert her.",
+    "tags": ["reverse engineering", "agenter", "binærfiler", "apper", "analyse"]
+  },
+  "shader-effects-inc/shaders": {
+    "summary": "WebGPU-komponenter for React, Vue, Svelte, Solid, JavaScript og Framer.",
+    "categories": ["3D og simulering"],
+    "reuse": "Vurder avgrensede shaderkomponenter og visuelle effekter i eksisterende webgrensesnitt.",
+    "caveats": "WebGPU-støtte og ytelse må kontrolleres i målmiljøet. Ingen nettleserdemo er kjørt her.",
+    "tags": ["WebGPU", "shader", "React", "Vue", "Svelte", "Solid", "Framer", "effekter"]
+  },
+  "SimonSchubert/omalauncher": {
+    "summary": "Android-launcher med agentbygde apper og widgets, Omarchy-temaer og Arch Linux uten root.",
+    "categories": ["Apper og egen drift", "Skills og agentverktøy"],
+    "reuse": "Studer et tilpassbart Android-startgrensesnitt og agentarbeid med apper og widgets.",
+    "caveats": "Ingen Android-installasjon er utført. Lisensfeltet er NOASSERTION og må avklares fra faktiske vilkår før gjenbruk.",
+    "tags": ["Android", "launcher", "widgets", "Omarchy", "Arch Linux", "agenter"]
+  },
+  "snuri00/ps2-web-recomp": {
+    "summary": "Statisk rekompilering av PS2-spill til WebAssembly, med native runtime.",
+    "categories": ["Spill og spillmotorer"],
+    "reuse": "Undersøk en PS2-rekompileringspipeline og skillet mellom generert kode og runtime.",
+    "caveats": "Ingen spill er rekompilert eller kjørt. Prosjektbeskrivelsen dokumenterer ikke full PS2-kompatibilitet.",
+    "tags": ["PS2", "PlayStation 2", "rekompilering", "WebAssembly", "WASM", "runtime"]
+  },
+  "snuri00/ps3recomp": {
+    "summary": "Runtime-biblioteker for statisk rekompilering av PS3-titler.",
+    "categories": ["Spill og spillmotorer"],
+    "reuse": "Studer runtime-grensesnitt og støttebiblioteker for PS3-rekompilering.",
+    "caveats": "Et runtime-bibliotek er ikke i seg selv en ferdig port av et spill. Ingen lokal bygging eller kompatibilitetstest.",
+    "tags": ["PS3", "PlayStation 3", "rekompilering", "runtime", "bibliotek"]
+  },
+  "snuri00/psp-web-recomp": {
+    "summary": "PSP-spill i nettleseren med statisk rekompilering til WebAssembly, HLE-kjerne og WebGL2.",
+    "categories": ["Spill og spillmotorer"],
+    "reuse": "Undersøk kombinasjonen av rekompilert kode, systemkall og nettleserrendering.",
+    "caveats": "Ingen PSP-spill er bygget eller testet. Kompatibilitet må undersøkes for den konkrete tittelen.",
+    "tags": ["PSP", "rekompilering", "WebAssembly", "WASM", "HLE", "WebGL2", "nettleser"]
+  },
+  "snuri00/turbo-quant": {
+    "summary": "TurboQuant: kvantisering av KV-cache for LLM-inferens, med QJL og PolarQuant.",
+    "categories": ["Skills og agentverktøy"],
+    "reuse": "Vurder komprimering av KV-cache som referanse for en senere måling av lokal inferens.",
+    "caveats": "Ingen inferensbenchmark er kjørt. Kontroller implementasjon, modellstøtte, minnebruk og kvalitet før integrasjon.",
+    "tags": ["TurboQuant", "kvantisering", "KV-cache", "LLM", "inferens", "QJL", "PolarQuant"]
+  },
+  "snuri00/turbo-quant-ios": {
+    "summary": "Metal-akselerert komprimering av KV-cache for lokal LLM-inferens på Apple-enheter.",
+    "categories": ["Skills og agentverktøy"],
+    "reuse": "Studer GPU-akselerert cachekomprimering på iPhone, iPad og Mac.",
+    "caveats": "Ingen Apple-enhet er testet. Plattform- og modellstøtte må sjekkes ved valgt revisjon.",
+    "tags": ["TurboQuant", "iOS", "Metal", "Apple", "iPhone", "iPad", "Mac", "KV-cache", "LLM"]
+  },
+  "storytold/photocraft": {
+    "summary": "Åpen bilderedigerer skrevet i Rust.",
+    "categories": ["Apper og egen drift"],
+    "reuse": "Undersøk arkitektur og bildebehandling som referanse for lokale redigeringsverktøy.",
+    "caveats": "Ikke bygget eller kjørt. Funksjoner, filformatstøtte og plattformkompatibilitet må verifiseres før bruk.",
+    "tags": ["PhotoCraft", "Rust", "bildebehandling", "bilderedigering"]
+  },
+  "TencentARC/AnimeSR": {
+    "summary": "AnimeSR: superoppløsning av animasjonsvideo.",
+    "categories": ["3D og simulering"],
+    "reuse": "Vurder metoden som kandidat for en avgrenset oppskaleringsprøve av animasjon.",
+    "caveats": "GitHubs lisensfelt er NOASSERTION. Les kode- og modellvilkår før gjenbruk; ingen modeller eller videoklipp er testet.",
+    "tags": ["AnimeSR", "superoppløsning", "oppskalering", "animasjon", "video"]
+  },
+  "Tombonator3000/Dig-HD-Remake": {
+    "summary": "HD-versjon av The Dig med grafikk over originalen gjennom en ScummVM-patch.",
+    "categories": ["Egne prosjekter", "Spill og spillmotorer"],
+    "reuse": "Bruk de eksisterende løsningskortene om figurark, publisert mod og logg over manglende HD.",
+    "caveats": "Biblioteket viser offentlig kode og dokumentasjon. Originaldata og avledet spillgrafikk har egne rettigheter. Ingen ny spilltest i denne innhentingen.",
+    "tags": ["The Dig", "HD", "ScummVM", "sprites", "figurark", "mod", "spill", "løsningskort"]
   }
 }

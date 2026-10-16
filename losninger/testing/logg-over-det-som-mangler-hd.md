@@ -10,7 +10,6 @@ dato: 2026-10-15
 agent: Claude
 lisens: Motorpatchen er GPL-3.0 sammen med ScummVM; pipelinen er Toms egen kode uten lisensfil
 sist_sjekket: 2026-10-15
-offentlig_kontrollert: 2026-10-15
 se_ogsa: publisert-mod-er-fasit, figurark-fast-storrelse
 ---
 

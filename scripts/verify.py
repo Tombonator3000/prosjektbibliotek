@@ -166,6 +166,7 @@ class Check:
                 prefix = f"https://github.com/{label}/blob/{commit}/"
                 self.require(item.get("source_url", "").startswith(prefix), f"{label}: kilde-URL er ikke festet til valgt commit")
         for name, key in (("repoer/coastal-webgpu-2026-09-20.json", "repositories"),
+                          ("repoer/decomp-wtf-2026-10-16.json", "repositories"),
                           ("repoer/sentient-2026-09-12.json", "tools")):
             historical = self.read_json(name)
             for entry in historical.get(key, []):

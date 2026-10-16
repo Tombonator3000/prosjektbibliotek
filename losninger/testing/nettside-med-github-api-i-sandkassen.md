@@ -9,7 +9,6 @@ opphav: Tombonator3000/ZakMcKracken-HD@7147a72e2522124c3c5a5874c5e0ce65dcb28db3:
 dato: 2026-10-14
 agent: Claude
 lisens: Ingen lisensfil i repoet
-offentlig_kontrollert: 2026-10-14
 se_ogsa: playwright-swiftshader-three-lokalt, pages-deler-localstorage
 sist_sjekket: 2026-10-14
 ---

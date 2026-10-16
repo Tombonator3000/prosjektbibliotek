@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "collected_at": "2026-10-05T19:46:22+00:00",
+  "collected_at": "2026-10-16T15:48:05+00:00",
   "scope": "Public repositories; SKILL.md documents, not runtime verification",
-  "scanned_count": 78,
+  "scanned_count": 101,
   "sources": [
     {
       "repository": "achillean/shodan-python",
@@ -30,13 +30,33 @@
       "license_spdx": "MIT"
     },
     {
-      "repository": "alphanu1/daytona-arcade-recomp",
-      "commit": "9ad266b0a0d2b860c14d95cfe1425eea942d7b06",
-      "tree_sha": "810dfa11a8f4057e4bba318097841d8760590373",
+      "repository": "ahujasid/mcp-for-blender",
+      "commit": "7a0373ec9199183cb460068c4f96aed9c579fb4f",
+      "tree_sha": "f15cafed967cee94554d9c3009e7abcbeeb5ebb4",
       "truncated": false,
-      "pushed_at": "2026-10-04T20:50:27Z",
+      "pushed_at": "2026-10-06T15:08:04Z",
       "default_branch": "main",
-      "license_spdx": null,
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "alphanu1/daytona-arcade-recomp",
+      "commit": "b33baeb28a1e1c94d90a4a80811f0b2c7f61106b",
+      "tree_sha": "62079143ebc1c01fdf06298e4eb7f5b07eeb7439",
+      "truncated": false,
+      "pushed_at": "2026-10-13T20:33:27Z",
+      "default_branch": "main",
+      "license_spdx": "BSD-3-Clause",
+      "skills": []
+    },
+    {
+      "repository": "amathislab/terra",
+      "commit": "db9d0d694f776c9de56b8cb3fc3ab48804bd57a1",
+      "tree_sha": "bc91991b8a0af1128271b5e5da7aca24365271d6",
+      "truncated": false,
+      "pushed_at": "2026-10-09T16:51:28Z",
+      "default_branch": "main",
+      "license_spdx": "Apache-2.0",
       "skills": []
     },
     {
@@ -50,6 +70,21 @@
       "skills": []
     },
     {
+      "repository": "arielshad/3d-asset-server",
+      "commit": "2efa8d8e284efc03fce5ebe6331e0d21de381c9f",
+      "tree_sha": "08bc3a3d571210acebc1e9527e72df00d20f8abd",
+      "truncated": false,
+      "pushed_at": "2026-10-16T10:02:25Z",
+      "default_branch": "main",
+      "license_spdx": "Apache-2.0",
+      "skills": [
+        {
+          "path": "web/src/content/SKILL.md",
+          "blob_sha": "ad12d8e9edbb4fb878606431e4bdaf31e3e6a5a5"
+        }
+      ]
+    },
+    {
       "repository": "Aureliengmz/clearwater",
       "tree_sha": "e200aaef2f079b78280da29fed115858b1cc258e",
       "truncated": false,
@@ -61,10 +96,10 @@
     },
     {
       "repository": "bethington/ghidra-mcp",
-      "commit": "3f8d2a0d735033e3c48904c16c9dfaa2cfa80820",
-      "tree_sha": "8bb5df07b0f875434eb94f2fb92b5f8be78c840b",
+      "commit": "cf8b12db27eb139b28b90eaa3488306da910d759",
+      "tree_sha": "814d1dc8896e002ee86a19bf50d07b279a04d591",
       "truncated": false,
-      "pushed_at": "2026-10-05T09:32:15Z",
+      "pushed_at": "2026-10-16T01:17:04Z",
       "default_branch": "dev",
       "license_spdx": "Apache-2.0",
       "skills": []
@@ -81,18 +116,28 @@
     },
     {
       "repository": "bilawalsidhu/gods-eye-view",
-      "commit": "a08a53cf9469eb991f708bd3d042c327a2347e3c",
-      "tree_sha": "8e32a8bb0d3f5514ab0c76682c016721c95748bb",
+      "commit": "537e99dfa45a3f7b239ad6230a65be658b3ea29d",
+      "tree_sha": "7637938d7e9cf7a975eb208a2cbf0520d984cf26",
       "truncated": false,
-      "pushed_at": "2026-10-05T16:03:09Z",
+      "pushed_at": "2026-10-16T11:47:12Z",
       "default_branch": "main",
       "license_spdx": "NOASSERTION",
       "skills": [
         {
           "path": ".agents/skills/community-pr/SKILL.md",
-          "blob_sha": "78acefb0000792fbd0ecd4c913dccfbd3844a7b4"
+          "blob_sha": "1441a998371471d65f37fbf830e01f0a3e8a1c98"
         }
       ]
+    },
+    {
+      "repository": "BlueHeisenberg/SCSKiller",
+      "commit": "b10c1e38be5901330c7af39c026d03d660db6883",
+      "tree_sha": "e27cb1acfc09c922a4e9f647be8ab74092bed3bc",
+      "truncated": false,
+      "pushed_at": "2026-10-11T17:50:47Z",
+      "default_branch": "main",
+      "license_spdx": "GPL-3.0",
+      "skills": []
     },
     {
       "repository": "bobeff/open-source-games",
@@ -106,13 +151,13 @@
     },
     {
       "repository": "chaseleantj/deskworlds",
-      "tree_sha": "b46746f93659c700f13c5876272b305cc764c999",
+      "commit": "42ad88c98b394efddb071016f2df40d3c2032c96",
+      "tree_sha": "04952965b674b771301fb0ed4994f77ae8ad1555",
       "truncated": false,
-      "skills": [],
-      "pushed_at": "2026-09-30T20:11:50Z",
+      "pushed_at": "2026-10-09T12:18:31Z",
       "default_branch": "main",
       "license_spdx": "MIT",
-      "commit": "1be66513b2e90b780d8da9eb7ac89b8b6e3146fc"
+      "skills": []
     },
     {
       "repository": "chrispository/desktop-habitats-omarchy",
@@ -141,10 +186,10 @@
     },
     {
       "repository": "Crosstalk-Solutions/project-nomad",
-      "commit": "5e1702efebfc5549f870911b2b042ed3bd312fcd",
-      "tree_sha": "ef37bd2672a051521de0917004f2d46d46cbdffe",
+      "commit": "54ee30a44902e5c252b477f8685c26ec3064ab72",
+      "tree_sha": "a18994ea887a68dca46120319a3c63640035bc88",
       "truncated": false,
-      "pushed_at": "2026-10-02T22:13:45Z",
+      "pushed_at": "2026-10-16T05:15:42Z",
       "default_branch": "main",
       "license_spdx": "Apache-2.0",
       "skills": []
@@ -161,10 +206,10 @@
     },
     {
       "repository": "debpalash/VoiceStudio",
-      "commit": "286f46bba14bc8718a05b56af5829e37f34129e8",
-      "tree_sha": "8c3bd9c6a9ead23098772a6a25f84a94824a04b6",
+      "commit": "f47221a1f0af89df27c34747471daa30391a9487",
+      "tree_sha": "d8836c82139191ecc7029323ae2aa18ec000cda9",
       "truncated": false,
-      "pushed_at": "2026-10-05T18:30:38Z",
+      "pushed_at": "2026-10-16T14:33:40Z",
       "default_branch": "main",
       "license_spdx": "AGPL-3.0",
       "skills": [
@@ -182,7 +227,7 @@
         },
         {
           "path": "skills/voicestudio/SKILL.md",
-          "blob_sha": "8aa8e8f69d4faccef279d1535e53c540645f083f"
+          "blob_sha": "a612d3fd67d1f917e48425f47cde556c7c43dc7c"
         }
       ]
     },
@@ -207,6 +252,29 @@
       "commit": "8cc20593b2270e2ce832e7b7b44356705daddec4"
     },
     {
+      "repository": "EpicGames/unreal-engine-skills-for-claude-code-plugin",
+      "commit": "a6aa73ada02a9fb1f5415bec491f9942c519b297",
+      "tree_sha": "b5b9624b00fc90217240e823406699d0ab78b959",
+      "truncated": false,
+      "pushed_at": "2026-09-17T02:27:43Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": [
+        {
+          "path": "skills/create-toolset/SKILL.md",
+          "blob_sha": "febf5d5a70739b8bb1d65215ef8272a67f0bbfdd"
+        },
+        {
+          "path": "skills/unreal-mcp/SKILL.md",
+          "blob_sha": "9cd2cc2656d05a738f5814fb2945cc48daff66fc"
+        },
+        {
+          "path": "skills/unreal-skill/SKILL.md",
+          "blob_sha": "a1513865cb7299fc4c76843f426352934bb7aa47"
+        }
+      ]
+    },
+    {
       "repository": "ErwannRobin/ex-nihilo",
       "tree_sha": "39c2c0c01ec3e37f8b6cf90fe1392c7f33159425",
       "truncated": false,
@@ -218,13 +286,87 @@
     },
     {
       "repository": "github/github-mcp-server",
-      "commit": "71ef8266e48110974b13aef50b4df6ff9914ff68",
-      "tree_sha": "970552bbfc4dbcc6a26d7664b877a32101db5930",
+      "commit": "e3809fe91c7546633241006bf0b91f23b2595e28",
+      "tree_sha": "d3b3686a891cfbaad922ab9cacc8ecc5e3406151",
       "truncated": false,
-      "pushed_at": "2026-10-05T16:15:15Z",
+      "pushed_at": "2026-10-15T21:16:40Z",
       "default_branch": "main",
       "license_spdx": "MIT",
       "skills": []
+    },
+    {
+      "repository": "GLinnik21/plx-native",
+      "commit": "e8125923db9eb27cf0ffb8f45321e01be57b04dd",
+      "tree_sha": "2d723b9454a6f76ba9d493c24d29d94e4ee616e4",
+      "truncated": false,
+      "pushed_at": "2026-10-16T15:42:47Z",
+      "default_branch": "main",
+      "license_spdx": "GPL-3.0",
+      "skills": [
+        {
+          "path": ".agents/skills/bind-tv-lib-abi/SKILL.md",
+          "blob_sha": "5d04ae544ce6bd4c36ac3e7d6fa70b4a399a4aad"
+        },
+        {
+          "path": ".agents/skills/crash-triage/SKILL.md",
+          "blob_sha": "81f9e777f4da155c3559b1ad96f80b8691d55bc9"
+        },
+        {
+          "path": ".agents/skills/cut-release/SKILL.md",
+          "blob_sha": "f79e74fb19c9f0d72d82d40b8343ddbc98bbab30"
+        },
+        {
+          "path": ".agents/skills/decompile-tv-lib/SKILL.md",
+          "blob_sha": "b83b6471246817c8000ddc2503098cb1e6756e02"
+        },
+        {
+          "path": ".agents/skills/fleet-plan/SKILL.md",
+          "blob_sha": "4ad41f405dd16bfecc79773659e6ebde9c3097fb"
+        },
+        {
+          "path": ".agents/skills/profile-tv/SKILL.md",
+          "blob_sha": "a410755ab3084df1efacfb2f42e4b27558dab11d"
+        },
+        {
+          "path": ".agents/skills/setup-environment/SKILL.md",
+          "blob_sha": "754fe81413af0a16b6559b8ff44c6c0ce729686e"
+        },
+        {
+          "path": ".agents/skills/tv-lock/SKILL.md",
+          "blob_sha": "09ed104f5ecf38618dd7dc94da8e869a371d02fe"
+        },
+        {
+          "path": ".agents/skills/tv-session/SKILL.md",
+          "blob_sha": "d57eb7dc220f860cd823c4f8b21682a5a6c511fc"
+        },
+        {
+          "path": ".agents/skills/ui-sim/SKILL.md",
+          "blob_sha": "d101268d00eba51fe3899b46a6a07fac6573aee3"
+        },
+        {
+          "path": ".agents/skills/wake-tv/SKILL.md",
+          "blob_sha": "17e791a3426ba136ee7d949a12c44a5d52d07144"
+        },
+        {
+          "path": ".agents/skills/which-tier/SKILL.md",
+          "blob_sha": "b5f5000e681e2c5425413062645da9553ba348c4"
+        }
+      ]
+    },
+    {
+      "repository": "i12bp8/decomp.wtf",
+      "commit": "575b4a30ed481ff5497dfb9ce4f599368a95a04a",
+      "tree_sha": "f65de843b33b886c46f9d39b55ab15dc6311de23",
+      "truncated": false,
+      "pushed_at": "2026-10-15T20:39:36Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": [
+        {
+          "path": "plugins/decomp-wtf/skills/decompile/SKILL.md",
+          "blob_sha": "c0826b64b599de31966599a7a7a45247fb70fa61"
+        }
+      ]
     },
     {
       "repository": "iamtechartist/coastal-simulation",
@@ -282,11 +424,21 @@
       "license_spdx": "MIT"
     },
     {
+      "repository": "joetsoi/OpenMoonstone",
+      "commit": "60b253ec76c6b85924de6c9d08d42e9e42913760",
+      "tree_sha": "1601f3a9eb22e8fe5956e963a5905da3008ac596",
+      "truncated": false,
+      "pushed_at": "2023-05-15T16:27:04Z",
+      "default_branch": "master",
+      "license_spdx": "AGPL-3.0",
+      "skills": []
+    },
+    {
       "repository": "Karolynaz/devil-3ds",
       "commit": "7f58000383f9a0c775da42ca2bc5f0d1c217becc",
       "tree_sha": "4601f8084c771b764bb223c5a2f6d9451fa3c4d5",
       "truncated": false,
-      "pushed_at": "2026-10-05T19:06:55Z",
+      "pushed_at": "2026-10-16T08:59:38Z",
       "default_branch": "master",
       "license_spdx": "NOASSERTION",
       "skills": []
@@ -316,7 +468,7 @@
       "commit": "49a38f8d33c32336bbf6a111ea723ea223116265",
       "tree_sha": "695ccc6d83dcbf08a3e6049c14e1847fff7336a6",
       "truncated": false,
-      "pushed_at": "2026-10-04T19:00:27Z",
+      "pushed_at": "2026-10-14T05:13:58Z",
       "default_branch": "master",
       "license_spdx": "GPL-2.0",
       "skills": []
@@ -338,30 +490,67 @@
     },
     {
       "repository": "marceld23/BlocksBeyondTheStars",
-      "commit": "668d085ee558659c7e4ae6e0173ca58257c14cc4",
-      "tree_sha": "1aea84ff915e3a9a0502e3aa73ba2fdf7770926b",
+      "commit": "7f93f7cb305b4efdc3a92c63901f7a077097abcc",
+      "tree_sha": "a40b45777afd7bc4b531f1e07d3228398805915b",
       "truncated": false,
-      "pushed_at": "2026-10-05T19:18:29Z",
+      "pushed_at": "2026-10-16T13:26:28Z",
       "default_branch": "main",
       "license_spdx": "AGPL-3.0",
       "skills": []
     },
     {
-      "repository": "moonpudding/localchannels",
-      "tree_sha": "fb4ae73864d54eb528f687fa813e1f291208c4ed",
+      "repository": "microsoft/TRELLIS.2",
+      "commit": "75fbf0183001ed9876c8dbb35de6b68552ee08bd",
+      "tree_sha": "3f9738a1f65eb732b1619ceb0a01069c6c71d5b3",
       "truncated": false,
-      "skills": [],
-      "pushed_at": "2026-08-21T10:10:53Z",
+      "pushed_at": "2026-07-10T12:34:32Z",
       "default_branch": "main",
       "license_spdx": "MIT",
-      "commit": "7bfdb777f464408f669b17b45581011244fd7a2c"
+      "skills": []
+    },
+    {
+      "repository": "moonpudding/localchannels",
+      "commit": "cc99ae78c844cb18db47b4f0e3f15a7f99072e66",
+      "tree_sha": "b937d05e7c16554a74b660ab9007c5d0b34a290b",
+      "truncated": false,
+      "pushed_at": "2026-10-11T22:23:41Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "morluto/rea",
+      "commit": "9a82046b07244e62df22076b64ded05ff9abc5db",
+      "tree_sha": "b68476ba3f6b8003eeabdf0b6c4ca52afe459978",
+      "truncated": false,
+      "pushed_at": "2026-10-16T15:35:19Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": [
+        {
+          "path": ".agents/skills/rea-changelog-update/SKILL.md",
+          "blob_sha": "d45f226383eb7c12ff2b39e54b387266b034455a"
+        },
+        {
+          "path": ".agents/skills/rea-ci-tests-audit/SKILL.md",
+          "blob_sha": "4d7b44bf5c78bd5208118949118d85bfb60bc0a1"
+        },
+        {
+          "path": ".agents/skills/rea-tool-design/SKILL.md",
+          "blob_sha": "f4ba7894e7ab4040d7ee061fb04669ee12779764"
+        },
+        {
+          "path": ".agents/skills/reverse-engineer-anything/SKILL.md",
+          "blob_sha": "4101b1e1656c27b188f8837709ab064d45b791f3"
+        }
+      ]
     },
     {
       "repository": "multimodal-art-projection/YuE",
-      "commit": "3d21f8f5d31be867f4c3b2e6beafb0f2e52f8c10",
-      "tree_sha": "a0baf946c4101a04ce92e3105780fa4626014e38",
+      "commit": "1647252d68b70cbead046ffd3f7caf036dde47ee",
+      "tree_sha": "5c6db27a234633ed6f0ce3bfdcc906bf0e78db1e",
       "truncated": false,
-      "pushed_at": "2026-10-05T13:58:58Z",
+      "pushed_at": "2026-10-06T07:30:39Z",
       "default_branch": "main",
       "license_spdx": "Apache-2.0",
       "skills": [
@@ -377,10 +566,10 @@
     },
     {
       "repository": "NationalSecurityAgency/ghidra",
-      "commit": "77f213795d97abaae7da8ac9097794acb7438c59",
-      "tree_sha": "704fcc8e87d1b725f83b454a30fc8a767644bf51",
+      "commit": "2ea69c678b1f8f44352e6a8f6d05633a906f2064",
+      "tree_sha": "5bed5163af395fd3dbf513ddfa7da9a1219db52e",
       "truncated": false,
-      "pushed_at": "2026-10-05T13:19:28Z",
+      "pushed_at": "2026-10-16T15:07:24Z",
       "default_branch": "master",
       "license_spdx": "Apache-2.0",
       "skills": []
@@ -430,10 +619,10 @@
     },
     {
       "repository": "OpenCloudGaming/OpenNOW",
-      "commit": "bee18c118dbc89f42319436dcdb172d5b9e15e0c",
-      "tree_sha": "70dee0f03a1eebbec5f7ad6b51602663e0ab126d",
+      "commit": "60ce69a07bf94ba484af7406d386ccb28e5a13e6",
+      "tree_sha": "b9ffeed2aa96212e28afa53e5c6864da022afd91",
       "truncated": false,
-      "pushed_at": "2026-10-05T19:19:54Z",
+      "pushed_at": "2026-10-16T15:38:06Z",
       "default_branch": "main",
       "license_spdx": "MIT",
       "skills": [
@@ -449,10 +638,10 @@
     },
     {
       "repository": "rehan-remade/universal-modder",
-      "commit": "0f5dcdfdcd8ed420f8413815bd6647586ab894a2",
-      "tree_sha": "7ec39a535cd30b13860cc07b63f4662b564f2ecd",
+      "commit": "23902ef42e8ea9b077bfbbf6911eb8ea0348e55a",
+      "tree_sha": "dadae243cd60d5d1e644f89599bda923f952af28",
       "truncated": false,
-      "pushed_at": "2026-10-05T12:43:12Z",
+      "pushed_at": "2026-10-16T11:19:09Z",
       "default_branch": "main",
       "license_spdx": "MIT",
       "skills": [
@@ -462,35 +651,43 @@
         },
         {
           "path": ".agents/skills/fal-assets/SKILL.md",
-          "blob_sha": "bcd6f94976b0196e79634236d5ac11e06ce8a20b"
+          "blob_sha": "0395f68762dcc70a19ae5fca50f85d4db411436f"
         },
         {
           "path": ".agents/skills/game-automation/SKILL.md",
-          "blob_sha": "0c585788e3a09905aff9d10ca7c82078860eef3f"
+          "blob_sha": "c95b780e9f5a07a89ff6d7f4394271c1712aebb0"
         },
         {
           "path": ".agents/skills/game-recon/SKILL.md",
           "blob_sha": "3d284caa09f33beea74c7660c2f584cfcbcd70f2"
         },
         {
+          "path": ".agents/skills/game-research-websearch/SKILL.md",
+          "blob_sha": "839893ffbd0f5d6d4e6e090b363f53e4aed925f2"
+        },
+        {
           "path": ".agents/skills/mashup-mods/SKILL.md",
-          "blob_sha": "726e83c63b1ca3ce5b52968a05cf41f1fea48c5f"
+          "blob_sha": "57ec207746d9ebbd57aa111319d4bede4493192d"
         },
         {
           "path": ".agents/skills/mod-any-game/SKILL.md",
-          "blob_sha": "d28c743d28c84d94572bf842a4f5fe668c7170b4"
+          "blob_sha": "b54560c7280c5d8d84f65e18f8b46ee9e963f862"
+        },
+        {
+          "path": ".agents/skills/port-a-mod/SKILL.md",
+          "blob_sha": "a033ea533ff9fc4407982ef194cd6ce24a994781"
         },
         {
           "path": ".agents/skills/publish-mod/SKILL.md",
-          "blob_sha": "f610ff98f448d3d6fd7de635344f0220d220f43a"
+          "blob_sha": "9b7dc6b53012237c599749f0f21ae369b687b8bf"
         },
         {
           "path": ".agents/skills/reverse-engineering/SKILL.md",
-          "blob_sha": "b36619abda9349419b3a7799b5c114ea647f1ffd"
+          "blob_sha": "9765bb1c72586edc64fbbd900f7dbbf3851717f6"
         },
         {
           "path": ".agents/skills/share-field-notes/SKILL.md",
-          "blob_sha": "1d1300ef49807da4e61e9208dd984f9a91106860"
+          "blob_sha": "87ab9a0d59229d8967ff7e92a289ac03a890c890"
         },
         {
           "path": ".agents/skills/showcase-video/SKILL.md",
@@ -502,35 +699,43 @@
         },
         {
           "path": ".claude/skills/fal-assets/SKILL.md",
-          "blob_sha": "bcd6f94976b0196e79634236d5ac11e06ce8a20b"
+          "blob_sha": "0395f68762dcc70a19ae5fca50f85d4db411436f"
         },
         {
           "path": ".claude/skills/game-automation/SKILL.md",
-          "blob_sha": "0c585788e3a09905aff9d10ca7c82078860eef3f"
+          "blob_sha": "c95b780e9f5a07a89ff6d7f4394271c1712aebb0"
         },
         {
           "path": ".claude/skills/game-recon/SKILL.md",
           "blob_sha": "3d284caa09f33beea74c7660c2f584cfcbcd70f2"
         },
         {
+          "path": ".claude/skills/game-research-websearch/SKILL.md",
+          "blob_sha": "839893ffbd0f5d6d4e6e090b363f53e4aed925f2"
+        },
+        {
           "path": ".claude/skills/mashup-mods/SKILL.md",
-          "blob_sha": "726e83c63b1ca3ce5b52968a05cf41f1fea48c5f"
+          "blob_sha": "57ec207746d9ebbd57aa111319d4bede4493192d"
         },
         {
           "path": ".claude/skills/mod-any-game/SKILL.md",
-          "blob_sha": "d28c743d28c84d94572bf842a4f5fe668c7170b4"
+          "blob_sha": "b54560c7280c5d8d84f65e18f8b46ee9e963f862"
+        },
+        {
+          "path": ".claude/skills/port-a-mod/SKILL.md",
+          "blob_sha": "a033ea533ff9fc4407982ef194cd6ce24a994781"
         },
         {
           "path": ".claude/skills/publish-mod/SKILL.md",
-          "blob_sha": "f610ff98f448d3d6fd7de635344f0220d220f43a"
+          "blob_sha": "9b7dc6b53012237c599749f0f21ae369b687b8bf"
         },
         {
           "path": ".claude/skills/reverse-engineering/SKILL.md",
-          "blob_sha": "b36619abda9349419b3a7799b5c114ea647f1ffd"
+          "blob_sha": "9765bb1c72586edc64fbbd900f7dbbf3851717f6"
         },
         {
           "path": ".claude/skills/share-field-notes/SKILL.md",
-          "blob_sha": "1d1300ef49807da4e61e9208dd984f9a91106860"
+          "blob_sha": "87ab9a0d59229d8967ff7e92a289ac03a890c890"
         },
         {
           "path": ".claude/skills/showcase-video/SKILL.md",
@@ -542,35 +747,43 @@
         },
         {
           "path": "skills/fal-assets/SKILL.md",
-          "blob_sha": "bcd6f94976b0196e79634236d5ac11e06ce8a20b"
+          "blob_sha": "0395f68762dcc70a19ae5fca50f85d4db411436f"
         },
         {
           "path": "skills/game-automation/SKILL.md",
-          "blob_sha": "0c585788e3a09905aff9d10ca7c82078860eef3f"
+          "blob_sha": "c95b780e9f5a07a89ff6d7f4394271c1712aebb0"
         },
         {
           "path": "skills/game-recon/SKILL.md",
           "blob_sha": "3d284caa09f33beea74c7660c2f584cfcbcd70f2"
         },
         {
+          "path": "skills/game-research-websearch/SKILL.md",
+          "blob_sha": "839893ffbd0f5d6d4e6e090b363f53e4aed925f2"
+        },
+        {
           "path": "skills/mashup-mods/SKILL.md",
-          "blob_sha": "726e83c63b1ca3ce5b52968a05cf41f1fea48c5f"
+          "blob_sha": "57ec207746d9ebbd57aa111319d4bede4493192d"
         },
         {
           "path": "skills/mod-any-game/SKILL.md",
-          "blob_sha": "d28c743d28c84d94572bf842a4f5fe668c7170b4"
+          "blob_sha": "b54560c7280c5d8d84f65e18f8b46ee9e963f862"
+        },
+        {
+          "path": "skills/port-a-mod/SKILL.md",
+          "blob_sha": "a033ea533ff9fc4407982ef194cd6ce24a994781"
         },
         {
           "path": "skills/publish-mod/SKILL.md",
-          "blob_sha": "f610ff98f448d3d6fd7de635344f0220d220f43a"
+          "blob_sha": "9b7dc6b53012237c599749f0f21ae369b687b8bf"
         },
         {
           "path": "skills/reverse-engineering/SKILL.md",
-          "blob_sha": "b36619abda9349419b3a7799b5c114ea647f1ffd"
+          "blob_sha": "9765bb1c72586edc64fbbd900f7dbbf3851717f6"
         },
         {
           "path": "skills/share-field-notes/SKILL.md",
-          "blob_sha": "1d1300ef49807da4e61e9208dd984f9a91106860"
+          "blob_sha": "87ab9a0d59229d8967ff7e92a289ac03a890c890"
         },
         {
           "path": "skills/showcase-video/SKILL.md",
@@ -610,13 +823,25 @@
     },
     {
       "repository": "scenario-labs/skills",
-      "commit": "91caa011e13774a220aba7136309b49964104040",
-      "tree_sha": "377205e8b70b1a2daeb300703d498eb5b79b9c4d",
+      "commit": "49dd26e47371163ae0020c7f5627d0993626bfc2",
+      "tree_sha": "9ecdb6c176a16546394aba20822b6c1bcb94b86c",
       "truncated": false,
-      "pushed_at": "2026-10-04T19:21:05Z",
+      "pushed_at": "2026-10-16T14:25:27Z",
       "default_branch": "main",
       "license_spdx": "MIT",
       "skills": [
+        {
+          "path": ".agents/skills/pr-handle-comments/SKILL.md",
+          "blob_sha": "b9931754598cc2241d6440f17d6cf2aefa4a92fe"
+        },
+        {
+          "path": ".agents/skills/pr-squash-message/SKILL.md",
+          "blob_sha": "e908588bc5b65a014b8a5dd9af1aa8528dbbea73"
+        },
+        {
+          "path": ".agents/skills/pr-summary/SKILL.md",
+          "blob_sha": "9318ce55ad47fa5611a5fcfca74119bf5d66120a"
+        },
         {
           "path": ".agents/skills/skill-creator/SKILL.md",
           "blob_sha": "65b3a402dbd09b8e83f9d637c6b553875189085c"
@@ -627,19 +852,11 @@
         },
         {
           "path": ".agents/skills/skills-pr-handle/SKILL.md",
-          "blob_sha": "b19a1e912d775331637f690e4d145870384af0f7"
-        },
-        {
-          "path": ".agents/skills/skills-pr-summary/SKILL.md",
-          "blob_sha": "a53fb3970d49da195ad77bcd9f1e6e4d1d0313eb"
-        },
-        {
-          "path": ".agents/skills/skills-squash-message/SKILL.md",
-          "blob_sha": "1d320e4b8953f7073b0a5b954e4676dc2ff3d213"
+          "blob_sha": "090b0115ab3c7e34bc930d2600020ac69f4a0dea"
         },
         {
           "path": ".agents/skills/skills-validate/SKILL.md",
-          "blob_sha": "d4139d06646334542a413fbc773b911de3992e63"
+          "blob_sha": "453c49e04609bc4a93ca18e46dddd8b181855fad"
         },
         {
           "path": "skills/dcc/blender/scenario-blender-animation/SKILL.md",
@@ -795,7 +1012,7 @@
         },
         {
           "path": "skills/game-engines/godot/scenario-godot-expert/SKILL.md",
-          "blob_sha": "e33fad64309c8f6aa29f943db8647ab6a7136f66"
+          "blob_sha": "5080a45fcbd612d8cfc5b680d8b3c5e66a8a5f26"
         },
         {
           "path": "skills/game-engines/godot/scenario-godot-gameplay/SKILL.md",
@@ -807,7 +1024,7 @@
         },
         {
           "path": "skills/game-engines/godot/scenario-godot-performance-export/SKILL.md",
-          "blob_sha": "14754f6f45a188a4db28de2defa7749061854165"
+          "blob_sha": "fba8d3bbf811ccbbe87a36381bbc17cd0dce1fea"
         },
         {
           "path": "skills/game-engines/godot/scenario-godot-pipeline-automation/SKILL.md",
@@ -931,11 +1148,15 @@
         },
         {
           "path": "skills/scenario-3d/SKILL.md",
-          "blob_sha": "da222d4d9afbfbc7bd171be034c470b64d29aeed"
+          "blob_sha": "4826f801105995a17b70f224ff60e769eb8c7817"
         },
         {
           "path": "skills/scenario-ace-step/SKILL.md",
           "blob_sha": "f0be3ae4b3b8e63b40a90e2aaec2dee5b69efaeb"
+        },
+        {
+          "path": "skills/scenario-ad-variants/SKILL.md",
+          "blob_sha": "07d299e50089ffbd6509eae70dd5b6ea111a602a"
         },
         {
           "path": "skills/scenario-admin-analytics/SKILL.md",
@@ -943,11 +1164,11 @@
         },
         {
           "path": "skills/scenario-asset-analysis/SKILL.md",
-          "blob_sha": "a5e305e60201c521f027bae2f41a2df291304045"
+          "blob_sha": "01f49ec4a3f49a56dc9ffcb2edaa36b50a7929c6"
         },
         {
           "path": "skills/scenario-audio/SKILL.md",
-          "blob_sha": "1045e35d81aaa72ca544a92216e4195a4720ee97"
+          "blob_sha": "687e880b349954f3fcda9a3fd1457fe1b009477e"
         },
         {
           "path": "skills/scenario-brand-kit/SKILL.md",
@@ -955,7 +1176,15 @@
         },
         {
           "path": "skills/scenario-caption-studio/SKILL.md",
-          "blob_sha": "f3b0dd50707932975c6a78ee208640743408fa07"
+          "blob_sha": "60617aaa3fdbf5cb8714d10b998c10cff0cd4d84"
+        },
+        {
+          "path": "skills/scenario-chatgpt-pet-create/SKILL.md",
+          "blob_sha": "f2dd1a3f1a66df58a2ca0e7e22d2cd165bba6d17"
+        },
+        {
+          "path": "skills/scenario-chatgpt-pet-update/SKILL.md",
+          "blob_sha": "77ac0973a90b6e72d4ad2b98448af9c3dab8061e"
         },
         {
           "path": "skills/scenario-consistency/SKILL.md",
@@ -975,7 +1204,7 @@
         },
         {
           "path": "skills/scenario-game-assets/SKILL.md",
-          "blob_sha": "ed960e98369c0d9a4e717df30996b4aa8b457520"
+          "blob_sha": "f4b39a0c4cc47310e5eb389d4b21d109564be98c"
         },
         {
           "path": "skills/scenario-gemini-image/SKILL.md",
@@ -987,7 +1216,7 @@
         },
         {
           "path": "skills/scenario-gpt-image/SKILL.md",
-          "blob_sha": "05f54c4ef7052c8468d1da0049889df7593943fc"
+          "blob_sha": "dd5aaf0cae19e3ddb37be7487184d2a39554fb6a"
         },
         {
           "path": "skills/scenario-grok-imagine-image/SKILL.md",
@@ -1011,7 +1240,7 @@
         },
         {
           "path": "skills/scenario-image/SKILL.md",
-          "blob_sha": "7a9e5fa2d7b9b0d772db561dbd510131d255fc73"
+          "blob_sha": "1e20218711e5fc00dcaa71b7330bccc70155cd5b"
         },
         {
           "path": "skills/scenario-inspiration/SKILL.md",
@@ -1019,7 +1248,7 @@
         },
         {
           "path": "skills/scenario-kinetic-music-video/SKILL.md",
-          "blob_sha": "d4ca822a590b7bf2d35c0a0a234637661761ac58"
+          "blob_sha": "9cae285a1c6d7ef89f5e1533832d484813e33d88"
         },
         {
           "path": "skills/scenario-kling/SKILL.md",
@@ -1039,7 +1268,7 @@
         },
         {
           "path": "skills/scenario-meshy/SKILL.md",
-          "blob_sha": "6c24786b76cafdbc26ac58e3baf82805b9ad1bea"
+          "blob_sha": "233ec2c1dc2ddf15c3a50252d1b419dca501b0e6"
         },
         {
           "path": "skills/scenario-minimax-music/SKILL.md",
@@ -1060,6 +1289,10 @@
         {
           "path": "skills/scenario-moderation/SKILL.md",
           "blob_sha": "e9fa3414bfa843f0b7646e87861ea7d1e0d5f265"
+        },
+        {
+          "path": "skills/scenario-multi-reference/SKILL.md",
+          "blob_sha": "aab09b673ab0da8f509db100d9c75d61d3e86099"
         },
         {
           "path": "skills/scenario-orbit-views/SKILL.md",
@@ -1115,7 +1348,7 @@
         },
         {
           "path": "skills/scenario-side-view-game-kit/SKILL.md",
-          "blob_sha": "de19b40502eb8de458356193f9586bdcca8ca079"
+          "blob_sha": "24130e48b6ec8b12dccc02c4c1452cd942ce1290"
         },
         {
           "path": "skills/scenario-skyboxes/SKILL.md",
@@ -1150,6 +1383,10 @@
           "blob_sha": "48122aa00fb1d146123ec21d8eec55d4a33f445d"
         },
         {
+          "path": "skills/scenario-thumbnails/SKILL.md",
+          "blob_sha": "e731ab5a3e1f3964e95bd4e8d1e9641dc4e36c83"
+        },
+        {
           "path": "skills/scenario-ugc/SKILL.md",
           "blob_sha": "4657ff07c3ffe00df046788da807a7af6dd3ecd5"
         },
@@ -1159,11 +1396,11 @@
         },
         {
           "path": "skills/scenario-video-ads/SKILL.md",
-          "blob_sha": "92b755173574ffb788e8b56b1ad43b0ab86faeba"
+          "blob_sha": "6781f79f132d7c8adf79407dc3b11cce2404b381"
         },
         {
           "path": "skills/scenario-video-assembly/SKILL.md",
-          "blob_sha": "d228903a25bb82ad3aba87698e10540fbd63abff"
+          "blob_sha": "51d02d2fd424994ef4f473d314dc9125a7faf980"
         },
         {
           "path": "skills/scenario-video-editing/SKILL.md",
@@ -1179,7 +1416,7 @@
         },
         {
           "path": "skills/scenario-walkable-room/SKILL.md",
-          "blob_sha": "094938cb73805899d6d62a09ab742a9f0d9b2cba"
+          "blob_sha": "94f83a5c5c91afe0a7a20cb073323cbf25170aca"
         },
         {
           "path": "skills/scenario-wan/SKILL.md",
@@ -1195,7 +1432,7 @@
         },
         {
           "path": "skills/scenario/SKILL.md",
-          "blob_sha": "7d9a8348c149683a9ecced4a1a3c84024aceb981"
+          "blob_sha": "0dca5336f6572d6b9ac3ecfdb9f29e44d9c7f1cb"
         }
       ]
     },
@@ -1211,8 +1448,12 @@
     },
     {
       "repository": "scottstts/Threejs-Awesome-Graphics-Agent-Skills",
-      "tree_sha": "99f0ba426c83afb81dd9569ed8290215c1d00d96",
+      "commit": "897aaa0a49f9346f342993e1eb74a30479f82614",
+      "tree_sha": "3ce4bf37e0b59aad5d7c05076b6e561503f73813",
       "truncated": false,
+      "pushed_at": "2026-10-15T18:20:42Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
       "skills": [
         {
           "path": "skills/threejs-atmosphere-aerial-perspective/SKILL.md",
@@ -1260,7 +1501,7 @@
         },
         {
           "path": "skills/threejs-procedural-materials/SKILL.md",
-          "blob_sha": "922e37ce4766f25491a48e3365918ea0c543a25d"
+          "blob_sha": "5286f4bc1ffe77382503349eb780239fe0cc78d7"
         },
         {
           "path": "skills/threejs-procedural-planets/SKILL.md",
@@ -1288,11 +1529,11 @@
         },
         {
           "path": "skills/threejs-skill-router/SKILL.md",
-          "blob_sha": "754e11facde472d9a52800196975718f68cd0677"
+          "blob_sha": "62e8b67fa37e96ea84b38bb1ba935c7ba9c86d0c"
         },
         {
           "path": "skills/threejs-spectral-ocean/SKILL.md",
-          "blob_sha": "43e61c4eb009398943d8ba2feb9d5895b26913b6"
+          "blob_sha": "25d9d22a8db1877b0ba42c9d9038e2d70d5e0bbe"
         },
         {
           "path": "skills/threejs-temporal-surfaces/SKILL.md",
@@ -1308,13 +1549,34 @@
         },
         {
           "path": "skills/threejs-water-optics/SKILL.md",
-          "blob_sha": "b9576981eca6885a2c525ce3a26cf0f5c00feebf"
+          "blob_sha": "da8bdcce995ad4d6ff09de79b637cac0951a3612"
         }
-      ],
-      "commit": "d1cb23dcce6ea8ee4a60f6159daeb79d4b511dba",
-      "pushed_at": "2026-09-22T22:55:52Z",
+      ]
+    },
+    {
+      "repository": "shader-effects-inc/shaders",
+      "commit": "81fd4ece5d493ca6c424a2af41f0e2c361ec8258",
+      "tree_sha": "c3cc284ea30c1b83c8d243ce740c9ac61e3e114a",
+      "truncated": false,
+      "pushed_at": "2026-10-09T13:24:56Z",
       "default_branch": "main",
-      "license_spdx": "MIT"
+      "license_spdx": "MIT",
+      "skills": [
+        {
+          "path": "skills/shaders/SKILL.md",
+          "blob_sha": "ce8aea4e07c15be8c555f0ed5a381ffdd24c6033"
+        }
+      ]
+    },
+    {
+      "repository": "SimonSchubert/omalauncher",
+      "commit": "686cce57afb2c2580c4a232adec04bc637f7d2ed",
+      "tree_sha": "dec072950bbae006574a4a4e6c5bc9865d1d0993",
+      "truncated": false,
+      "pushed_at": "2026-10-16T14:59:45Z",
+      "default_branch": "main",
+      "license_spdx": "NOASSERTION",
+      "skills": []
     },
     {
       "repository": "smicallef/spiderfoot",
@@ -1327,49 +1589,119 @@
       "skills": []
     },
     {
-      "repository": "soxoj/maigret",
-      "commit": "d692810934c69e74acdbe24a0f464fd18eb4609b",
-      "tree_sha": "a7121f956ea9e37bb57a2135efc97a9c606e5e6c",
+      "repository": "snuri00/ps2-web-recomp",
+      "commit": "c628ae843209f6e4cef34ec04efb6267a1618882",
+      "tree_sha": "2cedf2edb7480279aeea012a9f756eac6222d447",
       "truncated": false,
-      "pushed_at": "2026-10-05T07:58:30Z",
+      "pushed_at": "2026-10-15T22:27:07Z",
       "default_branch": "main",
       "license_spdx": "MIT",
       "skills": []
     },
     {
-      "repository": "Tencent-Hunyuan/AuK",
-      "tree_sha": "94ba44ea2cb03941af6ce52e9588ce9905c25a60",
+      "repository": "snuri00/ps3recomp",
+      "commit": "80e8b654cd5a3ba5fdc1e610401d69053ca8502b",
+      "tree_sha": "fd2530e56b47c19ca4e8742ac824d1eedf26e06d",
       "truncated": false,
-      "skills": [],
-      "pushed_at": "2026-09-25T17:46:51Z",
+      "pushed_at": "2026-06-20T06:46:07Z",
+      "default_branch": "master",
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "snuri00/psp-web-recomp",
+      "commit": "37826ab881d9a593efb842fe47adfae2e9118b5d",
+      "tree_sha": "3ff9a938c5ecc5c2e4b1aa506ae7118af7a3ffb3",
+      "truncated": false,
+      "pushed_at": "2026-10-15T09:21:04Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "snuri00/turbo-quant",
+      "commit": "2f979dfb5b11bb0e620ba1fa35d1ea04a561986a",
+      "tree_sha": "506e62b15e5c62014ce78e676533c3fa072f6b0b",
+      "truncated": false,
+      "pushed_at": "2026-03-29T12:16:51Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "snuri00/turbo-quant-ios",
+      "commit": "ed19d2c4170362b53d6fef0623cb794409a52cc2",
+      "tree_sha": "6f8c090139a4c6e25cf7bcc07795d7a8739d9ddd",
+      "truncated": false,
+      "pushed_at": "2026-03-29T12:42:46Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "soxoj/maigret",
+      "commit": "eaf820666d15bfd545129f3223e2261c27191e74",
+      "tree_sha": "189bbb7401efd1bb5a151db408d33341f3d380d2",
+      "truncated": false,
+      "pushed_at": "2026-10-14T16:10:52Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "storytold/photocraft",
+      "commit": "2a952f164c0b4cf936b1c6497db10dd095341c00",
+      "tree_sha": "b28fa32806f888154cd80908d3493b8997be72f0",
+      "truncated": false,
+      "pushed_at": "2026-10-16T05:48:30Z",
+      "default_branch": "main",
+      "license_spdx": "Apache-2.0",
+      "skills": []
+    },
+    {
+      "repository": "Tencent-Hunyuan/AuK",
+      "commit": "9481474f107ee4d8dec959b3aed05b0627cebbf8",
+      "tree_sha": "60f27a8a768464741f3708d89cb6796923660c87",
+      "truncated": false,
+      "pushed_at": "2026-10-14T13:34:38Z",
       "default_branch": "main",
       "license_spdx": "NOASSERTION",
-      "commit": "da1f31b18e212697388a9ecd6988082db3cd2a87"
+      "skills": []
+    },
+    {
+      "repository": "TencentARC/AnimeSR",
+      "commit": "80a24bf7a5270907c703158ff6affb3248bf0dc2",
+      "tree_sha": "eb9e65a5fa8044a2899df8d806b9dbd7627d0ac7",
+      "truncated": false,
+      "pushed_at": "2023-08-18T13:09:28Z",
+      "default_branch": "main",
+      "license_spdx": "NOASSERTION",
+      "skills": []
     },
     {
       "repository": "tigerless-labs/autoharness",
-      "commit": "6d7f9305489c17d2ee1fc20de741b725d865ddbb",
-      "tree_sha": "0f870c79af49af4cd7d18d5f1d603a53a0195d53",
+      "commit": "27d13c1d8091681db05a10ef9626081217da240f",
+      "tree_sha": "1ff0adaca50237f2530dbadd2674eb03b9b813cc",
       "truncated": false,
-      "pushed_at": "2026-10-05T12:08:52Z",
+      "pushed_at": "2026-10-15T16:22:50Z",
       "default_branch": "main",
       "license_spdx": "MIT",
       "skills": [
         {
           "path": "skills/learn/SKILL.md",
-          "blob_sha": "cfb0246bd9fd1c1b59838dadfc8c9a5c257a41ae"
+          "blob_sha": "e9b1447a5b9e816ce10b95a31ec682bbc73983a8"
         }
       ]
     },
     {
       "repository": "Tombonator3000/3044",
-      "tree_sha": "6522a7d6c70d44cabd2f1df3e2f292e703f343b8",
+      "commit": "83e3d9f9b9a95462c5c2e061581209dba6b87ca7",
+      "tree_sha": "c5b7b3234248be90901d2285445f0db3f856c1d4",
       "truncated": false,
-      "skills": [],
-      "pushed_at": "2026-09-09T14:33:40Z",
+      "pushed_at": "2026-10-13T19:14:29Z",
       "default_branch": "main",
       "license_spdx": null,
-      "commit": "b552cff16001cbee07ae8d7d52a76f44e90e9a9e"
+      "skills": []
     },
     {
       "repository": "Tombonator3000/Blocky",
@@ -1422,6 +1754,21 @@
       "skills": []
     },
     {
+      "repository": "Tombonator3000/decomp.wtf",
+      "commit": "575b4a30ed481ff5497dfb9ce4f599368a95a04a",
+      "tree_sha": "f65de843b33b886c46f9d39b55ab15dc6311de23",
+      "truncated": false,
+      "pushed_at": "2026-10-15T20:39:36Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": [
+        {
+          "path": "plugins/decomp-wtf/skills/decompile/SKILL.md",
+          "blob_sha": "c0826b64b599de31966599a7a7a45247fb70fa61"
+        }
+      ]
+    },
+    {
       "repository": "Tombonator3000/deep-regrets-digital",
       "commit": "7c4fa444c3a011102476095729a3ca832235bd60",
       "tree_sha": "6ba4b3dca3c1e5dc84d04f3ba0ea5633db35b966",
@@ -1432,11 +1779,46 @@
       "skills": []
     },
     {
-      "repository": "Tombonator3000/guild-life-adventures",
-      "commit": "1fa067156a62de8837bb5c0df091716cd172e569",
-      "tree_sha": "faf1fa7006b8046a74dc9282e081d81984bbd2b9",
+      "repository": "Tombonator3000/Dig-HD-Remake",
+      "commit": "c2c9b8e00ba2e83af4001088bbccb976f0f22d1d",
+      "tree_sha": "530e18314b596aeb0753589d1a9d641239dc57c9",
       "truncated": false,
-      "pushed_at": "2026-10-02T05:27:02Z",
+      "pushed_at": "2026-10-16T15:08:20Z",
+      "default_branch": "main",
+      "license_spdx": null,
+      "skills": [
+        {
+          "path": "docs/skills/scumm-hd-remake/SKILL.md",
+          "blob_sha": "aa4856b9301b068b618734698eacda57e4e834d3"
+        }
+      ]
+    },
+    {
+      "repository": "Tombonator3000/Dig-HD-Web",
+      "commit": "b8ea79baf7f7a81e8f7f2e7148b78a3aa7a4896a",
+      "tree_sha": "7c196f8d52398c59752995522dc39245c5ee191c",
+      "truncated": false,
+      "pushed_at": "2026-10-16T15:05:12Z",
+      "default_branch": "main",
+      "license_spdx": "GPL-3.0",
+      "skills": []
+    },
+    {
+      "repository": "Tombonator3000/DoD-Roguelite",
+      "commit": "fdb2d590c70a9c231c9f97d2a729bcfbdd513a95",
+      "tree_sha": "14d913fb73cfe4d7da00d1276a65b36059249cbd",
+      "truncated": false,
+      "pushed_at": "2026-10-09T19:49:13Z",
+      "default_branch": "main",
+      "license_spdx": "MIT",
+      "skills": []
+    },
+    {
+      "repository": "Tombonator3000/guild-life-adventures",
+      "commit": "52deb0fb037af5d7941a37feaaef925793505b3f",
+      "tree_sha": "ea225effaa117b2232ac9bfa99f486101aba4007",
+      "truncated": false,
+      "pushed_at": "2026-10-14T21:43:46Z",
       "default_branch": "main",
       "license_spdx": null,
       "skills": [
@@ -1512,17 +1894,17 @@
       "commit": "6c7d1d9afe93e56869a6e6886ab5dcce6b84a8f0",
       "tree_sha": "a7258e08a884cb91057e77dde675e8df9e27b5f6",
       "truncated": false,
-      "pushed_at": "2026-10-05T18:42:43Z",
+      "pushed_at": "2026-10-06T21:53:00Z",
       "default_branch": "main",
       "license_spdx": null,
       "skills": []
     },
     {
       "repository": "Tombonator3000/MOONSTONE",
-      "commit": "c4bdd8707819fe9734d1552938688dfcd14603a6",
-      "tree_sha": "1970d23367da186cbff3e06d84406007295cd358",
+      "commit": "69d9f8200c3244df0d5073f8e64f50cb479a5916",
+      "tree_sha": "b51a1a8b781513a75d38e6d386d71acc0f5ac579",
       "truncated": false,
-      "pushed_at": "2026-10-03T14:49:44Z",
+      "pushed_at": "2026-10-13T09:05:15Z",
       "default_branch": "main",
       "license_spdx": null,
       "skills": []
@@ -1579,10 +1961,10 @@
     },
     {
       "repository": "Tombonator3000/prosjektbibliotek",
-      "commit": "9e590d5b15366afb7405c8383a2e42451f3d1fdd",
-      "tree_sha": "523802f8ad0c4b687da1d4b0724d4491cfbcb1cb",
+      "commit": "ed5678a4a151df3722a7e3b686a57a4576df354a",
+      "tree_sha": "cffb550fa1c1ffc67e57052cc06ed6b5d2c8ecb1",
       "truncated": false,
-      "pushed_at": "2026-10-01T16:05:28Z",
+      "pushed_at": "2026-10-16T09:23:22Z",
       "default_branch": "main",
       "license_spdx": null,
       "skills": [
@@ -1591,6 +1973,31 @@
           "blob_sha": "826c3bb2a1e28afeb4204d46deef96144827d65c"
         }
       ]
+    },
+    {
+      "repository": "Tombonator3000/Sam-Max-HD",
+      "commit": "0d7c23d572673e131afe70b0ebc1ada3b1fb2f4f",
+      "tree_sha": "3b4a59ed988feb765be611142c33f608fafb0152",
+      "truncated": false,
+      "pushed_at": "2026-10-16T10:58:24Z",
+      "default_branch": "main",
+      "license_spdx": null,
+      "skills": [
+        {
+          "path": "docs/skills/scumm-hd-remake/SKILL.md",
+          "blob_sha": "aa4856b9301b068b618734698eacda57e4e834d3"
+        }
+      ]
+    },
+    {
+      "repository": "Tombonator3000/Sam-Max-HD-Web",
+      "commit": "0cb79e92c84d07e90899ddaa67db066c32e37a38",
+      "tree_sha": "b5cb4f4a3c4c933fa687c24d423a1b9ad6767ed1",
+      "truncated": false,
+      "pushed_at": "2026-10-14T11:26:22Z",
+      "default_branch": "main",
+      "license_spdx": null,
+      "skills": []
     },
     {
       "repository": "Tombonator3000/SceneForge",
@@ -1624,10 +2031,10 @@
     },
     {
       "repository": "Tombonator3000/SIGNAL-47",
-      "commit": "5d8e9e5449a9b546b93323108b2b9681bdaa6719",
-      "tree_sha": "2d6abc8a2f76eff3e354a0622273ab03e2e4e89a",
+      "commit": "82683cf3d074df5618270d6cbd3384ba6b4ec69f",
+      "tree_sha": "9c1612de8e741720832fcb1826bb56d776022ff3",
       "truncated": false,
-      "pushed_at": "2026-10-05T19:09:45Z",
+      "pushed_at": "2026-10-16T14:06:13Z",
       "default_branch": "main",
       "license_spdx": null,
       "skills": [
@@ -1701,23 +2108,23 @@
     },
     {
       "repository": "Tombonator3000/vector-war-games",
-      "tree_sha": "7371bde4b8127817e1d92503aef4ba81c8c95b1e",
+      "commit": "12cc1b6b01b22b138114cae80c84a10f50e59ecb",
+      "tree_sha": "1b169fa29c86dd5f26027417b355407f4e46eaa1",
       "truncated": false,
-      "skills": [],
-      "pushed_at": "2026-02-10T11:00:05Z",
+      "pushed_at": "2026-10-12T05:25:33Z",
       "default_branch": "main",
       "license_spdx": null,
-      "commit": "db13fde9245cb3196fe41983740935f9e4bcea52"
+      "skills": []
     },
     {
       "repository": "Tombonator3000/Voidcraft",
+      "commit": "20235009d317b0c4e7e9318e330e7b3bb00cddac",
       "tree_sha": "e76ed5147699d0548a5accfc34df31b573853d18",
       "truncated": false,
-      "skills": [],
-      "pushed_at": "2026-09-15T16:47:39Z",
+      "pushed_at": "2026-10-14T05:53:23Z",
       "default_branch": "main",
       "license_spdx": "AGPL-3.0",
-      "commit": "20235009d317b0c4e7e9318e330e7b3bb00cddac"
+      "skills": []
     },
     {
       "repository": "Tombonator3000/Wasteland-Racers",
@@ -1730,11 +2137,26 @@
       "skills": []
     },
     {
-      "repository": "tscherrie/salmon-survival",
-      "commit": "dcd016aee5d79782422e5e039c6b4e37258b1bad",
-      "tree_sha": "4ab9a0bcf63c73a601a7ff39e977c642e2b5c8d2",
+      "repository": "Tombonator3000/ZakMcKracken-HD",
+      "commit": "fd59403202c625d69e8e8ce6832b016ddfe979bc",
+      "tree_sha": "afcee352a6d55863b3458765289e2f463320b4e4",
       "truncated": false,
-      "pushed_at": "2026-10-05T17:49:16Z",
+      "pushed_at": "2026-10-15T16:24:22Z",
+      "default_branch": "main",
+      "license_spdx": null,
+      "skills": [
+        {
+          "path": "docs/skills/scumm-hd-remake/SKILL.md",
+          "blob_sha": "aa4856b9301b068b618734698eacda57e4e834d3"
+        }
+      ]
+    },
+    {
+      "repository": "tscherrie/salmon-survival",
+      "commit": "03472722bec2833c2d998b706bb143fdfa001a9a",
+      "tree_sha": "2a862103c28035c768f9cf5288dd50aba40829b9",
+      "truncated": false,
+      "pushed_at": "2026-10-06T20:23:47Z",
       "default_branch": "main",
       "license_spdx": "MIT",
       "skills": []

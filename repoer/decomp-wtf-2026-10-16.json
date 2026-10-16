@@ -1,0 +1,47 @@
+{
+  "collected_at": "2026-10-16T15:43:57+00:00",
+  "scope": "Avgrenset dokumentgjennomgang av arkivert decomp.wtf og kontroll av egen GitHub-fork; ingen installasjon eller runtime-test.",
+  "repositories": [
+    {
+      "repository": "i12bp8/decomp.wtf",
+      "url": "https://github.com/i12bp8/decomp.wtf",
+      "commit": "575b4a30ed481ff5497dfb9ce4f599368a95a04a",
+      "version": "0.10.6",
+      "archived": true,
+      "fork": "Tombonator3000/decomp.wtf",
+      "fork_url": "https://github.com/Tombonator3000/decomp.wtf",
+      "fork_commit": "575b4a30ed481ff5497dfb9ce4f599368a95a04a",
+      "starred_at": "2026-10-16T15:33:24Z",
+      "license_spdx": "MIT",
+      "runtime_tested": false,
+      "installed": false,
+      "integrated_in_game": false,
+      "snapshots": [
+        {
+          "bytes": 1066,
+          "sha256": "55009bca6729ada566f3846d3fdfda3466348f3ffdcb1d66e85db77148bf3f8b",
+          "git_blob_sha": "7a124a20dfae3c0bac2ec4251fee494b897e754f",
+          "source_url": "https://github.com/i12bp8/decomp.wtf/blob/575b4a30ed481ff5497dfb9ce4f599368a95a04a/LICENSE",
+          "path": "kilder/github/i12bp8--decomp.wtf/575b4a30ed481ff5497dfb9ce4f599368a95a04a/LICENSE.txt",
+          "upstream_path": "LICENSE"
+        },
+        {
+          "bytes": 28732,
+          "sha256": "420e2e0e435ad58643c314ac94f6d978f98c6282aaf4ada77888029a47977631",
+          "git_blob_sha": "137e9f791283c084a044561d5920c9bfcbbb1752",
+          "source_url": "https://github.com/i12bp8/decomp.wtf/blob/575b4a30ed481ff5497dfb9ce4f599368a95a04a/README.md",
+          "path": "kilder/github/i12bp8--decomp.wtf/575b4a30ed481ff5497dfb9ce4f599368a95a04a/README.md.txt",
+          "upstream_path": "README.md"
+        },
+        {
+          "bytes": 1451,
+          "sha256": "f28e9a924aaabe1a9474b67f9ecb4bf989c94720ddb06975e16ed94dbc620f6a",
+          "git_blob_sha": "0b624d041910fe0f85392eb20070571a54af3900",
+          "source_url": "https://github.com/i12bp8/decomp.wtf/blob/575b4a30ed481ff5497dfb9ce4f599368a95a04a/pyproject.toml",
+          "path": "kilder/github/i12bp8--decomp.wtf/575b4a30ed481ff5497dfb9ce4f599368a95a04a/pyproject.toml.txt",
+          "upstream_path": "pyproject.toml"
+        }
+      ]
+    }
+  ]
+}

@@ -18,6 +18,11 @@ def flatten(value):
 
 def all_records(root):
     repositories = json.loads((root / 'data/catalog.json').read_text(encoding='utf-8'))['repositories']
+    notes = {}
+    for name in ('starred-notes.json', 'extra-notes.json'):
+        path = root / 'data' / name
+        if path.exists():
+            notes.update(json.loads(path.read_text(encoding='utf-8')))
     inventory_path = root / 'data/offentlig-inventar.json'
     if inventory_path.exists():
         inventory = json.loads(inventory_path.read_text())
@@ -31,7 +36,8 @@ def all_records(root):
                 repositories.append({'id': current.get('id'), 'full_name': current['full_name'],
                                      'description': current['description'], 'html_url': current['url'],
                                      'categories': ['Egne prosjekter'] if current['full_name'].startswith('Tombonator3000/') else ['Offentlig inventar'],
-                                     'profile_path': 'OFFENTLIG_INVENTAR.md'})
+                                     'profile_path': 'OFFENTLIG_INVENTAR.md',
+                                     **notes.get(current['full_name'], {})})
     skills_path = root / 'data/skills.json'
     if skills_path.exists():
         data = json.loads(skills_path.read_text())

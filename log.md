@@ -31,3 +31,12 @@ Arbeid i prosjektbiblioteket, nyeste nederst. Klokkeslett i norsk tid (Europe/Os
 - 01:23 Dig-HD-Remake står ikke i det offentlige inventaret; offentlig_kontrollert 2026-10-15 (visibility public i GitHub-listen).
 - 01:23 build_solution_index.py og verify.py: 24 kort, OK. build_catalog.py byttet bare rekkefølgen på søkeord i seks profiler og catalog.json; de endringene er ikke tatt med.
 - 04:33 Tom: lag PR. PR 3 laget fra grenen ccr-4d55edba-vg2olf mot main. Repoet har ingen CI.
+
+## 2026-10-16, stjerner og decomp.wtf
+
+- 17:52 Codex: hentet prosjektbibliotek på nytt og sammenlignet offentlige stjerner med inventaret fra 5. oktober etter repo-ID. 20 nye stjerner; dagens inventar har 75 offentlige stjerner og 37 egne offentlige repoer. Sammenlignet også med offentlige stjerner i den innloggede kontoens komplette, paginerte svar.
+- 17:52 Codex: opprettet offentlig fork Tombonator3000/decomp.wtf. Originalen er arkivert fra 15. oktober. Begge main-grenene pekte til 575b4a30ed481ff5497dfb9ce4f599368a95a04a ved kontrollen. Bevarte README, LICENSE og pyproject.toml fra denne revisjonen, med kontrollsummer og eget notat og manifest under repoer/.
+- 17:52 Codex: oppdaterte skilldekningen for alle 101 unike offentlige repoer, med 55 nye eller endrede kilder. Indeksen har 274 skillfiler, 247 ulike dokumentinnhold og 26 kilderepoer. Originalen og egen decomp.wtf-fork har samme skillinnhold. Ingen tredjepartverktøy eller skills er installert eller kjørt.
+- 17:52 Codex: la til norske notater for de 20 nye stjernene og forken. find.py bruker notatene også for nye inventaroppføringer, og decomp.wtf peker til gjennomgangen. Arkiverte stjerner merkes i det genererte inventaret. Tidligere norske notater, historiske profiler og kildefiler er beholdt.
+- 17:52 Codex: fjernet 20 midlertidige offentlig_kontrollert-felt fra kort som nå har offentlig opphav i inventaret. Bygget løsningsindeksen med alle 24 kort beholdt. build_catalog.py er kjørt; bare kjent sorteringsstøy er tatt ut igjen.
+- 17:55 Codex: verify.py passerer med 118 kildefiler, 24 løsningskort og 391 lokale lenker. Kontrollerte også alle 20 tillegg mot autentisert offentlig stjernesvar, søk og profillenker, at eldre norske notater er uendret, og skillendringene 40 nye, 2 erstattede og 46 endrede filer. Git-diffkontrollen er uten feil for egne filer; bevarte originaltekster kontrolleres med hash.

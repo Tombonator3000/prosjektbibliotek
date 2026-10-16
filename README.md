@@ -4,7 +4,9 @@ Referansebibliotek for **Tombonator3000**: spill, 3D, simulering, skills, agentv
 
 **[Løsningskort](LOSNINGER.md)** · **[Stjerner og egne repoer](OFFENTLIG_INVENTAR.md)** · **[Samlet skilloversikt](SKILLS.md)** · **[Kuraterte profiler](KATALOG.md)** · **[Søk og gjenbruk](docs/BRUK.md)**
 
-Oppdatert **5. oktober 2026**: **56 offentlige stjerner**, **32 egne offentlige repoer**, **236 SKILL.md-filer fra 16 repoer** og den komplette egne **Morbidium-spritesheets-pakken**. Alle 78 unike offentlige repoer er undersøkt for skills. Av skillfilene er 139 Scenario-skills og seks Scenario-hjelpere for internt repoarbeid. Noen skills finnes i flere mapper; de 236 filene har 215 ulike dokumentinnhold. [Se hva som er nytt siden torsdag](docs/OPPDATERING_2026-10-05.md).
+Oppdatert **16. oktober 2026**: **75 offentlige stjerner**, **37 egne offentlige repoer**, **274 SKILL.md-filer fra 26 repoer** og den komplette egne **Morbidium-spritesheets-pakken**. Skillmanifestet dekker alle 101 unike offentlige repoer. Av skillfilene er 144 Scenario-skills og sju Scenario-hjelpere for internt repoarbeid. Noen skills finnes i flere mapper og forker; de 274 filene har 247 ulike dokumentinnhold. [Se de 20 nye stjernene siden 5. oktober](docs/OPPDATERING_2026-10-16.md).
+
+**decomp.wtf:** [egen fork](https://github.com/Tombonator3000/decomp.wtf) er opprettet. Originalen ble arkivert 15. oktober og er ikke lenger vedlikeholdt. [Gjennomgangen](repoer/decomp-wtf-2026-10-16.md) har festet revisjon, bevarte dokumentkilder, plattformstatus og gjenbruksnotater.
 
 [Maskinlesbart inventar med stjernedatoer](data/offentlig-inventar.json), [skilldata](data/skills.json) og oppdateringsskriptene følger med. Kildekode ligger i de lenkede originalrepoene; skillkildene er festet til kontrollerte commits. Private repoer og private stjerner er ikke med i den offentlige oversikten. `scripts/find.py` søker i den historiske katalogen, det ferske inventaret og skills fra både stjerner og egne offentlige repoer.
 
@@ -16,6 +18,7 @@ Den første kuraterte GitHub-samlingen, 23. september 2026, omfatter **46 unike 
 |---|---|
 | Problemer Tom allerede har løst i egne spill: symptom, årsak, løsning, bevis og opphav | [Løsningskort](LOSNINGER.md) |
 | Skills, agentarbeid, Blender og Unity MCP | [Samlet skilloversikt](SKILLS.md) |
+| Dekompilering, bytekontroll og lokal agentstyring | [decomp.wtf og egen fork](repoer/decomp-wtf-2026-10-16.md) |
 | Spillprosjekter, spillarkitektur og motorintegrasjon | [Spill og spillmotorer](KATALOG.md#spill-og-spillmotorer) |
 | Vann, shaderkode, Three.js, WebGPU og splats | [3D og simulering](KATALOG.md#3d-og-simulering) |
 | Musikkgenerering | [Lyd og musikk](KATALOG.md#lyd-og-musikk) |
