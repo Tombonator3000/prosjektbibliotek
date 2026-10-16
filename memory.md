@@ -40,3 +40,6 @@ Beslutninger og fallgruver som neste person trenger. Dagbok hører hjemme i log.
 
 
 - Kantrens ecd9ec0e er tatt i bruk i hd-mod 55f976de og har fått separat Codex-etterkontroll rundt 04:00 den 16. oktober. Alle 163 ikon-PNG har identisk størrelse/alfa mot 001e2405; 159 har synlig RGB-endring. 22 navngitte PNG er visuelt sett på mørk og lys bakgrunn, med tydelig færre grønne/magenta kantrester og ingen åpenbar ny skade på ekte farger i utvalget. Tynne mørke/lilla streker og trappetrinn fra uendret alfa gjenstår på bilene. Ikke helt pikselrent eller motorverifisert. Før/etter, åtte paneler og etter-kontroll.json ligger i output/natt-kantrens-20261016 i Codex-arbeidsmappen. Sam-Max-HD todo-punktene for kodekontroll og nybygd visuell etterkontroll kan kvitteres i en ledig fase; ikke skriv der mens Claude bruker logg/todo i grafikkontrollen.
+
+
+- Sam-Max-HD-dokumentasjonen for første kantrens og begge Codex-kodekontroller er kvittert i d76310e0 på nattgrenen. Andre trinn de951ff7 er kodegodkjent med 63 tester klokken 04:15, men venter på ny import/visuell kontroll. Alle 163 ikon-PNG i hd-mod 5f6fc0a6 er byteidentiske med sikrede første-trinn-bilder fra 55f976de; bruk eksisterende output/natt-kantrens-20261016/etter som førgrunnlag for andre trinn. Kildekoblingen er registrert i etter-kontroll.json. Ikke overskriv disse førbildene med nye rensede filer.
