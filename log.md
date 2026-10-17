@@ -432,3 +432,10 @@ Morgenbevis med alle 72 jobb-ID-er, fire ventende filhasher og importspor for al
 - Opprettet PR33 for nattkoden, knyttet den til chatten og bekreftet grønn CI. Tom flettet den på GitHub klokken 08:44, merge 3c6d2572. Ny main er hentet til begge kodekopier. Godkjennings- og mottaksdokumentasjonen som kom etter flettingen er tatt med som ren dokumentasjon på main c6f072a3, etter diff-kontroll. Nattkode og godkjenningsstatus er dermed med i main; grafikken ligger fortsatt bare på egne grener. PR32 for motoren er fortsatt åpen. Ingen nye manuelle kodetester var nødvendige, koden er uendret fra kontrollen med 65 beståtte tester.
 - Bevarte den historiske nattgrenen og alle tre stasher. Ingen ny motoravspilling eller pakkebygging i denne bestillingen. Særlig munndelen, logoens lyse magenta, resten av figuranimasjonene og PR32s motor-/spillkontroller gjenstår. Katalogbygg og lokal verify kjøres for rapporten.
 - 2026-10-17 10:59 (Claude) Tom: hva mangler. Fra GitHub (Sam-Max-HD, gpt-arbeid status.csv): rom 1 (rom083, sjekk), store objekter 12 i sjekk, lag 9 (5 sjekk, 4 nye i rom 83), ikonark 2 i sjekk, figurark 1645 av 1758 uten resultat (113 levert, 1226 av 15 661 figurruter i modden). ORDRE.md er fra 16. oktober 08:44; leveransene etter det har ikke hatt egen Claude-kontroll. Ingen natteskift natt til 17. oktober (siste commit i gpt-arbeid 16. oktober 22:15).
+
+## 2026-10-17 11:55 (Claude)
+
+- Tom: lag en agent som spiller gjennom og finner feil, og lag all grafikken som mangler.
+- Gjennomspillingsagenten ligger i Sam-Max-HD (tools/styr.py, tools/gjennomspill.sh, docs/GJENNOMSPILLING.md, styringskanalen DIGHD_STYRING i motorpatchen). Grafikken tegnes av Codex på Toms PC; den kan ikke lages fra skyøkta.
+- samarbeid.mjs: grafikkontrollen til Claude leser nå work/gjennomspill/FUNN.md og avviser leverte jobber der gjennomspillingen fant feil, eller skriver motorfeil i todo.md. 15 av 15 tester består.
+- README: hvordan natteskiftet går i flere døgn bare med grafikk (--spor grafikk --jobber 8 --timer 168).

@@ -331,7 +331,8 @@ Du kontrollerer grafikken. Codex har nettopp levert disse jobbene i gpt-arbeid (
 1. Kjør tools/gpt_runde.sh. Den henter leveransene, kontrollerer dem, bygger HD-modden og sender ny ORDRE.md med retur til gpt-arbeid. Push til gpt-arbeid og hd-mod er en del av den vanlige runden og er greit.
 2. Les work/gpt/RAPPORT.md.
 3. Se selv på hver av de nye leveransene mot originalen (referanse.png og forhåndsvisningene), etter kravene i BESTILLING-CHATGPT.md: ingenting flyttet, lagt til eller fjernet, tekst bokstav for bokstav, riktig figur og samme størrelse i figurarkene. Det automatikken slapp gjennom og som er feil, avviser du på den måten repoet bruker (docs/gpt-avvisninger.csv, se memory.md) med grunn og forslag, og kjører runden igjen så returen kommer med i ORDRE.md.
-4. Logg i log.md med dato, klokkeslett og navnet ditt, og commit endringene i repoet på ${v.gren}.
+4. Finnes work/gjennomspill/FUNN.md (gjennomspillingsagenten, docs/GJENNOMSPILLING.md), se på funn av slag grafikk, uten-hd og kant som er nye siden forrige runde. Er feilen i en levert jobb, avviser du jobben på samme måte med funnet og utsnittet som grunn. Mangler jobben, eller er det en feil i motoren eller mottaket, skriver du det i todo.md. Skriv i log.md hvilke funn du har tatt.
+5. Logg i log.md med dato, klokkeslett og navnet ditt, og commit endringene i repoet på ${v.gren}.
 
 Siste linje: RUNDE: godkjent <antall>, avvist <antall>`;
 }

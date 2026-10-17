@@ -66,6 +66,19 @@ natt.sh ~/Sam-Max-HD --fokus "bare figurarkene for Sam og Max"
 
 `node samarbeid.mjs --help` viser alle valgene.
 
+## All grafikken som mangler
+
+Natteskiftet kan gå i flere døgn, bare med grafikk, til Codex ikke finner flere jobber:
+
+```sh
+tmux new -s grafikk
+~/prosjektbibliotek/samarbeid/natt.sh ~/Sam-Max-HD --spor grafikk --jobber 8 --timer 168
+```
+
+`--timer 168` er en uke; skriptet stopper før hvis alle jobbene er tegnet. Med 8 jobber per runde går mindre tid med til kontrollrundene til Claude. Det som begrenser farten, er kvoten på bildeverktøyet i ChatGPT: leverer Codex ingen bilder to runder på rad, tar grafikken 30 minutters pause og prøver igjen.
+
+Kjører gjennomspillingsagenten (`tools/gjennomspill.sh` i Sam-Max-HD) samtidig, leser Claude funnene dens i hver grafikkontroll og sender feil grafikk tilbake til Codex.
+
 ## Stoppe
 
 - Ctrl+C: stopper etter steget som pågår. Ctrl+C to ganger stopper med en gang.
